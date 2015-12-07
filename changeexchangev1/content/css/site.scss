@@ -1,0 +1,53 @@
+@import '_colours.scss';
+@import '_mixins.scss'; 
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden; 
+    height: auto; 
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    a{
+        -webkit-font-smoothing: antialiased;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+    min-height: 100%;
+    min-width: 100%;
+    height: auto; 
+    xpadding-bottom: 10px;
+    //@include basic-font(); 
+    line-height: 1.428571429;
+    color: $base-colour;
+    /*
+	 * Relates to the pseudo class & sibling bug, see
+	 * http://css-tricks.com/webkit-sibling-bug/ for more details
+	 */
+    -webkit-animation: bugfix infinite 1s;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/* Also relates to the pseudo class & sibling bug */
+@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
+
+@import '_pureNav.scss'; 
