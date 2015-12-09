@@ -44,7 +44,12 @@ html {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
   html a {
     -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+    cursor: pointer;
+    text-decoration: none;
+    color: black; }
+  html em {
+    font-style: normal;
+    color: #e5980a; }
 
 body {
   box-sizing: border-box;
@@ -56,11 +61,13 @@ body {
   xpadding-bottom: 10px;
   line-height: 1.428571429;
   color: black;
+  background-color: #ededed;
     /*
 	 * Relates to the pseudo class & sibling bug, see
 	 * http://css-tricks.com/webkit-sibling-bug/ for more details
 	 */
-  -webkit-animation: bugfix infinite 1s; }
+  -webkit-animation: bugfix infinite 1s;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
 
 body::-webkit-scrollbar {
   width: 0.5em; }
@@ -78,6 +85,42 @@ body::-webkit-scrollbar-thumb {
     padding: 0; }
   to {
     padding: 0; } }
+/*Colours*/
+/*Colours*/
+/*@mixin bp-iphone6landscape {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : landscape) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}
+
+@mixin bp-iphone6portrait {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : portrait) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}*/
+/* Smartphones (landscape) ----------- 4 */
+/* Smartphones (portrait) ----------- 4 */
+/* Smartphones (portrait) ----------- 5 */
+/* Smartphones (landscape) ----------- 5 */
+/* Smartphones (portrait) ----------- 6 */
+/* Smartphones (landscape) ----------- 6 */
+/* Smartphones (portrait) ----------- 6+ */
+/* Smartphones (landscape) ----------- 6+ */
+/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* Desktops and laptops ----------- */
 .pure-img-responsive {
   max-width: 100%;
   height: auto; }
@@ -99,14 +142,15 @@ This is the parent `<div>` that contains the menu and the content area.
 */
 #layout {
   position: relative;
+  top: 25%;
   padding-left: 0; }
 
 #layout.active #menu {
-  left: 20%;
-  width: 20%; }
+  left: 17.5%;
+  width: 17.5%; }
 
 #layout.active .menu-link {
-  left: 20%; }
+  left: 17.5%; }
 
 /*
 The content `<div>` is where all your content goes.
@@ -146,18 +190,29 @@ The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 #menu {
-  margin-left: -20%;
+  margin-left: -17.5%;
   /* "#menu" width */
-  width: 20%;
+  width: 17.5%;
   position: fixed;
-  top: 0;
+  top: 25%;
   left: 0;
   bottom: 0;
   z-index: 1000;
   /* so the menu or its navicon stays above all content */
-  background: #191818;
+  background: #ededed;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+#menu::-webkit-scrollbar {
+  width: 0.2em; }
+
+#menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); }
+
+#menu::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey; }
 
 /*
 All anchors inside the menu should be styled like this.
@@ -166,6 +221,14 @@ All anchors inside the menu should be styled like this.
   color: #999;
   border: none;
   padding: 0.6em 0 0.6em 0.6em; }
+
+#menu li a {
+  color: black;
+  border: none;
+  padding: 0.6em 0 0 0.6em; }
+
+#menu li:last-child {
+  padding-bottom: 0.6em; }
 
 /*
 Remove all background/borders, since we are applying them to #menu.
@@ -187,14 +250,22 @@ Change color of the anchor links on hover/focus.
 */
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
-  background: #333; }
+  background: #f6a915; }
 
 /*
 This styles the selected menu item `<li>`.
 */
 #menu .pure-menu-selected,
 #menu .pure-menu-heading {
-  background: #1f8dd6; }
+  width: 105%;
+  background-color: #616161;
+  -ms-border-radius: 0 8px 8px 0;
+  -moz-border-radius: 0 8px 8px 0;
+  -webkit-border-radius: 0 8px 8px 0;
+  border-radius: 0 8px 8px 0;
+  -moz-box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3); }
 
 /*
 This styles a link within a selected menu item `<li>`.
@@ -209,6 +280,26 @@ This styles the menu heading.
   font-size: 110%;
   color: #fff;
   margin: 0; }
+
+#menu-wrapper {
+  background-color: #e5980a;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 25%;
+  margin-bottom: 25%;
+  -ms-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  -webkit-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px; }
+  #menu-wrapper img#love-change-badge {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 /*
@@ -270,20 +361,20 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-right: 2em; }
 
   #layout {
-    padding-left: 20%;
+    padding-left: 17.5%;
     /* left col width "#menu" */
     left: 0; }
 
   #menu {
-    left: 20%; }
+    left: 17.5%; }
 
   .menu-link {
     position: fixed;
-    left: 20%;
+    left: 17.5%;
     display: none; }
 
   #layout.active .menu-link {
-    left: 20%; } }
+    left: 17.5%; } }
 @media (max-width: 48em) {
   /* Only apply this when the window is small. Otherwise, the following
   case results in extra padding on the left:
@@ -293,6 +384,154 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   */
   #layout.active {
     position: relative;
-    left: 20%; } }
+    left: 17.5%; } }
+/*Colours*/
+/*@mixin bp-iphone6landscape {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : landscape) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}
+
+@mixin bp-iphone6portrait {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : portrait) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}*/
+/* Smartphones (landscape) ----------- 4 */
+/* Smartphones (portrait) ----------- 4 */
+/* Smartphones (portrait) ----------- 5 */
+/* Smartphones (landscape) ----------- 5 */
+/* Smartphones (portrait) ----------- 6 */
+/* Smartphones (landscape) ----------- 6 */
+/* Smartphones (portrait) ----------- 6+ */
+/* Smartphones (landscape) ----------- 6+ */
+/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* Desktops and laptops ----------- */
+/*Colours*/
+.image-column {
+  padding: 0; }
+
+.box-container {
+  box-sizing: border-box;
+  padding: .5rem; }
+
+.cxc-card {
+  height: 280px;
+  padding: 0;
+  margin-bottom: 2.5%; }
+  .cxc-card img {
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  .cxc-card:hover img {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0); }
+
+.card-inner {
+  position: relative;
+  height: 100%;
+  background-color: white;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-bottom: 20px; }
+
+.cxc-content-image {
+  height: 150px;
+  overflow: hidden; }
+
+.content-copy {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  border-top: 3px solid #e5980a;
+  padding: 2%;
+  min-height: 135px; }
+  .content-copy p {
+    font-size: 0.8em; }
+
+.cxc-content-title h5 {
+  padding: 0;
+  margin: 0; }
+
+.cxc-content-excerpt {
+  font-size: 0.8em;
+  height: 100px;
+  overflow: hidden; }
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 25%;
+  top: 0;
+  background-color: #ededed;
+  z-index: 1; }
+  header h4 {
+    position: absolute;
+    width: 45%;
+    margin: 0;
+    margin-left: 5%;
+    bottom: 8%; }
+  header select.change-moment-select {
+    position: absolute;
+    left: 50%;
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: 25%;
+    height: 18%;
+    top: 30%;
+    background-color: #e5980a;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    border: none; }
+  header figure {
+    position: absolute;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2.5%; }
+    header figure img {
+      width: 100%; }
+    header figure.header-image-left {
+      width: 25%;
+      left: 0; }
+    header figure.header-image-right {
+      right: 1%;
+      width: 12.5%; }
+
+.cxc-content-wrap {
+  margin-top: 12.5%; }
+  .cxc-content-wrap #more-button {
+    position: absolute;
+    right: 5px;
+    bottom: 5px; }
 
 /*# sourceMappingURL=site.css.map */

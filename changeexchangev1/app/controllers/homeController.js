@@ -3,14 +3,18 @@
 
     var app = angular.module("cxcApp");
 
-    var homeController = function ($scope) {
+    var homeController = function ($scope, contentState) {
 
-        $scope.testFunction = function () {
-            alert('Hello!!');
+        $scope.contentState = contentState;
+
+        $scope.callForPosts = function () {
+            return contentState.getPosts();
         }
 
-        $scope.message = 'HELLO FROM THE HOME';
+        //Initialise 
+        if (contentState.data.pageNumber <= 1)             // - If this is the first time we land on this page. 
+            $scope.callForPosts();
     }
 
-    app.controller("homeController", ["$scope", homeController]);
+    app.controller("homeController", ["$scope", "contentState", homeController]);
 }())

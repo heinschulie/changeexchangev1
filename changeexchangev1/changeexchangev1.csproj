@@ -43,7 +43,8 @@
     <Content Include="content\css\_colours.scss" />
     <Content Include="content\css\_fonts.scss" />
     <Content Include="content\css\_mixins.scss" />
-    <Content Include="content\css\_sbVariables.scss" />
+    <Content Include="content\css\_cxcVariables.scss" />
+    <Content Include="content\css\_cxc-card.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -54,21 +55,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\aboutController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\indexController.js" />
+    <Content Include="app\controllers\postController.js" />
+    <Content Include="app\directives\cxcCard.js" />
+    <Content Include="app\directives\templates\cxc-card.html" />
+    <Content Include="app\services\categoryService.js" />
+    <Content Include="app\services\cxcService.js" />
+    <Content Include="app\services\errorService.js" />
+    <Content Include="app\services\pageService.js" />
+    <Content Include="app\services\postService.js" />
+    <Content Include="app\services\contentState.js" />
+    <Content Include="app\views\about.html" />
     <Content Include="app\views\home.html" />
+    <Content Include="app\views\post.html" />
     <Content Include="content\css\site.css">
       <DependentUpon>site.scss</DependentUpon>
     </Content>
+    <Content Include="content\images\BrightRock-Slab.png" />
+    <Content Include="content\images\Change Exchange Logo.png" />
+    <Content Include="content\images\Love-Change-badge.png" />
     <Content Include="index.html" />
     <Content Include="scripts\pureNav.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
-    <Folder Include="app\services\" />
     <Folder Include="content\fonts\" />
-    <Folder Include="content\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,5 +1,6 @@
 @import '_colours.scss';
 @import '_mixins.scss'; 
+@import '_cxcVariables.scss';
 
 html {
     position: relative;
@@ -11,9 +12,14 @@ html {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
     a{
         -webkit-font-smoothing: antialiased;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+        cursor: pointer; 
+        text-decoration: none; 
+        color: $bodycopycolour;
     }
-
+    em{
+        font-style: normal; 
+        color: $mustard-orange; 
+    }
 }
 
 body {
@@ -26,12 +32,14 @@ body {
     xpadding-bottom: 10px;
     //@include basic-font(); 
     line-height: 1.428571429;
-    color: $base-colour;
+    color: $bodycopycolour;
+    background-color: $lightgray;
     /*
 	 * Relates to the pseudo class & sibling bug, see
 	 * http://css-tricks.com/webkit-sibling-bug/ for more details
 	 */
     -webkit-animation: bugfix infinite 1s;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 body::-webkit-scrollbar {
@@ -51,3 +59,62 @@ body::-webkit-scrollbar-thumb {
 @-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
 
 @import '_pureNav.scss'; 
+@import "cxc-card";
+
+header{
+    position: fixed;
+    width: 100%;
+    height: $headerHeight; 
+    top: 0; 
+    background-color: $lightgray;
+    z-index: 1;
+
+    h4{
+        position: absolute;
+        width: 45%;
+        margin: 0;
+        margin-left: 5%;
+        bottom: 8%;        
+    }
+
+    select.change-moment-select{
+        @include centerThisThingX(); 
+        width: 25%; 
+        height: 18%;
+        top: 30%; 
+        background-color: $mustard-orange; 
+        @include border-radius(3px);
+        border: none; 
+    }
+
+    figure{
+        position: absolute; 
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2.5%; 
+
+        img{
+            width: 100%;
+        }
+
+        &.header-image-left{          
+            width: 25%; 
+            left: 0;
+        }
+        &.header-image-right{  
+            right: 1%;         
+            width: 12.5%; 
+        }
+    }
+}
+
+.cxc-content-wrap{
+    margin-top: $headerHeight / 2; 
+
+    #more-button{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+    }
+}

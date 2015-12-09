@@ -1,4 +1,9 @@
-﻿<div ng-controller="homeController">
-    <a ng-cloak ng-click="testFunction()">{{message}}</a>
-    With Github
+﻿<div class="row">
+    <!--<div ng-repeat="post in contentState.data.posts">
+        <a ng-href="#/{{post.ID}}"><h3>{{post.title}}</h3></a>
+        <div ng-bind-html="post.excerpt"></div>
+        <img ng-src="{{post.featured_image.source}}" />
+    </div>-->
+    <cxc-card ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
+    <a id="more-button" ng-click="callForPosts()">More</a>
 </div>
