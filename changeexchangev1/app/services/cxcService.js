@@ -7,7 +7,7 @@
         //var applicationBase = 'http://localhost:16327/';
 
         // *** Development and staging
-        var serviceBase = 'http://changeexchangedev.azurewebsites.net/';
+        var serviceBase = 'http://changeexchangedev.azurewebsites.net/wp-json/';
         var applicationBase = 'http://changeexchangev1.azurewebsites.net//';
 
         // *** Production 

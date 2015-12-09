@@ -33,3 +33,9 @@ app.config(function ($routeProvider) {
     });
 
 });
+
+app.config(function ($httpProvider) {
+    //Enable cross domain calls
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    $httpProvider.defaults.useXDomain = true;
+});
