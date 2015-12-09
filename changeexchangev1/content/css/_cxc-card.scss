@@ -1,0 +1,68 @@
+@import '_mixins.scss';
+@import '_cxcVariables.scss';
+@import '_colours.scss';
+
+.image-column{
+    padding: 0;
+}
+
+.box-container {
+    box-sizing: border-box;
+    padding: .5rem;
+}
+
+.cxc-card{
+    height: 280px;
+    padding: 0;
+    margin-bottom: 2.5%;
+    img{
+        width:100%; 
+        @include transition(all, 1s, ease-in-out);
+        @include filter(grayscale, 100%);        
+    }
+    &:hover{
+        img{
+            @include filter(grayscale, 0);
+        }    
+    }
+}
+
+.card-inner{    
+    position: relative;
+    height: 100%;
+    background-color: $white; 
+    margin-left: 4px;  
+    margin-right: 4px; 
+    padding-bottom: 20px;
+}
+
+.cxc-content-image{
+    height: 150px; 
+    overflow: hidden;
+}
+
+.content-copy{
+    position: absolute;
+    bottom: 0;
+    background: $white;
+    border-top: 3px solid $mustard-orange; 
+    padding: 2%;
+    min-height: 135px;
+    p{
+        font-size: 0.8em;
+    }
+}
+
+
+.cxc-content-title{
+    h5{
+        padding: 0;
+        margin: 0; 
+    }
+}
+
+.cxc-content-excerpt{
+    font-size: 0.8em;
+    height: 100px;
+    overflow: hidden;
+}
