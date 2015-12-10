@@ -16,9 +16,6 @@
     box-sizing: border-box;
     min-height: 1rem;
     margin-bottom: 0;
-    background: #007FFF;
-    border: 1px solid #FFF;
-    border-radius: 2px;
     overflow: hidden;
     text-align: center;
     color: #fff;
@@ -30,12 +27,13 @@
 
 .cxc-card{
     height: $cardHeight;
-    //padding: 0;
-    /*margin-bottom: 3.5%;*/
     img{
         width:100%; 
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
+        -o-object-position: top center;
+        object-position: top center;
         @include transition(all, 0.5s, ease-in-out);
         @include filter(grayscale, 100%);        
     }
