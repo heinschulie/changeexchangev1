@@ -110,6 +110,33 @@ header{
     }
 }
 
+// The overall content container on the home page 
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+}
+.wrap {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-section {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 3rem;
+
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .cxc-content-wrap{
     margin-top: $headerHeight / 2; 
 

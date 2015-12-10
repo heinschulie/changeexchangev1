@@ -429,12 +429,26 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .box-container {
   box-sizing: border-box;
-  padding: .5rem; }
+  padding: .2rem; }
+
+.box-row {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: #007FFF;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff; }
+
+.reduced-padding {
+  padding: 0.2rem; }
 
 .cxc-card {
   height: 280px;
-  padding: 0;
-  margin-bottom: 3.5%; }
+  /*margin-bottom: 3.5%;*/ }
   .cxc-card img {
     width: 100%;
     height: 100%;
@@ -460,25 +474,55 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       /*@include translate(-50%, 0);
       width: 100%;*/ } }
 
-.card-inner {
-  position: relative;
-  height: 100%;
-  background-color: white;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-bottom: 20px; }
-
+@media only screen and (max-width: 30em) {
+  .cxc-card,
+  .col-xs,
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9,
+  .col-xs-offset-1,
+  .col-xs-offset-10,
+  .col-xs-offset-11,
+  .col-xs-offset-12,
+  .col-xs-offset-2,
+  .col-xs-offset-3,
+  .col-xs-offset-4,
+  .col-xs-offset-5,
+  .col-xs-offset-6,
+  .col-xs-offset-7,
+  .col-xs-offset-8,
+  .col-xs-offset-9 {
+    padding-left: 0;
+    padding-right: 0; } }
+/*.card-inner{    
+    position: relative;
+    height: 100%;
+    background-color: $white; 
+    margin-left: 4px;  
+    margin-right: 4px; 
+    padding-bottom: 20px;
+}*/
 .cxc-content-image {
   height: 200px;
   overflow: hidden; }
 
 .content-copy {
   position: absolute;
+  width: 100%;
   bottom: 0;
   background: white;
   border-top: 3px solid #e5980a;
   padding: 2%;
-  min-height: 100px; }
+  min-height: 60px; }
   .content-copy p {
     font-size: 0.8em; }
 
@@ -608,7 +652,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .banner-copy {
   position: absolute;
-  right: 0;
+  right: .5rem;
   width: 40%;
   height: 210px; }
 
@@ -665,6 +709,28 @@ header {
     header figure.header-image-right {
       right: 1%;
       width: 12.5%; }
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.container-fluid {
+  margin-right: 0;
+  margin-left: 0; }
+
+.wrap {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.page-section {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 3rem; }
+  .page-section .row {
+    margin-left: 0;
+    margin-right: 0; }
 
 .cxc-content-wrap {
   margin-top: 12.5%; }
