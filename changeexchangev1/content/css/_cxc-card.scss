@@ -27,6 +27,12 @@
             @include filter(grayscale, 0);
         }    
     }
+
+    @include bp-small{
+        //margin-left: 6.3%;
+        /*@include translate(-50%, 0);
+        width: 100%;*/
+    }
 }
 
 .card-inner{    

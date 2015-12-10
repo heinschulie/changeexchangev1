@@ -8,7 +8,8 @@
             pageNumber: 0,
             postsPerPage : 6,
             post: {},
-            posts: []
+            posts: [],
+            banners: []
         };
 
         var getPage = function (pageId) {

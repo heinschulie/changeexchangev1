@@ -1,9 +1,12 @@
 ﻿<div class="row">
-    <div class="row col-lg-9">
-        <cxc-card ng-class="$first ? 'col-lg-9' : 'col-lg-3'" ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
-        <a id="more-button" ng-click="callForPosts()">More</a>
+    <div class="banner-container col-lg-12 col-xs-12">
+        <cxc-banner cxcbannercontent="contentState.data.posts[1]"></cxc-banner>
     </div>
-    <div class="social-feeds column col-lg-3">
+    <div class="row col-lg-9 col-xs-12">
+        <cxc-card ng-class="$first ? 'col-lg-9 col-xs-12' : 'col-lg-3 col-xs-12'" ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
+        <a class="col-lg-12" ng-click="callForPosts()">More</a>
+    </div>
+    <div class="social-feeds column col-lg-3 col-xs-12">
         <span>
             <a ng-click="changeSm('fb')">fb</a>
             <a ng-click="changeSm('tw')">tw</a>

@@ -59,8 +59,9 @@ body::-webkit-scrollbar-thumb {
 @-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
 
 @import '_pureNav.scss'; 
-@import "cxc-card";
+@import "_cxc-card";
 @import '_socialFeeds.scss';
+@import "_cxc-banner.scss";
 
 header{
     position: fixed;

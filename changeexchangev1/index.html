@@ -24,7 +24,7 @@
             <figure class="header-image-left">
                 <img src="content/images/Change Exchange Logo.png" />
             </figure>
-            <select class="change-moment-select" ng-init="chosenMoment = changeMoments[0]" ng-model="chosenMoment" ng-options="moment.title for moment in changeMoments" ng-change="callForPosts(chosenMoment)"></select>
+            <select class="change-moment-select" ng-model="chosenMoment" ng-options="moment.title for moment in changeMoments" ng-change="selectedMoment(null)"></select>
             <figure class="header-image-right">
                 <img src="content/images/BrightRock-Slab.png" />
             </figure>
@@ -38,9 +38,9 @@
                 </a>
                 <div class="pure-menu">
                     <div id="menu-wrapper">
-                        <a class="pure-menu-heading" ng-click="callForPosts(null)">Change Moments</a>
+                        <a class="pure-menu-heading" ng-click="selectedMoment('all')">Change Moments</a>
                         <ul class="pure-menu-list">
-                            <li ng-cloak class="pure-menu-item" ng-model="chosenMoment" ng-class="{ 'active': moment.active }" ng-repeat="moment in changeMoments"><a ng-click="callForPosts(moment.title)" class="pure-menu-link">{{moment.title}}</a></li>
+                            <li ng-cloak class="pure-menu-item" ng-class="{ 'active': moment.active }" ng-repeat="moment in changeMoments"><a ng-click="selectedMoment(moment)" class="pure-menu-link">{{moment.title}}</a></li>
                             <!--<li class="pure-menu-item"><a ng-click="callForPosts('Landing that Job')" class="pure-menu-link">Landing that Job</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Making a Home')" class="pure-menu-link">Making a Home</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Starting a Family')" class="pure-menu-link">Starting a Family</a></li>
@@ -93,7 +93,7 @@
 
     <!-- Load directives -->
     <script src="app/directives/cxcCard.js"></script>
-
+    <script src="app/directives/cxcBanner.js"></script>
     <!-- Load controllers -->
     <script src="app/controllers/aboutController.js"></script>
     <script src="app/controllers/homeController.js"></script>

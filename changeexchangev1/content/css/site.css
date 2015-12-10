@@ -455,6 +455,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     -ms-filter: grayscale(0);
     -o-filter: grayscale(0);
     filter: grayscale(0); }
+  @media only screen and (max-width: 30em) {
+    .cxc-card {
+      /*@include translate(-50%, 0);
+      width: 100%;*/ } }
 
 .card-inner {
   position: relative;
@@ -541,6 +545,82 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       background-color: #2e2e2e; }
       .social-feeds span a:hover {
         background-color: #f6a915; }
+
+/*Colours*/
+/*@mixin bp-iphone6landscape {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : landscape) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}
+
+@mixin bp-iphone6portrait {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : portrait) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}*/
+/* Smartphones (landscape) ----------- 4 */
+/* Smartphones (portrait) ----------- 4 */
+/* Smartphones (portrait) ----------- 5 */
+/* Smartphones (landscape) ----------- 5 */
+/* Smartphones (portrait) ----------- 6 */
+/* Smartphones (landscape) ----------- 6 */
+/* Smartphones (portrait) ----------- 6+ */
+/* Smartphones (landscape) ----------- 6+ */
+/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* Desktops and laptops ----------- */
+/*Colours*/
+.banner-container {
+  height: 210px;
+  margin-bottom: 0.5em; }
+
+.cxc-banner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center; }
+  .cxc-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); }
+
+.banner-copy {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  height: 210px; }
+
+.banner-overlay {
+  position: absolute;
+  height: 210px;
+  width: 100%;
+  opacity: 0.5;
+  background-color: #616161; }
+
+.cxc-banner-title {
+  text-transform: uppercase; }
 
 header {
   position: fixed;
