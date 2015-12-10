@@ -468,10 +468,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     -ms-filter: grayscale(0);
     -o-filter: grayscale(0);
     filter: grayscale(0); }
-  @media only screen and (max-width: 30em) {
-    .cxc-card {
-      /*@include translate(-50%, 0);
-      width: 100%;*/ } }
 
 @media only screen and (max-width: 30em) {
   .cxc-card,
@@ -489,9 +485,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .col-xs-8,
   .col-xs-9,
   .col-xs-offset-1,
-  .col-xs-offset-10,
-  .col-xs-offset-11,
-  .col-xs-offset-12,
   .col-xs-offset-2,
   .col-xs-offset-3,
   .col-xs-offset-4,
@@ -499,17 +492,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .col-xs-offset-6,
   .col-xs-offset-7,
   .col-xs-offset-8,
-  .col-xs-offset-9 {
+  .col-xs-offset-9,
+  .col-xs-offset-10,
+  .col-xs-offset-11,
+  .col-xs-offset-12 {
     padding-left: 0;
     padding-right: 0; } }
-/*.card-inner{    
-    position: relative;
-    height: 100%;
-    background-color: $white; 
-    margin-left: 4px;  
-    margin-right: 4px; 
-    padding-bottom: 20px;
-}*/
 .cxc-content-image {
   height: 200px;
   overflow: hidden; }
@@ -743,6 +731,9 @@ header {
 
 .cxc-content-wrap {
   margin-top: 25%; }
+  @media only screen and (min-width: 1224px) {
+    .cxc-content-wrap {
+      margin-top: 12.5%; } }
   .cxc-content-wrap #more-button {
     position: absolute;
     right: 5px;

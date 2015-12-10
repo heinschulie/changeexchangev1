@@ -138,7 +138,10 @@ header{
 }
 
 .cxc-content-wrap{
-    margin-top: $headerHeight; 
+    margin-top: $headerHeight;
+    @include bp-desktop{       
+        margin-top: $headerHeight/2; 
+    } 
 
     #more-button{
         position: absolute;
