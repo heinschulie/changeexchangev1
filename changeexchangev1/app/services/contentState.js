@@ -6,7 +6,7 @@
         var data = {
             changeMoment: '',
             pageNumber: 0,
-            postsPerPage : 1,
+            postsPerPage : 6,
             post: {},
             posts: []
         };

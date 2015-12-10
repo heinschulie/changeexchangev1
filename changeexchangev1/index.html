@@ -9,20 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
+    <div id="fb-root"></div>
     <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '481757868679120',
-                xfbml: true,
-                version: 'v2.5'
-            });
-        };
-
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
+            if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=481757868679120";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -31,7 +24,7 @@
             <figure class="header-image-left">
                 <img src="content/images/Change Exchange Logo.png" />
             </figure>
-            <select class="change-moment-select" ng-init="chosenMoment = changeMoments[0]" ng-model="chosenMoment" ng-options="moment for moment in changeMoments" ng-change="callForPosts(chosenMoment)"></select>
+            <select class="change-moment-select" ng-init="chosenMoment = changeMoments[0]" ng-model="chosenMoment" ng-options="moment.title for moment in changeMoments" ng-change="callForPosts(chosenMoment)"></select>
             <figure class="header-image-right">
                 <img src="content/images/BrightRock-Slab.png" />
             </figure>
@@ -47,17 +40,16 @@
                     <div id="menu-wrapper">
                         <a class="pure-menu-heading" ng-click="callForPosts(null)">Change Moments</a>
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Landing that Job')" class="pure-menu-link">Landing that Job</a></li>
+                            <li ng-cloak class="pure-menu-item" ng-model="chosenMoment" ng-class="{ 'active': moment.active }" ng-repeat="moment in changeMoments"><a ng-click="callForPosts(moment.title)" class="pure-menu-link">{{moment.title}}</a></li>
+                            <!--<li class="pure-menu-item"><a ng-click="callForPosts('Landing that Job')" class="pure-menu-link">Landing that Job</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Making a Home')" class="pure-menu-link">Making a Home</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Starting a Family')" class="pure-menu-link">Starting a Family</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Tying the Knot</a></li>
+                            <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Tying the Knot</a></li>-->
                         </ul>
                         <a class="pure-menu-heading" href="#">Exchange</a>
                         <ul class="pure-menu-list">
                             <li class="pure-menu-item"><a href="#/about" class="pure-menu-link">About</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Making a Home')" class="pure-menu-link">Events</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Starting a Family')" class="pure-menu-link">Exchange</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Iris Sessions</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Connection Sessions</a></li>
                             <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Galleries</a></li>
                             <li ng-cloak class="pure-menu-item" ng-repeat="cat in exchangeCategories | orderBy:'id'"><a href="#" class="pure-menu-link">{{cat.name}}</a></li>

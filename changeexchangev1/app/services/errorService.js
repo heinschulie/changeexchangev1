@@ -22,6 +22,7 @@
             //var status = error.status;
             //var message = error.data.message;
             //toastr.error("An error " + status + " got caught here: " + message);
+            console.log(error);
         };
 
         return {

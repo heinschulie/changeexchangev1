@@ -1,9 +1,33 @@
 ﻿<div class="row">
-    <!--<div ng-repeat="post in contentState.data.posts">
-        <a ng-href="#/{{post.ID}}"><h3>{{post.title}}</h3></a>
-        <div ng-bind-html="post.excerpt"></div>
-        <img ng-src="{{post.featured_image.source}}" />
-    </div>-->
-    <cxc-card ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
-    <a id="more-button" ng-click="callForPosts()">More</a>
+    <div class="row col-lg-9">
+        <cxc-card ng-class="$first ? 'col-lg-9' : 'col-lg-3'" ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
+        <a id="more-button" ng-click="callForPosts()">More</a>
+    </div>
+    <div class="social-feeds column col-lg-3">
+        <span>
+            <a ng-click="changeSm('fb')">fb</a>
+            <a ng-click="changeSm('tw')">tw</a>
+        </span>
+        <div ng-show="currentSm == 'fb'">
+            <div class="fb-page"
+                 data-href="https://www.facebook.com/sontheband"
+                 data-tabs="timeline"
+                 data-height="610"
+                 data-width="275"
+                 data-small-header="true"
+                 data-adapt-container-width="true"
+                 data-hide-cover="false"
+                 data-show-facepile="true">
+                <div class="fb-xfbml-parse-ignore">
+                    <blockquote cite="https://www.facebook.com/sontheband">
+                        <a href="https://www.facebook.com/sontheband">SON</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="" ng-show="current-sm == 'tw'">
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/lovechange" data-widget-id="674864355553484800" data-chrome="nofooter noborders noscrollbar transparent">#lovechange Tweets</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
+    </div>
 </div>

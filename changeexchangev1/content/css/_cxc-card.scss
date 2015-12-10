@@ -12,12 +12,14 @@
 }
 
 .cxc-card{
-    height: 280px;
+    height: $cardHeight;
     padding: 0;
-    margin-bottom: 2.5%;
+    margin-bottom: 3.5%;
     img{
         width:100%; 
-        @include transition(all, 1s, ease-in-out);
+        height: 100%;
+        object-fit: cover;
+        @include transition(all, 0.5s, ease-in-out);
         @include filter(grayscale, 100%);        
     }
     &:hover{
@@ -37,7 +39,7 @@
 }
 
 .cxc-content-image{
-    height: 150px; 
+    height: 200px; 
     overflow: hidden;
 }
 
@@ -47,7 +49,7 @@
     background: $white;
     border-top: 3px solid $mustard-orange; 
     padding: 2%;
-    min-height: 135px;
+    min-height: 100px;
     p{
         font-size: 0.8em;
     }

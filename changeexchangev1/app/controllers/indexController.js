@@ -5,9 +5,24 @@
 
     var indexController = function ($scope, $location, contentState, categoryService) {
        
-        $scope.changeMoments = ['What change moment are you going through?', 'Landing that Job', 'Making a Home', 'Starting a Family', 'Tying the Knot'];
+        $scope.chosenMoment = "";
+        $scope.changeMoments = [
+            { title: 'What change moment are you going through?', active: false },
+            { title: 'Landing that Job', active: false },
+            { title: 'Making a Home', active: false },
+            { title: 'Starting a Family', active: false },
+            { title: 'Tying the Knot', active: false }
+        ];
 
         $scope.callForPosts = function (category) {
+            angular.forEach($scope.changeMoments, function (moment) {
+                if (moment.title === category) {
+                    moment.active = true;
+                    $scope.chosenMoment = moment;
+                }
+                else
+                    moment.active = false;
+            })
             contentState.data.pageNumber = 0;                                               // - Explicitly set page number back to 1                            
             var position = contentState.data.postsPerPage * contentState.data.pageNumber;   // - Calculate position to splice post array 
             contentState.data.posts = contentState.data.posts.splice(0, position)           // - Trim array down to position 

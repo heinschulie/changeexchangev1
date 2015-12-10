@@ -252,6 +252,9 @@ Change color of the anchor links on hover/focus.
 #menu .pure-menu li a:focus {
   background: #f6a915; }
 
+.active {
+  background: #f6a915; }
+
 /*
 This styles the selected menu item `<li>`.
 */
@@ -431,14 +434,16 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .cxc-card {
   height: 280px;
   padding: 0;
-  margin-bottom: 2.5%; }
+  margin-bottom: 3.5%; }
   .cxc-card img {
     width: 100%;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
@@ -460,7 +465,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   padding-bottom: 20px; }
 
 .cxc-content-image {
-  height: 150px;
+  height: 200px;
   overflow: hidden; }
 
 .content-copy {
@@ -469,7 +474,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   background: white;
   border-top: 3px solid #e5980a;
   padding: 2%;
-  min-height: 135px; }
+  min-height: 100px; }
   .content-copy p {
     font-size: 0.8em; }
 
@@ -481,6 +486,46 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   font-size: 0.8em;
   height: 100px;
   overflow: hidden; }
+
+/*Colours*/
+/*@mixin bp-iphone6landscape {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : landscape) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}
+
+@mixin bp-iphone6portrait {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : portrait) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}*/
+/* Smartphones (landscape) ----------- 4 */
+/* Smartphones (portrait) ----------- 4 */
+/* Smartphones (portrait) ----------- 5 */
+/* Smartphones (landscape) ----------- 5 */
+/* Smartphones (portrait) ----------- 6 */
+/* Smartphones (landscape) ----------- 6 */
+/* Smartphones (portrait) ----------- 6+ */
+/* Smartphones (landscape) ----------- 6+ */
+/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* Desktops and laptops ----------- */
+/*Colours*/
+.social-feeds {
+  height: 610px;
+  background-color: #616161; }
 
 header {
   position: fixed;

@@ -1,4 +1,4 @@
-﻿<div class="cxc-card column col-lg-3 center-lg bottom-lg">
+﻿<div class="cxc-card column center-lg bottom-lg" >
     <div class="card-inner col-large-12">
         <a ng-href="#/{{cxccontent.ID}}">
             <div class="image-column col-lg-12">
@@ -6,27 +6,13 @@
                     <img ng-src="{{cxccontent.featured_image.source}}">
                 </div>
             </div>
-            <!--<div class="col-lg-12">
-            <div class="cxc-content-title box">
-                <h5>{{cxccontent.title}}"</h5>
-            </div>
-        </div>
-        <div class="cxc-content-excerpt col-lg-12">
-            <div ng-bind-html="cxccontent.excerpt" class="box"></div>
-        </div>-->
             <div class="content-copy">
                 <div class="cxc-content-title">
                     <h5>{{cxccontent.title}}"</h5>
                 </div>
-            <div ng-bind-html="cxccontent.excerpt" class="box"></div>
-            <!--<p><em>{{cxccontent.author.username}}</em></p>-->
+                <div ng-bind-html="cxccontent.excerpt" class="box"></div>
             </div>
         </a>
-        <div class="fb-like"
-             data-share="true"
-             data-width="450"
-             data-show-faces="true">
-        </div>
     </div>
 </div>
 

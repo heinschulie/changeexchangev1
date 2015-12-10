@@ -45,6 +45,7 @@
     <Content Include="content\css\_mixins.scss" />
     <Content Include="content\css\_cxcVariables.scss" />
     <Content Include="content\css\_cxc-card.scss" />
+    <Content Include="content\css\_socialFeeds.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
