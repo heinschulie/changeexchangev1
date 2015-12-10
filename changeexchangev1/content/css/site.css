@@ -146,11 +146,18 @@ This is the parent `<div>` that contains the menu and the content area.
   padding-left: 0; }
 
 #layout.active #menu {
-  left: 17.5%;
-  width: 17.5%; }
+  left: 70%;
+  width: 70%; }
+  @media only screen and (min-width: 1224px) {
+    #layout.active #menu {
+      left: 17.5%;
+      width: 17.5%; } }
 
 #layout.active .menu-link {
-  left: 17.5%; }
+  left: 70%; }
+  @media only screen and (min-width: 1224px) {
+    #layout.active .menu-link {
+      left: 17.5%; } }
 
 /*
 The content `<div>` is where all your content goes.
@@ -190,9 +197,9 @@ The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 #menu {
-  margin-left: -17.5%;
+  margin-left: -70%;
   /* "#menu" width */
-  width: 17.5%;
+  width: 70%;
   position: fixed;
   top: 25%;
   left: 0;
@@ -203,6 +210,11 @@ appears on the left side of the page.
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
+  @media only screen and (min-width: 1224px) {
+    #menu {
+      margin-left: -17.5%;
+      /* "#menu" width */
+      width: 17.5%; } }
 
 #menu::-webkit-scrollbar {
   width: 0.2em; }
@@ -364,20 +376,37 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-right: 2em; }
 
   #layout {
-    padding-left: 17.5%;
+    padding-left: 70%;
     /* left col width "#menu" */
-    left: 0; }
+    left: 0; } }
+  @media only screen and (min-width: 48em) and (min-width: 1224px) {
+    #layout {
+      padding-left: 17.5%;
+      /* "#menu" width */ } }
 
+@media (min-width: 48em) {
   #menu {
-    left: 17.5%; }
+    left: 70%; } }
+  @media only screen and (min-width: 48em) and (min-width: 1224px) {
+    #menu {
+      left: 17.5%; } }
 
+@media (min-width: 48em) {
   .menu-link {
     position: fixed;
-    left: 17.5%;
-    display: none; }
+    left: 70%;
+    display: none; } }
+  @media only screen and (min-width: 48em) and (min-width: 1224px) {
+    .menu-link {
+      left: 17.5%; } }
 
+@media (min-width: 48em) {
   #layout.active .menu-link {
-    left: 17.5%; } }
+    left: 70%; } }
+  @media only screen and (min-width: 48em) and (min-width: 1224px) {
+    #layout.active .menu-link {
+      left: 17.5%; } }
+
 @media (max-width: 48em) {
   /* Only apply this when the window is small. Otherwise, the following
   case results in extra padding on the left:
@@ -387,7 +416,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   */
   #layout.active {
     position: relative;
-    left: 17.5%; } }
+    left: 70%; } }
+  @media only screen and (max-width: 48em) and (min-width: 1224px) {
+    #layout.active {
+      left: 17.5%; } }
+
 /*Colours*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
@@ -692,8 +725,8 @@ header {
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     width: 80%;
-    height: 30%;
-    top: 75%;
+    height: 40%;
+    top: 64%;
     background-color: #e5980a;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

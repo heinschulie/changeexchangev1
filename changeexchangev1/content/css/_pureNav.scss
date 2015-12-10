@@ -29,12 +29,20 @@ This is the parent `<div>` that contains the menu and the content area.
     padding-left: 0;
 }
     #layout.active #menu {
-        left: $sideNavWidth;
-        width: $sideNavWidth;
+        left: $mobileSideNavWidth;
+        width: $mobileSideNavWidth;
+
+        @include bp-desktop{
+            left: $sideNavWidth;
+            width: $sideNavWidth;
+        }
     }
 
     #layout.active .menu-link {
-        left: $sideNavWidth;
+        left: $mobileSideNavWidth;
+        @include bp-desktop{
+            left: $sideNavWidth;
+        }
     }
 /*
 The content `<div>` is where all your content goes.
@@ -80,8 +88,8 @@ appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -$sideNavWidth; /* "#menu" width */
-    width: $sideNavWidth;
+    margin-left: -$mobileSideNavWidth; /* "#menu" width */
+    width: $mobileSideNavWidth;
     position: fixed;
     top: $headerHeight;
     left: 0;
@@ -91,6 +99,11 @@ appears on the left side of the page.
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    @include bp-desktop{
+        margin-left: -$sideNavWidth; /* "#menu" width */
+        width: $sideNavWidth;
+    }
 }
 
 #menu::-webkit-scrollbar {
@@ -266,21 +279,33 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: $sideNavWidth; /* left col width "#menu" */
+        padding-left: $mobileSideNavWidth; /* left col width "#menu" */
         left: 0;
+        @include bp-desktop{
+            padding-left: $sideNavWidth; /* "#menu" width */
+        }
     }
     #menu {
-        left: $sideNavWidth;
+        left: $mobileSideNavWidth;
+        @include bp-desktop{
+            left: $sideNavWidth;
+        }
     }
 
     .menu-link {
         position: fixed;
-        left: $sideNavWidth;
+        left: $mobileSideNavWidth;
         display: none;
+        @include bp-desktop{
+            left: $sideNavWidth;
+        }
     }
 
     #layout.active .menu-link {
-        left: $sideNavWidth;
+        left: $mobileSideNavWidth;
+        @include bp-desktop{
+            left: $sideNavWidth;
+        }
     }
 }
 
@@ -293,6 +318,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     */
     #layout.active {
         position: relative;
-        left: $sideNavWidth;
+        left: $mobileSideNavWidth;
+        @include bp-desktop{
+            left: $sideNavWidth;
+        }
     }
 }
