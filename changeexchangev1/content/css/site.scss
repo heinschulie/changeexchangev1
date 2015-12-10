@@ -66,27 +66,41 @@ body::-webkit-scrollbar-thumb {
 header{
     position: fixed;
     width: 100%;
-    height: $headerHeight; 
+    height: $headerHeight / 2; 
     top: 0; 
     background-color: $lightgray;
     z-index: 1;
 
+    @include bp-desktop{       
+        height: $headerHeight; 
+    }
+
     h4{
-        position: absolute;
-        width: 45%;
-        margin: 0;
-        margin-left: 5%;
-        bottom: 8%;        
+         display: none;
+        @include bp-desktop{   
+            display: block;    
+            position: absolute;
+            width: 45%;
+            margin: 0;
+            margin-left: 5%;
+            bottom: 8%;
+        }       
     }
 
     select.change-moment-select{
         @include centerThisThingX(); 
-        width: 25%; 
-        height: 18%;
-        top: 30%; 
+        width: 80%; 
+        height: 30%;
+        top: 75%; 
         background-color: $mustard-orange; 
         @include border-radius(3px);
         border: none; 
+
+        @include bp-desktop{       
+                width: 25%; 
+                height: 18%;
+                top: 30%; 
+            }
     }
 
     figure{
@@ -100,12 +114,20 @@ header{
         }
 
         &.header-image-left{          
-            width: 25%; 
-            left: 0;
+            width: 65%; 
+            left: 15%;
+            @include bp-desktop{       
+                width: 25%; 
+                left: 0;
+            }
         }
         &.header-image-right{  
-            right: 1%;         
-            width: 12.5%; 
+            display: none;
+            @include bp-desktop{  
+                display: block;     
+                right: 1%;         
+                width: 12.5%;
+            }            
         }
     }
 }
