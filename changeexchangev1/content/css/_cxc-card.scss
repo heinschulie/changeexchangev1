@@ -7,8 +7,8 @@
 }
 
 .box-container {
-    box-sizing: border-box;
-    padding: .2rem;
+    /*box-sizing: border-box;
+    padding: .2rem;*/
 }
 
 .box-row{
@@ -21,8 +21,11 @@
     color: #fff;
 }
 
+.negative-margin-top-2{
+    margin-top: -$padding*2;
+}
 .reduced-padding{
-    padding: 0.2rem;
+    padding: $padding;
 }
 
 .cxc-card{
@@ -87,7 +90,6 @@
     bottom: 0;
     background: $white;
     border-top: 3px solid $mustard-orange; 
-    padding: 2%;
     min-height: 60px;
     p{
         font-size: 0.8em;
@@ -105,4 +107,9 @@
     font-size: 0.8em;
     height: 100px;
     overflow: hidden;
+}
+
+.excerpt{
+    padding-left: $padding;
+    padding-right: $padding;
 }

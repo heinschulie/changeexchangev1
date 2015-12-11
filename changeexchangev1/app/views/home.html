@@ -1,11 +1,15 @@
 ﻿<div class="wrap">
 
     <section class="page-section">
-        <div class="banner-container col-lg-12 col-xs-12">
-            <cxc-banner cxcbannercontent="contentState.data.posts[1]"></cxc-banner>
+        <div class="row reduced-padding">
+            <!--<div class="row">-->
+                <div class="banner-container col-lg-12 col-xs-12">
+                    <cxc-banner cxcbannercontent="contentState.data.posts[1]"></cxc-banner>
+                </div>
+            <!--</div>-->
         </div>
         <div class="row reduced-padding">
-            <div class="row col-lg-9 col-xs-12">
+            <div class="row col-lg-9 col-xs-12 reduced-padding negative-margin-top-2">
                 <cxc-card ng-class="$first ? 'col-xs-12 col-sm-3 col-md-2 col-lg-8' : 'col-xs-12 col-sm-3 col-md-2 col-lg-4'" ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
                 <a class="col-lg-12" ng-click="callForPosts()">More</a>
             </div>
@@ -19,8 +23,8 @@
                         <div class="fb-page"
                              data-href="https://www.facebook.com/sontheband"
                              data-tabs="timeline"
-                             data-height="555"
-                             data-width="268"
+                             data-height="517"
+                             data-width="255"
                              data-small-header="true"
                              data-adapt-container-width="true"
                              data-hide-cover="false"
