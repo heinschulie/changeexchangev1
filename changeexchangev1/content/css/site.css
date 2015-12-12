@@ -331,7 +331,7 @@ Change color of the anchor links on hover/focus.
   background: #f6a915; }
 
 a.active {
-  background: #616161;
+  background: black;
   top: 0;
   bottom: 0;
   right: 0;

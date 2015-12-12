@@ -1,4 +1,4 @@
-﻿<div class="wrap" ng-class="{'active': $parent.active}">
+﻿<div class="wrap">
     <section class="page-section">
         <div class="row reduced-padding carousel-wrapper">
             <!--<div class="row">-->
@@ -14,8 +14,7 @@
                 <cxc-card ng-class="$first ? 'col-xs-12 col-sm-3 col-md-2 col-lg-8' : 'col-xs-12 col-sm-3 col-md-2 col-lg-4'" ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
                 <a class="col-lg-12" ng-click="callForPosts()">More</a>
             </div>
-            <div class="col-lg-3 col-xs-12">
-                <!--social-feeds column-->
+            <div class="col-lg-3 col-xs-12"> <!--social-feeds column--> 
                 <div class="social-feeds box reduced-padding">
                     <span>
                         <a ng-click="changeSm('fb')">fb</a>
@@ -47,5 +46,5 @@
         </div>
     </section>
 
-
+    
 </div>
