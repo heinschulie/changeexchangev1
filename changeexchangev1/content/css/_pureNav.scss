@@ -27,6 +27,9 @@ This is the parent `<div>` that contains the menu and the content area.
     position: relative;
     top: $headerHeight; 
     padding-left: 0;
+    @include bp-desktop{
+        top: $headerHeight; 
+    }
 }
     #layout.active #menu {
         left: $mobileSideNavWidth;
@@ -91,7 +94,7 @@ appears on the left side of the page.
     margin-left: -$mobileSideNavWidth; /* "#menu" width */
     width: $mobileSideNavWidth;
     position: fixed;
-    top: $headerHeight;
+    top: 0;
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
@@ -103,6 +106,7 @@ appears on the left side of the page.
     @include bp-desktop{
         margin-left: -$sideNavWidth; /* "#menu" width */
         width: $sideNavWidth;
+        top: $headerHeight;
     }
 }
 
@@ -227,8 +231,9 @@ small screens.
     top: 0;
     left: 0; /* "#menu width" */
     background: #000;
+    background: black;
     background: rgba(0,0,0,0.7);
-    font-size: 10px; /* change this value to increase/decrease button size */
+    font-size: 20px; /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
     height: auto;
@@ -295,8 +300,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     .menu-link {
         position: fixed;
         left: $mobileSideNavWidth;
-        display: none;
+        /*display: none;*/
         @include bp-desktop{
+            display: none;
             left: $sideNavWidth;
         }
     }

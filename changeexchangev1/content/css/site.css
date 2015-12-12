@@ -34,6 +34,66 @@
 /* iPads (landscape) ----------- */
 /* iPads (portrait and landscape) ----------- */
 /* Desktops and laptops ----------- */
+input[type=range] {
+  width: 300px; }
+
+ul[rn-carousel] {
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  position: relative;
+  perspective: 1000px;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+  ul[rn-carousel] > li {
+    color: black;
+    backface-visibility: hidden;
+    overflow: visible;
+    vertical-align: top;
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: normal;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: inline-block; }
+
+/* prevent flickering when moving buffer */
+ul[rn-carousel-buffered] > li {
+  display: none; }
+
+ul[rn-carousel-transition="hexagon"] {
+  overflow: visible; }
+
+/* indicators */
+div.rn-carousel-indicator span {
+  cursor: pointer;
+  color: #666; }
+  div.rn-carousel-indicator span.active {
+    color: white; }
+
+/* prev/next controls */
+.rn-carousel-control {
+  transition: opacity 0.2s ease-out;
+  font-size: 2rem;
+  position: absolute;
+  top: 40%;
+  opacity: 0.75;
+  cursor: pointer; }
+  .rn-carousel-control:hover {
+    opacity: 1; }
+  .rn-carousel-control.rn-carousel-control-prev {
+    left: 0.5em; }
+    .rn-carousel-control.rn-carousel-control-prev:before {
+      content: "<"; }
+  .rn-carousel-control.rn-carousel-control-next {
+    right: 0.5em; }
+    .rn-carousel-control.rn-carousel-control-next:before {
+      content: ">"; }
+
 html {
   position: relative;
   min-height: 100%;
@@ -144,17 +204,20 @@ This is the parent `<div>` that contains the menu and the content area.
   position: relative;
   top: 25%;
   padding-left: 0; }
+  @media only screen and (min-width: 1224px) {
+    #layout {
+      top: 25%; } }
 
 #layout.active #menu {
-  left: 70%;
-  width: 70%; }
+  left: 50%;
+  width: 50%; }
   @media only screen and (min-width: 1224px) {
     #layout.active #menu {
       left: 17.5%;
       width: 17.5%; } }
 
 #layout.active .menu-link {
-  left: 70%; }
+  left: 50%; }
   @media only screen and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 17.5%; } }
@@ -197,11 +260,11 @@ The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 #menu {
-  margin-left: -70%;
+  margin-left: -50%;
   /* "#menu" width */
-  width: 70%;
+  width: 50%;
   position: fixed;
-  top: 25%;
+  top: 0;
   left: 0;
   bottom: 0;
   z-index: 1000;
@@ -214,7 +277,8 @@ appears on the left side of the page.
     #menu {
       margin-left: -17.5%;
       /* "#menu" width */
-      width: 17.5%; } }
+      width: 17.5%;
+      top: 25%; } }
 
 #menu::-webkit-scrollbar {
   width: 0.2em; }
@@ -333,8 +397,9 @@ small screens.
   left: 0;
   /* "#menu width" */
   background: #000;
+  background: black;
   background: rgba(0, 0, 0, 0.7);
-  font-size: 10px;
+  font-size: 20px;
   /* change this value to increase/decrease button size */
   z-index: 10;
   width: 2em;
@@ -376,7 +441,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-right: 2em; }
 
   #layout {
-    padding-left: 70%;
+    padding-left: 50%;
     /* left col width "#menu" */
     left: 0; } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
@@ -386,7 +451,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (min-width: 48em) {
   #menu {
-    left: 70%; } }
+    left: 50%; } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
     #menu {
       left: 17.5%; } }
@@ -394,15 +459,16 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 @media (min-width: 48em) {
   .menu-link {
     position: fixed;
-    left: 70%;
-    display: none; } }
+    left: 50%;
+    /*display: none;*/ } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
     .menu-link {
+      display: none;
       left: 17.5%; } }
 
 @media (min-width: 48em) {
   #layout.active .menu-link {
-    left: 70%; } }
+    left: 50%; } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 17.5%; } }
@@ -416,7 +482,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   */
   #layout.active {
     position: relative;
-    left: 70%; } }
+    left: 50%; } }
   @media only screen and (max-width: 48em) and (min-width: 1224px) {
     #layout.active {
       left: 17.5%; } }
@@ -535,7 +601,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 0;
     padding-right: 0; } }
 .cxc-content-image {
-  height: 200px;
+  min-height: 200px;
   overflow: hidden; }
 
 .content-copy {
@@ -652,62 +718,91 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* iPads (portrait and landscape) ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+.carousel-wrapper {
+  position: relative;
+  padding-top: 0; }
+
 .banner-container {
+  position: relative;
   height: 210px; }
   @media only screen and (min-width: 1224px) {
     .banner-container {
       padding-left: 0.4rem;
-      padding-right: 0.5rem; } }
+      padding-right: 0.5rem;
+      margin-bottom: 0;
+      margin-top: 0; } }
 
 .cxc-banner {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center left;
-  color: white;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%); }
-  .cxc-banner:hover {
+  /*background-size: cover;
+  background-position:center left;*/
+  color: white; }
+  .cxc-banner:hover img {
     -webkit-filter: grayscale(0);
     -moz-filter: grayscale(0);
     -ms-filter: grayscale(0);
     -o-filter: grayscale(0);
     filter: grayscale(0); }
   .cxc-banner img {
+    position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
     -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center left;
-    object-position: center left; }
+    -o-object-position: top left;
+    object-position: top left;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); }
 
 .banner-copy {
   position: absolute;
+  width: 100%;
+  height: 210px;
   right: .5rem;
-  width: 40%;
-  height: 210px; }
+  z-index: 1; }
+  .banner-copy h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    width: 90%;
+    padding: 0.2rem; }
+  @media only screen and (min-width: 1224px) {
+    .banner-copy {
+      width: 60%; } }
 
 .banner-overlay {
   position: absolute;
   height: 210px;
   width: 100%;
-  right: -0.4rem;
+  right: -0.5rem;
   opacity: 0.5;
+  z-index: -1;
   background-color: black; }
-  @media only screen and (min-width: 1224px) {
-    .banner-overlay {
-      right: 0.2rem; } }
 
 .cxc-banner-title {
   text-transform: uppercase; }
+
+.desktoponly {
+  display: none; }
+  @media only screen and (min-width: 1224px) {
+    .desktoponly {
+      display: block; } }
+
+.mobileonly {
+  display: block; }
+  @media only screen and (min-width: 1224px) {
+    .mobileonly {
+      display: none; } }
 
 header {
   position: fixed;
@@ -795,14 +890,12 @@ header {
     margin-left: 0;
     margin-right: 0; }
 
-.cxc-content-wrap {
-  margin-top: 25%; }
-  @media only screen and (min-width: 1224px) {
-    .cxc-content-wrap {
-      margin-top: 12.5%; } }
-  .cxc-content-wrap #more-button {
-    position: absolute;
-    right: 5px;
-    bottom: 5px; }
+@media only screen and (min-width: 1224px) {
+  .cxc-content-wrap {
+    margin-top: 12.5%; } }
+.cxc-content-wrap #more-button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px; }
 
 /*# sourceMappingURL=site.css.map */

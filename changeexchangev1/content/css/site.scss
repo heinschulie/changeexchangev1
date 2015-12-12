@@ -1,6 +1,7 @@
 @import '_colours.scss';
 @import '_mixins.scss'; 
 @import '_cxcVariables.scss';
+@import "angular-carousel";
 
 html {
     position: relative;
@@ -62,6 +63,20 @@ body::-webkit-scrollbar-thumb {
 @import "_cxc-card";
 @import '_socialFeeds.scss';
 @import "_cxc-banner.scss";
+
+.desktoponly{
+    display: none;
+    @include bp-desktop{
+        display: block;
+    }
+}
+
+.mobileonly{
+    display: block;
+    @include bp-desktop{
+        display: none;
+    }
+}
 
 header{
     position: fixed;
@@ -160,7 +175,7 @@ header{
 }
 
 .cxc-content-wrap{
-    margin-top: $headerHeight;
+    //margin-top: $headerHeight;
     @include bp-desktop{       
         margin-top: $headerHeight/2; 
     } 

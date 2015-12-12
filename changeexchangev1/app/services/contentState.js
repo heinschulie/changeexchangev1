@@ -4,7 +4,7 @@
     var contentState = function ($timeout, pageService, postService, errorService) {
 
         var data = {
-            changeMoment: '',
+            categories: [],
             pageNumber: 0,
             postsPerPage : 6,
             post: {},
@@ -26,7 +26,7 @@
 
         var getPosts = function () {
             data.pageNumber = data.pageNumber + 1;
-            return postService.getPosts(data.postsPerPage, data.pageNumber, data.changeMoment).then(function (results) {
+            return postService.getPosts(data.postsPerPage, data.pageNumber, data.categories).then(function (results) {
                 if (data.pageNumber === 1)
                     data.posts = results.data;
                 else
@@ -34,11 +34,19 @@
             })
         }
 
+        var getBanners = function () {
+            var bannerCategory = ['banner']; 
+            return postService.getBanners(data.postsPerPage, bannerCategory).then(function (results) {
+                data.banners = data.banners.concat(results.data);
+            })
+        }
+
         return {
             data: data,
             getPage: getPage,
             getPost: getPost,
-            getPosts: getPosts
+            getPosts: getPosts,
+            getBanners: getBanners
         };
     };
 

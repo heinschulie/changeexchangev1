@@ -49,6 +49,7 @@
     <Content Include="content\css\_cxc-card.scss" />
     <Content Include="content\css\_socialFeeds.scss" />
     <Content Include="content\css\_cxc-banner.scss" />
+    <Content Include="content\css\_angular-carousel.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -81,6 +82,7 @@
     <Content Include="content\images\Change Exchange Logo.png" />
     <Content Include="content\images\Love-Change-badge.png" />
     <Content Include="index.html" />
+    <Content Include="scripts\angular-carousel.min.js" />
     <Content Include="scripts\pureNav.js" />
     <Content Include="Web.config" />
   </ItemGroup>

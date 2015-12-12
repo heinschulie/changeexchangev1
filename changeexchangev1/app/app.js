@@ -6,7 +6,7 @@
 
 
 'use strict';
-var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize']); 
+var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel']);
 
 
 app.config(function ($routeProvider) {

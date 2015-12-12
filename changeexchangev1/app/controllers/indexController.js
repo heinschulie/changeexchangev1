@@ -31,7 +31,9 @@
             contentState.data.pageNumber = 0;                                               // - Explicitly set page number back to 1                            
             var position = contentState.data.postsPerPage * contentState.data.pageNumber;   // - Calculate position to splice post array 
             contentState.data.posts = contentState.data.posts.splice(0, position)           // - Trim array down to position 
-            contentState.data.changeMoment = $scope.chosenMoment.title;
+            contentState.data.categories = [];
+            if ($scope.chosenMoment.title)
+                contentState.data.categories.push($scope.chosenMoment.title);
             $scope.callForPosts();
         }
 
