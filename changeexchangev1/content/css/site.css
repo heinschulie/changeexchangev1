@@ -209,15 +209,15 @@ This is the parent `<div>` that contains the menu and the content area.
       top: 25%; } }
 
 #layout.active #menu {
-  left: 50%;
-  width: 50%; }
+  left: 75%;
+  width: 75%; }
   @media only screen and (min-width: 1224px) {
     #layout.active #menu {
       left: 17.5%;
       width: 17.5%; } }
 
 #layout.active .menu-link {
-  left: 50%; }
+  left: 75%; }
   @media only screen and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 17.5%; } }
@@ -260,9 +260,9 @@ The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 #menu {
-  margin-left: -50%;
+  margin-left: -75%;
   /* "#menu" width */
-  width: 50%;
+  width: 75%;
   position: fixed;
   top: 0;
   left: 0;
@@ -441,7 +441,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-right: 2em; }
 
   #layout {
-    padding-left: 50%;
+    padding-left: 75%;
     /* left col width "#menu" */
     left: 0; } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
@@ -451,7 +451,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (min-width: 48em) {
   #menu {
-    left: 50%; } }
+    left: 75%; } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
     #menu {
       left: 17.5%; } }
@@ -459,7 +459,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 @media (min-width: 48em) {
   .menu-link {
     position: fixed;
-    left: 50%;
+    left: 75%;
     /*display: none;*/ } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
     .menu-link {
@@ -468,7 +468,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (min-width: 48em) {
   #layout.active .menu-link {
-    left: 50%; } }
+    left: 75%; } }
   @media only screen and (min-width: 48em) and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 17.5%; } }
@@ -482,7 +482,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   */
   #layout.active {
     position: relative;
-    left: 50%; } }
+    left: 75%; } }
   @media only screen and (max-width: 48em) and (min-width: 1224px) {
     #layout.active {
       left: 17.5%; } }
