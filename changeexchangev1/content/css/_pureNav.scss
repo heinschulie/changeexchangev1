@@ -177,8 +177,10 @@ appears on the left side of the page.
             background: $mustard-yellow;
         }
 
-        .active{
+        a.active{
             background: $charcoal;
+            height:100%;
+            width: 100 - $mobileSideNavWidth; 
         }
 
     /*

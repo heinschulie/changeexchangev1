@@ -338,8 +338,10 @@ Change color of the anchor links on hover/focus.
 #menu .pure-menu li a:focus {
   background: #f6a915; }
 
-.active {
-  background: #616161; }
+a.active {
+  background: #616161;
+  height: 100%;
+  width: 35%; }
 
 /*
 This styles the selected menu item `<li>`.
