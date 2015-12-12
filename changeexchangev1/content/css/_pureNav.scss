@@ -229,8 +229,7 @@ small screens.
     top: 0;
     left: 0; /* "#menu width" */
     background: #000;
-    background: rgba(0,0,0,0.7);
-    background-color: red;
+    background: rgba(97,97,97,0.8); //$charcoal with a lesser opacity
     font-size: 10px; /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
