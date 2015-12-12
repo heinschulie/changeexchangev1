@@ -23,7 +23,16 @@
         element.className = classes.join(' ');
     }
 
+
     menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+    };
+    menu.onclick = function (e) {
         var active = 'active';
 
         e.preventDefault();

@@ -396,8 +396,7 @@ small screens.
   top: 0;
   left: 0;
   /* "#menu width" */
-  background: #000;
-  background: rgba(97, 97, 97, 0.8);
+  background-image: url("../images/Love-Change-badge.png");
   font-size: 10px;
   /* change this value to increase/decrease button size */
   z-index: 10;
