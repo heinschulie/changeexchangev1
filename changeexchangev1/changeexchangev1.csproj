@@ -40,6 +40,7 @@
   <ItemGroup>
     <Content Include="app\directives\cxcBanner.js" />
     <Content Include="app\directives\templates\cxc-banner.html" />
+    <Content Include="app\services\sideNavService.js" />
     <Content Include="content\css\site.scss" />
     <Content Include="content\css\_pureNav.scss" />
     <Content Include="content\css\_colours.scss" />
