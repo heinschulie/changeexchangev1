@@ -179,8 +179,9 @@ appears on the left side of the page.
 
         a.active{
             background: $charcoal;
-            height:100%;
+            height:120%;
             width: 100 - $mobileSideNavWidth; 
+            opacity: 0.5; 
         }
 
     /*
