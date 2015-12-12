@@ -179,7 +179,9 @@ appears on the left side of the page.
 
         a.active{
             background: $charcoal;
-            height:120%;
+            top:0;
+            bottom:0;
+            right: 0;
             width: 100 - $mobileSideNavWidth; 
             opacity: 0.5; 
         }
