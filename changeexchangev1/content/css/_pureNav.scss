@@ -83,8 +83,6 @@ The content `<div>` is where all your content goes.
     color: #888;
 }
 
-
-
 /*
 The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
@@ -231,9 +229,9 @@ small screens.
     top: 0;
     left: 0; /* "#menu width" */
     background: #000;
-    background: black;
     background: rgba(0,0,0,0.7);
-    font-size: 20px; /* change this value to increase/decrease button size */
+    background-color: red;
+    font-size: 10px; /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
     height: auto;
