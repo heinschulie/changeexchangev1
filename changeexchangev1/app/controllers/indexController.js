@@ -5,6 +5,14 @@
 
     var indexController = function ($scope, $location, contentState, categoryService) {
        
+        $scope.active = false;
+        $scope.toggleMenu = function () {
+            if ($scope.active)
+                $scope.active = false;
+            else
+                $scope.active = true;
+        }
+
         $scope.chosenMoment = "What change moment are you going through?";
         $scope.changeMoments = [
             { title: 'Landing that Job', active: false },

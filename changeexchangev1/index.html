@@ -30,14 +30,13 @@
             </figure>
             <h4>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your life's greatest <em>Change Moments</em></h4>
         </header>
-        <div id="layout">
-            <div id="menu">
-
-                <a href="#menu" id="menuLink" class="menu-link">
-                    <!-- Hamburger icon -->
-                    <span></span>
-                    <!--<img src="content/images/Love-Change-badge.png" style="height:100%; width:100%" />-->
-                </a>  
+        <div id="layout" ng-class="{'active': active}">
+            <a href="#menu" id="menuLink" class="menu-link" ng-click="toggleMenu()" ng-class="{'active': active}">
+                <!-- Hamburger icon -->
+                <span></span>
+                <!--<img src="content/images/Love-Change-badge.png" style="height:100%; width:100%" />-->
+            </a>  
+            <div id="menu" ng-class="{'active': active}">
                 <div class="pure-menu">
                     <div id="menu-wrapper">
                         <a class="pure-menu-heading" ng-click="selectedMoment('all')">Change Moments</a>
@@ -65,11 +64,10 @@
                     <h1>Page Title</h1>
                     <h2>A subtitle for your page goes here</h2>
                 </div>
-                <!--<div class="sb-contentContainer">-->
+                <div class="mobileonly" ng-show="active"></div>
                 <div data-ng-view="">
 
                 </div>
-                <!--</div>-->
             </div>
         </div>
     </div>
@@ -84,7 +82,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 
     <!--LOCAL-->
-    <script src="scripts/pureNav.js"></script>
+    <!--<script src="scripts/pureNav.js"></script>-->
     <script src="scripts/angular-carousel.min.js"></script>
 
     <!--CUSTOM CxC Scripts-->
