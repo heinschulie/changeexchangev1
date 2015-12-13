@@ -51,13 +51,18 @@
     height: $cardHeight/4*3;
     right: .5rem;
     z-index: 1;
+    text-align: left;
     h1{
         font-size: 3em;
         margin-bottom: 0;    
         width: 90%;
-        padding: $padding;
+        margin-top: $padding*5;
+        padding: 0 $padding*10;
     }
-
+    p{
+        margin: 0;
+        padding: 0 $padding*10;
+    }
     @include bp-desktop{   
         width: 60%;
     } 

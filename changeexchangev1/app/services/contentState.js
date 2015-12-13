@@ -20,6 +20,10 @@
 
         var getPost = function (postId) {
             return postService.getPost(postId).then(function (results) {
+                data.categories = results.data.terms.category
+                  .map(function (category) {
+                      return category.name;
+                  });
                 data.post = results.data;
             })
         }
