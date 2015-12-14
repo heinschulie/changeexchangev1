@@ -3,7 +3,7 @@
 <head>
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
     <title>Change Exchange</title>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -25,36 +25,36 @@
             <figure class="header-image-left">
                 <img src="content/images/Change Exchange Logo.png" />
             </figure>
-            <select class="change-moment-select" ng-model="chosenMoment" ng-options="moment.title for moment in changeMoments" ng-change="selectedMoment(null)"></select>
+            <select class="change-moment-select" data-ng-model="chosenMoment" data-ng-options="moment.title for moment in changeMoments" data-ng-change="selectedMoment(null)"></select>
             <figure class="header-image-right">
                 <img src="content/images/BrightRock-Slab.png" />
             </figure>
             <h4>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your life's greatest <em>Change Moments</em></h4>
         </header>
-        <div id="layout" ng-class="{'active': active}">
-            <a id="menuLink" class="menu-link" ng-click="toggleMenu()" ng-class="{'active': active}">
+        <div id="layout" data-ng-class="{'active': active}">
+            <a id="menuLink" class="menu-link" data-ng-click="toggleMenu()" data-ng-class="{'active': active}">
                 <!-- Hamburger icon -->
                 <span></span>
                 <!--<img src="content/images/Love-Change-badge.png" style="height:100%; width:100%" />-->
             </a>  
-            <div id="menu" ng-class="{'active': active}">
+            <div id="menu" data-ng-class="{'active': active}">
                 <div class="pure-menu">
                     <div id="menu-wrapper">
-                        <a class="pure-menu-heading" ng-click="selectedMoment('all')">Change Moments</a>
+                        <a class="pure-menu-heading" data-ng-click="selectedMoment('all')">Change Moments</a>
                         <ul class="pure-menu-list">
-                            <li ng-cloak class="pure-menu-item" ng-class="{ 'active': moment.active }" ng-repeat="moment in changeMoments"><a ng-click="selectedMoment(moment)" class="pure-menu-link">{{moment.title}}</a></li>
-                            <!--<li class="pure-menu-item"><a ng-click="callForPosts('Landing that Job')" class="pure-menu-link">Landing that Job</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Making a Home')" class="pure-menu-link">Making a Home</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Starting a Family')" class="pure-menu-link">Starting a Family</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Tying the Knot</a></li>-->
+                            <li data-ng-cloak class="pure-menu-item" data-ng-class="{ 'active': moment.active }" data-ng-repeat="moment in changeMoments"><a data-ng-click="selectedMoment(moment)" class="pure-menu-link">{{moment.title}}</a></li>
+                            <!--<li class="pure-menu-item"><a data-ng-click="callForPosts('Landing that Job')" class="pure-menu-link">Landing that Job</a></li>
+                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Making a Home')" class="pure-menu-link">Making a Home</a></li>
+                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Starting a Family')" class="pure-menu-link">Starting a Family</a></li>
+                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Tying the Knot</a></li>-->
                         </ul>
                         <a class="pure-menu-heading" href="#">Exchange</a>
                         <ul class="pure-menu-list">
                             <li class="pure-menu-item"><a href="#/about" class="pure-menu-link">About</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Making a Home')" class="pure-menu-link">Events</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Connection Sessions</a></li>
-                            <li class="pure-menu-item"><a ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Galleries</a></li>
-                            <li ng-cloak class="pure-menu-item" ng-repeat="cat in exchangeCategories | orderBy:'id'"><a href="#" class="pure-menu-link">{{cat.name}}</a></li>
+                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Making a Home')" class="pure-menu-link">Events</a></li>
+                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Connection Sessions</a></li>
+                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Galleries</a></li>
+                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'id'"><a href="#" class="pure-menu-link">{{cat.name}}</a></li>
                         </ul>
                         <img id="love-change-badge" src="content/images/Love-Change-badge.png" />
                     </div>

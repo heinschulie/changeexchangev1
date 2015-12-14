@@ -3,7 +3,7 @@
         <div class="row reduced-padding carousel-wrapper">
             <!--<div class="row">-->
             <ul rn-carousel rn-carousel-controls class="banner-container col-lg-12 col-xs-12">
-                <li ng-repeat="banner in contentState.data.banners">
+                <li data-ng-repeat="banner in contentState.data.banners">
                     <cxc-banner cxcbannercontent="banner"></cxc-banner>
                 </li>
             </ul>
@@ -11,16 +11,16 @@
         </div>
         <div class="row reduced-padding">
             <div class="row col-lg-9 col-xs-12 reduced-padding negative-margin-top-2">
-                <cxc-card ng-class="$first ? 'col-xs-12 col-sm-3 col-md-2 col-lg-8' : 'col-xs-12 col-sm-3 col-md-2 col-lg-4'" ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
-                <a class="col-lg-12" ng-click="callForPosts()">More</a>
+                <cxc-card data-ng-class="$first ? 'col-xs-12 col-sm-3 col-md-2 col-lg-8' : 'col-xs-12 col-sm-3 col-md-2 col-lg-4'" data-ng-repeat="post in contentState.data.posts" cxccontent="post"></cxc-card>
+                <a class="col-lg-12" data-ng-click="callForPosts()">More</a>
             </div>
             <div class="col-lg-3 col-xs-12"> <!--social-feeds column--> 
                 <div class="social-feeds box reduced-padding">
                     <span>
-                        <a ng-click="changeSm('fb')">fb</a>
-                        <a ng-click="changeSm('tw')">tw</a>
+                        <a data-ng-click="changeSm('fb')">fb</a>
+                        <a data-ng-click="changeSm('tw')">tw</a>
                     </span>
-                    <div ng-show="currentSm == 'fb'">
+                    <div data-ng-show="currentSm == 'fb'">
                         <div class="fb-page"
                              data-href="https://www.facebook.com/sontheband"
                              data-tabs="timeline"
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="" ng-show="current-sm == 'tw'">
+                    <div class="" data-ng-show="current-sm == 'tw'">
                         <a class="twitter-timeline" href="https://twitter.com/hashtag/lovechange" data-widget-id="674864355553484800" data-chrome="nofooter noborders noscrollbar transparent">#lovechange Tweets</a>
                         <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
                     </div>
