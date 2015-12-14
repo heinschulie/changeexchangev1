@@ -202,7 +202,7 @@
 
 @mixin radial-gradient($from, $to) {
     background: -moz-radial-gradient(center, circle cover, $from 0%, $to 80%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(80%, $to));
+    background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0%, $from), color-stop(80%, $to));
     background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 80%);
     background: -o-radial-gradient(center, circle cover, $from 0%, $to 80%);
     background: -ms-radial-gradient(center, circle cover, $from 0%, $to 80%);
@@ -300,9 +300,9 @@
 
 @mixin drop-shadow($bool) {
     @if ($bool) {
-        -moz-box-shadow:    0 15px 17px 0px rgba(0, 0, 0, 0.3);
-        -webkit-box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3);
-        box-shadow:         0 15px 17px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow:    0 15px 17px 0 rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3);
+        box-shadow:         0 15px 17px 0 rgba(0, 0, 0, 0.3);
     }
    @else {
         -moz-box-shadow: none; 

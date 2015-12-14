@@ -114,6 +114,7 @@ appears on the left side of the page.
  
 #menu::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
 }
  
 #menu::-webkit-scrollbar-thumb {
@@ -209,7 +210,7 @@ appears on the left side of the page.
         margin-bottom: 25%; 
         @include radius(0, 0, 15px, 15px);
 
-        img#love-change-badge{
+        img{
             position: absolute; 
             width: 50%;
             left: 50%; 
