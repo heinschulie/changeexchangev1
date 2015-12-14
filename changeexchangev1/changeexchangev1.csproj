@@ -52,6 +52,7 @@
     <Content Include="content\css\_cxc-banner.scss" />
     <Content Include="content\css\_angular-carousel.scss" />
     <Content Include="content\css\_post.scss" />
+    <Content Include="content\css\_navigation.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

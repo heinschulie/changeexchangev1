@@ -120,7 +120,6 @@ body {
   height: auto;
   overflow: hidden;
   /*Experiment*/
-  xpadding-bottom: 10px;
   line-height: 1.428571429;
   color: black;
   background-color: #ededed;
@@ -135,7 +134,8 @@ body::-webkit-scrollbar {
   width: 0.5em; }
 
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
@@ -286,7 +286,8 @@ appears on the left side of the page.
   width: 0.2em; }
 
 #menu::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); }
 
 #menu::-webkit-scrollbar-thumb {
   background-color: darkgrey;
@@ -349,9 +350,9 @@ This styles the selected menu item `<li>`.
   -moz-border-radius: 0 8px 8px 0;
   -webkit-border-radius: 0 8px 8px 0;
   border-radius: 0 8px 8px 0;
-  -moz-box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 15px 17px 0px rgba(0, 0, 0, 0.3); }
+  -moz-box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3); }
 
 /*
 This styles a link within a selected menu item `<li>`.
@@ -377,7 +378,7 @@ This styles the menu heading.
   -moz-border-radius: 0 0 15px 15px;
   -webkit-border-radius: 0 0 15px 15px;
   border-radius: 0 0 15px 15px; }
-  #menu-wrapper img#love-change-badge {
+  #menu-wrapper img {
     position: absolute;
     width: 50%;
     left: 50%;
@@ -531,10 +532,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /*Colours*/
 .image-column {
   padding: 0; }
-
-.box-container {
-  /*box-sizing: border-box;
-  padding: .2rem;*/ }
 
 .box-row {
   position: relative;
@@ -811,6 +808,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   background-color: white; }
   #post-container img {
     float: right; }
+
+.hello {
+  padding: 10px; }
 
 .desktoponly {
   display: none; }

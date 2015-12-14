@@ -61,11 +61,15 @@ body::-webkit-scrollbar-thumb {
 /* Also relates to the pseudo class & sibling bug */
 @-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
 
-@import '_pureNav.scss'; 
+@import '_navigation.scss'; 
 @import "_cxc-card";
 @import '_socialFeeds.scss';
 @import "_cxc-banner.scss";
 @import '_post.scss';
+
+.hello{
+    padding: 10px; 
+}
 
 .desktoponly{
     display: none;
