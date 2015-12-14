@@ -82,6 +82,7 @@
     </Content>
     <Content Include="content\images\BrightRock-Slab.png" />
     <Content Include="content\images\Change Exchange Logo.png" />
+    <Content Include="favicon.png" />
     <Content Include="content\images\Love-Change-badge.png" />
     <Content Include="index.html" />
     <Content Include="scripts\angular-carousel.min.js" />
