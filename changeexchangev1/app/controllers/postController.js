@@ -3,7 +3,7 @@
 
     var app = angular.module("cxcApp");
 
-    var postController = function ($scope, $sce, $routeParams, contentState) {
+    var postController = function ($scope, $routeParams, contentState) {
 
         $scope.sameAuthorPosts = [];
         $scope.sameCategoryPosts = [];
@@ -12,9 +12,10 @@
         var postId = $routeParams.postId;
 
         $scope.callForPost = function () {
-            return contentState.getPost(postId).then(function (results) {
-                $scope.post = $sce.trustAsHtml(contentState.data.post.content);
-            });
+            return contentState.getPost(postId)
+            //    .then(function (results) {
+            //    $scope.post = $sce.trustAsHtml(contentState.data.post.content);
+            //});
         }
 
         var callForRecommendedPosts = function () {
@@ -54,5 +55,5 @@
             .then(getRecommendedPosts);
     }
 
-    app.controller("postController", ["$scope", "$sce", "$routeParams", "contentState", postController]);
+    app.controller("postController", ["$scope", "$routeParams", "contentState", postController]);
 }())

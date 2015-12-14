@@ -1,7 +1,7 @@
 ﻿'use strict'; 
 (function () {
 
-    var contentState = function ($timeout, pageService, postService, errorService) {
+    var contentState = function ($timeout, $sce, pageService, postService, errorService) {
 
         var data = {
             categories: [],
@@ -24,7 +24,9 @@
                   .map(function (category) {
                       return category.name;
                   });
+
                 data.post = results.data;
+                data.post.content = $sce.trustAsHtml(data.post.content);
             })
         }
 
@@ -55,6 +57,6 @@
     };
 
     var module = angular.module("cxcApp");
-    module.factory('contentState', ['$timeout', 'pageService', 'postService', 'errorService', contentState]);
+    module.factory('contentState', ['$timeout', '$sce', 'pageService', 'postService', 'errorService', contentState]);
 
 }());
