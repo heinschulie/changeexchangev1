@@ -38,10 +38,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\all.min.js" />
     <Content Include="app\directives\cxcBanner.js" />
     <Content Include="app\directives\templates\cxc-banner.html" />
-    <Content Include="app\services\sideNavService.js" />
     <Content Include="content\css\site.scss" />
+    <Content Include="content\css\style.min.css" />
     <Content Include="content\css\_pureNav.scss" />
     <Content Include="content\css\_colours.scss" />
     <Content Include="content\css\_fonts.scss" />
@@ -53,6 +54,8 @@
     <Content Include="content\css\_angular-carousel.scss" />
     <Content Include="content\css\_post.scss" />
     <Content Include="content\css\_navigation.scss" />
+    <Content Include="gulpfile.js" />
+    <Content Include="package.json" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

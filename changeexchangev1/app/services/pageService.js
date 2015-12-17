@@ -1,4 +1,4 @@
-﻿(function () {
+﻿;(function () {
 
     var pageService = function ($http, cxcService, errorService) {
 

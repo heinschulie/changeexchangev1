@@ -1,12 +1,12 @@
-﻿'use strict';
-(function () {
-
+﻿
+;(function () {
+    'use strict';
     var postService = function ($http, cxcService, errorService) {
-
+         
         var serviceBase = cxcService.serviceBase;
-
+          
         var getPost = function (postId) {
-            return $http.get(serviceBase + 'posts/' + postId) //CHECK PROPER ENDPOINT 
+            return $http.get(serviceBase + 'posts/' + postId) 
                 .then(function (results) {
                     return results;
                 })

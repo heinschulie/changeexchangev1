@@ -1,5 +1,5 @@
 ﻿'use strict'; 
-(function () {
+;(function () {
 
     var categoryService = function ($http, cxcService, errorService) {
 

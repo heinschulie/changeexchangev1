@@ -9,7 +9,7 @@
 var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel']);
 
 
-app.config(function ($routeProvider) {
+app.config(["$routeProvider", function ($routeProvider) {
 
     $routeProvider.when("/about", {
         //controller: "aboutController",
@@ -32,11 +32,11 @@ app.config(function ($routeProvider) {
         redirectTo: "/home"
     });
 
-});
+}]);
 
-app.config(function ($httpProvider) {
+app.config(["$httpProvider", function ($httpProvider) {
     //Enable cross domain calls
     $httpProvider.defaults.useXDomain = true;
     //$httpProvider.defaults.withCredentials = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
-});
+}]);

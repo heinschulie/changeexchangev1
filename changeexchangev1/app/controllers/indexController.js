@@ -1,10 +1,10 @@
 ﻿'use strict';
-(function () {
+;(function () {
 
     var app = angular.module("cxcApp");
 
     var indexController = function ($scope, $location, contentState, categoryService) {
-       
+         
         $scope.active = false;
         $scope.toggleMenu = function () {
             if ($scope.active)
@@ -20,6 +20,8 @@
             { title: 'Starting a Family', active: false },
             { title: 'Tying the Knot', active: false }
         ];
+
+
 
         $scope.selectedMoment = function (moment) {
             if (moment)
@@ -50,7 +52,7 @@
                 $location.path('/home');
             else 
                 return contentState.getPosts()
-        }
+        } 
 
         var getExchangeCategories = function (parentFilter) {
             return categoryService.getCategories(parentFilter).then(function (results) {
