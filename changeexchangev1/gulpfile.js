@@ -24,7 +24,7 @@ gulp.task('clean', function () {
 gulp.task('minify-css', function () {
     return gulp.src('content/css/*.css')
       .pipe(minifyCSS({ compatibility: 'ie8' }))
-      .pipe(concat('style.min.css'))
+      .pipe(concat('style.min.css?version=20151217'))
       .pipe(gulp.dest('content/css'));
 });
 

@@ -1,5 +1,5 @@
 ﻿;(function () {
-
+    'use strict';
     var pageService = function ($http, cxcService, errorService) {
 
         var serviceBase = cxcService.serviceBase;

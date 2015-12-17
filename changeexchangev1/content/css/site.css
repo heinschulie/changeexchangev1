@@ -34,6 +34,7 @@
 /* iPads (landscape) ----------- */
 /* iPads (portrait and landscape) ----------- */
 /* Desktops and laptops ----------- */
+/*Colours*/
 input[type=range] {
   width: 300px; }
 
@@ -78,11 +79,12 @@ div.rn-carousel-indicator span {
 /* prev/next controls */
 .rn-carousel-control {
   transition: opacity 0.2s ease-out;
-  font-size: 2rem;
+  font-size: 3.5rem;
   position: absolute;
-  top: 40%;
+  top: 35%;
   opacity: 0.75;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #e5980a; }
   .rn-carousel-control:hover {
     opacity: 1; }
   .rn-carousel-control.rn-carousel-control-prev {

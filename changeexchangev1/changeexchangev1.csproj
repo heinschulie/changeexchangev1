@@ -43,6 +43,7 @@
     <Content Include="app\directives\templates\cxc-banner.html" />
     <Content Include="content\css\site.scss" />
     <Content Include="content\css\style.min.css" />
+    <Content Include="content\css\stylev1.min.css" />
     <Content Include="content\css\_pureNav.scss" />
     <Content Include="content\css\_colours.scss" />
     <Content Include="content\css\_fonts.scss" />
