@@ -1,6 +1,6 @@
-﻿'use strict'; 
+﻿
 ;(function () {
-
+    'use strict';
     var categoryService = function ($http, cxcService, errorService) {
 
         var serviceBase = cxcService.serviceBase;

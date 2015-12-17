@@ -4,10 +4,10 @@
 
     // COMPONENT DIRECTIVES! 
 
-    app.directive('cxcBanner', function () {
+    app.directive("cxcBanner", [function () {
 
         return {
-            restrict: 'E',
+            restrict: "E",
             templateUrl: "app/directives/templates/cxc-banner.html",
             scope: {
                 cxcbannercontent: '='
@@ -19,11 +19,11 @@
 
             },
 
-            controller: function ($scope) {
+            controller: ["$scope", function ($scope) {
                 $scope.testClick = function () {
-                    alert($scope.cxcbannercontent.title);
+                    alert($scope.cxccontent.title);
                 }
-            }
+            }]
         }
-    })
+    }])
 }());

@@ -1,5 +1,5 @@
 ﻿;(function () {
-
+    'use strict';
     var cxcService = function ($q, errorService) {
 
         // *** Local development

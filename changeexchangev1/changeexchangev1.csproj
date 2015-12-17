@@ -90,7 +90,6 @@
     <Content Include="content\images\Love-Change-badge.png" />
     <Content Include="index.html" />
     <Content Include="scripts\angular-carousel.min.js" />
-    <Content Include="scripts\pureNav.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

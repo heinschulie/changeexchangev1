@@ -1,10 +1,11 @@
-﻿'use strict';
+﻿
 ;(function () {
-
+    'use strict';
     var app = angular.module("cxcApp");
 
     var indexController = function ($scope, $location, contentState, categoryService) {
-         
+   
+
         $scope.active = false;
         $scope.toggleMenu = function () {
             if ($scope.active)

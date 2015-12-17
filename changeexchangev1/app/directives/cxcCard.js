@@ -4,7 +4,7 @@
 
     // COMPONENT DIRECTIVES! 
 
-    app.directive('cxcCard', function () {
+    app.directive('cxcCard', [function () {
 
         return {
             restrict: 'E',
@@ -19,11 +19,11 @@
                 
             },
 
-            controller: function ($scope) {
+            controller: ["$scope", function ($scope) {
                 $scope.testClick = function () {
                     alert($scope.cxccontent.title); 
                 }
-            }
+            }]
         }
-    })
+    }])
 }());

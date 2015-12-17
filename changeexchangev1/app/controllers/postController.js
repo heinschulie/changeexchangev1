@@ -1,6 +1,6 @@
-﻿'use strict';
+﻿
 ;(function () {
-
+    'use strict';
     var app = angular.module("cxcApp");
 
     var postController = function ($scope, $routeParams, contentState) {

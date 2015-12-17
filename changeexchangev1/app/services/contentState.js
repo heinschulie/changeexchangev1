@@ -1,6 +1,6 @@
-﻿'use strict'; 
+﻿
 ;(function () {
-
+    'use strict';
     var contentState = function ($timeout, $sce, pageService, postService, errorService) {
 
         var data = {
