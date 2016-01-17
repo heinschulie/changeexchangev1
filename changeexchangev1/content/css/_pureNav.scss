@@ -109,17 +109,17 @@ appears on the left side of the page.
 }
 
 #menu::-webkit-scrollbar {
-    width: 0.2em;
+    width: 0.1em;
 }
  
 #menu::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0);
 }
  
 #menu::-webkit-scrollbar-thumb {
   background-color: darkgrey;
-  outline: 1px solid slategrey;
+  outline: 1px solid rgba(0,0,0,0);
 }
     /*
     All anchors inside the menu should be styled like this.
@@ -279,8 +279,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 48em) {
-
+@media (max-width: 48em) {
     .header,
     .content {
         padding-left: 2em;

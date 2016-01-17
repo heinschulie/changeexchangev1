@@ -15,15 +15,17 @@
                 });
         };
 
-        var getPosts = function (postsPerPage, pageNumber, category) {
+
+        var getPosts = function (postsPerPage, pageNumber, category, includeContent) {
             var url = serviceBase + 'posts?filter[posts_per_page]=' + postsPerPage + '&page=' + pageNumber + '&fields=ID,title,excerpt';
+            if (includeContent) url = url + ',content';
             if (category && category.length > 0) {
                 url = url + '&filter[category_name]=';
                 for (var i = 0; i < category.length; i++) {
                     url = url + ',' + category[i];
                 }             
             }               
-
+            url = url.replace("'", "");
             return $http.get(url)
                 .then(function (results) {
                     return results;
@@ -33,6 +35,7 @@
                 });
         };
 
+
         var getBanners = function (numberOfBanners, category) {
             var url = serviceBase + 'posts?filter[posts_per_page]=' + numberOfBanners + '&fields=ID,title,excerpt';
             if (category && category.length > 0) {
@@ -41,7 +44,7 @@
                     url = url + ',' + category[i];
                 }
             }
-
+            url = url.replace("'", "");
             return $http.get(url)
                 .then(function (results) {
                     return results;

@@ -11,6 +11,7 @@
             return contentState.getPosts();
         }
 
+
         //Social Feed Functionality 
         $scope.currentSm = "fb";
         $scope.changeSm = function (sm) {
@@ -32,7 +33,7 @@
         }
 
         if (!contentState.data.banners || !contentState.data.banners.length) 
-            contentState.getBanners();
+            contentState.getBanners(null, true);
     }
 
     app.controller("homeController", ["$scope", "contentState", homeController]);

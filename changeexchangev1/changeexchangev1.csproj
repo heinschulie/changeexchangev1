@@ -39,11 +39,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\all.min.js" />
+    <Content Include="app\controllers\galleriesController.js" />
+    <Content Include="app\controllers\galleryController.js" />
     <Content Include="app\directives\cxcBanner.js" />
     <Content Include="app\directives\templates\cxc-banner.html" />
-    <Content Include="content\css\site.scss" />
-    <Content Include="content\css\style.min.css" />
-    <Content Include="content\css\stylev1.min.css" />
+    <Content Include="app\views\galleries.html" />
+    <Content Include="app\views\gallery.html" />
+    <Content Include="app\views\page.html" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\css\site.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <OutputFolder>..\..</OutputFolder>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
     <Content Include="content\css\_pureNav.scss" />
     <Content Include="content\css\_colours.scss" />
     <Content Include="content\css\_fonts.scss" />
@@ -55,8 +67,11 @@
     <Content Include="content\css\_angular-carousel.scss" />
     <Content Include="content\css\_post.scss" />
     <Content Include="content\css\_navigation.scss" />
+    <Content Include="content\images\selectbutton.jpg" />
+    <Content Include="content\images\selectbutton.png" />
     <Content Include="gulpfile.js" />
     <Content Include="package.json" />
+    <Content Include="content\css\_gallery.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -67,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\aboutController.js" />
+    <Content Include="app\controllers\pageController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\indexController.js" />
     <Content Include="app\controllers\postController.js" />
@@ -82,15 +97,13 @@
     <Content Include="app\views\about.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\post.html" />
-    <Content Include="content\css\site.css">
-      <DependentUpon>site.scss</DependentUpon>
-    </Content>
     <Content Include="content\images\BrightRock-Slab.png" />
     <Content Include="content\images\Change Exchange Logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="content\images\Love-Change-badge.png" />
     <Content Include="index.html" />
     <Content Include="scripts\angular-carousel.min.js" />
+    <Content Include="scripts\gallery.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

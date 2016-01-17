@@ -1,7 +1,32 @@
+@import '_mixins.scss';
+@import '_colours.scss'; 
 #post-container{
     padding: 1rem;
     background-color: white;
+    
     img{ 
         float: right;
+        width: 100%; 
+    }
+
+    section.article-hero{
+        position: relative;
+        width: 100%;
+        max-height: 250px;
+        overflow: hidden; 
+        border-bottom: 3px solid $mustard-orange;
+        
+        @include bp-ipad{      
+            max-height: 450px;
+        }
+        @include bp-desktop{      
+            max-height: 350px;
+        }
+
+        img{
+            width: 100%;
+            position: relative;
+            //@include translate(0, -50%);
+        }
     }
 }

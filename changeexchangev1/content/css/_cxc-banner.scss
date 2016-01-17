@@ -4,12 +4,15 @@
 
 .carousel-wrapper{
     position: relative;
-    padding-top: 0
+    padding-top: 0;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 .banner-container{
     position: relative;
-    height: $cardHeight/4*3;
+    //height: $cardHeight/4*3;
+    height: $cardHeight/5*4;
     @include bp-desktop{  
         padding-left:0.4rem;
         padding-right:0.5rem;
@@ -70,7 +73,7 @@
 
 .banner-overlay{
     position: absolute;
-    height: $cardHeight/4*3;
+    height: $cardHeight/5*4;
     width: 100%;
     right: -$padding*2.5;
     opacity: 0.5;

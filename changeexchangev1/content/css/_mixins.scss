@@ -32,7 +32,7 @@
 // IPHONE 6 EXPERMENT 
 /*@mixin bp-iphone6landscape {
     @media only screen 
-        and (min-device-width : 375px) 
+        and (min-device-width : 375px) HELLOYOU
         and (max-device-width : 667px) 
         and (orientation : landscape) 
         and (-webkit-min-device-pixel-ratio : 2)
@@ -162,7 +162,9 @@
 
 /* iPads (portrait and landscape) ----------- */
 @mixin bp-ipad {
-    @media only screen /*and (min-device-width : 768px)*/ and (max-device-width : 1024px) {
+    @media only screen and (min-device-width: 768px) 
+      and (max-device-width: 1024px) 
+      and (-webkit-min-device-pixel-ratio: 1) {
         @content;
     }
 }
@@ -174,7 +176,6 @@
     }
 }
 
-//
 
 @mixin alpha-attribute($attribute, $color, $background) {
   $percent: alpha($color) * 100%;

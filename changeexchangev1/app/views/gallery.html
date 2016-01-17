@@ -1,0 +1,17 @@
+﻿<!--Hello-->
+<!--<section ng-bind-html="contentState.data.page.content" class="image-grid">-->
+<section class="image-grid">
+    <div ng-click="expand(art)" ng-class="{'is-expanded' : art.active}" class="image__cell is-collapsed" ng-repeat="art in contentState.data.artworks">
+        <div class="image--basic">
+            <a>
+                <img id="expand-jump-1" class="basic__img" data-ng-src="{{art.featured_image.source}}" alt="Fashion 1" />
+            </a>
+            <div class="arrow--up"></div>
+        </div>
+        <div class="image--expand">
+            <a class="expand__close"></a>
+            <img class="image--large" data-ng-src="{{art.featured_image.source}}" alt="Fashion 1" />
+            <div class="art-info" ng-bind-html="art.content"></div>
+        </div>
+    </div>
+</section>

@@ -19,10 +19,9 @@
 
             },
 
+
             controller: ["$scope", function ($scope) {
-                $scope.testClick = function () {
-                    alert($scope.cxccontent.title);
-                }
+
             }]
         }
     }])

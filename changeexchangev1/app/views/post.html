@@ -1,10 +1,13 @@
 ﻿<div class="row">
     <div id="post-container" class="column col-lg-9 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <section class="article-hero">
+                <img data-ng-src="{{contentState.data.post.featured_image.source}}" />
+            </section>            
             <h3>{{contentState.data.post.title}}</h3>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <img ng-src="{{contentState.data.post.featured_image.source}}" />
+            <!--<img ng-src="{{contentState.data.post.featured_image.source}}" />-->
             <div ng-bind-html="contentState.data.post.excerpt"></div>
             <div ng-bind-html="contentState.data.post.content"></div>
         </div>

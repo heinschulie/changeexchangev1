@@ -11,9 +11,19 @@ var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel']
 
 app.config(["$routeProvider", function ($routeProvider) {
 
-    $routeProvider.when("/about", {
-        //controller: "aboutController",
-        templateUrl: "/app/views/about.html"
+    $routeProvider.when("/exchange/:pagename", {
+        controller: "pageController",
+        templateUrl: "/app/views/page.html"
+    });
+
+    $routeProvider.when("/galleries", {
+        controller: "galleriesController",
+        templateUrl: "/app/views/galleries.html"
+    });
+
+    $routeProvider.when("/gallery/:galleryName", {
+        controller: "galleryController",
+        templateUrl: "/app/views/gallery.html"
     });
 
     $routeProvider.when("/home", {

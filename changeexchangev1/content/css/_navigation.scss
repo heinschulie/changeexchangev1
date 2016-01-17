@@ -35,6 +35,10 @@ This is the parent `<div>` that contains the menu and the content area.
         left: $mobileSideNavWidth;
         width: $mobileSideNavWidth;
 
+        @include bp-ipad{
+            left: $tabletNavWidth; 
+            width: $tabletNavWidth;
+        }
         @include bp-desktop{
             left: $sideNavWidth;
             width: $sideNavWidth;
@@ -43,6 +47,9 @@ This is the parent `<div>` that contains the menu and the content area.
 
     #layout.active .menu-link {
         left: $mobileSideNavWidth;
+        @include bp-ipad{
+            left: $tabletNavWidth; 
+        }
         @include bp-desktop{
             left: $sideNavWidth;
         }
@@ -100,6 +107,11 @@ appears on the left side of the page.
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    @include bp-ipad{
+        margin-left: -$tabletNavWidth; /* "#menu" width */
+        width: $tabletNavWidth;
+    }
 
     @include bp-desktop{
         margin-left: -$sideNavWidth; /* "#menu" width */
@@ -174,6 +186,10 @@ appears on the left side of the page.
             right: 0;
             width: 100 - $mobileSideNavWidth; 
             opacity: 0.5; 
+
+            @include bp-ipad{
+                width: 100 - $tabletNavWidth; 
+            }
         }
 
     /*
@@ -181,7 +197,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        width: 105%;
+        width: 100%;
         background-color: $charcoal;
         @include radius(0, 8px, 8px, 0);
         @include drop-shadow($true); 
@@ -204,7 +220,7 @@ appears on the left side of the page.
 
     #menu-wrapper{
         background-color: $mustard-orange;
-        margin-left: 10%;
+        margin-left: 13%;
         margin-right: 10%; 
         padding-bottom: 25%; 
         margin-bottom: 25%; 
@@ -279,23 +295,31 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 48em) {
-
+@media (min-width: 80em) {
+//@include bp-ipad{
+   
     .header,
     .content {
         padding-left: 2em;
         padding-right: 2em;
     }
 
+
     #layout {
         padding-left: $mobileSideNavWidth; /* left col width "#menu" */
         left: 0;
+        @include bp-ipad{
+            padding-left: $tabletNavWidth; /* "#menu" width */
+        }
         @include bp-desktop{
             padding-left: $sideNavWidth; /* "#menu" width */
         }
     }
     #menu {
-        left: $mobileSideNavWidth;
+        left: $mobileSideNavWidth;       
+        @include bp-ipad{
+            left: $tabletNavWidth;
+        }
         @include bp-desktop{
             left: $sideNavWidth;
         }
@@ -304,7 +328,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     .menu-link {
         position: fixed;
         left: $mobileSideNavWidth;
-        /*display: none;*/
+        
+        @include bp-ipad{
+            left: $tabletNavWidth;
+        }
         @include bp-desktop{
             display: none;
             left: $sideNavWidth;
@@ -313,13 +340,16 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
     #layout.active .menu-link {
         left: $mobileSideNavWidth;
+        @include bp-ipad{
+            left: $tabletNavWidth;
+        }
         @include bp-desktop{
             left: $sideNavWidth;
         }
     }
 }
 
-@media (max-width: 48em) {
+@media (max-width: 80em) {
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -329,6 +359,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     #layout.active {
         position: relative;
         left: $mobileSideNavWidth;
+        @include bp-ipad{
+            left: $tabletNavWidth;
+        }
         @include bp-desktop{
             left: $sideNavWidth;
         }

@@ -6,10 +6,13 @@
     <title>Change Exchange</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <link href="content/css/style.min.css" rel="stylesheet" />
-    <!--<link href="content/css/site.css" rel="stylesheet" />-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
+    <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 </head>
 <body class="layout">
     <div id="fb-root"></div>
@@ -27,11 +30,13 @@
             <figure class="header-image-left">
                 <img src="content/images/Change Exchange Logo.png" />
             </figure>
-            <select class="change-moment-select" data-ng-model="chosenMoment" data-ng-options="moment.title for moment in changeMoments" data-ng-change="selectedMoment(null)"></select>
+            <select class="change-moment-select" data-ng-model="chosenMoment.name" data-ng-change="selectedMoment(chosenMoment, false)"><!--data-ng-options="moment.name for moment in changeMoments"--> 
+                <option ng-repeat="moment in changeMoments" value="{{moment.name}}">{{moment.name}}</option>
+            </select>
             <figure class="header-image-right">
                 <img src="content/images/BrightRock-Slab.png" />
             </figure>
-            <h4>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your life's greatest <em>Change Moments</em></h4>
+            <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
         </header>
         <div id="layout" data-ng-class="{'active': active}">
             <a id="menuLink" class="menu-link" data-ng-click="toggleMenu()" data-ng-class="{'active': active}">
@@ -44,19 +49,16 @@
                     <div id="menu-wrapper">
                         <a class="pure-menu-heading" data-ng-click="selectedMoment('all')">Change Moments</a>
                         <ul class="pure-menu-list">
-                            <li data-ng-cloak class="pure-menu-item" data-ng-class="{ 'active': moment.active }" data-ng-repeat="moment in changeMoments"><a data-ng-click="selectedMoment(moment)" class="pure-menu-link">{{moment.title}}</a></li>
-                            <!--<li class="pure-menu-item"><a data-ng-click="callForPosts('Landing that Job')" class="pure-menu-link">Landing that Job</a></li>
-                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Making a Home')" class="pure-menu-link">Making a Home</a></li>
-                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Starting a Family')" class="pure-menu-link">Starting a Family</a></li>
-                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Tying the Knot</a></li>-->
+                            <li data-ng-cloak class="pure-menu-item" data-ng-class="{ 'active': moment.active }" data-ng-repeat="moment in changeMoments"><a data-ng-click="selectedMoment(moment, false)" class="pure-menu-link">{{moment.name}}</a></li>
                         </ul>
                         <a class="pure-menu-heading" href="#">Exchange</a>
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item"><a href="#/about" class="pure-menu-link">About</a></li>
+                            <li class="pure-menu-item"><a href="#/exchange/about" class="pure-menu-link">About</a></li>
+                            <li class="pure-menu-item"><a href="#/exchange/iris%20sessions" class="pure-menu-link">Iris Sessions</a></li>
                             <li class="pure-menu-item"><a data-ng-click="callForPosts('Making a Home')" class="pure-menu-link">Events</a></li>
-                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Connection Sessions</a></li>
-                            <li class="pure-menu-item"><a data-ng-click="callForPosts('Tying the Knot')" class="pure-menu-link">Galleries</a></li>
-                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'id'"><a href="#" class="pure-menu-link">{{cat.name}}</a></li>
+                            <li class="pure-menu-item"><a href="#/exchange/connection%20sessions" class="pure-menu-link">Connection Sessions</a></li>
+                            <li class="pure-menu-item"><a ng-href="#/galleries" class="pure-menu-link">Galleries</a></li>
+                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'id'"><a data-ng-click="selectedMoment(cat, true)" class="pure-menu-link">{{cat.name}}</a></li>
                         </ul>
                         <img id="love-change-badge" src="content/images/Love-Change-badge.png" />
                     </div>
@@ -67,8 +69,24 @@
                     <h1>BrightRock</h1>
                     <h2>#LoveChange</h2>
                 </div>
-                <div data-ng-view="">
+                <div id="social-button-box">
+                    <div class="social-buttons">
+                        <i class="fa fa-facebook-square"></i>
+                    </div>
+                    <div class="social-buttons">
+                        <i class="fa fa-twitter-square"></i>
+                    </div>
+                    <div class="social-buttons">
+                        <i class="fa fa-google-plus-square"></i>
+                    </div>
+                    <div class="social-buttons">
+                        <i class="fa fa-youtube-square"></i>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div data-ng-view="">
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,20 +99,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- Older version of Jquery for expanding grid-->
+
 
     <!--LOCAL-->
     <!--<script src="scripts/pureNav.js"></script>-->
     <script src="scripts/angular-carousel.min.js"></script>
 
-
-
     <!--CUSTOM CxC Scripts-->
 
-    <script src="app/all.min.js"></script>
+    <!--<script src="app/all.min.js"></script>-->
 
     <!-- Load app main script -->
-    <!--<script src="app/app.js"></script>
+    <script src="app/app.js"></script>
 
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -106,9 +123,13 @@
     <script src="app/directives/cxcCard.js"></script>
     <script src="app/directives/cxcBanner.js"></script>
 
-    <script src="app/controllers/aboutController.js"></script>
+    <script src="app/controllers/pageController.js"></script>
+    <script src="app/controllers/galleryController.js"></script>
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
-    <script src="app/controllers/postController.js"></script>-->
+    <script src="app/controllers/postController.js"></script>
+    <script src="app/controllers/galleriesController.js"></script>
+    <!--<script src="scripts/gallery.js"></script>-->
+
 </body>
 </html>

@@ -2,6 +2,7 @@
 @import '_mixins.scss'; 
 @import '_cxcVariables.scss';
 @import "angular-carousel";
+@import "gallery";
 
 html {
     position: relative;
@@ -91,37 +92,46 @@ header{
     height: $headerHeight / 2; 
     top: 0; 
     background-color: $lightgray;
-    z-index: 1;
+    z-index: 2;
 
     @include bp-desktop{       
         height: $headerHeight; 
     }
 
-    h4{
+    h3{
          display: none;
         @include bp-desktop{   
-            display: block;    
+            display: block;
             position: absolute;
-            width: 45%;
+            width: 50%;
             margin: 0;
-            margin-left: 5%;
-            bottom: 8%;
+            margin-left: 6.5%;
+            bottom: 11.5%;
         }       
     }
 
     select.change-moment-select{
         @include centerThisThingX(); 
+        left: 56%;
         width: 80%; 
         height: 40%;
         top: 64%; 
         background-color: $mustard-orange; 
-        @include border-radius(3px);
+        background-image: url('../images/selectbutton.png');
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;   
+        @include border-radius(7px);
         border: none; 
 
         @include bp-desktop{       
-                width: 25%; 
+                width: 31%;
                 height: 18%;
-                top: 30%; 
+                top: 23%; 
+
+                appearance:none;
+                -moz-appearance:none; /* Firefox */
+                -webkit-appearance:none; /* Safari and Chrome */
             }
     }
 
@@ -129,7 +139,7 @@ header{
         position: absolute; 
         margin-left: 0;
         margin-right: 0;
-        margin-top: 2.5%; 
+        margin-top: 2%; 
 
         img{
             width: 100%;
@@ -139,16 +149,17 @@ header{
             width: 65%; 
             left: 15%;
             @include bp-desktop{       
-                width: 25%; 
-                left: 0;
+                width: 31%;
+                left: 0.5%;
             }
         }
         &.header-image-right{  
             display: none;
             @include bp-desktop{  
                 display: block;     
-                right: 1%;         
-                width: 12.5%;
+                right: 2.5%;
+                width: 15%;
+                margin-top: 2.5%; 
             }            
         }
     }
@@ -168,6 +179,11 @@ header{
     box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
+    
+    @include bp-desktop{
+       padding-right: 2.5%;
+    }
+
 }
 
 .page-section {
@@ -178,6 +194,11 @@ header{
     .row{
         margin-left: 0;
         margin-right: 0;
+
+        @include bp-desktop{
+            margin-left: -0.5rem;
+            margin-right:  -0.5rem;
+        }
     }
 }
 
@@ -191,5 +212,29 @@ header{
         position: absolute;
         right: 5px;
         bottom: 5px;
+    }
+}
+
+#social-button-box{
+    position:  absolute;
+    width: 100%; 
+    top: 0;
+    right: 0;
+    z-index: 1; //This is a terrible hack. Forgive me. 
+
+    @include bp-desktop{
+        width:   2.5%;
+        height: $cardHeight/5*4;
+        background-color: $lightgray; 
+    }
+
+    .social-buttons{
+        @include bp-desktop{
+            width: 100%;
+        }
+        i{
+            font-size: 2em; 
+            float: right; 
+        }
     }
 }
