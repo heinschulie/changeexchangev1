@@ -26,14 +26,11 @@
                 }             
             }               
             url = url.replace("'", "");
-            alert('Fetching posts');
             return $http.get(url)
                 .then(function (results) {
                     return results;
-                    alert('Posts returned: ' + results.data.length);
                 })
                 .catch(function (error) {
-                    alert('Error : ' + error.status + '|' + error.message);
                     errorState.catchError(error);
                 });
         };

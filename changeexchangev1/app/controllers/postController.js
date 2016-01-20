@@ -27,7 +27,7 @@
                 callForRecommendedPosts();
 
             $scope.sameAuthorPosts = contentState.data.posts.filter(function(post) {
-                return post.author.username === contentState.data.post.author.username;
+                return post.author.username === contentState.data.post.author.username && post.ID !== contentState.data.post.ID;
             });
             $scope.sameCategoryPosts = contentState.data.posts.filter(function (post) {
                 if (post.ID === contentState.data.post.ID)
