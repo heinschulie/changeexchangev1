@@ -545,8 +545,8 @@ This is the parent `<div>` that contains the menu and the content area.
       width: 45%; } }
   @media only screen and (min-width: 1224px) {
     #layout.active #menu {
-      left: 21%;
-      width: 21%; } }
+      left: 20%;
+      width: 20%; } }
 
 #layout.active .menu-link {
   left: 65%; }
@@ -555,7 +555,7 @@ This is the parent `<div>` that contains the menu and the content area.
       left: 45%; } }
   @media only screen and (min-width: 1224px) {
     #layout.active .menu-link {
-      left: 21%; } }
+      left: 20%; } }
 
 /*
 The content `<div>` is where all your content goes.
@@ -615,9 +615,9 @@ appears on the left side of the page.
       width: 45%; } }
   @media only screen and (min-width: 1224px) {
     #menu {
-      margin-left: -21%;
+      margin-left: -20%;
       /* "#menu" width */
-      width: 21%;
+      width: 20%;
       top: 10%; } }
 
 #menu::-webkit-scrollbar {
@@ -798,7 +798,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       /* "#menu" width */ } }
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     #layout {
-      padding-left: 21%;
+      padding-left: 20%;
       /* "#menu" width */ } }
 
 @media (min-width: 80em) {
@@ -809,7 +809,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 45%; } }
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     #menu {
-      left: 21%; } }
+      left: 20%; } }
 
 @media (min-width: 80em) {
   .menu-link {
@@ -821,7 +821,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     .menu-link {
       display: none;
-      left: 21%; } }
+      left: 20%; } }
 
 @media (min-width: 80em) {
   #layout.active .menu-link {
@@ -831,7 +831,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 45%; } }
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     #layout.active .menu-link {
-      left: 21%; } }
+      left: 20%; } }
 
 @media (max-width: 80em) {
   /* Only apply this when the window is small. Otherwise, the following
@@ -848,7 +848,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 45%; } }
   @media only screen and (max-width: 80em) and (min-width: 1224px) {
     #layout.active {
-      left: 21%; } }
+      left: 20%; } }
 
 /*Colours*/
 /*@mixin bp-iphone6landscape {
@@ -957,8 +957,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .col-xs-offset-10,
   .col-xs-offset-11,
   .col-xs-offset-12 {
-    padding-left: 0;
-    padding-right: 0; } }
+    /*padding-left: 0;
+    padding-right: 0;*/ } }
 .cxc-content-image {
   min-height: 200px;
   overflow: hidden; }
@@ -1520,16 +1520,19 @@ header.header-three {
       padding-right: 2.5%; } }
 
 .page-section {
-  padding-left: 0;
+  padding-left: 1rem;
   padding-right: 0;
   margin-bottom: 3rem; }
+  @media only screen and (min-width: 1224px) {
+    .page-section {
+      padding-left: 0; } }
   .page-section .row {
-    margin-left: 0;
-    margin-right: 0; }
+    /*margin-left: 0;
+    margin-right: 0;*/ }
     @media only screen and (min-width: 1224px) {
       .page-section .row {
-        margin-left: -0.5rem;
-        margin-right: -0.5rem; } }
+        padding-left: 0.4rem;
+        /*margin-right:  -0.5rem;*/ } }
 
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap {

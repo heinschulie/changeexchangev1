@@ -296,42 +296,49 @@ div.rn-carousel-indicator span {
   @media only screen and (min-width: 2547px) and (min-width: 1224px) {
     .image--expand {
       width: 791%; } }
+
   @media screen and (min-width: 2185px) and (max-width: 2546px) {
     .image--expand {
       width: 700%; } }
   @media only screen and (min-width: 2185px) and (max-width: 2546px) and (min-width: 1224px) {
     .image--expand {
       width: 691%; } }
+
   @media screen and (min-width: 1823px) and (max-width: 2184px) {
     .image--expand {
       width: 600%; } }
   @media only screen and (min-width: 1823px) and (max-width: 2184px) and (min-width: 1224px) {
     .image--expand {
       width: 591%; } }
+
   @media screen and (min-width: 1461px) and (max-width: 1822px) {
     .image--expand {
       width: 500%; } }
   @media only screen and (min-width: 1461px) and (max-width: 1822px) and (min-width: 1224px) {
     .image--expand {
       width: 491%; } }
+
   @media screen and (min-width: 1099px) and (max-width: 1460px) {
     .image--expand {
       width: 400%; } }
   @media only screen and (min-width: 1099px) and (max-width: 1460px) and (min-width: 1224px) {
     .image--expand {
       width: 391%; } }
+
   @media screen and (min-width: 737px) and (max-width: 1098px) {
     .image--expand {
       width: 300%; } }
   @media only screen and (min-width: 737px) and (max-width: 1098px) and (min-width: 1224px) {
     .image--expand {
       width: 291%; } }
+
   @media screen and (max-width: 736px) {
     .image--expand {
       width: 200%; } }
   @media only screen and (max-width: 736px) and (min-width: 1224px) {
     .image--expand {
       width: 191%; } }
+
   .is-collapsed .image--expand {
     margin-bottom: 0; }
 
@@ -344,7 +351,7 @@ div.rn-carousel-indicator span {
   line-height: 50px;
   text-decoration: none; }
   .expand__close:before {
-    content: '×'; }
+    content: 'â•«'; }
   .expand__close:hover {
     color: #fff; }
 
@@ -412,7 +419,7 @@ div.rn-carousel-indicator span {
   z-index: 99;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: #7f7f7f;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white; }
@@ -446,7 +453,7 @@ body {
   line-height: 1.428571429;
   color: black;
   background-color: #ededed;
-  /*
+    /*
 	 * Relates to the pseudo class & sibling bug, see
 	 * http://css-tricks.com/webkit-sibling-bug/ for more details
 	 */
@@ -470,7 +477,6 @@ body::-webkit-scrollbar-thumb {
     padding: 0; }
   to {
     padding: 0; } }
-
 /*Colours*/
 /*Colours*/
 /*@mixin bp-iphone6landscape {
@@ -539,8 +545,8 @@ This is the parent `<div>` that contains the menu and the content area.
       width: 45%; } }
   @media only screen and (min-width: 1224px) {
     #layout.active #menu {
-      left: 21%;
-      width: 21%; } }
+      left: 20%;
+      width: 20%; } }
 
 #layout.active .menu-link {
   left: 65%; }
@@ -549,7 +555,7 @@ This is the parent `<div>` that contains the menu and the content area.
       left: 45%; } }
   @media only screen and (min-width: 1224px) {
     #layout.active .menu-link {
-      left: 21%; } }
+      left: 20%; } }
 
 /*
 The content `<div>` is where all your content goes.
@@ -609,9 +615,9 @@ appears on the left side of the page.
       width: 45%; } }
   @media only screen and (min-width: 1224px) {
     #menu {
-      margin-left: -21%;
+      margin-left: -20%;
       /* "#menu" width */
-      width: 21%;
+      width: 20%;
       top: 10%; } }
 
 #menu::-webkit-scrollbar {
@@ -626,8 +632,8 @@ appears on the left side of the page.
   outline: 1px solid slategrey; }
 
 /*
-    All anchors inside the menu should be styled like this.
-    */
+All anchors inside the menu should be styled like this.
+*/
 #menu a {
   color: #999;
   border: none;
@@ -642,23 +648,23 @@ appears on the left side of the page.
   padding-bottom: 0.6em; }
 
 /*
-    Remove all background/borders, since we are applying them to #menu.
-    */
+Remove all background/borders, since we are applying them to #menu.
+*/
 #menu .pure-menu,
 #menu .pure-menu ul {
   border: none;
   background: transparent; }
 
 /*
-    Add that light border to separate items into groups.
-    */
+Add that light border to separate items into groups.
+*/
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
   border-top: 1px solid #333; }
 
 /*
-        Change color of the anchor links on hover/focus.
-        */
+Change color of the anchor links on hover/focus.
+*/
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
   background: #f6a915; }
@@ -675,8 +681,8 @@ a.active {
       width: 55%; } }
 
 /*
-    This styles the selected menu item `<li>`.
-    */
+This styles the selected menu item `<li>`.
+*/
 #menu .pure-menu-selected,
 #menu .pure-menu-heading {
   width: 100%;
@@ -690,14 +696,14 @@ a.active {
   box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3); }
 
 /*
-        This styles a link within a selected menu item `<li>`.
-        */
+This styles a link within a selected menu item `<li>`.
+*/
 #menu .pure-menu-selected a {
   color: #fff; }
 
 /*
-    This styles the menu heading.
-    */
+This styles the menu heading.
+*/
 #menu .pure-menu-heading {
   font-size: 110%;
   color: #fff;
@@ -781,6 +787,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .content {
     padding-left: 2em;
     padding-right: 2em; }
+
   #layout {
     padding-left: 65%;
     /* left col width "#menu" */
@@ -791,7 +798,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       /* "#menu" width */ } }
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     #layout {
-      padding-left: 21%;
+      padding-left: 20%;
       /* "#menu" width */ } }
 
 @media (min-width: 80em) {
@@ -802,7 +809,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 45%; } }
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     #menu {
-      left: 21%; } }
+      left: 20%; } }
 
 @media (min-width: 80em) {
   .menu-link {
@@ -814,7 +821,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     .menu-link {
       display: none;
-      left: 21%; } }
+      left: 20%; } }
 
 @media (min-width: 80em) {
   #layout.active .menu-link {
@@ -824,15 +831,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 45%; } }
   @media only screen and (min-width: 80em) and (min-width: 1224px) {
     #layout.active .menu-link {
-      left: 21%; } }
+      left: 20%; } }
 
 @media (max-width: 80em) {
   /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small.
-        * Tap the menu to trigger the active state.
-        * Make the window large again.
-    */
+  case results in extra padding on the left:
+      * Make the window small.
+      * Tap the menu to trigger the active state.
+      * Make the window large again.
+  */
   #layout.active {
     position: relative;
     left: 65%; } }
@@ -841,7 +848,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 45%; } }
   @media only screen and (max-width: 80em) and (min-width: 1224px) {
     #layout.active {
-      left: 21%; } }
+      left: 20%; } }
 
 /*Colours*/
 /*@mixin bp-iphone6landscape {
@@ -950,9 +957,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .col-xs-offset-10,
   .col-xs-offset-11,
   .col-xs-offset-12 {
-    padding-left: 0;
-    padding-right: 0; } }
-
+    /*padding-left: 0;
+    padding-right: 0;*/ } }
 .cxc-content-image {
   min-height: 200px;
   overflow: hidden; }
@@ -1111,7 +1117,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   height: 100%;
   /*background-size: cover;
-    background-position:center left;*/
+  background-position:center left;*/
   color: white; }
   .cxc-banner:hover img {
     -webkit-filter: grayscale(0);
@@ -1480,7 +1486,6 @@ header.header-three {
   margin: 2em 0 0; }
   .mobile-header figure img {
     width: 100%; }
-
 .mobile-header select.mobile-change-moment-select {
   width: 100%;
   height: 50%;
@@ -1515,21 +1520,23 @@ header.header-three {
       padding-right: 2.5%; } }
 
 .page-section {
-  padding-left: 0;
+  padding-left: 1rem;
   padding-right: 0;
   margin-bottom: 3rem; }
+  @media only screen and (min-width: 1224px) {
+    .page-section {
+      padding-left: 0; } }
   .page-section .row {
-    margin-left: 0;
-    margin-right: 0; }
+    /*margin-left: 0;
+    margin-right: 0;*/ }
     @media only screen and (min-width: 1224px) {
       .page-section .row {
-        margin-left: -0.5rem;
-        margin-right: -0.5rem; } }
+        padding-left: 0.4rem;
+        /*margin-right:  -0.5rem;*/ } }
 
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap {
     margin-top: 5%; } }
-
 .cxc-content-wrap #more-button {
   position: absolute;
   right: 5px;
@@ -1556,3 +1563,5 @@ header.header-three {
     margin: 1% 2%; }
     #social-button-box .social-buttons i bp-desktop {
       margin: 0; }
+
+/*# sourceMappingURL=site.css.map */

@@ -6,7 +6,7 @@
         var data = {
             categories: [],
             pageNumber: 0,
-            postsPerPage : 12,
+            postsPerPage : 18,
             post: {},
             posts: [],
             banners: [],
@@ -49,6 +49,8 @@
                   });
 
                 data.post = results.data;
+                data.post.title = $sce.trustAsHtml(data.post.title);
+                data.post.excerpt = $sce.trustAsHtml(data.post.excerpt);
                 data.post.content = $sce.trustAsHtml(data.post.content);
             })
         }
@@ -119,8 +121,9 @@
         var prepPosts = function (postArray, replaceBannerArray) {
             var bannerindeces = [];
             angular.forEach(postArray, function (post, key) {
+                //Remove banners from post array
                 angular.forEach(post.terms.category, function (cat) {
-                    if (cat.name === "Banner") {
+                    if (cat.name.toLowerCase() === "banner") {
                         bannerindeces.push(key);
                         if (replaceBannerArray) {
                             data.banners = [];

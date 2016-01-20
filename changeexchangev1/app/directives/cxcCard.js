@@ -19,10 +19,11 @@
                 
             },
 
-            controller: ["$scope", function ($scope) {
-                $scope.testClick = function () {
-                    alert($scope.cxccontent.title); 
-                }
+            controller: ["$scope", "$sce", function ($scope, $sce) {
+                if ($scope.cxccontent.title)
+                    $scope.cxccontent.title = $sce.trustAsHtml($scope.cxccontent.title);
+                if ($scope.cxccontent.excerpt)
+                    $scope.cxccontent.excerpt = $sce.trustAsHtml($scope.cxccontent.excerpt);
             }]
         }
     }])

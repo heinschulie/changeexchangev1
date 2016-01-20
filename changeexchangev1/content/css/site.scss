@@ -372,18 +372,25 @@ header.header-three{
 }
 
 .page-section {
-    padding-left: 0;
+    padding-left: $padding*5;
     padding-right: 0;
     margin-bottom: 3rem;
 
+    @include bp-desktop{
+        padding-left: 0;
+    }
     .row{
-        margin-left: 0;
-        margin-right: 0;
+        /*margin-left: 0;
+        margin-right: 0;*/
 
         @include bp-desktop{
-            margin-left: -0.5rem;
-            margin-right:  -0.5rem;
+            padding-left: $padding*2;
+            /*margin-right:  -0.5rem;*/
         }
+    }
+
+    .card-section-2:first-child{
+        //margin-left: -$padding*2;
     }
 }
 

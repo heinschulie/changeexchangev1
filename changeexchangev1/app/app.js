@@ -63,3 +63,9 @@ app.config(["$httpProvider", function ($httpProvider) {
     //$httpProvider.defaults.withCredentials = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
+
+//app.filter(['html',function($sce){
+//    return function(input){
+//        return $sce.trustAsHtml(input);
+//    }
+//}])
