@@ -9,7 +9,7 @@
 var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel']);
 
 
-app.config(["$routeProvider", function ($routeProvider) {
+app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
     $routeProvider.when("/exchange/:pagename", {
         controller: "pageController",
@@ -31,19 +31,14 @@ app.config(["$routeProvider", function ($routeProvider) {
         templateUrl: "/app/views/home.html"
     });
 
-    $routeProvider.when("/events", {
-        //controller: "homeController",
-        templateUrl: "/app/views/events.html"
-    });
+    //$routeProvider.when("/events", {
+    //    //controller: "homeController",
+    //    templateUrl: "/app/views/events.html"
+    //});
 
     $routeProvider.when("/:postId", {
         controller: "postController",
         templateUrl: "/app/views/post.html"
-    });
-
-    $routeProvider.when("/oops/whathappened", {
-        //controller: "postController",
-        templateUrl: "/app/views/oops.html"
     });
 
     //FINALLY
@@ -51,6 +46,9 @@ app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider.otherwise({
         redirectTo: "/home"
     });
+
+    // use the HTML5 History API
+    //$locationProvider.html5Mode(true);
 
 }]);
 

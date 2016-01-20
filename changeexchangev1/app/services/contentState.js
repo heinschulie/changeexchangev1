@@ -145,10 +145,6 @@
 
             data.categories = [];
             if (moment)
-                //if (moment.name !== 'Landing that Job'
-                //    && moment.name !== 'Making a Home'
-                //    && moment.name !== 'Starting a Family'
-                //    && moment.name !== 'Tying the Knot') {
                 if (moment.name === 'What change moment are you going through?') {
                     changeMoments[0].active = true;
                     chosenMoment = changeMoments[0];
@@ -167,18 +163,9 @@
                     amoment.active = false;
             })
 
-            data.pageNumber = 0;                                               // - Explicitly set page number back to 1                            
-            var position = data.postsPerPage * data.pageNumber;   // - Calculate position to splice post array 
-            data.posts = data.posts.splice(0, position)           // - Trim array down to position 
-            
-            //if (moment.name !== 'What change moment are you going through?') {
-            //    data.categories.push(moment.name);
-            //}
-            //else {
-            //    data.categories = [];
-            //    data.categories = data.categories.concat(standardPostCategories);
-            //    chosenMoment = { name: "What change moment are you going through?", active: true };
-            //}
+            data.pageNumber = 0;                                                // - Explicitly set page number back to 1                            
+            var position = data.postsPerPage * data.pageNumber;                 // - Calculate position to splice post array 
+            data.posts = data.posts.splice(0, position)                         // - Trim array down to position             
 
             if ($location.path() !== "/home")
                 $location.path('/home');

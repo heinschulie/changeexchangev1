@@ -19,10 +19,11 @@
 
             },
 
-
             controller: ["$scope", "$sce", function ($scope, $sce) {
-                $scope.cxcbannercontent.excerpt = $scope.cxcbannercontent.excerpt.replace('<p>', '').replace('</p>', ''); 
-                $scope.cxcbannercontent.excerpt = $sce.trustAsResourceUrl($scope.cxcbannercontent.excerpt);
+                if (typeof $scope.cxcbannercontent.excerpt === 'string' || $scope.cxcbannercontent.excerpt instanceof String) {
+                    $scope.cxcbannercontent.excerpt = $scope.cxcbannercontent.excerpt.replace('<p>', '').replace('</p>', '');
+                    $scope.cxcbannercontent.excerpt = $sce.trustAsResourceUrl($scope.cxcbannercontent.excerpt);
+                }
             }]
         }
     }])
