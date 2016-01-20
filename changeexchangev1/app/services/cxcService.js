@@ -4,11 +4,11 @@
 
         // *** Local development
         //var serviceBase = 'http://localhost/ohsoserious/wp-json/';
-        var applicationBase = 'http://localhost:16327/';
+        //var applicationBase = 'http://localhost:16327/';
 
         // *** Development and staging
         //var serviceBase = 'http://changeexchangedev.azurewebsites.net/wp-json/';
-        //var applicationBase = 'http://changeexchangev1.azurewebsites.net//';
+        var applicationBase = 'http://changeexchangev1.azurewebsites.net/';
 
         var serviceBase = 'https://services.brightrock.co.za/changeexchange/wp-json/';
 
