@@ -33,7 +33,7 @@
                     alert('Posts returned: ' + results.data.length);
                 })
                 .catch(function (error) {
-                    alert('Error : ' + error.status);
+                    alert('Error : ' + error.status + '|' + error.message);
                     errorState.catchError(error);
                 });
         };
