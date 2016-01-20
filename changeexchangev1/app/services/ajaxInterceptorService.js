@@ -40,6 +40,7 @@ app.factory('ajaxInterceptorService', ['$q', '$location', 'errorState', 'cxcServ
         if (rejection.status === 401 || rejection.status === 500) {
             //TODO - Set error object in contentState. 
             console.log('There was a ' + rejection.status + ' error');
+            alert('There was a ' + rejection.status + ' error');
             //if ($location.path() !== "/home") {
             //    $location.path('/home');
             //}
