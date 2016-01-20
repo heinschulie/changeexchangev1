@@ -1,6 +1,6 @@
 ﻿;(function () {
     'use strict';
-    var pageService = function ($http, cxcService, errorService) {
+    var pageService = function ($http, cxcService, errorState) {
 
         var serviceBase = cxcService.serviceBase;
 
@@ -10,7 +10,7 @@
                     return results;
                 })
                 .catch(function (error) {
-                    errorService.catchError(error);
+                    errorState.catchError(error);
                 });
         };
 
@@ -20,7 +20,7 @@
                     return results;
                 })
                 .catch(function (error) {
-                    errorService.catchError(error);
+                    errorState.catchError(error);
                 });
         };
 
@@ -31,6 +31,6 @@
     };
 
     var module = angular.module("cxcApp");
-    module.factory('pageService', ['$http', 'cxcService', 'errorService', pageService]);
+    module.factory('pageService', ['$http', 'cxcService', 'errorState', pageService]);
 
 }());

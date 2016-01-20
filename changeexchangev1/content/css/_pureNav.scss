@@ -28,7 +28,8 @@ This is the parent `<div>` that contains the menu and the content area.
     top: $headerHeight; 
     padding-left: 0;
     @include bp-desktop{
-        top: $headerHeight; 
+        //top: $headerHeight; //for header one
+        top: $headerHeight/3; //for header two
     }
 }
     #layout.active #menu {
@@ -104,7 +105,8 @@ appears on the left side of the page.
     @include bp-desktop{
         margin-left: -$sideNavWidth; /* "#menu" width */
         width: $sideNavWidth;
-        top: $headerHeight;
+        //top: $headerHeight; //for header one
+        top: $headerHeight/3; //for header two
     }
 }
 

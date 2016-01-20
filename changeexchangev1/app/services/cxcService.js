@@ -1,14 +1,16 @@
 ﻿;(function () {
     'use strict';
-    var cxcService = function ($q, errorService) {
+    var cxcService = function ($q, errorState) {
 
         // *** Local development
-        var serviceBase = 'http://localhost/ohsoserious/wp-json/';
+        //var serviceBase = 'http://localhost/ohsoserious/wp-json/';
         var applicationBase = 'http://localhost:16327/';
 
         // *** Development and staging
         //var serviceBase = 'http://changeexchangedev.azurewebsites.net/wp-json/';
         //var applicationBase = 'http://changeexchangev1.azurewebsites.net//';
+
+        var serviceBase = 'https://services.brightrock.co.za/changeexchange/wp-json/';
 
         // *** Production 
         // ???
@@ -23,7 +25,7 @@
                 var message = "Service Base is undefined.";
                 deferred.reject(message);
                 var err = { message: message };
-                errorService(err);
+                errorState(err);
             }
 
             return deferred.promise;
@@ -38,7 +40,7 @@
                 var message = "Application Base is undefined.";
                 deferred.reject(message);
                 var err = { message: message };
-                errorService(err);
+                errorState(err);
             }
 
             return deferred.promise;
@@ -52,6 +54,6 @@
     };
 
     var module = angular.module("cxcApp");
-    module.factory('cxcService', ['$q', 'errorService', cxcService]);
+    module.factory('cxcService', ['$q', 'errorState', cxcService]);
 
 }());

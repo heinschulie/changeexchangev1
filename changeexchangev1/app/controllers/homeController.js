@@ -3,14 +3,14 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var homeController = function ($scope, contentState) {
+    var homeController = function ($scope, errorState, contentState) {
 
         $scope.contentState = contentState;
+        $scope.errorState = errorState; 
 
         $scope.callForPosts = function () {
             return contentState.getPosts();
         }
-
 
         //Social Feed Functionality 
         $scope.currentSm = "fb";
@@ -19,22 +19,16 @@
         }
 
         //Initialise 
-        if (contentState.data.pageNumber <= 1) {             // - If this is the first time we land on this page. 
+        if (contentState.data.categories.length < 1) {             // - If this is the first time we land on this page. 
             //Call only the change moments and exchange categories 
-            $scope.contentState.data.categories = [
-                'Landing that Job',
-                'Making a Home',
-                'Starting a Family',
-                'Tying the Knot',
-                'Ruda talks change',
-                'The Dan Nicoll Show'
-            ];
-            $scope.callForPosts();
+            $scope.contentState.data.categories = $scope.contentState.standardPostCategories;
         }
+        if (contentState.data.posts.length < 1)
+            $scope.callForPosts();
 
         if (!contentState.data.banners || !contentState.data.banners.length) 
             contentState.getBanners(null, true);
     }
 
-    app.controller("homeController", ["$scope", "contentState", homeController]);
+    app.controller("homeController", ["$scope", "errorState", "contentState", homeController]);
 }())

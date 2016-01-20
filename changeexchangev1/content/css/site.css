@@ -296,49 +296,42 @@ div.rn-carousel-indicator span {
   @media only screen and (min-width: 2547px) and (min-width: 1224px) {
     .image--expand {
       width: 791%; } }
-
   @media screen and (min-width: 2185px) and (max-width: 2546px) {
     .image--expand {
       width: 700%; } }
   @media only screen and (min-width: 2185px) and (max-width: 2546px) and (min-width: 1224px) {
     .image--expand {
       width: 691%; } }
-
   @media screen and (min-width: 1823px) and (max-width: 2184px) {
     .image--expand {
       width: 600%; } }
   @media only screen and (min-width: 1823px) and (max-width: 2184px) and (min-width: 1224px) {
     .image--expand {
       width: 591%; } }
-
   @media screen and (min-width: 1461px) and (max-width: 1822px) {
     .image--expand {
       width: 500%; } }
   @media only screen and (min-width: 1461px) and (max-width: 1822px) and (min-width: 1224px) {
     .image--expand {
       width: 491%; } }
-
   @media screen and (min-width: 1099px) and (max-width: 1460px) {
     .image--expand {
       width: 400%; } }
   @media only screen and (min-width: 1099px) and (max-width: 1460px) and (min-width: 1224px) {
     .image--expand {
       width: 391%; } }
-
   @media screen and (min-width: 737px) and (max-width: 1098px) {
     .image--expand {
       width: 300%; } }
   @media only screen and (min-width: 737px) and (max-width: 1098px) and (min-width: 1224px) {
     .image--expand {
       width: 291%; } }
-
   @media screen and (max-width: 736px) {
     .image--expand {
       width: 200%; } }
   @media only screen and (max-width: 736px) and (min-width: 1224px) {
     .image--expand {
       width: 191%; } }
-
   .is-collapsed .image--expand {
     margin-bottom: 0; }
 
@@ -351,7 +344,7 @@ div.rn-carousel-indicator span {
   line-height: 50px;
   text-decoration: none; }
   .expand__close:before {
-    content: 'â•«'; }
+    content: '×'; }
   .expand__close:hover {
     color: #fff; }
 
@@ -377,6 +370,52 @@ div.rn-carousel-indicator span {
 
 .art-info {
   max-width: 300px; }
+
+/*Colours*/
+/*@mixin bp-iphone6landscape {
+    @media only screen 
+        and (min-device-width : 375px) HELLOYOU
+        and (max-device-width : 667px) 
+        and (orientation : landscape) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}
+
+@mixin bp-iphone6portrait {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : portrait) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}*/
+/* Smartphones (landscape) ----------- 4 */
+/* Smartphones (portrait) ----------- 4 */
+/* Smartphones (portrait) ----------- 5 */
+/* Smartphones (landscape) ----------- 5 */
+/* Smartphones (portrait) ----------- 6 */
+/* Smartphones (landscape) ----------- 6 */
+/* Smartphones (portrait) ----------- 6+ */
+/* Smartphones (landscape) ----------- 6+ */
+/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* Desktops and laptops ----------- */
+/*Colours*/
+.error-modal {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white; }
 
 html {
   position: relative;
@@ -407,7 +446,7 @@ body {
   line-height: 1.428571429;
   color: black;
   background-color: #ededed;
-    /*
+  /*
 	 * Relates to the pseudo class & sibling bug, see
 	 * http://css-tricks.com/webkit-sibling-bug/ for more details
 	 */
@@ -431,6 +470,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0; }
   to {
     padding: 0; } }
+
 /*Colours*/
 /*Colours*/
 /*@mixin bp-iphone6landscape {
@@ -488,11 +528,7 @@ This is the parent `<div>` that contains the menu and the content area.
 */
 #layout {
   position: relative;
-  top: 30%;
   padding-left: 0; }
-  @media only screen and (min-width: 1224px) {
-    #layout {
-      top: 30%; } }
 
 #layout.active #menu {
   left: 65%;
@@ -530,7 +566,7 @@ The content `<div>` is where all your content goes.
   color: #333;
   text-align: center;
   padding: 2.5em 2em 0;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 10px solid #eee; }
 
 .header h1 {
   margin: 0.2em 0;
@@ -576,7 +612,7 @@ appears on the left side of the page.
       margin-left: -21%;
       /* "#menu" width */
       width: 21%;
-      top: 30%; } }
+      top: 10%; } }
 
 #menu::-webkit-scrollbar {
   width: 0.2em; }
@@ -590,8 +626,8 @@ appears on the left side of the page.
   outline: 1px solid slategrey; }
 
 /*
-All anchors inside the menu should be styled like this.
-*/
+    All anchors inside the menu should be styled like this.
+    */
 #menu a {
   color: #999;
   border: none;
@@ -606,23 +642,23 @@ All anchors inside the menu should be styled like this.
   padding-bottom: 0.6em; }
 
 /*
-Remove all background/borders, since we are applying them to #menu.
-*/
+    Remove all background/borders, since we are applying them to #menu.
+    */
 #menu .pure-menu,
 #menu .pure-menu ul {
   border: none;
   background: transparent; }
 
 /*
-Add that light border to separate items into groups.
-*/
+    Add that light border to separate items into groups.
+    */
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
   border-top: 1px solid #333; }
 
 /*
-Change color of the anchor links on hover/focus.
-*/
+        Change color of the anchor links on hover/focus.
+        */
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
   background: #f6a915; }
@@ -639,8 +675,8 @@ a.active {
       width: 55%; } }
 
 /*
-This styles the selected menu item `<li>`.
-*/
+    This styles the selected menu item `<li>`.
+    */
 #menu .pure-menu-selected,
 #menu .pure-menu-heading {
   width: 100%;
@@ -654,14 +690,14 @@ This styles the selected menu item `<li>`.
   box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3); }
 
 /*
-This styles a link within a selected menu item `<li>`.
-*/
+        This styles a link within a selected menu item `<li>`.
+        */
 #menu .pure-menu-selected a {
   color: #fff; }
 
 /*
-This styles the menu heading.
-*/
+    This styles the menu heading.
+    */
 #menu .pure-menu-heading {
   font-size: 110%;
   color: #fff;
@@ -745,7 +781,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .content {
     padding-left: 2em;
     padding-right: 2em; }
-
   #layout {
     padding-left: 65%;
     /* left col width "#menu" */
@@ -793,11 +828,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (max-width: 80em) {
   /* Only apply this when the window is small. Otherwise, the following
-  case results in extra padding on the left:
-      * Make the window small.
-      * Tap the menu to trigger the active state.
-      * Make the window large again.
-  */
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
   #layout.active {
     position: relative;
     left: 65%; } }
@@ -917,6 +952,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .col-xs-offset-12 {
     padding-left: 0;
     padding-right: 0; } }
+
 .cxc-content-image {
   min-height: 200px;
   overflow: hidden; }
@@ -987,7 +1023,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   height: 560px;
   background-color: #616161;
   right: 2.5%;
-  width: 18.5%;
+  width: 19%;
   position: absolute; }
   .social-feeds span {
     display: block;
@@ -1045,7 +1081,20 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   position: relative;
   padding-top: 0;
   margin-right: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  padding-right: 0.2rem; }
+  @media only screen and (max-width: 60em) {
+    .carousel-wrapper {
+      padding-right: 0.7rem;
+      padding-left: 0.7rem; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .carousel-wrapper {
+      padding-right: 0.7rem;
+      padding-left: 0.7rem; } }
+  @media only screen and (max-device-width: 480px) {
+    .carousel-wrapper {
+      padding-right: 0.2rem;
+      padding-left: 0.2rem; } }
 
 .banner-container {
   position: relative;
@@ -1062,7 +1111,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   height: 100%;
   /*background-size: cover;
-  background-position:center left;*/
+    background-position:center left;*/
   color: white; }
   .cxc-banner:hover img {
     -webkit-filter: grayscale(0);
@@ -1122,6 +1171,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .cxc-banner-title {
   text-transform: uppercase; }
 
+.banner-video {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 41%; }
+  .banner-video iframe {
+    width: 100%;
+    height: 100%; }
+
 /*Colours*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
@@ -1163,7 +1221,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   background-color: white; }
   #post-container img {
     float: right;
-    width: 100%; }
+    max-width: 100%; }
+    @media only screen and (max-device-width: 480px) {
+      #post-container img {
+        width: 100%; } }
   #post-container section.article-hero {
     position: relative;
     width: 100%;
@@ -1195,7 +1256,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     .mobileonly {
       display: none; } }
 
-header {
+header.header-one {
   position: fixed;
   width: 100%;
   height: 15%;
@@ -1203,19 +1264,19 @@ header {
   background-color: #ededed;
   z-index: 2; }
   @media only screen and (min-width: 1224px) {
-    header {
+    header.header-one {
       height: 30%; } }
-  header h3 {
+  header.header-one h3 {
     display: none; }
     @media only screen and (min-width: 1224px) {
-      header h3 {
+      header.header-one h3 {
         display: block;
         position: absolute;
         width: 50%;
         margin: 0;
         margin-left: 6.5%;
         bottom: 11.5%; } }
-  header select.change-moment-select {
+  header.header-one select.change-moment-select {
     position: absolute;
     left: 50%;
     -moz-transform: translate(-50%, 0);
@@ -1227,6 +1288,7 @@ header {
     width: 80%;
     height: 40%;
     top: 64%;
+    padding-left: 25%;
     background-color: #e5980a;
     background-image: url("../images/selectbutton.png");
     background-position: right;
@@ -1238,7 +1300,7 @@ header {
     border-radius: 7px;
     border: none; }
     @media only screen and (min-width: 1224px) {
-      header select.change-moment-select {
+      header.header-one select.change-moment-select {
         width: 31%;
         height: 18%;
         top: 23%;
@@ -1247,28 +1309,193 @@ header {
         /* Firefox */
         -webkit-appearance: none;
         /* Safari and Chrome */ } }
-  header figure {
+  header.header-one figure {
     position: absolute;
     margin-left: 0;
     margin-right: 0;
     margin-top: 2%; }
-    header figure img {
+    header.header-one figure img {
       width: 100%; }
-    header figure.header-image-left {
+    header.header-one figure.header-image-left {
       width: 65%;
       left: 15%; }
       @media only screen and (min-width: 1224px) {
-        header figure.header-image-left {
+        header.header-one figure.header-image-left {
           width: 31%;
           left: 0.5%; } }
-    header figure.header-image-right {
+    header.header-one figure.header-image-right {
       display: none; }
       @media only screen and (min-width: 1224px) {
-        header figure.header-image-right {
+        header.header-one figure.header-image-right {
           display: block;
           right: 2.5%;
           width: 15%;
           margin-top: 2.5%; } }
+
+header.header-two {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #ededed;
+  z-index: 2; }
+  @media only screen and (min-width: 1224px) {
+    header.header-two {
+      height: 18%; } }
+  header.header-two h3 {
+    display: none; }
+    @media only screen and (min-width: 1224px) {
+      header.header-two h3 {
+        display: block;
+        position: absolute;
+        width: 98%;
+        margin: 0;
+        margin-left: 3.5%;
+        bottom: 0;
+        font-size: 1.1em; } }
+  header.header-two select.change-moment-select {
+    position: absolute;
+    left: 50%;
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    width: 40%;
+    height: 48%;
+    top: 13%;
+    padding-left: 25%;
+    background-color: #e5980a;
+    background-image: url("../images/selectbutton.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    border: none; }
+    @media only screen and (min-width: 1224px) {
+      header.header-two select.change-moment-select {
+        left: 54%;
+        width: 49%;
+        height: 48%;
+        appearance: none;
+        -moz-appearance: none;
+        /* Firefox */
+        -webkit-appearance: none;
+        /* Safari and Chrome */ } }
+  header.header-two p {
+    position: absolute;
+    right: 2.5%;
+    top: 33%; }
+  header.header-two figure {
+    width: 25%;
+    left: 0;
+    position: absolute;
+    top: 0%; }
+    header.header-two figure img {
+      width: 100%; }
+    header.header-two figure.header-image-left {
+      width: 65%;
+      left: 15%; }
+      @media only screen and (min-width: 1224px) {
+        header.header-two figure.header-image-left {
+          width: 25%;
+          left: 0; } }
+    header.header-two figure.header-image-right {
+      display: none; }
+      @media only screen and (min-width: 1224px) {
+        header.header-two figure.header-image-right {
+          display: block;
+          right: 2.5%;
+          width: 15%;
+          margin-top: 2.5%; } }
+
+header.header-three {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #ededed;
+  z-index: 2; }
+  @media only screen and (min-width: 1224px) {
+    header.header-three {
+      height: 10%; } }
+  header.header-three h3 {
+    display: block;
+    position: absolute;
+    width: 98%;
+    margin: 0;
+    margin-left: 3.5%;
+    bottom: 0;
+    font-size: 1.1em; }
+  header.header-three select.change-moment-select {
+    position: absolute;
+    left: 50%;
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 53%;
+    width: 65%;
+    height: 50%;
+    top: 10%;
+    padding-left: 25%;
+    background-color: #e5980a;
+    background-image: url("../images/selectbutton.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */ }
+  header.header-three figure {
+    width: 20%;
+    position: absolute;
+    padding: 0;
+    margin: 0; }
+    header.header-three figure img {
+      width: 100%; }
+    header.header-three figure.header-image-left {
+      width: 15%;
+      left: 2.5%;
+      top: 10%; }
+    header.header-three figure.header-image-right {
+      position: absolute;
+      display: block;
+      right: 2.5%;
+      width: 10%;
+      top: 0; }
+
+.mobile-header figure {
+  width: 100%;
+  margin: 2em 0 0; }
+  .mobile-header figure img {
+    width: 100%; }
+
+.mobile-header select.mobile-change-moment-select {
+  width: 100%;
+  height: 50%;
+  padding-left: 25%;
+  background-color: #e5980a;
+  background-image: url("../images/selectbutton.png");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */ }
 
 .layout {
   display: flex;
@@ -1301,7 +1528,8 @@ header {
 
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap {
-    margin-top: 15%; } }
+    margin-top: 5%; } }
+
 .cxc-content-wrap #more-button {
   position: absolute;
   right: 5px;
@@ -1315,6 +1543,7 @@ header {
   z-index: 1; }
   @media only screen and (min-width: 1224px) {
     #social-button-box {
+      padding-top: 1em;
       width: 2.5%;
       height: 224px;
       background-color: #ededed; } }
@@ -1323,6 +1552,7 @@ header {
       width: 100%; } }
   #social-button-box .social-buttons i {
     font-size: 2em;
-    float: right; }
-
-/*# sourceMappingURL=site.css.map */
+    float: right;
+    margin: 1% 2%; }
+    #social-button-box .social-buttons i bp-desktop {
+      margin: 0; }

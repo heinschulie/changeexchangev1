@@ -3,6 +3,7 @@
 @import '_cxcVariables.scss';
 @import "angular-carousel";
 @import "gallery";
+@import '_error.scss'; 
 
 html {
     position: relative;
@@ -86,7 +87,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-header{
+header.header-one{
     position: fixed;
     width: 100%;
     height: $headerHeight / 2; 
@@ -116,6 +117,7 @@ header{
         width: 80%; 
         height: 40%;
         top: 64%; 
+        padding-left: 25%; //Center text in select
         background-color: $mustard-orange; 
         background-image: url('../images/selectbutton.png');
         background-position: right;
@@ -165,6 +167,189 @@ header{
     }
 }
 
+header.header-two{
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    background-color: $lightgray;
+    z-index: 2;
+
+    @include bp-desktop{       
+        height: $headerHeight/5*3; 
+    }
+
+    h3{
+         display: none;
+        @include bp-desktop{   
+            display: block;
+            position: absolute;
+            width: 98%;
+            margin: 0;
+            margin-left: 3.5%;
+            bottom: 0;
+            font-size: 1.1em;
+        }       
+    }
+
+    select.change-moment-select{
+        @include centerThisThingX(); 
+        left: 50%;
+        width: 40%;
+        height: 48%;
+        top: 13%; 
+        padding-left: 25%; //Center text in select
+        background-color: $mustard-orange; 
+        background-image: url('../images/selectbutton.png');
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;   
+        @include border-radius(7px);
+        border: none; 
+
+        @include bp-desktop{       
+                left: 54%;
+                width: 49%;
+                height: 48%;
+
+                appearance:none;
+                -moz-appearance:none; /* Firefox */
+                -webkit-appearance:none; /* Safari and Chrome */
+            }
+    }
+
+    p{
+        position: absolute;
+        right: 2.5%;
+        top: 33%;
+    }
+
+    figure{
+        width: 25%;
+        left: 0;
+        position: absolute;
+        top: 0%; 
+
+        img{
+            width: 100%;
+        }
+
+        &.header-image-left{          
+            width: 65%; 
+            left: 15%;
+            @include bp-desktop{       
+                width: 25%;
+                left: 0;
+            }
+        }
+        &.header-image-right{  
+            display: none;
+            @include bp-desktop{  
+                display: block;     
+                right: 2.5%;
+                width: 15%;
+                margin-top: 2.5%; 
+            }            
+        }
+    }
+}
+
+header.header-three{
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    background-color: $lightgray;
+    z-index: 2;
+
+    @include bp-desktop{       
+        height: 10%; 
+    }
+
+    h3{
+        display: block;
+        position: absolute;
+        width: 98%;
+        margin: 0;
+        margin-left: 3.5%;
+        bottom: 0;
+        font-size: 1.1em;   
+    }
+
+    select.change-moment-select{
+        @include centerThisThingX(); 
+        left: 53%;
+        width: 65%;
+        height: 50%;
+        top: 10%;
+        padding-left: 25%; //Center text in select
+        background-color: $mustard-orange; 
+        background-image: url('../images/selectbutton.png');
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;   
+
+        @include border-radius(7px);
+        border: none; 
+
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+    }
+
+    figure{
+        width: 20%;
+        position: absolute;        
+        padding: 0;
+        margin: 0;    
+
+        img{
+            width: 100%;
+        }
+
+        &.header-image-left{          
+            width: 15%; 
+            left: 2.5%;
+            top: 10%;
+        }
+        &.header-image-right{ 
+            position: absolute;
+            display: block;
+            right: 2.5%;
+            width: 10%;
+            top: 0;      
+        }
+    }
+}
+
+//Mobile change moment drop down 
+.mobile-header{
+
+    figure{
+        width: 100%;
+        margin: 2em 0 0;
+        img{
+            width:100%;
+        }
+    }
+    select.mobile-change-moment-select{
+
+        width: 100%;
+        height: 50%;       
+        padding-left: 25%; //Center text in select
+        background-color: $mustard-orange; 
+        background-image: url('../images/selectbutton.png');
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;   
+
+        //@include border-radius(7px);
+        border: none; 
+
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+    }
+}
+
 // The overall content container on the home page 
 .layout {
     display: flex;
@@ -205,7 +390,9 @@ header{
 .cxc-content-wrap{
     //margin-top: $headerHeight;
     @include bp-desktop{       
-        margin-top: $headerHeight/2; 
+        //margin-top: $headerHeight/2; //For headerone
+        //margin-top: $headerHeight/3; //For header two
+        margin-top: $headerHeight/6; //For header two
     } 
 
     #more-button{
@@ -223,6 +410,7 @@ header{
     z-index: 1; //This is a terrible hack. Forgive me. 
 
     @include bp-desktop{
+        padding-top: 1em;
         width:   2.5%;
         height: $cardHeight/5*4;
         background-color: $lightgray; 
@@ -233,8 +421,13 @@ header{
             width: 100%;
         }
         i{
-            font-size: 2em; 
-            float: right; 
+            font-size: 2em;
+            float: right;
+            margin: 1% 2%;
+
+            bp-desktop{
+                margin: 0;
+            }
         }
     }
 }

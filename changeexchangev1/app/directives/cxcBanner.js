@@ -20,8 +20,9 @@
             },
 
 
-            controller: ["$scope", function ($scope) {
-
+            controller: ["$scope", "$sce", function ($scope, $sce) {
+                $scope.cxcbannercontent.excerpt = $scope.cxcbannercontent.excerpt.replace('<p>', '').replace('</p>', ''); 
+                $scope.cxcbannercontent.excerpt = $sce.trustAsResourceUrl($scope.cxcbannercontent.excerpt);
             }]
         }
     }])

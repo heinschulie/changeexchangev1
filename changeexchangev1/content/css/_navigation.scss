@@ -25,10 +25,11 @@ This is the parent `<div>` that contains the menu and the content area.
 */
 #layout {
     position: relative;
-    top: $headerHeight; 
+    //top: $headerHeight; 
     padding-left: 0;
     @include bp-desktop{
-        top: $headerHeight; 
+        //top: $headerHeight; //for header one
+        //top: $headerHeight/3*2; //for header two
     }
 }
     #layout.active #menu {
@@ -70,7 +71,7 @@ The content `<div>` is where all your content goes.
      color: #333;
      text-align: center;
      padding: 2.5em 2em 0;
-     border-bottom: 1px solid #eee;
+     border-bottom: 10px solid #eee;
  }
     .header h1 {
         margin: 0.2em 0;
@@ -116,7 +117,9 @@ appears on the left side of the page.
     @include bp-desktop{
         margin-left: -$sideNavWidth; /* "#menu" width */
         width: $sideNavWidth;
-        top: $headerHeight;
+        //top: $headerHeight; //for header one
+        //top: $headerHeight/3*2; //for header two
+        top: $headerHeight/3; //for header two
     }
 }
 

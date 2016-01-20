@@ -31,9 +31,19 @@ app.config(["$routeProvider", function ($routeProvider) {
         templateUrl: "/app/views/home.html"
     });
 
+    $routeProvider.when("/events", {
+        //controller: "homeController",
+        templateUrl: "/app/views/events.html"
+    });
+
     $routeProvider.when("/:postId", {
         controller: "postController",
         templateUrl: "/app/views/post.html"
+    });
+
+    $routeProvider.when("/oops/whathappened", {
+        //controller: "postController",
+        templateUrl: "/app/views/oops.html"
     });
 
     //FINALLY
@@ -45,6 +55,9 @@ app.config(["$routeProvider", function ($routeProvider) {
 }]);
 
 app.config(["$httpProvider", function ($httpProvider) {
+
+    $httpProvider.interceptors.push('ajaxInterceptorService');
+
     //Enable cross domain calls
     $httpProvider.defaults.useXDomain = true;
     //$httpProvider.defaults.withCredentials = true;

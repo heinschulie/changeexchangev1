@@ -50,8 +50,8 @@
         //Initialise 
         $scope.callForPost()
             .then(function(results){
-
-                return; 
+                if (contentState.data.posts.length < 1)
+                    return contentState.getPosts();
             })
             .then(getRecommendedPosts);
     }

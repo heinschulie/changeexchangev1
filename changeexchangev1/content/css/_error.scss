@@ -1,0 +1,10 @@
+@import '_mixins.scss';
+@import '_colours.scss';
+
+.error-modal{
+    
+    @include modal();  
+    text-align: center;
+    color: white;
+    
+}

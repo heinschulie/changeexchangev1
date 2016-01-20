@@ -43,9 +43,13 @@
     <Content Include="app\controllers\galleryController.js" />
     <Content Include="app\directives\cxcBanner.js" />
     <Content Include="app\directives\templates\cxc-banner.html" />
+    <Content Include="app\services\ajaxInterceptorService.js" />
+    <Content Include="app\views\events.html" />
     <Content Include="app\views\galleries.html" />
     <Content Include="app\views\gallery.html" />
+    <Content Include="app\views\oops.html" />
     <Content Include="app\views\page.html" />
+    <Content Include="app\views\partials\error.html" />
     <Content Include="content\css\site.css" />
     <Content Include="content\css\site.scss">
       <Compile>True</Compile>
@@ -67,11 +71,13 @@
     <Content Include="content\css\_angular-carousel.scss" />
     <Content Include="content\css\_post.scss" />
     <Content Include="content\css\_navigation.scss" />
+    <Content Include="content\images\cxclogo-sansbubble.png" />
     <Content Include="content\images\selectbutton.jpg" />
     <Content Include="content\images\selectbutton.png" />
     <Content Include="gulpfile.js" />
     <Content Include="package.json" />
     <Content Include="content\css\_gallery.scss" />
+    <Content Include="content\css\_error.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -90,7 +96,7 @@
     <Content Include="app\directives\templates\cxc-card.html" />
     <Content Include="app\services\categoryService.js" />
     <Content Include="app\services\cxcService.js" />
-    <Content Include="app\services\errorService.js" />
+    <Content Include="app\services\errorState.js" />
     <Content Include="app\services\pageService.js" />
     <Content Include="app\services\postService.js" />
     <Content Include="app\services\contentState.js" />

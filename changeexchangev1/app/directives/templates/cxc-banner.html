@@ -1,11 +1,15 @@
 ﻿<div class="cxc-banner row center-lg middle-lg" data-ng-click="testClick()"> 
     <!--ng-style="{'background-image': 'url(' + cxcbannercontent.featured_image.source + ')'}"-->
     <img data-ng-src="{{cxcbannercontent.featured_image.source}}" alt="banner for {{cxcbannercontent.featured_image.title}}">
+    <div class="banner-video">
+        <iframe data-ng-src ="{{cxcbannercontent.excerpt}}" width="100%" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    </div>
     <div class="banner-copy box">
         <div class="banner-overlay"></div>
         <div class="cxc-banner-title">
             <h1 data-ng-bind-html="cxcbannercontent.title"></h1>
+            {{video}}
         </div>
-        <div data-ng-bind-html="cxcbannercontent.excerpt" class="box"></div>
+        <div data-ng-bind-html="cxcbannercontent.content" class="box"></div>
     </div>
 </div>

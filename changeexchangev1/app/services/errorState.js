@@ -1,7 +1,10 @@
 ﻿;(function () {
 
-    var errorService = function () {
+    var errorState = function () {
 
+        var data = {
+            ajaxErrors: []
+        };
         //toastr.options = {
         //    "closeButton": true,
         //    "debug": false,
@@ -26,11 +29,12 @@
         };
 
         return {
+            data: data,
             catchError: catchError
         };
     };
 
     var module = angular.module("cxcApp");
-    module.factory('errorService', [errorService]);
+    module.factory('errorState', [errorState]);
 
 }());
