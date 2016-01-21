@@ -57,6 +57,12 @@
 
         var getPosts = function () {
             data.pageNumber = data.pageNumber + 1;
+            if (data.categories.length)
+                angular.forEach(data.categories, function (cat) {
+                    if (cat.toLowerCase() === "events") {
+                        socialState.changeSm('fe');
+                    }
+                })
             return postService.getPosts(data.postsPerPage, data.pageNumber, data.categories, false).then(function (results) {
                 prepPosts(results.data, false);
                 if (data.pageNumber === 1)
@@ -129,9 +135,6 @@
                             data.banners = [];
                             data.banners.push(post);
                         }
-                    }
-                    if (cat.name.toLowerCase() === "events") {
-                        socialState.data.currentSM = "fe"; 
                     }
                 });
                 angular.forEach(post.terms.post_tag, function (tag) {

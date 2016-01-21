@@ -378,13 +378,21 @@ header.header-three{
 
     @include bp-desktop{
         padding-left: 0;
+        margin-right: -$padding;
+
+        .card-section-1{
+            margin-left: -$padding*2;
+        }
+        .card-section-2{
+            margin-left: -$padding*2.5;
+        }
     }
     .row{
         /*margin-left: 0;
         margin-right: 0;*/
 
         @include bp-desktop{
-            padding-left: $padding*2;
+            /*padding-left: $padding*2;*/
             /*margin-right:  -0.5rem;*/
         }
     }

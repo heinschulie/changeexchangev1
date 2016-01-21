@@ -3,11 +3,14 @@
 @import '_colours.scss';
 
 .social-feeds{
-    height: $cardHeight*2; 
+    height: $cardHeight*2 + 10px; 
+    margin-top: $padding;
     background-color: $charcoal;
-    right: $padding*13;
-    width: 19%;
+    right: $padding*12;
+    width: 16.1rem;
     position: absolute;
+    overflow: hidden;
+    border-bottom: 3px solid $mustard-orange;
 
     span{
         display: block;

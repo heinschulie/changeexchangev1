@@ -1,23 +1,25 @@
-﻿<div class="row">
-    <div id="post-container" class="column col-lg-9 col-md-12 col-sm-12 col-xs-12">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+﻿<div class="post-container-parent row">
+    <div class="post-container row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="post-canvas col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <section class="article-hero">
                 <img data-ng-src="{{contentState.data.post.featured_image.source}}" />
-            </section>            
+            </section>
             <h3 data-ng-bind-html="contentState.data.post.title"></h3>
-        </div>
-        <div class="post-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <!--</div>        
+        <div class="post-content col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
             <!--<img ng-src="{{contentState.data.post.featured_image.source}}" />-->
             <div ng-bind-html="contentState.data.post.excerpt"></div>
             <div ng-bind-html="contentState.data.post.content"></div>
         </div>
-        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <cxc-card class="col-xs-12 col-sm-12 col-md-4 col-lg-4'" ng-repeat="post in sameCategoryPosts | limitTo: 3" cxccontent="post"></cxc-card>
+        <div id="sidebar" class="column col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h5 class="recommended-post-message">{{recommendedMessageAuthor}}</h5>
+            <div class="row box">
+                <cxc-card class="col-xs-12 col-sm-6 col-md-12 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 5" cxccontent="post"></cxc-card>
+            </div>
         </div>
-    </div>
-    <div id="sidebar" class="column col-lg-3 col-md-12 col-sm-12 col-xs-12">
-        <div class="box">
-            <cxc-card class="col-xs-12 col-sm-12 col-md-12 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 2" cxccontent="post"></cxc-card>
+        <div class="suggested-posts-category row col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h5 class="row recommended-post-message">{{recommendedMessageCat}}</h5>
+            <cxc-card class="col-xs-12 col-sm-6 col-md-4 col-lg-4'" ng-repeat="post in sameCategoryPosts | limitTo: 3" cxccontent="post"></cxc-card>
         </div>
     </div>
 </div>

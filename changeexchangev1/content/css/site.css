@@ -296,42 +296,49 @@ div.rn-carousel-indicator span {
   @media only screen and (min-width: 2547px) and (min-width: 1224px) {
     .image--expand {
       width: 791%; } }
+
   @media screen and (min-width: 2185px) and (max-width: 2546px) {
     .image--expand {
       width: 700%; } }
   @media only screen and (min-width: 2185px) and (max-width: 2546px) and (min-width: 1224px) {
     .image--expand {
       width: 691%; } }
+
   @media screen and (min-width: 1823px) and (max-width: 2184px) {
     .image--expand {
       width: 600%; } }
   @media only screen and (min-width: 1823px) and (max-width: 2184px) and (min-width: 1224px) {
     .image--expand {
       width: 591%; } }
+
   @media screen and (min-width: 1461px) and (max-width: 1822px) {
     .image--expand {
       width: 500%; } }
   @media only screen and (min-width: 1461px) and (max-width: 1822px) and (min-width: 1224px) {
     .image--expand {
       width: 491%; } }
+
   @media screen and (min-width: 1099px) and (max-width: 1460px) {
     .image--expand {
       width: 400%; } }
   @media only screen and (min-width: 1099px) and (max-width: 1460px) and (min-width: 1224px) {
     .image--expand {
       width: 391%; } }
+
   @media screen and (min-width: 737px) and (max-width: 1098px) {
     .image--expand {
       width: 300%; } }
   @media only screen and (min-width: 737px) and (max-width: 1098px) and (min-width: 1224px) {
     .image--expand {
       width: 291%; } }
+
   @media screen and (max-width: 736px) {
     .image--expand {
       width: 200%; } }
   @media only screen and (max-width: 736px) and (min-width: 1224px) {
     .image--expand {
       width: 191%; } }
+
   .is-collapsed .image--expand {
     margin-bottom: 0; }
 
@@ -344,7 +351,7 @@ div.rn-carousel-indicator span {
   line-height: 50px;
   text-decoration: none; }
   .expand__close:before {
-    content: '×'; }
+    content: 'â•«'; }
   .expand__close:hover {
     color: #fff; }
 
@@ -412,7 +419,7 @@ div.rn-carousel-indicator span {
   z-index: 99;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: #7f7f7f;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white; }
@@ -446,7 +453,7 @@ body {
   line-height: 1.428571429;
   color: black;
   background-color: #ededed;
-  /*
+    /*
 	 * Relates to the pseudo class & sibling bug, see
 	 * http://css-tricks.com/webkit-sibling-bug/ for more details
 	 */
@@ -470,7 +477,6 @@ body::-webkit-scrollbar-thumb {
     padding: 0; }
   to {
     padding: 0; } }
-
 /*Colours*/
 /*Colours*/
 /*@mixin bp-iphone6landscape {
@@ -626,8 +632,8 @@ appears on the left side of the page.
   outline: 1px solid slategrey; }
 
 /*
-    All anchors inside the menu should be styled like this.
-    */
+All anchors inside the menu should be styled like this.
+*/
 #menu a {
   color: #999;
   border: none;
@@ -642,23 +648,23 @@ appears on the left side of the page.
   padding-bottom: 0.6em; }
 
 /*
-    Remove all background/borders, since we are applying them to #menu.
-    */
+Remove all background/borders, since we are applying them to #menu.
+*/
 #menu .pure-menu,
 #menu .pure-menu ul {
   border: none;
   background: transparent; }
 
 /*
-    Add that light border to separate items into groups.
-    */
+Add that light border to separate items into groups.
+*/
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
   border-top: 1px solid #333; }
 
 /*
-        Change color of the anchor links on hover/focus.
-        */
+Change color of the anchor links on hover/focus.
+*/
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
   background: #f6a915; }
@@ -675,8 +681,8 @@ a.active {
       width: 55%; } }
 
 /*
-    This styles the selected menu item `<li>`.
-    */
+This styles the selected menu item `<li>`.
+*/
 #menu .pure-menu-selected,
 #menu .pure-menu-heading {
   width: 100%;
@@ -687,14 +693,14 @@ a.active {
   border-radius: 0 8px 8px 0; }
 
 /*
-        This styles a link within a selected menu item `<li>`.
-        */
+This styles a link within a selected menu item `<li>`.
+*/
 #menu .pure-menu-selected a {
   color: #fff; }
 
 /*
-    This styles the menu heading.
-    */
+This styles the menu heading.
+*/
 #menu .pure-menu-heading {
   font-size: 110%;
   color: #fff;
@@ -780,6 +786,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .content {
     padding-left: 2em;
     padding-right: 2em; }
+
   #layout {
     padding-left: 65%;
     /* left col width "#menu" */
@@ -827,11 +834,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (max-width: 80em) {
   /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small.
-        * Tap the menu to trigger the active state.
-        * Make the window large again.
-    */
+  case results in extra padding on the left:
+      * Make the window small.
+      * Tap the menu to trigger the active state.
+      * Make the window large again.
+  */
   #layout.active {
     position: relative;
     left: 65%; } }
@@ -950,8 +957,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .col-xs-offset-11,
   .col-xs-offset-12 {
     /*padding-left: 0;
-        padding-right: 0;*/ } }
-
+    padding-right: 0;*/ } }
 .cxc-content-image {
   min-height: 200px;
   overflow: hidden; }
@@ -1019,11 +1025,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Desktops and laptops ----------- */
 /*Colours*/
 .social-feeds {
-  height: 560px;
+  height: 570px;
+  margin-top: 0.2rem;
   background-color: #616161;
-  right: 2.6rem;
-  width: 19%;
-  position: absolute; }
+  right: 2.4rem;
+  width: 16.1rem;
+  position: absolute;
+  overflow: hidden;
+  border-bottom: 3px solid #e5980a; }
   .social-feeds span {
     display: block;
     width: 100%;
@@ -1110,7 +1119,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   height: 100%;
   /*background-size: cover;
-    background-position:center left;*/
+  background-position:center left;*/
   color: white; }
   .cxc-banner:hover img {
     -webkit-filter: grayscale(0);
@@ -1215,34 +1224,61 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* iPads (portrait and landscape) ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
-#post-container {
-  padding: 1rem;
-  background-color: white; }
-  #post-container img {
-    float: right;
-    max-width: 100%; }
-    @media only screen and (max-device-width: 480px) {
-      #post-container img {
-        width: 100%; } }
-  #post-container section.article-hero {
-    position: relative;
+@media only screen and (min-width: 1224px) {
+  .post-container-parent {
+    padding-right: 1rem;
+    width: 103%; } }
+
+@media only screen and (min-width: 1224px) {
+  .post-container {
+    padding: 0 1rem 1rem; } }
+.post-container img {
+  float: right;
+  max-width: 100%; }
+  @media only screen and (max-device-width: 480px) {
+    .post-container img {
+      width: 100%; } }
+.post-container section.article-hero {
+  position: relative;
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+  border-bottom: 3px solid #e5980a; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .post-container section.article-hero {
+      max-height: 450px; } }
+  @media only screen and (min-width: 1224px) {
+    .post-container section.article-hero {
+      max-height: 350px; } }
+  .post-container section.article-hero img {
     width: 100%;
-    max-height: 250px;
-    overflow: hidden;
-    border-bottom: 3px solid #e5980a; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-      #post-container section.article-hero {
-        max-height: 450px; } }
-    @media only screen and (min-width: 1224px) {
-      #post-container section.article-hero {
-        max-height: 350px; } }
-    #post-container section.article-hero img {
-      width: 100%;
-      position: relative; }
+    position: relative; }
+
+.post-canvas {
+  background-color: white;
+  padding-top: 0.6rem;
+  padding-bottom: 3rem;
+  border-bottom: 3px solid #e5980a; }
 
 #sidebar {
-  margin-top: 560px;
-  margin-right: 2.4rem; }
+  /*margin-top: 0; 
+      position: relative;
+      width: auto;
+      right: auto;*/ }
+  @media only screen and (min-width: 1224px) {
+    #sidebar {
+      margin-top: 570px;
+      position: absolute;
+      width: 16.6rem;
+      right: 2.1rem; } }
+
+.suggested-posts-category {
+  margin-left: 0;
+  padding: 0; }
+
+h5.recommended-post-message {
+  width: 100%;
+  text-align: center; }
 
 .hello {
   padding: 10px; }
@@ -1483,7 +1519,6 @@ header.header-three {
   margin: 2em 0 0; }
   .mobile-header figure img {
     width: 100%; }
-
 .mobile-header select.mobile-change-moment-select {
   width: 100%;
   height: 50%;
@@ -1523,19 +1558,23 @@ header.header-three {
   margin-bottom: 3rem; }
   @media only screen and (min-width: 1224px) {
     .page-section {
-      padding-left: 0; } }
+      padding-left: 0;
+      margin-right: -0.2rem; }
+      .page-section .card-section-1 {
+        margin-left: -0.4rem; }
+      .page-section .card-section-2 {
+        margin-left: -0.5rem; } }
   .page-section .row {
     /*margin-left: 0;
-        margin-right: 0;*/ }
+    margin-right: 0;*/ }
     @media only screen and (min-width: 1224px) {
       .page-section .row {
-        padding-left: 0.4rem;
+        /*padding-left: $padding*2;*/
         /*margin-right:  -0.5rem;*/ } }
 
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap {
     margin-top: 5%; } }
-
 .cxc-content-wrap #more-button {
   position: absolute;
   right: 5px;
@@ -1562,3 +1601,5 @@ header.header-three {
     margin: 1% 2%; }
     #social-button-box .social-buttons i bp-desktop {
       margin: 0; }
+
+/*# sourceMappingURL=site.css.map */

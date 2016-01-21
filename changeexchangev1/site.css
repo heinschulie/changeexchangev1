@@ -1025,11 +1025,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Desktops and laptops ----------- */
 /*Colours*/
 .social-feeds {
-  height: 560px;
+  height: 570px;
+  margin-top: 0.2rem;
   background-color: #616161;
-  right: 2.6rem;
-  width: 19%;
-  position: absolute; }
+  right: 2.4rem;
+  width: 16.1rem;
+  position: absolute;
+  overflow: hidden;
+  border-bottom: 3px solid #e5980a; }
   .social-feeds span {
     display: block;
     width: 100%;
@@ -1221,34 +1224,61 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* iPads (portrait and landscape) ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
-#post-container {
-  padding: 1rem;
-  background-color: white; }
-  #post-container img {
-    float: right;
-    max-width: 100%; }
-    @media only screen and (max-device-width: 480px) {
-      #post-container img {
-        width: 100%; } }
-  #post-container section.article-hero {
-    position: relative;
+@media only screen and (min-width: 1224px) {
+  .post-container-parent {
+    padding-right: 1rem;
+    width: 103%; } }
+
+@media only screen and (min-width: 1224px) {
+  .post-container {
+    padding: 0 1rem 1rem; } }
+.post-container img {
+  float: right;
+  max-width: 100%; }
+  @media only screen and (max-device-width: 480px) {
+    .post-container img {
+      width: 100%; } }
+.post-container section.article-hero {
+  position: relative;
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+  border-bottom: 3px solid #e5980a; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .post-container section.article-hero {
+      max-height: 450px; } }
+  @media only screen and (min-width: 1224px) {
+    .post-container section.article-hero {
+      max-height: 350px; } }
+  .post-container section.article-hero img {
     width: 100%;
-    max-height: 250px;
-    overflow: hidden;
-    border-bottom: 3px solid #e5980a; }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-      #post-container section.article-hero {
-        max-height: 450px; } }
-    @media only screen and (min-width: 1224px) {
-      #post-container section.article-hero {
-        max-height: 350px; } }
-    #post-container section.article-hero img {
-      width: 100%;
-      position: relative; }
+    position: relative; }
+
+.post-canvas {
+  background-color: white;
+  padding-top: 0.6rem;
+  padding-bottom: 3rem;
+  border-bottom: 3px solid #e5980a; }
 
 #sidebar {
-  margin-top: 560px;
-  margin-right: 2.4rem; }
+  /*margin-top: 0; 
+      position: relative;
+      width: auto;
+      right: auto;*/ }
+  @media only screen and (min-width: 1224px) {
+    #sidebar {
+      margin-top: 570px;
+      position: absolute;
+      width: 16.6rem;
+      right: 2.1rem; } }
+
+.suggested-posts-category {
+  margin-left: 0;
+  padding: 0; }
+
+h5.recommended-post-message {
+  width: 100%;
+  text-align: center; }
 
 .hello {
   padding: 10px; }
@@ -1528,13 +1558,18 @@ header.header-three {
   margin-bottom: 3rem; }
   @media only screen and (min-width: 1224px) {
     .page-section {
-      padding-left: 0; } }
+      padding-left: 0;
+      margin-right: -0.2rem; }
+      .page-section .card-section-1 {
+        margin-left: -0.4rem; }
+      .page-section .card-section-2 {
+        margin-left: -0.5rem; } }
   .page-section .row {
     /*margin-left: 0;
     margin-right: 0;*/ }
     @media only screen and (min-width: 1224px) {
       .page-section .row {
-        padding-left: 0.4rem;
+        /*padding-left: $padding*2;*/
         /*margin-right:  -0.5rem;*/ } }
 
 @media only screen and (min-width: 1224px) {

@@ -7,12 +7,17 @@
 
         $scope.sameAuthorPosts = [];
         $scope.sameCategoryPosts = [];
+        $scope.recommendedMessageCat = "";
+        $scope.recommendedMessageAuthor = "";
 
         $scope.contentState = contentState;
         var postId = $routeParams.postId;
 
         $scope.callForPost = function () {
-            return contentState.getPost(postId);
+            return contentState.getPost(postId).then(function (results) {
+                $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
+                $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;
+            });
         }
 
         var callForRecommendedPosts = function () {

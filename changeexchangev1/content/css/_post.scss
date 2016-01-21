@@ -2,10 +2,19 @@
 @import '_colours.scss'; 
 @import '_cxcVariables.scss';
 
-#post-container{
-    padding: 1rem;
-    background-color: white;
+.post-container-parent{
     
+    @include bp-desktop{
+        padding-right: 1rem;
+        width: 103%; //Hack!...:(
+    }
+}
+
+.post-container{
+    @include bp-desktop{
+        padding: 0 1rem 1rem;
+    }
+      
     .post-content{
     }
 
@@ -38,7 +47,34 @@
     }
 }
 
+.post-canvas{  
+    background-color: white;
+    padding-top: $padding*3;   
+    padding-bottom: $padding*15; 
+    border-bottom: 3px solid $mustard-orange;
+}
+
 #sidebar{
-    margin-top: $cardHeight * 2; 
-    margin-right: $padding*12;
+    
+
+    /*margin-top: 0; 
+        position: relative;
+        width: auto;
+        right: auto;*/
+    @include bp-desktop{
+        margin-top: $cardHeight*2 + 10px; 
+        position: absolute;
+        width: 16.6rem;
+        right: 2.1rem;
+    }
+}
+
+.suggested-posts-category{
+    margin-left: 0;
+    padding: 0;
+}
+
+h5.recommended-post-message{
+    width: 100%;
+    text-align: center;
 }
