@@ -413,7 +413,7 @@ header.header-three{
     }
 }
 
-#social-button-box{
+.social-button-box{
     position:  absolute;
     width: 100%; 
     top: 0;
@@ -421,10 +421,8 @@ header.header-three{
     z-index: 1; //This is a terrible hack. Forgive me. 
 
     @include bp-desktop{
-        padding-top: 1em;
+        top: 14.6rem;
         width:   2.5%;
-        height: $cardHeight/5*4;
-        background-color: $lightgray; 
     }
 
     .social-buttons{
@@ -433,12 +431,20 @@ header.header-three{
         }
         i{
             font-size: 2em;
-            float: right;
+            float: left;
             margin: 1% 2%;
 
             bp-desktop{
                 margin: 0;
             }
+
+            &.sn-active{
+                color:  $mustard-orange;
+            } 
+        }
+        i:hover{
+            cursor: pointer;
+            color: $mustard-yellow; 
         }
     }
 }

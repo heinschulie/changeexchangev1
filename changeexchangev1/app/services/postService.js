@@ -36,6 +36,14 @@
         };
 
 
+        var getPostsByAuthor = function (authorId) {
+            var url = serviceBase + 'posts?filter[posts_per_page]=3&filter[author]=' + authorId + '&fields=ID,title,excerpt';
+            return $http.get(url)
+                .then(function (results) {
+                    return results;
+                })
+        };
+
         var getBanners = function (numberOfBanners, category) {
             var url = serviceBase + 'posts?filter[posts_per_page]=' + numberOfBanners + '&fields=ID,title,excerpt';
             if (category && category.length > 0) {
@@ -57,6 +65,7 @@
         return {
             getPost: getPost,
             getPosts: getPosts,
+            getPostsByAuthor: getPostsByAuthor,
             getBanners: getBanners
         };
     };

@@ -3,7 +3,8 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var postController = function ($scope, $routeParams, contentState) {
+    var postController = function ($scope, $location, $routeParams, $sce, socialState, contentState) {
+
 
         $scope.sameAuthorPosts = [];
         $scope.sameCategoryPosts = [];
@@ -11,26 +12,30 @@
         $scope.recommendedMessageAuthor = "";
 
         $scope.contentState = contentState;
+        $scope.socialState = socialState;
         var postId = $routeParams.postId;
 
         $scope.callForPost = function () {
             return contentState.getPost(postId).then(function (results) {
                 $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
                 $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;
+                $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
             });
         }
 
         var callForRecommendedPosts = function () {
-            //TODO 
+            contentState.getPostsByAuthor().then(function(results){
+                $scope.sameAuthorPosts = results; 
+            });
         }
 
         var getRecommendedPosts = function () {
-            if (!contentState.data.posts.length)
-                callForRecommendedPosts();
 
             $scope.sameAuthorPosts = contentState.data.posts.filter(function(post) {
                 return post.author.username === contentState.data.post.author.username && post.ID !== contentState.data.post.ID;
             });
+            if ($scope.sameAuthorPosts.length < 3)
+                callForRecommendedPosts();
             $scope.sameCategoryPosts = contentState.data.posts.filter(function (post) {
                 if (post.ID === contentState.data.post.ID)
                     return false; 
@@ -57,5 +62,5 @@
             .then(getRecommendedPosts);
     }
 
-    app.controller("postController", ["$scope", "$routeParams", "contentState", postController]);
+    app.controller("postController", ["$scope", "$location", "$routeParams", "$sce", "socialState", "contentState", postController]);
 }())

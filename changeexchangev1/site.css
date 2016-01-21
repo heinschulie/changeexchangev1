@@ -1049,6 +1049,24 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       .social-feeds span a:hover {
         background-color: #f6a915; }
 
+.video-player {
+  position: absolute;
+  width: 3rem;
+  height: 1rem;
+  background-color: #e5980a;
+  top: 1.15rem;
+  z-index: 1000;
+  left: -2rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  border-radius: 1rem; }
+
+.video-expand {
+  width: 100%;
+  position: relative;
+  right: 0.8rem; }
+
 /*Colours*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
@@ -1270,7 +1288,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       margin-top: 570px;
       position: absolute;
       width: 16.6rem;
-      right: 2.1rem; } }
+      right: 2.1rem; }
+      #sidebar.no-margin-top {
+        margin-top: 0; } }
 
 .suggested-posts-category {
   margin-left: 0;
@@ -1278,7 +1298,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 h5.recommended-post-message {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  display: block;
+  font-size: .83em;
+  margin-before: 1.67em;
+  margin-after: 1.67em;
+  margin-start: 0;
+  margin-end: 0;
+  font-weight: bold; }
 
 .hello {
   padding: 10px; }
@@ -1580,26 +1607,29 @@ header.header-three {
   right: 5px;
   bottom: 5px; }
 
-#social-button-box {
+.social-button-box {
   position: absolute;
   width: 100%;
   top: 0;
   right: 0;
   z-index: 1; }
   @media only screen and (min-width: 1224px) {
-    #social-button-box {
-      padding-top: 1em;
-      width: 2.5%;
-      height: 224px;
-      background-color: #ededed; } }
+    .social-button-box {
+      top: 14.6rem;
+      width: 2.5%; } }
   @media only screen and (min-width: 1224px) {
-    #social-button-box .social-buttons {
+    .social-button-box .social-buttons {
       width: 100%; } }
-  #social-button-box .social-buttons i {
+  .social-button-box .social-buttons i {
     font-size: 2em;
-    float: right;
+    float: left;
     margin: 1% 2%; }
-    #social-button-box .social-buttons i bp-desktop {
+    .social-button-box .social-buttons i bp-desktop {
       margin: 0; }
+    .social-button-box .social-buttons i.sn-active {
+      color: #e5980a; }
+  .social-button-box .social-buttons i:hover {
+    cursor: pointer;
+    color: #f6a915; }
 
 /*# sourceMappingURL=site.css.map */

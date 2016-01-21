@@ -66,6 +66,10 @@
         position: absolute;
         width: 16.6rem;
         right: 2.1rem;
+
+        &.no-margin-top{
+            margin-top: 0;
+        }
     }
 }
 
@@ -77,4 +81,11 @@
 h5.recommended-post-message{
     width: 100%;
     text-align: center;
+    display: block;
+    font-size: .83em;
+    margin-before: 1.67em;
+    margin-after: 1.67em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
 }

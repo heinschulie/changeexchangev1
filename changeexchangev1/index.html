@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
-    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/site.min.css" rel="stylesheet" />
+    <!--<link href="content/css/site.css" rel="stylesheet" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
@@ -102,8 +102,13 @@
                         <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
                     </select>
                 </div>
-                <div id="social-button-box">
-                    <div class="social-buttons">
+                <div class="social-button-box">
+
+                    <div data-ng-repeat="sn in socialState.data.socialNetworks" class="social-buttons">
+                        <i ng-click="socialState.changeSm(sn.id, sn.abbrev)" data-ng-class="sn.active ? '{{sn.class}} sn-active' : '{{sn.class}}'"></i>
+                    </div>
+
+                    <!--<div class="social-buttons">
                         <i ng-click="socialState.changeSm('fb')" class="fa fa-facebook-square"></i>
                     </div>
                     <div class="social-buttons">
@@ -117,7 +122,7 @@
                     </div>
                     <div class="social-buttons">
                         <i ng-click="socialState.changeSm('yt')" class="fa fa-youtube-square"></i>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="wrap">
                     <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
@@ -128,9 +133,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="row reduced-padding sidebar-right">
-                            <div class="col-lg-3 col-xs-12">
-                                <div class="social-feeds col-lg-12 col-xs-12 box reduced-padding">
+                        <div class="row reduced-padding sidebar-right desktoponly">
+                            <div data-ng-class="socialState.data.videoPlayer ? 'col-lg-12 col-xs-12' : 'col-lg-3 col-xs-12'">
+                                <div data-ng-class="socialState.data.videoPlayer ? 'video-expand social-feeds col-lg-12 col-xs-12 box reduced-padding' : 'social-feeds col-lg-12 col-xs-12 box reduced-padding'">
                                     <div data-ng-show="socialState.data.currentSm == 'fb'">
                                         <div class="fb-page"
                                              data-href="https://www.facebook.com/sontheband"
@@ -168,7 +173,8 @@
                                     <div class="" data-ng-show="socialState.data.currentSm == 'tw'">
                                         <twitter-stream></twitter-stream>
                                     </div>
-                                    <div class="" data-ng-show="socialState.data.currentSm == 'yt'">
+                                    <div data-ng-show="socialState.data.currentSm == 'yt'">
+                                        <div ng-click="socialState.data.videoPlayer = !socialState.data.videoPlayer" class="video-player"></div>
                                         <iframe width="100%" height="560" src="https://www.youtube.com/embed/videoseries?list=PLg7wQ1JGZrZi21PXbjIjirDkEmxzTM8SV" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                 </div>
@@ -194,15 +200,14 @@
 
 
     <!--LOCAL-->
-    <!--<script src="scripts/pureNav.js"></script>-->
     <script src="scripts/angular-carousel.min.js"></script>
 
     <!--CUSTOM CxC Scripts-->
 
-    <!--<script src="app/all.min.js"></script>-->
+    <script src="app/all.min.js"></script>
 
     <!-- Load app main script -->
-    <script src="app/app.js"></script>
+    <!--<script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -221,8 +226,7 @@
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>
-    <!--<script src="scripts/gallery.js"></script>-->
+    <script src="app/controllers/galleriesController.js"></script>-->
 
 </body>
 </html>

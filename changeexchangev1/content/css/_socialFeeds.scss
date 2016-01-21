@@ -32,3 +32,20 @@
         }
     }
 }
+
+.video-player{
+    position: absolute;
+    width: 3rem;
+    height:1rem;
+    background-color: $mustard-orange; 
+    top: 1.15rem;
+    z-index: 1000;
+    left: -2rem;
+    @include border-radius(1rem);
+}
+
+.video-expand{
+    width: 100%;
+    position: relative;
+    right: 0.8rem;
+}

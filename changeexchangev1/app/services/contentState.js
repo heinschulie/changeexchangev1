@@ -72,6 +72,13 @@
             })
         }
 
+        var getPostsByAuthor = function () {
+            return postService.getPostsByAuthor(data.post.author.ID).then(function (results) {
+                prepPosts(results.data, false);
+                return results.data;
+            })
+        };
+
         var getArtworks = function () {
             return postService.getPosts(20, 1, ['art'], true).then(function (results) {
                 data.artworks = results.data;
@@ -192,6 +199,7 @@
             getPage: getPage,
             getPost: getPost,
             getPosts: getPosts,
+            getPostsByAuthor: getPostsByAuthor,
             getArtworks: getArtworks,
             getGalleries: getGalleries,
             getBanners: getBanners

@@ -10,11 +10,13 @@
             <!--<img ng-src="{{contentState.data.post.featured_image.source}}" />-->
             <div ng-bind-html="contentState.data.post.excerpt"></div>
             <div ng-bind-html="contentState.data.post.content"></div>
+            <!--<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="facebooklikeurl" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
+            <div ng-if="facebooklikebutton" ng-bind-html="facebooklikebutton"></div>
         </div>
-        <div id="sidebar" class="column col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div id="sidebar" data-ng-class="socialState.data.videoPlayer ? 'no-margin-top column col-lg-3 col-md-12 col-sm-12 col-xs-12' : 'column col-lg-3 col-md-12 col-sm-12 col-xs-12'">
             <h5 class="recommended-post-message">{{recommendedMessageAuthor}}</h5>
             <div class="row box">
-                <cxc-card class="col-xs-12 col-sm-6 col-md-12 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 5" cxccontent="post"></cxc-card>
+                <cxc-card class="col-xs-12 col-sm-6 col-md-12 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 3" cxccontent="post"></cxc-card>
             </div>
         </div>
         <div class="suggested-posts-category row col-lg-9 col-md-12 col-sm-12 col-xs-12">
