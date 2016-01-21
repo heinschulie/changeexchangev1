@@ -1,5 +1,7 @@
 @import '_mixins.scss';
 @import '_colours.scss'; 
+@import '_cxcVariables.scss';
+
 #post-container{
     padding: 1rem;
     background-color: white;
@@ -34,4 +36,9 @@
             position: relative;
         }
     }
+}
+
+#sidebar{
+    margin-top: $cardHeight * 2; 
+    margin-right: $padding*12;
 }

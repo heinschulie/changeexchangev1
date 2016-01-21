@@ -690,10 +690,7 @@ This styles the selected menu item `<li>`.
   -ms-border-radius: 0 8px 8px 0;
   -moz-border-radius: 0 8px 8px 0;
   -webkit-border-radius: 0 8px 8px 0;
-  border-radius: 0 8px 8px 0;
-  -moz-box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 15px 17px 0 rgba(0, 0, 0, 0.3); }
+  border-radius: 0 8px 8px 0; }
 
 /*
 This styles a link within a selected menu item `<li>`.
@@ -728,6 +725,8 @@ This styles the menu heading.
     -ms-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0); }
+    #menu-wrapper img.drop-shadow {
+      width: 100%; }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 /*
@@ -1028,7 +1027,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .social-feeds {
   height: 560px;
   background-color: #616161;
-  right: 2.5%;
+  right: 2.6rem;
   width: 19%;
   position: absolute; }
   .social-feeds span {
@@ -1246,6 +1245,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     #post-container section.article-hero img {
       width: 100%;
       position: relative; }
+
+#sidebar {
+  margin-top: 560px;
+  margin-right: 2.4rem; }
 
 .hello {
   padding: 10px; }

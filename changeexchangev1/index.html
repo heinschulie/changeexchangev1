@@ -77,10 +77,12 @@
                     <div id="menu-wrapper">
                         <a class="pure-menu-heading" data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, false)">Change Moments</a>
                         <ul class="pure-menu-list">
+                            <img class="drop-shadow" src="content/images/dropshadow.PNG" />
                             <li data-ng-cloak class="pure-menu-item" data-ng-class="{ 'active': moment.active }" data-ng-repeat="moment in contentState.changeMoments" ng-if="$index > 0"><a data-ng-click="contentState.selectedMoment(moment, false)" class="pure-menu-link">{{moment.name}}</a></li>
                         </ul>
                         <a class="pure-menu-heading">Exchange</a>
                         <ul class="pure-menu-list">
+                            <img class="drop-shadow" src="content/images/dropshadow.PNG" />
                             <li class="pure-menu-item"><a href="#/exchange/about" class="pure-menu-link">About</a></li>
                             <li class="pure-menu-item"><a href="#/exchange/iris%20sessions" class="pure-menu-link">Iris Sessions</a></li>
                             <li class="pure-menu-item"><a href="#/exchange/connection%20sessions" class="pure-menu-link">Connection Sessions</a></li>
@@ -102,22 +104,77 @@
                 </div>
                 <div id="social-button-box">
                     <div class="social-buttons">
-                        <i class="fa fa-facebook-square"></i>
+                        <i ng-click="socialState.changeSm('fb')" class="fa fa-facebook-square"></i>
                     </div>
                     <div class="social-buttons">
-                        <i class="fa fa-twitter-square"></i>
+                        <i ng-click="socialState.changeSm('tw')" class="fa fa-twitter-square"></i>
                     </div>
                     <div class="social-buttons">
-                        <i class="fa fa-google-plus-square"></i>
+                        <i ng-click="socialState.changeSm('fe')" class="fa fa-facebook-square"></i>
                     </div>
                     <div class="social-buttons">
-                        <i class="fa fa-youtube-square"></i>
+                        <i ng-click="socialState.changeSm('gg')" class="fa fa-google-plus-square"></i>
+                    </div>
+                    <div class="social-buttons">
+                        <i ng-click="socialState.changeSm('yt')" class="fa fa-youtube-square"></i>
                     </div>
                 </div>
                 <div class="wrap">
-                    <div data-ng-view="">
+                    <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
+                        <div class="row reduced-padding carousel-wrapper">
+                            <ul rn-carousel rn-carousel-controls class="banner-container col-lg-12 col-xs-12">
+                                <li data-ng-repeat="banner in contentState.data.banners">
+                                    <cxc-banner cxcbannercontent="banner"></cxc-banner>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row reduced-padding sidebar-right">
+                            <div class="col-lg-3 col-xs-12">
+                                <div class="social-feeds col-lg-12 col-xs-12 box reduced-padding">
+                                    <div data-ng-show="socialState.data.currentSm == 'fb'">
+                                        <div class="fb-page"
+                                             data-href="https://www.facebook.com/sontheband"
+                                             data-tabs="timeline"
+                                             data-height="517"
+                                             data-width="350"
+                                             data-small-header="true"
+                                             data-adapt-container-width="true"
+                                             data-hide-cover="false"
+                                             data-show-facepile="true">
+                                            <div class="fb-xfbml-parse-ignore">
+                                                <blockquote cite="https://www.facebook.com/sontheband">
+                                                    <a href="https://www.facebook.com/sontheband">SON</a>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-ng-show="socialState.data.currentSm == 'fe'">
+                                        <div class="fb-page"
+                                             data-href="https://www.facebook.com/sontheband"
+                                             data-tabs="events"
+                                             data-height="517"
+                                             data-width="350"
+                                             data-small-header="true"
+                                             data-adapt-container-width="true"
+                                             data-hide-cover="false"
+                                             data-show-facepile="true">
+                                            <div class="fb-xfbml-parse-ignore">
+                                                <blockquote cite="https://www.facebook.com/sontheband">
+                                                    <a href="https://www.facebook.com/sontheband">SON EVENTS</a>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="" data-ng-show="socialState.data.currentSm == 'tw'">
+                                        <twitter-stream></twitter-stream>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-ng-view="">
 
-                    </div>
+                        </div>
+                    </section>                  
                 </div>
             </div>
         </div>
@@ -150,9 +207,11 @@
     <script src="app/services/errorState.js"></script>
     <script src="app/services/pageService.js"></script>
     <script src="app/services/postService.js"></script>
+    <script src="app/services/socialState.js"></script>
 
     <script src="app/directives/cxcCard.js"></script>
     <script src="app/directives/cxcBanner.js"></script>
+    <script src="app/directives/twitterStream.js"></script>
 
     <script src="app/controllers/pageController.js"></script>
     <script src="app/controllers/galleryController.js"></script>

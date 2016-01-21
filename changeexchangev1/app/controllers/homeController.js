@@ -3,19 +3,14 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var homeController = function ($scope, errorState, contentState) {
+    var homeController = function ($scope, $timeout, errorState, contentState, socialState) {
 
         $scope.contentState = contentState;
+        $scope.socialState = socialState;
         $scope.errorState = errorState; 
 
         $scope.callForPosts = function () {
             return contentState.getPosts();
-        }
-
-        //Social Feed Functionality 
-        $scope.currentSm = "fb";
-        $scope.changeSm = function (sm) {
-            $scope.currentSm = sm;
         }
 
         //Initialise 
@@ -25,10 +20,8 @@
         }
         if (contentState.data.posts.length < 1)
             $scope.callForPosts();
-
-        if (!contentState.data.banners || !contentState.data.banners.length) 
-            contentState.getBanners(null, true);
+       
     }
 
-    app.controller("homeController", ["$scope", "errorState", "contentState", homeController]);
+    app.controller("homeController", ["$scope", "$timeout", "errorState", "contentState", "socialState", homeController]);
 }())

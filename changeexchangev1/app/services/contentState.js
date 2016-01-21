@@ -1,7 +1,7 @@
 ﻿
 ;(function () {
     'use strict';
-    var contentState = function ($timeout, $sce, $location, pageService, postService, errorState) {
+    var contentState = function ($timeout, $sce, $location, pageService, postService, socialState, errorState) {
 
         var data = {
             categories: [],
@@ -58,7 +58,7 @@
         var getPosts = function () {
             data.pageNumber = data.pageNumber + 1;
             return postService.getPosts(data.postsPerPage, data.pageNumber, data.categories, false).then(function (results) {
-                prepPosts(results.data, false); 
+                prepPosts(results.data, false);
                 if (data.pageNumber === 1)
                     data.posts = results.data;
                 else
@@ -130,6 +130,9 @@
                             data.banners.push(post);
                         }
                     }
+                    if (cat.name.toLowerCase() === "events") {
+                        socialState.data.currentSM = "fe"; 
+                    }
                 });
                 angular.forEach(post.terms.post_tag, function (tag) {
                     if (tag.name.toLowerCase() === 'featured')
@@ -193,6 +196,6 @@
     };
 
     var module = angular.module("cxcApp");
-    module.factory('contentState', ['$timeout', '$sce', '$location', 'pageService', 'postService', 'errorState', contentState]);
+    module.factory('contentState', ['$timeout', '$sce', '$location', 'pageService', 'postService', 'socialState', 'errorState', contentState]);
 
 }());

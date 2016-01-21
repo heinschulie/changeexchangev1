@@ -203,7 +203,7 @@ appears on the left side of the page.
         width: 100%;
         background-color: $charcoal;
         @include radius(0, 8px, 8px, 0);
-        @include drop-shadow($true); 
+        //@include drop-shadow($true); 
     }
         /*
         This styles a link within a selected menu item `<li>`.
@@ -234,6 +234,10 @@ appears on the left side of the page.
             width: 50%;
             left: 50%; 
             @include translate(-50%, 0); 
+
+            &.drop-shadow{
+                width: 100%;
+            }
         }
     }
 

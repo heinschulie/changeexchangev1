@@ -3,9 +3,10 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var indexController = function ($scope, $location, errorState, contentState, categoryService) {
+    var indexController = function ($scope, $location, errorState, contentState, socialState, categoryService) {
 
         $scope.contentState = contentState;
+        $scope.socialState = socialState;
         $scope.errorState = errorState;
         $scope.active = false;
         $scope.toggleMenu = function () {
@@ -29,8 +30,10 @@
         }
 
         //Initialise
-        getExchangeCategories('Exchange'); 
+        getExchangeCategories('Exchange');
+        if (!contentState.data.banners || !contentState.data.banners.length)
+            contentState.getBanners(null, true);
     }
 
-    app.controller("indexController", ["$scope", "$location", "errorState", "contentState", "categoryService", indexController]);
+    app.controller("indexController", ["$scope", "$location", "errorState", "contentState", "socialState", "categoryService", indexController]);
 }())

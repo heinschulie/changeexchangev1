@@ -12,10 +12,7 @@
         var postId = $routeParams.postId;
 
         $scope.callForPost = function () {
-            return contentState.getPost(postId)
-            //    .then(function (results) {
-            //    $scope.post = $sce.trustAsHtml(contentState.data.post.content);
-            //});
+            return contentState.getPost(postId);
         }
 
         var callForRecommendedPosts = function () {
