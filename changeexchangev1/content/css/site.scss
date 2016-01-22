@@ -117,7 +117,7 @@ header.header-one{
         width: 80%; 
         height: 40%;
         top: 64%; 
-        padding-left: 25%; //Center text in select
+        padding-left: 2%; //Center text in select in Header 1
         background-color: $mustard-orange; 
         background-image: url('../images/selectbutton.png');
         background-position: right;
@@ -280,7 +280,8 @@ header.header-three{
         width: 65%;
         height: 50%;
         top: 10%;
-        padding-left: 25%; //Center text in select
+        padding-left: 2%; //Center text in select in Header 1
+        //padding-left: 25%; //Center text in select in Header 3
         background-color: $mustard-orange; 
         background-image: url('../images/selectbutton.png');
         background-position: right;
@@ -401,9 +402,9 @@ header.header-three{
 .cxc-content-wrap{
     //margin-top: $headerHeight;
     @include bp-desktop{       
-        //margin-top: $headerHeight/2; //For headerone
+        margin-top: $headerHeight/2; //For headerone
         //margin-top: $headerHeight/3; //For header two
-        margin-top: $headerHeight/6; //For header two
+        //margin-top: $headerHeight/6; //For header two
     } 
 
     #more-button{
@@ -431,10 +432,11 @@ header.header-three{
         }
         i{
             font-size: 2em;
-            float: left;
+            float: right;
             margin: 1% 2%;
 
             bp-desktop{
+            float: left;
                 margin: 0;
             }
 
@@ -446,5 +448,21 @@ header.header-three{
             cursor: pointer;
             color: $mustard-yellow; 
         }
+    }
+}
+
+.more-button{
+    width: 100%;
+    text-align: center;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-top: 1.5rem;
+    color: white;
+    @include transition(all, 0.4s, ease-in-out);   
+    @include alpha-attribute('background-color', rgba($charcoal, 0.5), white);
+
+    &:hover{
+        cursor: pointer;        
+        @include alpha-attribute('background-color', rgba($mustard-orange, 0.8), white);
     }
 }

@@ -3,8 +3,12 @@
     var errorState = function () {
 
         var data = {
-            ajaxErrors: []
+            firstMessage: 'There seems to have been one or more errors:',
+            ajaxErrors: [],
+            secondMessage: 'Please refresh the browser window or come back again in a little while...'
         };
+
+
         //toastr.options = {
         //    "closeButton": true,
         //    "debug": false,

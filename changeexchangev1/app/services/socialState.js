@@ -13,7 +13,10 @@
                 { id: 4, abbrev: 'gg', url: 'https://www.google.com/', class: 'fa fa-google-plus-square', active: false },
                 { id: 5, abbrev: 'yt', url: 'https://www.youtube.com/', class: 'fa fa-youtube-square', active: false }
             ],
-            videoPlayer: false
+            videoPlayer: false,
+            firstheader: false,
+            secondheader: false,
+            thirdheader: false
         };
         
         //Social Feed Functionality 
@@ -38,6 +41,21 @@
                 
             if (abbrev === 'yt')
                 data.videoPlayer = false;
+
+            if (abbrev === 'fb') {
+                data.firstheader = true;
+                data.secondheader = false;
+                data.thirdheader = false;
+            }
+            if (abbrev === 'fe') {
+                data.firstheader = false;
+                data.secondheader = true;
+                data.thirdheader = false;
+            } if (abbrev === 'yt') {
+                data.firstheader = false;
+                data.secondheader = false;
+                data.thirdheader = true;
+            }
             
         }
 

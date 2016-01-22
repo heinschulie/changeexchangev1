@@ -226,6 +226,12 @@ $transition-time: .3s;
   }
 }
 
-.art-info{
-    max-width: 300px;
+@include bp-desktop{
+    .image--large{
+        margin-left: -6px;
+    }
+    .art-info{
+        max-width: 50%;
+    }
 }
+

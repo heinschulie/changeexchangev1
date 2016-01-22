@@ -6,6 +6,7 @@
     var homeController = function ($scope, $timeout, errorState, contentState, socialState) {
 
         $scope.contentState = contentState;
+        $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
         $scope.socialState = socialState;
         $scope.errorState = errorState; 
 
@@ -20,6 +21,8 @@
         }
         if (contentState.data.posts.length < 1)
             $scope.callForPosts();
+        if (!contentState.data.banners || contentState.data.banners.length < 3)
+            contentState.getBanners(null, true);
        
     }
 

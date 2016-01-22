@@ -6,6 +6,7 @@
     var galleryController = function ($scope, contentState) {
 
         $scope.contentState = contentState;
+        $scope.contentState.data.galleryViewing = true; 
 
         var callForArtworks = function () {
             return contentState.getArtworks();

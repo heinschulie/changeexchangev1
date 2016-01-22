@@ -54,13 +54,41 @@
     border-bottom: 3px solid $mustard-orange;
 }
 
-#sidebar{
-    
+.page-content {
+   
+    background-color: white;
+    padding-bottom: $padding*15; 
+    border-bottom: 3px solid $mustard-orange;
 
-    /*margin-top: 0; 
-        position: relative;
-        width: auto;
-        right: auto;*/
+    @include bp-desktop{
+        margin-left: -0.8rem;
+        padding-left: 3rem;
+        padding-right: 0;
+        text-align: justify;
+    }
+
+    .page-main-body{
+
+        @include bp-desktop{
+            padding-right: 0;
+            margin-right: 0;
+        }
+        
+        .page-main-copy{
+            text-align: inherit;
+            p{
+                text-align: inherit;
+            }
+        }
+
+        .page-main-image{
+            width: 100%;
+        }
+    }
+}
+
+#sidebar{
+
     @include bp-desktop{
         margin-top: $cardHeight*2 + 10px; 
         position: absolute;

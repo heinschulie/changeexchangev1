@@ -375,9 +375,12 @@ div.rn-carousel-indicator span {
     .image--large em a, .art-info em a {
       color: #e5980a; }
 
-.art-info {
-  max-width: 300px; }
+@media only screen and (min-width: 1224px) {
+  .image--large {
+    margin-left: -6px; }
 
+  .art-info {
+    max-width: 50%; } }
 /*Colours*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
@@ -535,6 +538,9 @@ This is the parent `<div>` that contains the menu and the content area.
 #layout {
   position: relative;
   padding-left: 0; }
+  @media only screen and (min-width: 1224px) {
+    #layout {
+      top: 30%; } }
 
 #layout.active #menu {
   left: 65%;
@@ -618,7 +624,7 @@ appears on the left side of the page.
       margin-left: -20%;
       /* "#menu" width */
       width: 20%;
-      top: 10%; } }
+      top: 30%; } }
 
 #menu::-webkit-scrollbar {
   width: 0.2em; }
@@ -1285,19 +1291,35 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   padding-bottom: 3rem;
   border-bottom: 3px solid #e5980a; }
 
-#sidebar {
-  /*margin-top: 0; 
-      position: relative;
-      width: auto;
-      right: auto;*/ }
+.page-content {
+  background-color: white;
+  padding-bottom: 3rem;
+  border-bottom: 3px solid #e5980a; }
   @media only screen and (min-width: 1224px) {
-    #sidebar {
-      margin-top: 570px;
-      position: absolute;
-      width: 16.6rem;
-      right: 2.1rem; }
-      #sidebar.no-margin-top {
-        margin-top: 0; } }
+    .page-content {
+      margin-left: -0.8rem;
+      padding-left: 3rem;
+      padding-right: 0;
+      text-align: justify; } }
+  @media only screen and (min-width: 1224px) {
+    .page-content .page-main-body {
+      padding-right: 0;
+      margin-right: 0; } }
+  .page-content .page-main-body .page-main-copy {
+    text-align: inherit; }
+    .page-content .page-main-body .page-main-copy p {
+      text-align: inherit; }
+  .page-content .page-main-body .page-main-image {
+    width: 100%; }
+
+@media only screen and (min-width: 1224px) {
+  #sidebar {
+    margin-top: 570px;
+    position: absolute;
+    width: 16.6rem;
+    right: 2.1rem; }
+    #sidebar.no-margin-top {
+      margin-top: 0; } }
 
 .suggested-posts-category {
   margin-left: 0;
@@ -1361,7 +1383,7 @@ header.header-one {
     width: 80%;
     height: 40%;
     top: 64%;
-    padding-left: 25%;
+    padding-left: 2%;
     background-color: #e5980a;
     background-image: url("../images/selectbutton.png");
     background-position: right;
@@ -1514,7 +1536,7 @@ header.header-three {
     width: 65%;
     height: 50%;
     top: 10%;
-    padding-left: 25%;
+    padding-left: 2%;
     background-color: #e5980a;
     background-image: url("../images/selectbutton.png");
     background-position: right;
@@ -1608,7 +1630,7 @@ header.header-three {
 
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap {
-    margin-top: 5%; } }
+    margin-top: 15%; } }
 .cxc-content-wrap #more-button {
   position: absolute;
   right: 5px;
@@ -1629,14 +1651,34 @@ header.header-three {
       width: 100%; } }
   .social-button-box .social-buttons i {
     font-size: 2em;
-    float: left;
+    float: right;
     margin: 1% 2%; }
     .social-button-box .social-buttons i bp-desktop {
+      float: left;
       margin: 0; }
     .social-button-box .social-buttons i.sn-active {
       color: #e5980a; }
   .social-button-box .social-buttons i:hover {
     cursor: pointer;
     color: #f6a915; }
+
+.more-button {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-top: 1.5rem;
+  color: white;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: #b0b0b0;
+  background-color: rgba(97, 97, 97, 0.5); }
+  .more-button:hover {
+    cursor: pointer;
+    background-color: #eaac3a;
+    background-color: rgba(229, 152, 10, 0.8); }
 
 /*# sourceMappingURL=site.css.map */

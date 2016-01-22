@@ -12,6 +12,7 @@
         $scope.recommendedMessageAuthor = "";
 
         $scope.contentState = contentState;
+        $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
         $scope.socialState = socialState;
         var postId = $routeParams.postId;
 

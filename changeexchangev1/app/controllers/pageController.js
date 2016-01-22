@@ -6,6 +6,7 @@
     var pageController = function ($scope, $routeParams, contentState) {
 
         $scope.contentState = contentState;
+        $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
 
         var callForPage = function () {
             return contentState.getPage($routeParams.pagename);

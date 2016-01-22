@@ -11,7 +11,8 @@
             posts: [],
             banners: [],
             galleries: [],
-            artworks: []
+            artworks: [],
+            galleryViewing: false
         };
 
         var standardPostCategories = [

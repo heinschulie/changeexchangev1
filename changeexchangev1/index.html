@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
-    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/site.min.css" rel="stylesheet" />
+    <!--<link href="content/css/site.css" rel="stylesheet" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
@@ -27,44 +27,44 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <div class="cxc-content-wrap" data-ng-controller="indexController">
-        <div class="error-modal" ng-cloak ng-if="errorState.data.ajaxErrors.length">
-            <h2>There seems to have been one or more errors:</h2>
+        <div ng-cloak class="error-modal" ng-if="errorState.data.ajaxErrors.length">
+            <h2>{{errorState.data.firstMessage}}</h2>
             <h3 ng-repeat="error in errorState.data.ajaxErrors">{{error.status}}</h3>
-            <h2>Please refresh the browser window or come back again in a little while...</h2>
+            <h2>{{errorState.data.secondMessage}}</h2>
         </div>
-        <!--<header class="desktoponly header-one">
+        <header class="desktoponly header-one"> <!--ng-if="socialState.data.firstheader"-->
             <figure class="header-image-left">
                 <img src="content/images/Change Exchange Logo.png" />
             </figure>
-            <select class="change-moment-select" data-ng-model="chosenMoment.name" data-ng-change="selectedMoment(chosenMoment, false)">
-                <option ng-repeat="moment in changeMoments" value="{{moment.name}}">{{moment.name}}</option>
-            </select>
-            <figure class="header-image-right">
-                <img src="content/images/BrightRock-Slab.png" />
-            </figure>
-            <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
-        </header>-->
-        <!--<header class="desktoponly header-two">
-            <figure class="header-image-left">
-                <img src="content/images/cxclogo-sansbubble.png" />
-            </figure>
-            <select class="change-moment-select" data-ng-model="chosenMoment.name" data-ng-change="selectedMoment(chosenMoment, false)">
-                <option ng-repeat="moment in changeMoments" value="{{moment.name}}">{{moment.name}}</option>
-            </select>
-            <p>brought to you by BRIGHTROCK</p>
-            <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
-        </header>-->
-        <header class="desktoponly header-three">
-            <figure class="header-image-left">
-                <img src="content/images/cxclogo-sansbubble.png" />
-            </figure>
-            <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)"> <!--data-ng-init="contentState.chosenMoment.name = contentState.changeMoments[0].name"-->
+            <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
             </select>
             <figure class="header-image-right">
                 <img src="content/images/BrightRock-Slab.png" />
             </figure>
+            <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
         </header>
+        <!--<header ng-if="socialState.data.secondheader" class="desktoponly header-two">
+            <figure class="header-image-left">
+                <img src="content/images/cxclogo-sansbubble.png" />
+            </figure>
+            <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
+                <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
+            </select>
+            <p>brought to you by BRIGHTROCK</p>
+            <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
+        </header>
+        <header ng-if="socialState.data.thirdheader" class="desktoponly header-three">
+            <figure class="header-image-left">
+                <img src="content/images/cxclogo-sansbubble.png" />
+            </figure>
+            <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
+                <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
+            </select>
+            <figure class="header-image-right">
+                <img src="content/images/BrightRock-Slab.png" />
+            </figure>
+        </header>-->
 
         <div id="layout" data-ng-class="{'active': active}">
             <a id="menuLink" class="menu-link" data-ng-click="toggleMenu()" data-ng-class="{'active': active}">
@@ -102,8 +102,7 @@
                         <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
                     </select>
                 </div>
-                <div class="social-button-box">
-
+                <div ng-hide="contentState.data.galleryViewing" class="social-button-box">
                     <div data-ng-repeat="sn in socialState.data.socialNetworks" class="social-buttons">
                         <i ng-click="socialState.changeSm(sn.id, sn.abbrev)" data-ng-class="sn.active ? '{{sn.class}} sn-active' : '{{sn.class}}'"></i>
                     </div>
@@ -117,13 +116,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="row reduced-padding sidebar-right desktoponly">
+                        <div ng-hide="contentState.data.galleryViewing" class="row reduced-padding sidebar-right desktoponly">
                             <div data-ng-class="socialState.data.videoPlayer ? 'col-lg-12 col-xs-12' : 'col-lg-3 col-xs-12'">
                                 <div data-ng-class="socialState.data.videoPlayer ? 'video-expand social-feeds col-lg-12 col-xs-12 box reduced-padding' : 'social-feeds col-lg-12 col-xs-12 box reduced-padding'">
                                     <div data-ng-class="{'fb-events': socialState.data.fbevents }" data-ng-show="socialState.data.currentSm == 'fb'">
                                         <div class="fb-page"
                                              data-href="https://www.facebook.com/sontheband"
-                                             data-tabs="timeline,events"
+                                             data-tabs="timeline"
                                              data-height="570"
                                              data-width="345"
                                              data-small-header="true"
@@ -138,7 +137,7 @@
                                         </div>
                                         <div class="fb-page"
                                              data-href="https://www.facebook.com/sontheband"
-                                             data-tabs="events,timeline"
+                                             data-tabs="events"
                                              data-height="570"
                                              data-width="345"
                                              data-small-header="true"
@@ -203,10 +202,10 @@
 
     <!--CUSTOM CxC Scripts-->
 
-    <!--<script src="app/all.min.js"></script>-->
+    <script src="app/all.min.js"></script>
 
     <!-- Load app main script -->
-    <script src="app/app.js"></script>
+    <!--<script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -225,7 +224,7 @@
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>
+    <script src="app/controllers/galleriesController.js"></script>-->
 
 </body>
 </html>
