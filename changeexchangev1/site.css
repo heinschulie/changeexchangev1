@@ -781,7 +781,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 80em) {
+@media (min-width: 70em) {
   .header,
   .content {
     padding-left: 2em;
@@ -791,44 +791,44 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 65%;
     /* left col width "#menu" */
     left: 0; } }
-  @media only screen and (min-width: 80em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #layout {
       padding-left: 45%;
       /* "#menu" width */ } }
-  @media only screen and (min-width: 80em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     #layout {
       padding-left: 20%;
       /* "#menu" width */ } }
 
-@media (min-width: 80em) {
+@media (min-width: 70em) {
   #menu {
     left: 65%; } }
-  @media only screen and (min-width: 80em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #menu {
       left: 45%; } }
-  @media only screen and (min-width: 80em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     #menu {
       left: 20%; } }
 
-@media (min-width: 80em) {
+@media (min-width: 70em) {
   .menu-link {
     position: fixed;
     left: 65%; } }
-  @media only screen and (min-width: 80em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     .menu-link {
       left: 45%; } }
-  @media only screen and (min-width: 80em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     .menu-link {
       display: none;
       left: 20%; } }
 
-@media (min-width: 80em) {
+@media (min-width: 70em) {
   #layout.active .menu-link {
     left: 65%; } }
-  @media only screen and (min-width: 80em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #layout.active .menu-link {
       left: 45%; } }
-  @media only screen and (min-width: 80em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 20%; } }
 
@@ -1033,6 +1033,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   position: absolute;
   overflow: hidden;
   border-bottom: 3px solid #e5980a; }
+  @media only screen and (max-width: 80em) {
+    .social-feeds {
+      right: 2.3rem;
+      width: 14.4rem; } }
   .social-feeds span {
     display: block;
     width: 100%;
@@ -1066,6 +1070,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   position: relative;
   right: 0.8rem; }
+
+.fb-events {
+  margin-top: -584px; }
 
 /*Colours*/
 /*@mixin bp-iphone6landscape {

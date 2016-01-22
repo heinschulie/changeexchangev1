@@ -60,7 +60,7 @@
             if (data.categories.length)
                 angular.forEach(data.categories, function (cat) {
                     if (cat.toLowerCase() === "events") {
-                        socialState.changeSm('fe');
+                        socialState.changeSm(3, 'fe'); //Magic number! Apologies - but time is of the essence. See socialState. 
                     }
                 })
             return postService.getPosts(data.postsPerPage, data.pageNumber, data.categories, false).then(function (results) {

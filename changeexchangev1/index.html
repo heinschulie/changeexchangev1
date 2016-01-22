@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="content/css/site.min.css" rel="stylesheet" />
-    <!--<link href="content/css/site.css" rel="stylesheet" />-->
+    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
+    <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
@@ -107,22 +107,6 @@
                     <div data-ng-repeat="sn in socialState.data.socialNetworks" class="social-buttons">
                         <i ng-click="socialState.changeSm(sn.id, sn.abbrev)" data-ng-class="sn.active ? '{{sn.class}} sn-active' : '{{sn.class}}'"></i>
                     </div>
-
-                    <!--<div class="social-buttons">
-                        <i ng-click="socialState.changeSm('fb')" class="fa fa-facebook-square"></i>
-                    </div>
-                    <div class="social-buttons">
-                        <i ng-click="socialState.changeSm('tw')" class="fa fa-twitter-square"></i>
-                    </div>
-                    <div class="social-buttons">
-                        <i ng-click="socialState.changeSm('fe')" class="fa fa-facebook-square"></i>
-                    </div>
-                    <div class="social-buttons">
-                        <i ng-click="socialState.changeSm('gg')" class="fa fa-google-plus-square"></i>
-                    </div>
-                    <div class="social-buttons">
-                        <i ng-click="socialState.changeSm('yt')" class="fa fa-youtube-square"></i>
-                    </div>-->
                 </div>
                 <div class="wrap">
                     <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
@@ -136,11 +120,11 @@
                         <div class="row reduced-padding sidebar-right desktoponly">
                             <div data-ng-class="socialState.data.videoPlayer ? 'col-lg-12 col-xs-12' : 'col-lg-3 col-xs-12'">
                                 <div data-ng-class="socialState.data.videoPlayer ? 'video-expand social-feeds col-lg-12 col-xs-12 box reduced-padding' : 'social-feeds col-lg-12 col-xs-12 box reduced-padding'">
-                                    <div data-ng-show="socialState.data.currentSm == 'fb'">
+                                    <div data-ng-class="{'fb-events': socialState.data.fbevents }" data-ng-show="socialState.data.currentSm == 'fb'">
                                         <div class="fb-page"
                                              data-href="https://www.facebook.com/sontheband"
-                                             data-tabs="timeline"
-                                             data-height="517"
+                                             data-tabs="timeline,events"
+                                             data-height="570"
                                              data-width="345"
                                              data-small-header="true"
                                              data-adapt-container-width="true"
@@ -152,12 +136,10 @@
                                                 </blockquote>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div data-ng-show="socialState.data.currentSm == 'fe'">
                                         <div class="fb-page"
                                              data-href="https://www.facebook.com/sontheband"
-                                             data-tabs="events"
-                                             data-height="517"
+                                             data-tabs="events,timeline"
+                                             data-height="570"
                                              data-width="345"
                                              data-small-header="true"
                                              data-adapt-container-width="true"
@@ -169,6 +151,23 @@
                                                 </blockquote>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div data-ng-show="socialState.data.currentSm == 'fe'">
+                                        <!--<div class="fb-page"
+                                             data-href="https://www.facebook.com/sontheband"
+                                             data-tabs="events,timeline"
+                                             data-height="517"
+                                             data-width="345"
+                                             data-small-header="true"
+                                             data-adapt-container-width="true"
+                                             data-hide-cover="false"
+                                             data-show-facepile="true">
+                                            <div class="fb-xfbml-parse-ignore">
+                                                <blockquote cite="https://www.facebook.com/sontheband">
+                                                    <a href="https://www.facebook.com/sontheband">SON EVENTS</a>
+                                                </blockquote>
+                                            </div>
+                                        </div>-->
                                     </div>
                                     <div class="" data-ng-show="socialState.data.currentSm == 'tw'">
                                         <twitter-stream></twitter-stream>
@@ -204,10 +203,10 @@
 
     <!--CUSTOM CxC Scripts-->
 
-    <script src="app/all.min.js"></script>
+    <!--<script src="app/all.min.js"></script>-->
 
     <!-- Load app main script -->
-    <!--<script src="app/app.js"></script>
+    <script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -226,7 +225,7 @@
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>-->
+    <script src="app/controllers/galleriesController.js"></script>
 
 </body>
 </html>

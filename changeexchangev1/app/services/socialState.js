@@ -5,6 +5,7 @@
 
         var data = {
             currentSm: "fb",
+            fbevents: false,
             socialNetworks: [
                 { id: 1, abbrev: 'fb', url: 'https://www.facebook.com/brightrock', class: 'fa fa-facebook-square', active: false },
                 { id: 2, abbrev: 'tw', url: 'https://www.twitter.com/', class: 'fa fa-twitter-square', active: false },
@@ -26,9 +27,18 @@
                 else
                     sn.active = false;
             })
-            data.currentSm = abbrev;
+            if (abbrev === 'fe') {
+                data.currentSm = 'fb';
+                data.fbevents = true; 
+            }                
+            else {
+                data.fbevents = false;
+                data.currentSm = abbrev;
+            }
+                
             if (abbrev === 'yt')
                 data.videoPlayer = false;
+            
         }
 
         return {
