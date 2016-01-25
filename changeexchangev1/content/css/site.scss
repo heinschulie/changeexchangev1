@@ -402,9 +402,7 @@ header.header-three{
 .cxc-content-wrap{
     //margin-top: $headerHeight;
     @include bp-desktop{       
-        margin-top: $headerHeight/2; //For headerone
-        //margin-top: $headerHeight/3; //For header two
-        //margin-top: $headerHeight/6; //For header two
+        margin-top: $headerHeight/2; //For main header
     } 
 
     #more-button{
@@ -412,6 +410,12 @@ header.header-three{
         right: 5px;
         bottom: 5px;
     }
+}
+
+.cxc-content-wrap-scrolled{
+    @include bp-desktop{       
+        margin-top: $headerHeight/6; //For minimal header
+    } 
 }
 
 .social-button-box{

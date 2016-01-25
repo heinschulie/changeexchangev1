@@ -40,22 +40,23 @@
             }
                 
             if (abbrev === 'yt')
-                data.videoPlayer = false;
+                data.videoPlayer = !data.videoPlayer;
+            else data.videoPlayer = false; 
 
-            if (abbrev === 'fb') {
-                data.firstheader = true;
-                data.secondheader = false;
-                data.thirdheader = false;
-            }
-            if (abbrev === 'fe') {
-                data.firstheader = false;
-                data.secondheader = true;
-                data.thirdheader = false;
-            } if (abbrev === 'yt') {
-                data.firstheader = false;
-                data.secondheader = false;
-                data.thirdheader = true;
-            }
+            //if (abbrev === 'fb') {
+            //    data.firstheader = true;
+            //    data.secondheader = false;
+            //    data.thirdheader = false;
+            //}
+            //if (abbrev === 'fe') {
+            //    data.firstheader = false;
+            //    data.secondheader = true;
+            //    data.thirdheader = false;
+            //} if (abbrev === 'yt') {
+            //    data.firstheader = false;
+            //    data.secondheader = false;
+            //    data.thirdheader = true;
+            //}
             
         }
 

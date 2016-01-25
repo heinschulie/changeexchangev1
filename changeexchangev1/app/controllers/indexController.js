@@ -3,7 +3,7 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var indexController = function ($scope, $location, errorState, contentState, socialState, categoryService) {
+    var indexController = function ($scope, $window, $location, errorState, contentState, socialState, categoryService) {
 
         $scope.contentState = contentState;
         $scope.socialState = socialState;
@@ -15,6 +15,15 @@
             else
                 $scope.active = true;
         }
+
+        $scope.scroll = 0; 
+
+        $scope.$watch($window.scrollY, function (newVal, oldVal) {
+            if (newVal > 0)
+                $scope.minimalHeader = true;
+            else $scope.minimalHeader = false; 
+        })
+    
 
         $scope.callForPosts = function () {           
             if ($location.path() !== "/home")
@@ -35,5 +44,5 @@
             contentState.getBanners(null, true);
     }
 
-    app.controller("indexController", ["$scope", "$location", "errorState", "contentState", "socialState", "categoryService", indexController]);
+    app.controller("indexController", ["$scope", "$window", "$location", "errorState", "contentState", "socialState", "categoryService", indexController]);
 }())

@@ -60,6 +60,7 @@
             data.pageNumber = data.pageNumber + 1;
             if (data.categories.length)
                 angular.forEach(data.categories, function (cat) {
+                    socialState.data.videoPlayer = false; // Ensure Youtube video isn't expanded. 
                     if (cat.toLowerCase() === "events") {
                         socialState.changeSm(3, 'fe'); //Magic number! Apologies - but time is of the essence. See socialState. 
                     }

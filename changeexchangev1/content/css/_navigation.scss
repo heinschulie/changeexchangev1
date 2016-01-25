@@ -121,6 +121,10 @@ appears on the left side of the page.
         top: $headerHeight; //for header one
         //top: $headerHeight/3*2; //for header two
         //top: $headerHeight/3; //for header two
+
+        &.minimalHeader{
+            top: $headerHeight/3; //for minimal header
+        }
     }
 }
 

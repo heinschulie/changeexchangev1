@@ -1,0 +1,12 @@
+﻿<header ng-hide="minimalHeader" class="desktoponly header-one">
+    <figure class="header-image-left">
+        <img src="content/images/Change Exchange Logo.png" />
+    </figure>
+    <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
+        <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
+    </select>
+    <figure class="header-image-right">
+        <img src="content/images/BrightRock-Slab.png" />
+    </figure>
+    <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
+</header>

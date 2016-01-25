@@ -10,6 +10,7 @@
         //var serviceBase = 'http://changeexchangedev.azurewebsites.net/wp-json/';
         var applicationBase = 'http://changeexchangev1.azurewebsites.net/';
 
+        // *** Staging and Production
         var serviceBase = 'https://services.brightrock.co.za/changeexchange/wp-json/';
 
         // *** Production 
