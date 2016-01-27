@@ -9,6 +9,7 @@
             },
             link: function (scope, element, attrs) {
 
+
                 function debounce(func, wait, immediate) {
                     var timeout;
                     return function () {
@@ -29,7 +30,7 @@
                 var handler = function () {
                     //scope.scroll = windowEl.scrollTop();
                     //console.log('Scroll Position : ' + windowEl[0].scrollY);
-                    if (windowEl[0].scrollY < 50)
+                    if (windowEl[0].scrollY < 500)
                         scope.scroll = windowEl[0].scrollY;
                 }
 

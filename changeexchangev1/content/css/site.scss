@@ -167,92 +167,6 @@ header.header-one{
     }
 }
 
-header.header-two{
-    position: fixed;
-    width: 100%;
-    top: 0; 
-    background-color: $lightgray;
-    z-index: 2;
-
-    @include bp-desktop{       
-        height: $headerHeight/5*3; 
-    }
-
-    h3{
-         display: none;
-        @include bp-desktop{   
-            display: block;
-            position: absolute;
-            width: 98%;
-            margin: 0;
-            margin-left: 3.5%;
-            bottom: 0;
-            font-size: 1.1em;
-        }       
-    }
-
-    select.change-moment-select{
-        @include centerThisThingX(); 
-        left: 50%;
-        width: 40%;
-        height: 48%;
-        top: 13%; 
-        padding-left: 25%; //Center text in select
-        background-color: $mustard-orange; 
-        background-image: url('../images/selectbutton.png');
-        background-position: right;
-        background-size: contain;
-        background-repeat: no-repeat;   
-        @include border-radius(7px);
-        border: none; 
-
-        @include bp-desktop{       
-                left: 54%;
-                width: 49%;
-                height: 48%;
-
-                appearance:none;
-                -moz-appearance:none; /* Firefox */
-                -webkit-appearance:none; /* Safari and Chrome */
-            }
-    }
-
-    p{
-        position: absolute;
-        right: 2.5%;
-        top: 33%;
-    }
-
-    figure{
-        width: 25%;
-        left: 0;
-        position: absolute;
-        top: 0%; 
-
-        img{
-            width: 100%;
-        }
-
-        &.header-image-left{          
-            width: 65%; 
-            left: 15%;
-            @include bp-desktop{       
-                width: 25%;
-                left: 0;
-            }
-        }
-        &.header-image-right{  
-            display: none;
-            @include bp-desktop{  
-                display: block;     
-                right: 2.5%;
-                width: 15%;
-                margin-top: 2.5%; 
-            }            
-        }
-    }
-}
-
 header.header-three{
     position: fixed;
     width: 100%;
@@ -279,7 +193,7 @@ header.header-three{
         left: 53%;
         width: 65%;
         height: 50%;
-        top: 10%;
+        top: 23%;
         padding-left: 2%; //Center text in select in Header 1
         //padding-left: 25%; //Center text in select in Header 3
         background-color: $mustard-orange; 
@@ -309,14 +223,14 @@ header.header-three{
         &.header-image-left{          
             width: 15%; 
             left: 2.5%;
-            top: 10%;
+            top: 23%;
         }
         &.header-image-right{ 
             position: absolute;
             display: block;
             right: 2.5%;
             width: 10%;
-            top: 0;      
+            top: 14%;      
         }
     }
 }
@@ -430,19 +344,11 @@ header.header-three{
         width:   2.5%;
     }
 
-    .social-buttons{
-        @include bp-desktop{
-            width: 100%;
-        }
+    .social-buttons{      
         i{
             font-size: 2em;
             float: right;
             margin: 1% 2%;
-
-            bp-desktop{
-            float: left;
-                margin: 0;
-            }
 
             &.sn-active{
                 color:  $mustard-orange;
@@ -451,6 +357,14 @@ header.header-three{
         i:hover{
             cursor: pointer;
             color: $mustard-yellow; 
+        }
+
+        @include bp-desktop{
+            width: 100%;
+            i{
+                float: left;
+                margin: 0;
+            }
         }
     }
 }

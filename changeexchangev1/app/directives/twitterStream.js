@@ -6,6 +6,7 @@
 
     app.directive("twitterStream", [function () {
 
+
         return {
             restrict: "E",
             templateUrl: "app/directives/templates/twitter-stream.html",
