@@ -1,10 +1,11 @@
 ﻿<div class="post-container-parent row">
     <div class="post-container row col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="post-canvas col-lg-9 col-md-12 col-sm-12 col-xs-12">
-            <section class="article-hero">
+            <!--<section class="article-hero">
                 <img data-ng-src="{{contentState.data.post.featured_image.source}}" alt="Image for {{contentState.data.post.featured_image.title}}" />
-            </section>
+            </section>-->
             <h3 data-ng-bind-html="contentState.data.post.title"></h3>
+            <h5 ng-if="!changeAgentPost">By <a ng-click="contentState.getPostByName(contentState.data.post.author.name)" data-ng-bind-html="contentState.data.post.author.name"></a> </h5>
         <!--</div>        
         <div class="post-content col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
             <!--<img ng-src="{{contentState.data.post.featured_image.source}}" />-->
@@ -12,8 +13,12 @@
             <div ng-bind-html="contentState.data.post.content"></div>
             <!--<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="facebooklikeurl" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
             <div ng-if="facebooklikebutton" ng-bind-html="facebooklikebutton"></div>
+            <div ng-if="changeAgentPost" class="suggested-posts-category row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h5 class="row recommended-post-message">Contributions by {{contentState.data.post.author.name}}</h5>
+                <cxc-card class="col-xs-12 col-sm-6 col-md-4 col-lg-4'" ng-repeat="post in sameAuthorPosts" cxccontent="post"></cxc-card>
+            </div>
         </div>
-        <div id="sidebar" data-ng-class="socialState.data.videoPlayer ? 'no-margin-top column col-lg-3 col-md-12 col-sm-12 col-xs-12' : 'column col-lg-3 col-md-12 col-sm-12 col-xs-12'">
+        <div ng-if="!changeAgentPost" id="sidebar" data-ng-class="socialState.data.videoPlayer ? 'no-margin-top column col-lg-3 col-md-12 col-sm-12 col-xs-12' : 'column col-lg-3 col-md-12 col-sm-12 col-xs-12'">
             <h5 class="recommended-post-message">{{recommendedMessageAuthor}}</h5>
             <div class="row box">
                 <cxc-card class="col-xs-12 col-sm-6 col-md-12 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 3" cxccontent="post"></cxc-card>

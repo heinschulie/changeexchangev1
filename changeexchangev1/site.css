@@ -540,7 +540,7 @@ This is the parent `<div>` that contains the menu and the content area.
   padding-left: 0; }
   @media only screen and (min-width: 1224px) {
     #layout {
-      top: 30%; } }
+      top: 8%; } }
 
 #layout.active #menu {
   left: 65%;
@@ -613,7 +613,9 @@ appears on the left side of the page.
   background: #ededed;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar; }
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-face-color: transparent;
+  scrollbar-track-color: transparent; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #menu {
       margin-left: -45%;
@@ -629,15 +631,15 @@ appears on the left side of the page.
         top: 10%; } }
 
 #menu::-webkit-scrollbar {
-  width: 0.2em; }
+  width: 0; }
 
 #menu::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: inset 0 0 0 transparent;
+  box-shadow: inset 0 0 0 transparent; }
 
 #menu::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey; }
+  background-color: transparent;
+  outline: transparent; }
 
 /*
 All anchors inside the menu should be styled like this.
@@ -710,9 +712,11 @@ This styles a link within a selected menu item `<li>`.
 This styles the menu heading.
 */
 #menu .pure-menu-heading {
-  font-size: 110%;
   color: #fff;
   margin: 0; }
+  @media only screen and (min-width: 1224px) {
+    #menu .pure-menu-heading {
+      font-size: 110%; } }
 
 #menu-wrapper {
   background-color: #e5980a;
@@ -1123,7 +1127,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   padding-top: 0;
   margin-right: 0;
   padding-right: 0;
-  padding-right: 0.2rem; }
+  padding-right: 0.2rem;
+  border: 1px solid green; }
   @media only screen and (max-width: 60em) {
     .carousel-wrapper {
       padding-right: 0.7rem;
@@ -1139,7 +1144,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .banner-container {
   position: relative;
-  height: 224px; }
+  height: 280px;
+  border: 1px solid red; }
   @media only screen and (min-width: 1224px) {
     .banner-container {
       padding-left: 0.4rem;
@@ -1151,6 +1157,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   position: relative;
   width: 100%;
   height: 100%;
+  border: 1px solid blue;
   /*background-size: cover;
   background-position:center left;*/
   color: white; }
@@ -1164,6 +1171,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
     left: 0;
     -o-object-fit: cover;
     object-fit: cover;
@@ -1183,8 +1191,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .banner-copy {
   position: absolute;
   width: 100%;
-  height: 210px;
-  right: .5rem;
+  height: 280px;
+  right: 0;
+  top: 0;
   z-index: 1;
   text-align: left; }
   .banner-copy h1 {
@@ -1198,7 +1207,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding: 0 2rem; }
   @media only screen and (min-width: 1224px) {
     .banner-copy {
-      width: 60%; } }
+      width: 50%; } }
 
 .banner-overlay {
   position: absolute;
@@ -1215,8 +1224,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .banner-video {
   position: absolute;
   left: 0;
+  top: 0;
   height: 100%;
-  width: 41%; }
+  width: 497.77778px; }
   .banner-video iframe {
     width: 100%;
     height: 100%; }
@@ -1267,10 +1277,13 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding: 0 1rem 1rem; } }
 .post-container img {
   float: right;
-  max-width: 100%; }
-  @media only screen and (max-device-width: 480px) {
-    .post-container img {
-      width: 100%; } }
+  height: 100%;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
 .post-container section.article-hero {
   position: relative;
   width: 100%;
@@ -1286,11 +1299,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .post-container section.article-hero img {
     width: 100%;
     position: relative; }
+.post-container .instagram-media {
+  margin: 0 auto; }
 
 .post-canvas {
   background-color: white;
   padding-top: 0.6rem;
   padding-bottom: 3rem;
+  padding-left: 1.2rem;
   border-bottom: 3px solid #e5980a; }
 
 .page-content {
@@ -1369,7 +1385,7 @@ header.header-one {
       header.header-one h3 {
         display: block;
         position: absolute;
-        width: 50%;
+        width: 55%;
         margin: 0;
         margin-left: 6.5%;
         bottom: 11.5%; } }
@@ -1533,7 +1549,8 @@ header.header-three {
 .page-section {
   padding-left: 1rem;
   padding-right: 0;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  padding-bottom: 10rem; }
   @media only screen and (min-width: 1224px) {
     .page-section {
       padding-left: 0;
@@ -1558,6 +1575,19 @@ header.header-three {
   right: 5px;
   bottom: 5px; }
 
+_:-ms-fullscreen, :root .ie11up {
+  /*#layout {
+      top: 9%; //for header one
+  }*/ }
+  _:-ms-fullscreen .cxc-content-wrap, :root .ie11up .cxc-content-wrap {
+    margin-top: 0; }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .cxc-content-wrap {
+    margin-top: 0; }
+
+  #layout {
+    top: 9%; } }
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap-scrolled {
     margin-top: 5%; } }
@@ -1570,7 +1600,8 @@ header.header-three {
   z-index: 1; }
   @media only screen and (min-width: 1224px) {
     .social-button-box {
-      top: 14.6rem;
+      margin-top: 0.5rem;
+      top: 280px;
       width: 2.5%; } }
   .social-button-box .social-buttons i {
     font-size: 2em;
@@ -1589,22 +1620,25 @@ header.header-three {
         margin: 0; } }
 
 .more-button {
-  width: 100%;
+  width: 99%;
   text-align: center;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
   margin-top: 1.5rem;
+  margin-left: 1%;
+  margin-bottom: 15rem;
   color: white;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  background-color: #b0b0b0;
-  background-color: rgba(97, 97, 97, 0.5); }
-  .more-button:hover {
-    cursor: pointer;
-    background-color: #eaac3a;
-    background-color: rgba(229, 152, 10, 0.8); }
+  background-color: #e5980a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+    /*@include transition(all, 0.4s, ease-in-out);   
+    @include alpha-attribute('background-color', rgba($charcoal, 0.5), white);
+
+    &:hover{
+        cursor: pointer;        
+        @include alpha-attribute('background-color', rgba($mustard-orange, 0.8), white);
+    }*/ }
 
 /*# sourceMappingURL=site.css.map */

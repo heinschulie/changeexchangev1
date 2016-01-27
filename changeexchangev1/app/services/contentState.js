@@ -56,6 +56,24 @@
             })
         }
 
+        var getPostByName = function (name) {
+            return postService.getPostByName(name).then(function (results) {
+                if (results.data.length) {
+                    data.categories = results.data[0].terms.category
+                      .map(function (category) {
+                          return category.name;
+                      });
+
+                    data.post = results.data[0];
+                    data.post.title = $sce.trustAsHtml(data.post.title);
+                    data.post.excerpt = $sce.trustAsHtml(data.post.excerpt);
+                    data.post.content = $sce.trustAsHtml(data.post.content);
+
+                    $location.path('/' + data.post.ID);
+                }                
+            })
+        }
+
         var getPosts = function () {
             data.pageNumber = data.pageNumber + 1;
             if (data.categories.length)
@@ -78,6 +96,14 @@
             return postService.getPostsByAuthor(data.post.author.ID).then(function (results) {
                 prepPosts(results.data, false);
                 return results.data;
+            })
+        };
+
+        var getPostsByTags = function (tagArray) {
+            return postService.getPostsByTags(tagArray).then(function (results) {
+                prepPosts(results.data, false);
+                data.pageNumber = 1;
+                data.posts = results.data;
             })
         };
 
@@ -200,8 +226,10 @@
             selectedMoment: selectedMoment,
             getPage: getPage,
             getPost: getPost,
+            getPostByName: getPostByName,
             getPosts: getPosts,
             getPostsByAuthor: getPostsByAuthor,
+            getPostsByTags: getPostsByTags,
             getArtworks: getArtworks,
             getGalleries: getGalleries,
             getBanners: getBanners

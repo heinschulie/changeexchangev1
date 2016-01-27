@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="content/css/site.min.css" rel="stylesheet" />
-    <!--<link href="content/css/site.css" rel="stylesheet" />-->
+    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
+    <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -103,6 +103,8 @@
                         <ul class="pure-menu-list">
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" />
                             <li class="pure-menu-item"><a href="#/exchange/about" class="pure-menu-link">About</a></li>
+                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Change Agents'}, false)" class=" pure-menu-link">Meet the Change Agents</a></li>
+                            <!--<li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.getPostsByTags(['change-agents-2'])" class="pure-menu-link">Meet the Change Agents</a></li>-->
                             <li class="pure-menu-item"><a href="#/exchange/iris%20sessions" class="pure-menu-link">Iris Sessions</a></li>
                             <li class="pure-menu-item"><a href="#/exchange/connection%20sessions" class="pure-menu-link">Connection Sessions</a></li>
                             <li class="pure-menu-item"><a ng-href="#/galleries" class="pure-menu-link">Galleries</a></li>
@@ -218,9 +220,9 @@
     <script src="scripts/angular-carousel.min.js"></script>
 
     <!--CUSTOM CxC Scripts-->
-    <script src="app/all.min.js"></script>
+    <!--<script src="app/all.min.js"></script>-->
     <!-- Load app main script -->
-    <!--<script src="app/app.js"></script>
+    <script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -240,7 +242,7 @@
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>-->
+    <script src="app/controllers/galleriesController.js"></script>
 
 </body>
 </html>

@@ -6,6 +6,7 @@
     var postController = function ($scope, $location, $routeParams, $sce, socialState, contentState) {
 
 
+        $scope.changeAgentPost = false;
         $scope.sameAuthorPosts = [];
         $scope.sameCategoryPosts = [];
         $scope.recommendedMessageCat = "";
@@ -31,7 +32,7 @@
         }
 
         var getRecommendedPosts = function () {
-
+            
             $scope.sameAuthorPosts = contentState.data.posts.filter(function(post) {
                 return post.author.username === contentState.data.post.author.username && post.ID !== contentState.data.post.ID;
             });
@@ -55,12 +56,23 @@
         }
 
         //Initialise 
-        $scope.callForPost()
-            .then(function(results){
-                if (contentState.data.posts.length < 1)
-                    return contentState.getPosts();
-            })
-            .then(getRecommendedPosts);
+        if (postId === contentState.data.post.ID) {
+            if (contentState.data.categories[0] === 'Change agents')
+                $scope.changeAgentPost = true;
+            if (contentState.data.posts.length < 1)
+                contentState.getPosts();
+            getRecommendedPosts();
+        }
+        else
+            $scope.callForPost()
+                .then(function (results) {
+                    if (contentState.data.categories[0] === 'Change agents')
+                        $scope.changeAgentPost = true;
+                    if (contentState.data.posts.length < 1)
+                        contentState.getPosts().then(getRecommendedPosts);
+                    else
+                        getRecommendedPosts();
+                });
     }
 
     app.controller("postController", ["$scope", "$location", "$routeParams", "$sce", "socialState", "contentState", postController]);
