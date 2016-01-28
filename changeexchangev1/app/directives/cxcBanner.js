@@ -19,7 +19,8 @@
 
             },
 
-            controller: ["$scope", "$sce", function ($scope, $sce) {
+            controller: ["$scope", "$sce", "contentState", function ($scope, $sce, contentState) {
+                $scope.contentState = contentState; 
                 if (typeof $scope.cxcbannercontent.excerpt === 'string' || $scope.cxcbannercontent.excerpt instanceof String) {
                     $scope.videoExists = true; 
                     $scope.cxcbannercontent.excerpt = $scope.cxcbannercontent.excerpt.replace('<p>', '').replace('</p>', '');

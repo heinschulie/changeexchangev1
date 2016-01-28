@@ -153,18 +153,62 @@
 }
 
 /* iPads (landscape) ----------- */
-@mixin bp-ipadlandscape {
-    @media only screen 
-    and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
         @content;
     }
-}
+}*/
 
+@mixin bp-ipadlandscape {
+    // iPad (portrait and landscape)
+    @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation : landscape) {
+        @content;
+      }
+}
 /* iPads (portrait and landscape) ----------- */
 @mixin bp-ipad {
     @media only screen and (min-device-width: 768px) 
       and (max-device-width: 1024px) 
       and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+    }
+}
+
+/* Samsung Galaxy S3 ----------- */
+@mixin bp-s3galaxylandscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+        @content;
+    }
+}
+
+@mixin bp-s3galaxyportrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+        @content;
+    }
+}
+
+/* Samsung Galaxy S4 ----------- */
+@mixin bp-s4galaxylandscape {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+        @content;
+    }
+}
+
+@mixin bp-s4galaxyportrait {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+        @content;
+    }
+}
+
+/* Samsung Galaxy S5 ----------- */
+@mixin bp-s5galaxylandscape {
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+        @content;
+    }
+}
+
+@mixin bp-s5galaxyportrait {
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
         @content;
     }
 }

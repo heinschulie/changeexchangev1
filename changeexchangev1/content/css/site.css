@@ -33,7 +33,15 @@
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
 input[type=range] {
@@ -60,10 +68,43 @@ ul[rn-carousel] {
     margin: 0;
     list-style-type: none;
     width: 100%;
-    height: 100%;
+    height: 93.33333px;
     display: inline-block;
     margin-left: 0;
     margin-right: 0; }
+    @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+      ul[rn-carousel] > li {
+        height: 143.33333px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      ul[rn-carousel] > li {
+        height: 143.33333px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+      ul[rn-carousel] > li {
+        height: 93.33333px; } }
+    @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+      ul[rn-carousel] > li {
+        height: 143.33333px; } }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+      ul[rn-carousel] > li {
+        height: 93.33333px; } }
+    @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+      ul[rn-carousel] > li {
+        height: 143.33333px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      ul[rn-carousel] > li {
+        height: 143.33333px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      ul[rn-carousel] > li {
+        height: 93.33333px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      ul[rn-carousel] > li {
+        height: 143.33333px; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      ul[rn-carousel] > li {
+        height: 93.33333px; } }
+    @media only screen and (min-width: 1224px) {
+      ul[rn-carousel] > li {
+        height: 280px; } }
 
 /* prevent flickering when moving buffer */
 ul[rn-carousel-buffered] > li {
@@ -133,7 +174,15 @@ div.rn-carousel-indicator span {
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*body {
   margin: 0;
@@ -414,7 +463,15 @@ div.rn-carousel-indicator span {
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
 .error-modal {
@@ -426,6 +483,58 @@ div.rn-carousel-indicator span {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white; }
+
+/*Colours*/
+.play {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 18px solid #e5980a;
+  margin: 30px auto 15px auto;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  left: 3px; }
+  .play:before {
+    content: '';
+    position: absolute;
+    top: -22.5px;
+    left: -34.5px;
+    bottom: -22.5px;
+    right: -10.5px;
+    border-radius: 50%;
+    border: 3px solid #e5980a;
+    z-index: 2;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s; }
+  .play:after {
+    content: '';
+    opacity: 0;
+    transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s; }
+  .play:hover:before, .play:focus:before {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1); }
+  .play.play-active {
+    border-color: transparent; }
+    .play.play-active:after {
+      content: '';
+      opacity: 1;
+      width: 15px;
+      height: 24px;
+      background: #e5980a;
+      position: absolute;
+      right: 1.5px;
+      top: -12px;
+      border-left: 6px solid #e5980a;
+      box-shadow: inset 9px 0 0 0 #e5980a; }
 
 html {
   position: relative;
@@ -514,7 +623,15 @@ body::-webkit-scrollbar-thumb {
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 .pure-img-responsive {
   max-width: 100%;
@@ -894,7 +1011,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
 .image-column {
@@ -1033,7 +1158,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
 .social-feeds {
@@ -1119,7 +1252,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
 .carousel-wrapper {
@@ -1127,13 +1268,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   padding-top: 0;
   margin-right: 0;
   padding-right: 0;
-  padding-right: 0.2rem;
-  border: 1px solid green; }
+  padding-right: 0.2rem; }
   @media only screen and (max-width: 60em) {
     .carousel-wrapper {
       padding-right: 0.7rem;
       padding-left: 0.7rem; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
     .carousel-wrapper {
       padding-right: 0.7rem;
       padding-left: 0.7rem; } }
@@ -1144,20 +1284,82 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .banner-container {
   position: relative;
-  height: 280px;
-  border: 1px solid red; }
+  height: 93.33333px; }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    .banner-container {
+      height: 143.33333px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .banner-container {
+      height: 143.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .banner-container {
+      height: 93.33333px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .banner-container {
+      height: 143.33333px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .banner-container {
+      height: 93.33333px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .banner-container {
+      height: 143.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .banner-container {
+      height: 143.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .banner-container {
+      height: 93.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .banner-container {
+      height: 143.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .banner-container {
+      height: 93.33333px; } }
   @media only screen and (min-width: 1224px) {
     .banner-container {
+      height: 280px;
       padding-left: 0.4rem;
       padding-right: 0.5rem;
       margin-bottom: 0;
       margin-top: 0; } }
 
+.mobile-banner-container-expand {
+  height: 326.66667px; }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    .mobile-banner-container-expand {
+      height: 716.66667px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .mobile-banner-container-expand {
+      height: 609.16667px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-banner-container-expand {
+      height: 280px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-banner-container-expand {
+      height: 179.16667px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-banner-container-expand {
+      height: 326.66667px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-banner-container-expand {
+      height: 322.5px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-banner-container-expand {
+      height: 501.66667px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-banner-container-expand {
+      height: 312.66667px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-banner-container-expand {
+      height: 501.66667px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-banner-container-expand {
+      height: 312.66667px; } }
+
 .cxc-banner {
   position: relative;
   width: 100%;
   height: 100%;
-  border: 1px solid blue;
   /*background-size: cover;
   background-position:center left;*/
   color: white; }
@@ -1190,24 +1392,59 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .banner-copy {
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 280px;
   right: 0;
   top: 0;
   z-index: 1;
-  text-align: left; }
+  text-align: right; }
   .banner-copy h1 {
-    font-size: 3em;
+    font-size: 1em;
     margin-bottom: 0;
     width: 90%;
-    margin-top: 1rem;
-    padding: 0 2rem; }
+    margin-top: 1rem; }
+    @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+      .banner-copy h1 {
+        font-size: 2em; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      .banner-copy h1 {
+        font-size: 2em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+      .banner-copy h1 {
+        font-size: 1em; } }
+    @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+      .banner-copy h1 {
+        font-size: 2em; } }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+      .banner-copy h1 {
+        font-size: 1em; } }
+    @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+      .banner-copy h1 {
+        font-size: 2em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .banner-copy h1 {
+        font-size: 2em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .banner-copy h1 {
+        font-size: 1em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      .banner-copy h1 {
+        font-size: 2em; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      .banner-copy h1 {
+        font-size: 1em; } }
+    @media only screen and (min-width: 1224px) {
+      .banner-copy h1 {
+        font-size: 2em; } }
   .banner-copy p {
     margin: 0;
     padding: 0 2rem; }
   @media only screen and (min-width: 1224px) {
     .banner-copy {
-      width: 50%; } }
+      width: 50%;
+      padding: 0 2rem; }
+      .banner-copy h1 {
+        font-size: 3em; } }
 
 .banner-overlay {
   position: absolute;
@@ -1226,10 +1463,67 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   left: 0;
   top: 0;
   height: 100%;
-  width: 497.77778px; }
+  width: 497.77778px;
+  z-index: 10; }
   .banner-video iframe {
     width: 100%;
     height: 100%; }
+
+.mobile-banner-video {
+  width: 100%;
+  position: relative;
+  margin-top: 109.33333px;
+  padding-bottom: 57%; }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-banner-video {
+      margin-top: 109.33333px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-banner-video {
+      margin-top: 109.33333px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-banner-video {
+      margin-top: 109.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-banner-video {
+      margin-top: 109.33333px; } }
+  @media only screen and (min-width: 1224px) {
+    .mobile-banner-video {
+      margin-top: 280px; } }
+  .mobile-banner-video .inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+    .mobile-banner-video .inner iframe {
+      width: 100%;
+      height: 100%; }
+
+.mobile-play-button {
+  z-index: 5; }
+
+.play-button-container {
+  width: 20%; }
 
 /*Colours*/
 /*@mixin bp-iphone6landscape {
@@ -1264,7 +1558,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Smartphones (portrait) ----------- */
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
 /* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
 @media only screen and (min-width: 1224px) {
@@ -1516,7 +1818,7 @@ header.header-three {
 .mobile-header select.mobile-change-moment-select {
   width: 100%;
   height: 50%;
-  padding-left: 25%;
+  border-radius: 5px;
   background-color: #e5980a;
   background-image: url("../images/selectbutton.png");
   background-position: right;
@@ -1528,6 +1830,53 @@ header.header-three {
   /* Firefox */
   -webkit-appearance: none;
   /* Safari and Chrome */ }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    .mobile-header select.mobile-change-moment-select {
+      height: 45px;
+      padding-left: 30%; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .mobile-header select.mobile-change-moment-select {
+      height: 45px;
+      padding-left: 25%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 0.7em;
+      height: 35px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 1em;
+      height: 35px;
+      padding-left: 15%; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 0.7em;
+      height: 35px;
+      padding-left: 10%; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 1em;
+      height: 35px;
+      padding-left: 22.5%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 1em;
+      height: 35px;
+      padding-left: 20%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 0.7em;
+      height: 35px;
+      padding-left: 10%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 1em;
+      height: 35px;
+      padding-left: 22.5%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-header select.mobile-change-moment-select {
+      font-size: 0.7em;
+      height: 35px;
+      padding-left: 10%; } }
 
 .layout {
   display: flex;
@@ -1604,7 +1953,7 @@ _:-ms-fullscreen, :root .ie11up {
       top: 280px;
       width: 2.5%; } }
   .social-button-box .social-buttons i {
-    font-size: 2em;
+    font-size: 2.5em;
     float: right;
     margin: 1% 2%; }
     .social-button-box .social-buttons i.sn-active {
@@ -1616,6 +1965,7 @@ _:-ms-fullscreen, :root .ie11up {
     .social-button-box .social-buttons {
       width: 100%; }
       .social-button-box .social-buttons i {
+        font-size: 2em;
         float: left;
         margin: 0; } }
 

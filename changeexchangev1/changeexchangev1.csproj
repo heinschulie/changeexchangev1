@@ -85,6 +85,7 @@
     <Content Include="package.json" />
     <Content Include="content\css\_gallery.scss" />
     <Content Include="content\css\_error.scss" />
+    <Content Include="content\css\_playButton.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

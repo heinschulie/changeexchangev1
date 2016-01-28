@@ -8,6 +8,14 @@ $tabletNavWidth: 45%;
 $mobileSideNavWidth: 65%;
 
 $cardHeight: 280px;
+$bannerHeight: $cardHeight; 
+
+$mobileBannerHeight: $bannerHeight/3;
+$ipadBannerHeight: $mobileBannerHeight + 50px;
+$iphone5BannerHeight: $mobileBannerHeight;
+$iphone5LandscapeBannerHeight: $mobileBannerHeight + 50px;
+$iphone6BannerHeight: $mobileBannerHeight;
+$iphone6LandscapeBannerHeight: $mobileBannerHeight + 50px;
 
 $padding: 0.2rem;
 $borderRadius: 5px;

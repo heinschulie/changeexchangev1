@@ -1,8 +1,11 @@
 ﻿<div class="cxc-banner row center-lg middle-lg" data-ng-click="testClick()"> 
     <!--ng-style="{'background-image': 'url(' + cxcbannercontent.featured_image.source + ')'}"-->
     <img data-ng-src="{{cxcbannercontent.featured_image.source}}" alt="banner image for {{cxcbannercontent.featured_image.title}}">
-    <div class="banner-video">
-        <iframe ng-if="videoExists" data-ng-src ="{{cxcbannercontent.excerpt}}" width="100%" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    <div class="banner-video">       
+        <div class="play-button-container">
+            <a ng-click="contentState.data.mobileBannerVideoPlay = !contentState.data.mobileBannerVideoPlay" class="play mobile-play-button mobileonly" title="Play video" ng-class="{'play-active': contentState.data.mobileBannerVideoPlay}"></a>
+        </div>
+        <iframe class="desktoponly" ng-if="videoExists" data-ng-src="{{cxcbannercontent.excerpt}}" width="100%" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     </div>
     <div class="banner-copy box">
         <!--<div class="banner-overlay"></div>-->
@@ -11,5 +14,10 @@
             {{video}}
         </div>
         <div data-ng-bind-html="cxcbannercontent.content" class="box"></div>
+    </div>
+    <div ng-if="videoExists" class="mobileonly mobile-banner-video">
+        <div class="inner">
+            <iframe ng-if="videoExists" data-ng-src="{{cxcbannercontent.excerpt}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+        </div>    
     </div>
 </div>

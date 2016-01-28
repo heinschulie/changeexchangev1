@@ -27,11 +27,47 @@ ul[rn-carousel] {
     margin:0;
     list-style-type:none;
     width:100%;
-    height:100%;
+    height:$mobileBannerHeight;
     display:inline-block;
 
     margin-left: 0; 
     margin-right: 0;
+
+    @include bp-ipadlandscape{
+        height: $ipadBannerHeight;
+    }   
+    @include bp-ipad{
+        height: $ipadBannerHeight;
+    }    
+    @include bp-iphone5portrait{
+        height: $iphone5BannerHeight;
+    }
+    @include bp-iphone5landscape{
+        height: $iphone5LandscapeBannerHeight;
+    }
+    @include bp-iphone6portrait{
+        height: $iphone6BannerHeight;
+    }
+    @include bp-iphone6landscape{
+        height: $iphone6LandscapeBannerHeight;
+    }
+
+    @include bp-s3galaxylandscape{
+        height: $iphone5LandscapeBannerHeight;
+    }
+    @include bp-s3galaxyportrait{
+        height: $iphone5BannerHeight;
+    }
+    @include bp-s4galaxylandscape{
+        height: $iphone6LandscapeBannerHeight;
+    }
+    @include bp-s4galaxyportrait{
+        height: $iphone6BannerHeight;
+    }
+
+    @include bp-desktop{
+        height: $bannerHeight;
+    }
   }
 }
 

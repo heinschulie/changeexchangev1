@@ -12,7 +12,8 @@
             banners: [],
             galleries: [],
             artworks: [],
-            galleryViewing: false
+            galleryViewing: false,
+            mobileBannerVideoPlay: false
         };
 
         var standardPostCategories = [

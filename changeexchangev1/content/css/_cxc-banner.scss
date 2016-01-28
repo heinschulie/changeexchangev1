@@ -8,7 +8,6 @@
     margin-right: 0;
     padding-right: 0;
     padding-right: 0.2rem;
-    border:1px solid green;
     @include bp-large{
         padding-right: 0.7rem;
         padding-left: 0.7rem; 
@@ -27,22 +26,91 @@
 .banner-container{
     position: relative;
     //height: $cardHeight/4*3;
-    height: $cardHeight;
-    border:1px solid red;
+    height: $mobileBannerHeight;
+
+    @include bp-ipadlandscape{
+        height: $ipadBannerHeight;
+    }   
+    @include bp-ipad{
+        height: $ipadBannerHeight;
+    }
+    
+    @include bp-iphone5portrait{
+        height: $iphone5BannerHeight;
+    }
+    @include bp-iphone5landscape{
+        height: $iphone5LandscapeBannerHeight;
+    }
+    @include bp-iphone6portrait{
+        height: $iphone6BannerHeight;
+    }
+    @include bp-iphone6landscape{
+        height: $iphone6LandscapeBannerHeight;
+    }
+    
+    @include bp-s3galaxylandscape{
+        height: $iphone5LandscapeBannerHeight;
+    }
+    @include bp-s3galaxyportrait{
+        height: $iphone5BannerHeight;
+    }
+    @include bp-s4galaxylandscape{
+        height: $iphone6LandscapeBannerHeight;
+    }
+    @include bp-s4galaxyportrait{
+        height: $iphone6BannerHeight;
+    }
+
     @include bp-desktop{  
+        height: $bannerHeight;
         padding-left:0.4rem;
         padding-right:0.5rem;
         margin-bottom: 0;
         margin-top: 0
     }     
-    //margin-bottom: 0.5em;
+    
+}
+
+.mobile-banner-container-expand{
+    height: $mobileBannerHeight*3.5;
+
+    @include bp-ipadlandscape{
+        height: $ipadBannerHeight*5;
+    }   
+    @include bp-ipad{
+        height: $ipadBannerHeight*4.25;
+    }   
+    @include bp-iphone5portrait{
+        height: $iphone5BannerHeight*3;
+    }
+    @include bp-iphone5landscape{
+        height: $iphone5LandscapeBannerHeight*1.25;
+    }
+    @include bp-iphone6portrait{
+        height: $iphone6BannerHeight*3.5;
+    }
+    @include bp-iphone6landscape{
+        height: $iphone6LandscapeBannerHeight*2.25;
+    }
+
+    @include bp-s3galaxylandscape{
+        height: $iphone5LandscapeBannerHeight*3.5;
+    }
+    @include bp-s3galaxyportrait{
+        height: $iphone5BannerHeight*3.35;
+    }
+    @include bp-s4galaxylandscape{
+        height: $iphone5LandscapeBannerHeight*3.5;
+    }
+    @include bp-s4galaxyportrait{
+        height: $iphone5BannerHeight*3.35;
+    }
 }
 
 .cxc-banner{
     position: relative;
     width:100%; 
     height: 100%;
-    border:1px solid blue;
     /*background-size: cover;
     background-position:center left;*/ 
     color: $white;
@@ -68,18 +136,53 @@
 
 .banner-copy{
     position:absolute;
-    width: 100%;
+    width: 50%;
     height: $cardHeight;
     right: 0;
     top:0;
     z-index: 1;
-    text-align: left;
+    text-align: right;
     h1{
-        font-size: 3em;
+        font-size: 1em;
         margin-bottom: 0;    
         width: 90%;
         margin-top: $padding*5;
-        padding: 0 $padding*10;
+        
+        @include bp-ipadlandscape{
+            font-size: 2em;
+        }   
+        @include bp-ipad{
+            font-size: 2em;
+        }   
+        @include bp-iphone5portrait{
+            font-size: 1em;
+        }
+        @include bp-iphone5landscape{
+            font-size: 2em;
+        }
+        @include bp-iphone6portrait{
+            font-size: 1em;
+        }
+        @include bp-iphone6landscape{
+            font-size: 2em;
+        }
+        
+        @include bp-s3galaxylandscape{
+            font-size: 2em;
+        }
+        @include bp-s3galaxyportrait{
+            font-size: 1em;
+        }
+        @include bp-s4galaxylandscape{
+            font-size: 2em;
+        }
+        @include bp-s4galaxyportrait{
+            font-size: 1em;
+        }
+
+        @include bp-desktop{
+            font-size: 2em;
+        }
     }
     p{
         margin: 0;
@@ -87,12 +190,16 @@
     }
     @include bp-desktop{   
         width: 50%;
+        padding: 0 $padding*10;
+        h1{
+            font-size: 3em;
+        }       
     } 
 }
 
 .banner-overlay{
     position: absolute;
-    height: $cardHeight/5*4;
+    height: $bannerHeight/5*4;
     width: 100%;
     right: -$padding*2.5;
     opacity: 0.5;
@@ -109,10 +216,77 @@
     left: 0;
     top:0;
     height: 100%;
-    width: $cardHeight/9*16;
+    width: $bannerHeight/9*16;
+    z-index: 10;
 
     iframe{
         width:100%;
         height:100%; 
     }
+}
+
+.mobile-banner-video{
+    width: 100%;
+    position: relative;
+    margin-top: $mobileBannerHeight + 16px;
+
+    @include bp-ipadlandscape{
+        margin-top: $ipadBannerHeight + 16px;
+    }   
+    @include bp-ipad{
+        margin-top: $ipadBannerHeight + 16px;
+    }    
+    @include bp-iphone5portrait{
+        margin-top: $iphone5BannerHeight + 16px;
+    }
+    @include bp-iphone5landscape{
+        margin-top: $iphone5LandscapeBannerHeight + 16px;
+    }
+    @include bp-iphone6portrait{
+        margin-top: $iphone6BannerHeight + 16px;
+    }
+    @include bp-iphone6landscape{
+        margin-top: $iphone6LandscapeBannerHeight + 16px;
+    }
+
+    @include bp-s3galaxylandscape{
+        margin-top: $iphone5LandscapeBannerHeight + 16px;
+    }
+    @include bp-s3galaxyportrait{
+        margin-top: $iphone5BannerHeight + 16px;
+    }
+    @include bp-s4galaxylandscape{
+        margin-top: $iphone6LandscapeBannerHeight + 16px;
+    }
+    @include bp-s4galaxyportrait{
+        margin-top: $iphone6BannerHeight + 16px;
+    }
+
+    @include bp-desktop{
+        margin-top: $cardHeight;
+    }
+    padding-bottom: 57%;
+
+    .inner{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width:100%;
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
+
+.mobile-play-button{
+    z-index:5;
+}
+
+.play-button-container{
+    width:20%;   
 }

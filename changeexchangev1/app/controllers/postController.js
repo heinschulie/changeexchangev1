@@ -16,6 +16,8 @@
         $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
         $scope.socialState = socialState;
         var postId = $routeParams.postId;
+        //var postId = 0;
+        //var postName = $routeParams.postName.replace("%20", " ");
 
         $scope.callForPost = function () {
             return contentState.getPost(postId).then(function (results) {
@@ -23,6 +25,12 @@
                 $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;
                 $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
             });
+
+            //return contentState.getPostByName(postName).then(function (results) {
+            //    $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
+            //    $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;
+            //    $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
+            //});
         }
 
         var callForRecommendedPosts = function () {

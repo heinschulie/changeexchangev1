@@ -31,15 +31,15 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         templateUrl: "/app/views/home.html"
     });
 
-    //$routeProvider.when("/events", {
-    //    //controller: "homeController",
-    //    templateUrl: "/app/views/events.html"
-    //});
-
     $routeProvider.when("/:postId", {
         controller: "postController",
         templateUrl: "/app/views/post.html"
     });
+
+    //$routeProvider.when("/:postName", {
+    //    controller: "postController",
+    //    templateUrl: "/app/views/post.html"
+    //});
 
     //FINALLY
 
