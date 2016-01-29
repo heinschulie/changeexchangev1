@@ -10,9 +10,44 @@
 
     padding-bottom: 26%; //THIS DETERMINES THE IMAGE ASPECT RATION. WIDTH: 100% ==> PADDING_BOTTOM: ?
 
+    @include bp-ipadlandscape{
+        padding-bottom: 35%;
+    }   
+    @include bp-ipad{
+        padding-bottom: 35%;
+    }   
+    @include bp-iphone5portrait{
+        padding-bottom: 40%;
+    }
+    @include bp-iphone5landscape{
+        padding-bottom: 35%;
+    }
+    @include bp-iphone6portrait{
+        padding-bottom: 40%;
+    }
+    @include bp-iphone6landscape{
+        //margin-bottom: $iphone6LandscapeBannerHeight*2.25;
+        padding-bottom: 35%;
+    }
+
+    @include bp-s3galaxylandscape{
+        padding-bottom: 30%;
+    }
+    @include bp-s3galaxyportrait{
+        padding-bottom: 40%;
+    }
+    @include bp-s4galaxylandscape{
+        padding-bottom: 30%;
+    }
+    @include bp-s4galaxyportrait{
+        padding-bottom: 40%;
+    }
+
     @include bp-large{
         padding-right: 0.7rem;
         padding-left: 0.7rem; 
+        //padding-bottom: 0;
+        //height: $bannerHeight;
     }
     @include bp-ipadlandscape{
         padding-right: 0.7rem;
@@ -28,7 +63,14 @@
 .absolute-inner{
     position: absolute;
     height:100%;
-    width:100%;
+    left: 0.7rem;
+    right:0.7rem;
+
+    @include bp-desktop{
+        left: initial;
+        right: initial; 
+        width:100%;
+    }
 }
 
 .banner-container{
@@ -113,6 +155,43 @@
     }
     @include bp-s4galaxyportrait{
         height: $iphone5BannerHeight*3.35;
+    }
+}
+
+.mobile-carousel-expand{
+    margin-bottom: $mobileBannerHeight*3.5;
+
+    @include bp-ipadlandscape{
+        margin-bottom: $ipadBannerHeight*5;
+    }   
+    @include bp-ipad{
+        margin-bottom: $ipadBannerHeight*4.25;
+    }   
+    @include bp-iphone5portrait{
+        margin-bottom: 185px;
+    }
+    @include bp-iphone5landscape{
+        margin-bottom: 335px;
+    }
+    @include bp-iphone6portrait{
+        margin-bottom: 195px;
+    }
+    @include bp-iphone6landscape{
+        //margin-bottom: $iphone6LandscapeBannerHeight*2.25;
+        margin-bottom: 368px;
+    }
+
+    @include bp-s3galaxylandscape{
+        margin-bottom: 345px;
+    }
+    @include bp-s3galaxyportrait{
+        margin-bottom: 190px;
+    }
+    @include bp-s4galaxylandscape{
+        margin-bottom: 345px;
+    }
+    @include bp-s4galaxyportrait{
+        margin-bottom: 190px;
     }
 }
 

@@ -1317,6 +1317,36 @@ $charcoal: rgba(97,97,97,1);*/
   margin-right: 0;
   padding-right: 0.2rem;
   padding-bottom: 26%; }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    .carousel-wrapper {
+      padding-bottom: 35%; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .carousel-wrapper {
+      padding-bottom: 35%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .carousel-wrapper {
+      padding-bottom: 40%; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .carousel-wrapper {
+      padding-bottom: 35%; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .carousel-wrapper {
+      padding-bottom: 40%; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .carousel-wrapper {
+      padding-bottom: 35%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .carousel-wrapper {
+      padding-bottom: 30%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .carousel-wrapper {
+      padding-bottom: 40%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .carousel-wrapper {
+      padding-bottom: 30%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .carousel-wrapper {
+      padding-bottom: 40%; } }
   @media only screen and (max-width: 60em) {
     .carousel-wrapper {
       padding-right: 0.7rem;
@@ -1333,7 +1363,13 @@ $charcoal: rgba(97,97,97,1);*/
 .absolute-inner {
   position: absolute;
   height: 100%;
-  width: 100%; }
+  left: 0.7rem;
+  right: 0.7rem; }
+  @media only screen and (min-width: 1224px) {
+    .absolute-inner {
+      left: initial;
+      right: initial;
+      width: 100%; } }
 
 .banner-container {
   position: relative;
@@ -1408,6 +1444,39 @@ $charcoal: rgba(97,97,97,1);*/
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .mobile-banner-container-expand {
       height: 312.66667px; } }
+
+.mobile-carousel-expand {
+  margin-bottom: 326.66667px; }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    .mobile-carousel-expand {
+      margin-bottom: 716.66667px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .mobile-carousel-expand {
+      margin-bottom: 609.16667px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-carousel-expand {
+      margin-bottom: 185px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-carousel-expand {
+      margin-bottom: 335px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-carousel-expand {
+      margin-bottom: 195px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-carousel-expand {
+      margin-bottom: 368px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-carousel-expand {
+      margin-bottom: 345px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .mobile-carousel-expand {
+      margin-bottom: 190px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-carousel-expand {
+      margin-bottom: 345px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-carousel-expand {
+      margin-bottom: 190px; } }
 
 .cxc-banner {
   position: relative;
