@@ -326,7 +326,7 @@ header.header-three{
 }
 .wrap {
     box-sizing: border-box;
-    max-width: 1200px;
+    //max-width: 1200px;
     margin: 0 auto;
     
     @include bp-desktop{
@@ -339,7 +339,7 @@ header.header-three{
     padding-left: $padding*5;
     padding-right: 0;
     margin-bottom: 3rem;
-    padding-bottom: 10rem;
+    /*padding-bottom: 10rem;*/
 
     @include bp-desktop{
         padding-left: 0;
@@ -446,7 +446,7 @@ _:-ms-fullscreen, :root .ie11up {
     padding-bottom: 0.8rem;
     margin-top: 1.5rem;
     margin-left: 1%;
-    margin-bottom: 15rem;
+    /*margin-bottom: 15rem;*/
     color: white;
     background-color: $mustard-orange; 
     @include border-radius($borderRadius); 

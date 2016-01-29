@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
-    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/site.min.css" rel="stylesheet" />
+    <!--<link href="content/css/site.css" rel="stylesheet" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -138,11 +138,13 @@
                 <div class="wrap">
                     <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
                         <div class="row reduced-padding carousel-wrapper">
-                            <ul ng-class="{'mobile-banner-container-expand': contentState.data.mobileBannerVideoPlay}" rn-carousel rn-carousel-controls class=" banner-container col-lg-12 col-xs-12">
-                                <li data-ng-repeat="banner in contentState.data.banners">
-                                    <cxc-banner cxcbannercontent="banner"></cxc-banner>
-                                </li>
-                            </ul>
+                            <div class="absolute-inner">
+                                <ul ng-class="{'mobile-banner-container-expand': contentState.data.mobileBannerVideoPlay}" rn-carousel rn-carousel-controls class=" banner-container col-lg-12 col-xs-12">
+                                    <li data-ng-repeat="banner in contentState.data.banners">
+                                        <cxc-banner cxcbannercontent="banner"></cxc-banner>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div ng-hide="contentState.data.galleryViewing" class="row reduced-padding sidebar-right desktoponly">
                             <div data-ng-class="socialState.data.videoPlayer ? 'col-lg-12 col-xs-12' : 'col-lg-3 col-xs-12'">
@@ -227,9 +229,9 @@
     <script src="scripts/angular-carousel.min.js"></script>
 
     <!--CUSTOM CxC Scripts-->
-    <!--<script src="app/all.min.js"></script>-->
+    <script src="app/all.min.js"></script>
     <!-- Load app main script -->
-    <script src="app/app.js"></script>
+    <!--<script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -249,7 +251,7 @@
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>
+    <script src="app/controllers/galleriesController.js"></script>-->
 
 </body>
 </html>

@@ -31,9 +31,16 @@ This is the parent `<div>` that contains the menu and the content area.
         //top: $headerHeight; //for header one
         //top: $headerHeight/3*2; //for header two
         //top: $headerHeight/3; //for header two
-        top: 8%; //for header one
+        //top: 8%; //for header one
+        top: 13em; //for header one
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            top: 0;
+        }       
     }
 }
+
+_:-ms-lang(x), _:-webkit-full-screen, #layout { top: 13em; } //Edge Hack
+
     #layout.active #menu {
         left: $mobileSideNavWidth;
         width: $mobileSideNavWidth;

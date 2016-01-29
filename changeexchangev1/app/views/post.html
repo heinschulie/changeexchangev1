@@ -6,12 +6,9 @@
             </section>-->
             <h3 data-ng-bind-html="contentState.data.post.title"></h3>
             <h5 ng-if="!changeAgentPost">By <a ng-click="contentState.getPostByName(contentState.data.post.author.name)" data-ng-bind-html="contentState.data.post.author.name"></a> </h5>
-        <!--</div>        
-        <div class="post-content col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
             <!--<img ng-src="{{contentState.data.post.featured_image.source}}" />-->
-            <div ng-bind-html="contentState.data.post.excerpt"></div>
-            <div ng-bind-html="contentState.data.post.content"></div>
-            <!--<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="facebooklikeurl" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
+            <!--<div ng-bind-html="contentState.data.post.excerpt"></div>-->
+            <div ng-bind-html="contentState.data.post.content"></div>         
             <div ng-if="facebooklikebutton" ng-bind-html="facebooklikebutton"></div>
             <div ng-if="changeAgentPost" class="suggested-posts-category row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h5 class="row recommended-post-message">Contributions by {{contentState.data.post.author.name}}</h5>

@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -44,6 +50,9 @@
 /* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 input[type=range] {
   width: 300px; }
 
@@ -68,7 +77,7 @@ ul[rn-carousel] {
     margin: 0;
     list-style-type: none;
     width: 100%;
-    height: 93.33333px;
+    height: 100%;
     display: inline-block;
     margin-left: 0;
     margin-right: 0; }
@@ -104,7 +113,7 @@ ul[rn-carousel] {
         height: 93.33333px; } }
     @media only screen and (min-width: 1224px) {
       ul[rn-carousel] > li {
-        height: 280px; } }
+        height: 100%; } }
 
 /* prevent flickering when moving buffer */
 ul[rn-carousel-buffered] > li {
@@ -128,7 +137,7 @@ div.rn-carousel-indicator span {
   top: 35%;
   opacity: 0.75;
   cursor: pointer;
-  color: #e5980a; }
+  color: #ffaa14; }
   .rn-carousel-control:hover {
     opacity: 1; }
   .rn-carousel-control.rn-carousel-control-prev {
@@ -141,7 +150,13 @@ div.rn-carousel-indicator span {
       content: ">"; }
 
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -420,9 +435,9 @@ div.rn-carousel-indicator span {
       float: left;
       max-width: 500px; } }
   .image--large em, .art-info em {
-    color: #e5980a; }
+    color: #ffaa14; }
     .image--large em a, .art-info em a {
-      color: #e5980a; }
+      color: #ffaa14; }
 
 @media only screen and (min-width: 1224px) {
   .image--large {
@@ -431,6 +446,9 @@ div.rn-carousel-indicator span {
   .art-info {
     max-width: 50%; } }
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -474,6 +492,9 @@ div.rn-carousel-indicator span {
 /* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 .error-modal {
   position: fixed;
   z-index: 99;
@@ -485,13 +506,16 @@ div.rn-carousel-indicator span {
   color: white; }
 
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 .play {
   display: block;
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 18px solid #e5980a;
+  border-left: 18px solid #ffaa14;
   margin: 30px auto 15px auto;
   position: relative;
   z-index: 1;
@@ -507,7 +531,7 @@ div.rn-carousel-indicator span {
     bottom: -22.5px;
     right: -10.5px;
     border-radius: 50%;
-    border: 3px solid #e5980a;
+    border: 3px solid #ffaa14;
     z-index: 2;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -529,12 +553,12 @@ div.rn-carousel-indicator span {
       opacity: 1;
       width: 15px;
       height: 24px;
-      background: #e5980a;
+      background: #ffaa14;
       position: absolute;
       right: 1.5px;
       top: -12px;
-      border-left: 6px solid #e5980a;
-      box-shadow: inset 9px 0 0 0 #e5980a; }
+      border-left: 6px solid #ffaa14;
+      box-shadow: inset 9px 0 0 0 #ffaa14; }
 
 html {
   position: relative;
@@ -551,7 +575,7 @@ html {
     color: black; }
   html em {
     font-style: normal;
-    color: #e5980a; }
+    color: #ffaa14; }
 
 body {
   box-sizing: border-box;
@@ -590,7 +614,13 @@ body::-webkit-scrollbar-thumb {
   to {
     padding: 0; } }
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -657,7 +687,13 @@ This is the parent `<div>` that contains the menu and the content area.
   padding-left: 0; }
   @media only screen and (min-width: 1224px) {
     #layout {
-      top: 8%; } }
+      top: 13em; } }
+  @media only screen and (min-width: 1224px) and (-webkit-min-device-pixel-ratio: 0) {
+    #layout {
+      top: 0; } }
+
+_:-ms-lang(x), _:-webkit-full-screen, #layout {
+  top: 13em; }
 
 #layout.active #menu {
   left: 65%;
@@ -794,7 +830,7 @@ Change color of the anchor links on hover/focus.
 */
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
-  background: #f6a915; }
+  background: #ffaa14; }
 
 a.active {
   background: black;
@@ -813,7 +849,7 @@ This styles the selected menu item `<li>`.
 #menu .pure-menu-selected,
 #menu .pure-menu-heading {
   width: 100%;
-  background-color: #616161;
+  background-color: #828282;
   -ms-border-radius: 0 8px 8px 0;
   -moz-border-radius: 0 8px 8px 0;
   -webkit-border-radius: 0 8px 8px 0;
@@ -836,7 +872,7 @@ This styles the menu heading.
       font-size: 110%; } }
 
 #menu-wrapper {
-  background-color: #e5980a;
+  background-color: #ffaa14;
   margin-left: 13%;
   margin-right: 10%;
   padding-bottom: 25%;
@@ -979,6 +1015,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       left: 20%; } }
 
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -1022,6 +1061,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 .image-column {
   padding: 0; }
 
@@ -1104,7 +1146,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   bottom: 0;
   background: white;
-  border-top: 3px solid #e5980a;
+  border-top: 3px solid #ffaa14;
   min-height: 60px;
   text-align: left; }
   .content-copy p {
@@ -1126,6 +1168,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-right: $padding;
 }*/
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -1169,15 +1214,18 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 .social-feeds {
   height: 570px;
   margin-top: 0.2rem;
-  background-color: #616161;
+  background-color: #828282;
   right: 2.4rem;
   width: 16.1rem;
   position: absolute;
   overflow: hidden;
-  border-bottom: 3px solid #e5980a; }
+  border-bottom: 3px solid #ffaa14; }
   @media only screen and (max-width: 80em) {
     .social-feeds {
       right: 2.3rem;
@@ -1192,17 +1240,17 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       height: 100%;
       display: block;
       float: left;
-      color: #616161;
+      color: #828282;
       text-align: center;
-      background-color: #2e2e2e; }
+      background-color: #4f4f4f; }
       .social-feeds span a:hover {
-        background-color: #f6a915; }
+        background-color: #ffaa14; }
 
 .video-player {
   position: absolute;
   width: 3rem;
   height: 1rem;
-  background-color: #e5980a;
+  background-color: #ffaa14;
   top: 1.15rem;
   z-index: 1000;
   left: -2rem;
@@ -1220,6 +1268,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   margin-top: -584px; }
 
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -1263,12 +1314,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 .carousel-wrapper {
   position: relative;
   padding-top: 0;
   margin-right: 0;
-  padding-right: 0;
-  padding-right: 0.2rem; }
+  padding-right: 0.2rem;
+  padding-bottom: 26%; }
   @media only screen and (max-width: 60em) {
     .carousel-wrapper {
       padding-right: 0.7rem;
@@ -1281,6 +1335,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     .carousel-wrapper {
       padding-right: 0.2rem;
       padding-left: 0.2rem; } }
+
+.absolute-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
 
 .banner-container {
   position: relative;
@@ -1317,7 +1376,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       height: 93.33333px; } }
   @media only screen and (min-width: 1224px) {
     .banner-container {
-      height: 280px;
+      height: 100%;
       padding-left: 0.4rem;
       padding-right: 0.5rem;
       margin-bottom: 0;
@@ -1526,6 +1585,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 20%; }
 
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 /*@mixin bp-iphone6landscape {
     @media only screen 
         and (min-device-width : 375px) HELLOYOU
@@ -1569,6 +1631,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Samsung Galaxy S5 ----------- */
 /* Desktops and laptops ----------- */
 /*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 @media only screen and (min-width: 1224px) {
   .post-container-parent {
     padding-right: 1rem;
@@ -1581,7 +1646,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   float: right;
   height: 100%;
   margin-bottom: 1rem;
-  margin-left: 1rem;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1591,7 +1655,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   max-height: 250px;
   overflow: hidden;
-  border-bottom: 3px solid #e5980a; }
+  border-bottom: 3px solid #ffaa14; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     .post-container section.article-hero {
       max-height: 450px; } }
@@ -1609,12 +1673,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   padding-top: 0.6rem;
   padding-bottom: 3rem;
   padding-left: 1.2rem;
-  border-bottom: 3px solid #e5980a; }
+  border-bottom: 3px solid #ffaa14; }
 
 .page-content {
   background-color: white;
   padding-bottom: 3rem;
-  border-bottom: 3px solid #e5980a; }
+  border-bottom: 3px solid #ffaa14; }
   @media only screen and (min-width: 1224px) {
     .page-content {
       margin-left: -0.8rem;
@@ -1704,7 +1768,7 @@ header.header-one {
     height: 40%;
     top: 64%;
     padding-left: 2%;
-    background-color: #e5980a;
+    background-color: #ffaa14;
     background-image: url("../images/selectbutton.png");
     background-position: right;
     background-size: contain;
@@ -1777,7 +1841,7 @@ header.header-three {
     height: 50%;
     top: 23%;
     padding-left: 2%;
-    background-color: #e5980a;
+    background-color: #ffaa14;
     background-image: url("../images/selectbutton.png");
     background-position: right;
     background-size: contain;
@@ -1819,7 +1883,7 @@ header.header-three {
   width: 100%;
   height: 50%;
   border-radius: 5px;
-  background-color: #e5980a;
+  background-color: #ffaa14;
   background-image: url("../images/selectbutton.png");
   background-position: right;
   background-size: contain;
@@ -1889,7 +1953,6 @@ header.header-three {
 
 .wrap {
   box-sizing: border-box;
-  max-width: 1200px;
   margin: 0 auto; }
   @media only screen and (min-width: 1224px) {
     .wrap {
@@ -1899,7 +1962,7 @@ header.header-three {
   padding-left: 1rem;
   padding-right: 0;
   margin-bottom: 3rem;
-  padding-bottom: 10rem; }
+  /*padding-bottom: 10rem;*/ }
   @media only screen and (min-width: 1224px) {
     .page-section {
       padding-left: 0;
@@ -1957,10 +2020,10 @@ _:-ms-fullscreen, :root .ie11up {
     float: right;
     margin: 1% 2%; }
     .social-button-box .social-buttons i.sn-active {
-      color: #e5980a; }
+      color: #ffaa14; }
   .social-button-box .social-buttons i:hover {
     cursor: pointer;
-    color: #f6a915; }
+    color: #ffaa14; }
   @media only screen and (min-width: 1224px) {
     .social-button-box .social-buttons {
       width: 100%; }
@@ -1976,9 +2039,9 @@ _:-ms-fullscreen, :root .ie11up {
   padding-bottom: 0.8rem;
   margin-top: 1.5rem;
   margin-left: 1%;
-  margin-bottom: 15rem;
+  /*margin-bottom: 15rem;*/
   color: white;
-  background-color: #e5980a;
+  background-color: #ffaa14;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;

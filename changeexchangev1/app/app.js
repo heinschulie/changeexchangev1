@@ -41,6 +41,11 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     //    templateUrl: "/app/views/post.html"
     //});
 
+    $routeProvider.when("/oops", {
+        //controller: "postController",
+        templateUrl: "/app/views/oops.html"
+    });
+
     //FINALLY
 
     $routeProvider.otherwise({

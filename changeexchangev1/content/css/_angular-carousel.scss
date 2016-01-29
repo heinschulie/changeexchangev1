@@ -27,7 +27,10 @@ ul[rn-carousel] {
     margin:0;
     list-style-type:none;
     width:100%;
-    height:$mobileBannerHeight;
+
+    //height:$mobileBannerHeight;
+    height: 100%;
+
     display:inline-block;
 
     margin-left: 0; 
@@ -66,7 +69,8 @@ ul[rn-carousel] {
     }
 
     @include bp-desktop{
-        height: $bannerHeight;
+        //height: $bannerHeight;
+        height: 100%;
     }
   }
 }

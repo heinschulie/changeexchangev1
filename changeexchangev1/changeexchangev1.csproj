@@ -52,11 +52,13 @@
     <Content Include="app\views\events.html" />
     <Content Include="app\views\galleries.html" />
     <Content Include="app\views\gallery.html" />
-    <Content Include="app\views\oops.html" />
+    <Content Include="content\css\error.css" />
+    <Content Include="content\css\site.min.css" />
+    <Content Include="content\images\errorscreen.png" />
+    <Content Include="oops.html" />
     <Content Include="app\views\page.html" />
     <Content Include="app\views\partials\error.html" />
     <Content Include="content\css\site.css" />
-    <Content Include="content\css\site.min.css" />
     <Content Include="content\css\site.scss">
       <Compile>True</Compile>
       <Minify>True</Minify>

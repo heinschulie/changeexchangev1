@@ -1,5 +1,5 @@
 ﻿;'use strict';
-app.factory('ajaxInterceptorService', ['$q', '$location', 'errorState', 'cxcService', function ($q, $location, errorState, cxcService) {
+app.factory('ajaxInterceptorService', ['$q', '$window','$location', 'errorState', 'cxcService', function ($q, $window, $location, errorState, cxcService) {
 
     //Destination URL 
     var serviceBase = cxcService.serviceBase;
@@ -37,16 +37,22 @@ app.factory('ajaxInterceptorService', ['$q', '$location', 'errorState', 'cxcServ
     }
 
     var _responseError = function (rejection) {
-        if (rejection.status === 401 || rejection.status === 500) {
-            //TODO - Set error object in contentState. 
-            console.log('There was a ' + rejection.status + ' error');
-            alert('There was a ' + rejection.status + ' error');
-            //if ($location.path() !== "/home") {
-            //    $location.path('/home');
-            //}
+        console.log('There was a ' + rejection.status + ' error');
+        if (rejection.status === 0) {
+            errorState.data.firstMessage = "Something went slightly wrong - but we don't have much idea what happened...";
             errorState.data.ajaxErrors.push(rejection);
         }
-        return $q.reject(rejection);
+        else if (rejection.status === 401) {
+            errorState.data.firstMessage = "This page could not be found!";
+            errorState.data.ajaxErrors.push(rejection);
+        }
+        else if (rejection.status === 500) {
+            errorState.data.firstMessage = "There seems to have been an issue on our side... :(";
+            errorState.data.ajaxErrors.push(rejection);
+        }
+        //$location.path('/oops');
+        $window.location.href = "http://localhost:16327/oops.html";
+        //return $q.reject(rejection);
     }
 
  
