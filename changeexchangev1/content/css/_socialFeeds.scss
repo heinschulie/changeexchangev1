@@ -6,8 +6,8 @@
     height: $cardHeight*2 + 10px; 
     margin-top: $padding;
     background-color: $charcoal;
-    right: $padding*12;
-    width: 16.1rem;
+    right: $padding*7;
+    width: 24%;
     position: absolute;
     overflow: hidden;
     border-bottom: 3px solid $mustard-orange;
@@ -50,9 +50,12 @@
 }
 
 .video-expand{
-    width: 100%;
+    /*width: 100%;
     position: relative;
-    right: 0.8rem;
+    right: 0.8rem;*/
+    width: 95%;
+    position: relative;
+    right: -2%;
 }
 
 .fb-events{

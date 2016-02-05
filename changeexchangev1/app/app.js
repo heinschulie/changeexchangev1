@@ -31,7 +31,7 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         templateUrl: "/app/views/home.html"
     });
 
-    $routeProvider.when("/:postId", {
+    $routeProvider.when("/:postId/:postTitle", {
         controller: "postController",
         templateUrl: "/app/views/post.html"
     });
@@ -53,7 +53,7 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     });
 
     // use the HTML5 History API
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
 }]);
 

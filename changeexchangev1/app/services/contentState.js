@@ -5,25 +5,29 @@
 
         var data = {
             categories: [],
+            chosenMoment: {},
             pageNumber: 0,
-            postsPerPage : 18,
+            postsPerPage : 20,
             post: {},
             posts: [],
             banners: [],
             galleries: [],
             artworks: [],
             galleryViewing: false,
-            mobileBannerVideoPlay: false
+            mobileBannerVideoPlay: false,
+            bannerIndex: 0
         };
 
         var standardPostCategories = [
-                'Landing that Job',
-                'Making a Home',
-                'Starting a Family',
-                'Tying the Knot',
-                'Ruda talks change',
-                'The Dan Nicoll Show',
-                'VeranderDinge'
+            'Landing that Job',
+            'Making a Home',
+            'Starting a Family',
+            'Tying the Knot',
+            "Latest Hangouts",
+            "WP Jou Lekker Ding",
+            'Ruda talks change',
+            'The Dan Nicoll Show',
+            'VeranderDinge'
         ];
 
         var chosenMoment = { name: "What change moment are you going through?", active: true };
@@ -34,7 +38,6 @@
             { name: 'Starting a Family', active: false },
             { name: 'Tying the Knot', active: false }
         ];
-
 
         var getPage = function (pageId) {
             return pageService.getPage(pageId).then(function (results) {
@@ -162,8 +165,10 @@
 
         var prepPosts = function (postArray, replaceBannerArray) {
             var bannerindeces = [];
+
             angular.forEach(postArray, function (post, key) {
                 //Remove banners from post array
+                post.urlName = encodeURI(post.title).replace(/%20/g, '-');
                 angular.forEach(post.terms.category, function (cat) {
                     if (cat.name.toLowerCase() === "banner") {
                         bannerindeces.push(key);
@@ -178,12 +183,16 @@
                         post.featured = true;
                 })
             });
-            angular.forEach(bannerindeces, function (index) {
+            for (var i = bannerindeces.length - 1; i > -1; i--) {
+                var index = bannerindeces[i];
                 postArray.splice(index, 1);
-            })         
+            }
+            //angular.forEach(bannerindeces, function (index) {
+            //    postArray.splice(index, 1);
+            //})         
         };
 
-        var selectedMoment = function (moment, fetchBanners) {
+        var selectedMoment = function (moment, fetchBanners, isExchangeCat) {
 
             data.categories = [];
             if (moment)
@@ -192,31 +201,43 @@
                     chosenMoment = changeMoments[0];
                     data.categories = data.categories.concat(standardPostCategories);
                 }
-                else{
-                    chosenMoment.name = moment.name;
+                else {
+                    if (!isExchangeCat)
+                        chosenMoment.name = moment.name;
+                    else {
+                        changeMoments[0].active = true;
+                        chosenMoment = changeMoments[0];
+                        chosenMoment.name = "What change moment are you going through?";
+                    }                       
                     data.categories.push(moment.name);
                 }
 
             angular.forEach(changeMoments, function (amoment) {
-                if (amoment.name === chosenMoment.name) {
+                //if (amoment.name === chosenMoment.name) {
+                if (amoment.name === moment.name) {
                     amoment.active = true;
                 }
                 else
                     amoment.active = false;
             })
 
+            if (isExchangeCat)
+                chosenMoment = changeMoments[0];
+
             data.pageNumber = 0;                                                // - Explicitly set page number back to 1                            
             var position = data.postsPerPage * data.pageNumber;                 // - Calculate position to splice post array 
             data.posts = data.posts.splice(0, position)                         // - Trim array down to position             
+
+            if (fetchBanners) {
+                getBanners(data.categories);
+                data.bannerIndex = 0;
+            }
+
 
             if ($location.path() !== "/home")
                 $location.path('/home');
             else
                 return getPosts();
-
-            if (fetchBanners) {
-                getBanners(data.categories);
-            }
         }
 
         return {

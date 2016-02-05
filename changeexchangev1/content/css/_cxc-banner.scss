@@ -7,14 +7,14 @@
     padding-top: 0;
     margin-right: 0;
     padding-right: 0.2rem;
-
-    padding-bottom: 26%; //THIS DETERMINES THE IMAGE ASPECT RATION. WIDTH: 100% ==> PADDING_BOTTOM: ?
+    //width: 99.5%;
+    padding-bottom: $bannerHeight; //THIS DETERMINES THE IMAGE ASPECT RATION. WIDTH: 100% ==> PADDING_BOTTOM: ?
 
     @include bp-ipadlandscape{
-        padding-bottom: 35%;
+        padding-bottom: 28%;
     }   
     @include bp-ipad{
-        padding-bottom: 35%;
+        padding-bottom: 38%;
     }   
     @include bp-iphone5portrait{
         padding-bottom: 40%;
@@ -69,13 +69,12 @@
     @include bp-desktop{
         left: initial;
         right: initial; 
-        width:100%;
+        width:98.5%;  
     }
 }
 
 .banner-container{
     position: relative;
-    //height: $cardHeight/4*3;
     height: $mobileBannerHeight;
 
     @include bp-ipadlandscape{
@@ -165,7 +164,7 @@
         margin-bottom: $ipadBannerHeight*5;
     }   
     @include bp-ipad{
-        margin-bottom: $ipadBannerHeight*4.25;
+        margin-bottom: 430px;
     }   
     @include bp-iphone5portrait{
         margin-bottom: 185px;
@@ -199,26 +198,27 @@
     position: relative;
     width:100%; 
     height: 100%;
+    margin-left: 0;
     /*background-size: cover;
     background-position:center left;*/ 
     color: $white;
-    &:hover{
+    /*&:hover{
         img{
             @include filter(grayscale, 0); 
         }          
-    }
+    }*/
     img{
         position:absolute;
         width:100%; 
         height: 100%;
         top:0;
         left: 0;
-        -o-object-fit: cover;
-        object-fit: cover;
+        /*-o-object-fit: cover;
+        object-fit: cover;*/
         -o-object-position: top left;
         object-position: top left;  
-        @include transition(all, 0.5s, ease-in-out);
-        @include filter(grayscale, 100%);      
+        /*@include transition(all, 0.5s, ease-in-out);
+        @include filter(grayscale, 100%);*/      
     }
 }
 
@@ -304,7 +304,8 @@
     left: 0;
     top:0;
     height: 100%;
-    width: $bannerHeight/9*16;
+    width: ($bannerHeight*16)/9;
+    //width: 46.222%; //This sshould be future proofed with a sass function reading padding-bottom of banner
     z-index: 10;
 
     iframe{
@@ -376,5 +377,5 @@
 }
 
 .play-button-container{
-    width:20%;   
+    margin-top:20%;   
 }

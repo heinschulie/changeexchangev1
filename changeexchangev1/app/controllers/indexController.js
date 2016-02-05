@@ -7,6 +7,8 @@
 
         $scope.contentState = contentState;
         $scope.socialState = socialState;
+        $scope.exchangeCategories = [];
+        $scope.flashbackCategories = [];
         $scope.errorState = errorState;
         $scope.active = false;
         $scope.toggleMenu = function () {
@@ -34,12 +36,16 @@
 
         var getExchangeCategories = function (parentFilter) {
             return categoryService.getCategories(parentFilter).then(function (results) {
-                $scope.exchangeCategories = results.data; 
+                if (parentFilter === "Exchange")
+                    $scope.exchangeCategories = results.data;
+                if (parentFilter === "Flashback")
+                    $scope.flashbackCategories = results.data;
             })
         }
 
         //Initialise
         getExchangeCategories('Exchange');
+        getExchangeCategories('Flashback');
         if (!contentState.data.banners || !contentState.data.banners.length)
             contentState.getBanners(null, true);
     }

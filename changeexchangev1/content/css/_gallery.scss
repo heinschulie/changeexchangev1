@@ -48,7 +48,8 @@ $transition-time: .3s;
 .image-grid {
   width: 100%;
   overflow: hidden;
-  padding: 0 $pad/2 0 0;
+  padding: 1% $pad/2 0 0;
+  margin-left: -0.4%;
 }
 
 .image__cell {

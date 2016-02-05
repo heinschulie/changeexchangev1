@@ -160,7 +160,7 @@ header.header-one{
             display: none;
             @include bp-desktop{  
                 display: block;     
-                right: 2.5%;
+                right: 2.8%;
                 width: 15%;
                 margin-top: 2.5%; 
             }            
@@ -229,7 +229,7 @@ header.header-three{
         &.header-image-right{ 
             position: absolute;
             display: block;
-            right: 2.5%;
+            right: 2.8%;
             width: 10%;
             top: 14%;      
         }
@@ -366,7 +366,10 @@ header.header-three{
 .cxc-content-wrap{
     //margin-top: $headerHeight;
     @include bp-desktop{       
-        margin-top: $headerHeight/2; //For main header
+        //margin-top: $headerHeight/2; //For main header
+        //margin-top: $headerHeight/2 - 2%; //For main header
+        margin-top: 200px; //For main header
+        margin-bottom: 25px;
     } 
     
     #more-button{
@@ -376,23 +379,23 @@ header.header-three{
     }
 }
 
-_:-ms-fullscreen, :root .ie11up { 
-    .cxc-content-wrap{
+//_:-ms-fullscreen, :root .ie11up { 
+    /*.cxc-content-wrap{
         margin-top: 0; //For main header
-    } 
+    }*/ 
     /*#layout {
         top: 9%; //for header one
     }*/
-} 
+//} 
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/*@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .cxc-content-wrap{
         margin-top: 0; //For main header
     } 
     #layout {
         top: 9%; //for header one
     }
-}
+}*/
 
 .cxc-content-wrap-scrolled{
     @include bp-desktop{       
@@ -400,17 +403,20 @@ _:-ms-fullscreen, :root .ie11up {
     } 
 }
 
+.sidebar-right{
+    position: relative;
+}
+
 .social-button-box{
     position:  absolute;
     width: 100%; 
     top: 0;
     right: 0;
-    z-index: 1; //This is a terrible hack. Forgive me. 
 
     @include bp-desktop{
-        margin-top: 0.5rem;
-        top: $cardHeight;
-        width:   2.5%;
+        top: 0.2rem;
+        width: 2.5%;
+        right: -1.2%;
     }
 
     .social-buttons{      
@@ -446,8 +452,8 @@ _:-ms-fullscreen, :root .ie11up {
     padding-bottom: 0.8rem;
     margin-top: 1.5rem;
     margin-left: 1%;
-    /*margin-bottom: 15rem;*/
-    color: white;
+
+    color: black;
     background-color: $mustard-orange; 
     @include border-radius($borderRadius); 
 

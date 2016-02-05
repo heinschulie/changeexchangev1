@@ -31,15 +31,18 @@ This is the parent `<div>` that contains the menu and the content area.
         //top: $headerHeight; //for header one
         //top: $headerHeight/3*2; //for header two
         //top: $headerHeight/3; //for header two
-        //top: 8%; //for header one
-        top: 13em; //for header one
+        //top: 10.5%; //for header one
+        //top: -150px; //for header one
+        //margin-bottom: 500px;
+        //top: 13em; //for header one
         @media screen and (-webkit-min-device-pixel-ratio:0) {
             top: 0;
+            margin-bottom: 0;
         }       
     }
 }
 
-_:-ms-lang(x), _:-webkit-full-screen, #layout { top: 13em; } //Edge Hack
+//_:-ms-lang(x), _:-webkit-full-screen, #layout { top: 13em; } //Edge Hack
 
     #layout.active #menu {
         left: $mobileSideNavWidth;
@@ -189,7 +192,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
+        //border-top: 1px solid #333;
     }
         /*
         Change color of the anchor links on hover/focus.
@@ -240,6 +243,13 @@ appears on the left side of the page.
         }
     }
 
+    #menu .pure-menu-secondary-heading{
+        background-color: transparent;
+        font-size: 1em;
+        color: black;
+        text-transform: none; 
+    }
+
     #menu-wrapper{
         background-color: $mustard-orange;
         margin-left: 13%;
@@ -257,6 +267,13 @@ appears on the left side of the page.
             &.drop-shadow{
                 width: 100%;
             }
+        }
+    }
+
+    .pure-menu-secondary-list{
+        li a:hover,
+        li a:focus {
+            background: $charcoal;
         }
     }
 

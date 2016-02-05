@@ -5,8 +5,8 @@
     <meta name="description" content="Its an asking, learning, sharing, changing space - packed with tips and tools to help you through, and even love, your life's greatest Change Moments">
     
     <base href="/">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" />
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="content/css/site.min.css" rel="stylesheet" />
@@ -17,8 +17,6 @@
     <title>Change Exchange</title>
     <meta property="og:title" content="The Change Exchange" />
 
-    <!--<meta property="fb:admins" content="1234" />-->
-    <!--<meta property="fb:app_id" content="481757868679120" />--> 
     <meta property="fb:app_id" content="1408756689402511" />
 
     <meta property=" og:type" content="website" />
@@ -54,12 +52,6 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <div class="cxc-content-wrap" data-ng-controller="indexController" ng-class="{'cxc-content-wrap-scrolled':scroll}">
-        <!---->
-        <div ng-cloak class="error-modal" ng-if="errorState.data.ajaxErrors.length">
-            <h2>{{errorState.data.firstMessage}}</h2>
-            <h3 ng-repeat="error in errorState.data.ajaxErrors">{{error.status}}</h3>
-            <h2>{{errorState.data.secondMessage}}</h2>
-        </div>
         <header ng-hide="scroll > 0" class="desktoponly header-one">
             <figure class="header-image-left">
                 <img src="content/images/Change Exchange Logo.png" />
@@ -88,13 +80,12 @@
             <a id="menuLink" class="menu-link" data-ng-click="toggleMenu()" data-ng-class="{'active': active}">
                 <!-- Hamburger icon -->
                 <span></span>
-                <!--<img src="content/images/Love-Change-badge.png" style="height:100%; width:100%" />-->
             </a>
             <div id="menu" data-ng-class="{'active': active, 'minimalHeader' : scroll}" ng-hide="errorState.data.ajaxErrors.length">
                 <!---->
                 <div class="pure-menu">
                     <div id="menu-wrapper">
-                        <a class="pure-menu-heading" data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, false)">Change Moments</a>
+                        <a class="pure-menu-heading" data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)">Change Moments</a>
                         <ul class="pure-menu-list">
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" />
                             <li data-ng-cloak class="pure-menu-item" data-ng-class="{ 'active': moment.active }" data-ng-repeat="moment in contentState.changeMoments" ng-if="$index > 0"><a data-ng-click="contentState.selectedMoment(moment, false)" class="pure-menu-link">{{moment.name}}</a></li>
@@ -102,20 +93,16 @@
                         <a class="pure-menu-heading">Exchange</a>
                         <ul class="pure-menu-list">
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" />
-                            <!--<li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link">About</a></li>
-                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Change Agents'}, false)" class=" pure-menu-link">Meet the Change Agents</a></li>
-                            <li class="pure-menu-item"><a href="/exchange/iris%20sessions" class="pure-menu-link">Iris Sessions</a></li>
-                            <li class="pure-menu-item"><a href="/exchange/connection%20sessions" class="pure-menu-link">Connection Sessions</a></li>
-                            <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link">Galleries</a></li>
-                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'id'"><a data-ng-click="contentState.selectedMoment(cat, true)" class="pure-menu-link">{{cat.name}}</a></li>-->
-
-                            <!--NON HTML5 MODE -->
-                            <li class="pure-menu-item"><a href="#/exchange/about" class="pure-menu-link">About</a></li>
-                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Change Agents'}, false)" class=" pure-menu-link">Meet the Change Agents</a></li>
-                            <li class="pure-menu-item"><a href="#/exchange/iris%20sessions" class="pure-menu-link">Iris Sessions</a></li>
-                            <li class="pure-menu-item"><a href="#/exchange/connection%20sessions" class="pure-menu-link">Connection Sessions</a></li>
-                            <li class="pure-menu-item"><a ng-href="#/galleries" class="pure-menu-link">Galleries</a></li>
-                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'id'"><a data-ng-click="contentState.selectedMoment(cat, true)" class="pure-menu-link">{{cat.name}}</a></li>
+                            <!--HTML5 MODE -->
+                                                     
+                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true, true)" class="pure-menu-link">{{cat.name}}</a></li>
+                            <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link">Galleries</a></li>                          
+                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Change Agents'}, false, true)" class=" pure-menu-link">Meet the Change Agents</a></li>
+                            <li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link">About</a></li>
+                        </ul>
+                        <a class="pure-menu-heading pure-menu-secondary-heading" ng-click="flashback = !flashback">Flashbacks</a>
+                        <ul class="pure-menu-list pure-menu-secondary-list" ng-show="flashback">
+                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in flashbackCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true)" class="pure-menu-link">{{cat.name}}</a></li>
                         </ul>
                         <img id="love-change-badge" src="content/images/Love-Change-badge.png" />
                     </div>
@@ -130,7 +117,7 @@
                         <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
                     </select>
                 </div>
-                <div ng-hide="contentState.data.galleryViewing" class="social-button-box">
+                <div ng-hide="contentState.data.galleryViewing" class="social-button-box mobileonly">
                     <div data-ng-repeat="sn in socialState.data.socialNetworks" class="social-buttons">
                         <i ng-click="socialState.changeSm(sn.id, sn.abbrev)" data-ng-class="sn.active ? '{{sn.class}} sn-active' : '{{sn.class}}'"></i>
                     </div>
@@ -139,7 +126,7 @@
                     <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
                         <div class="row reduced-padding carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
                             <div class="absolute-inner">
-                                <ul ng-class="{'mobile-banner-container-expand': contentState.data.mobileBannerVideoPlay}" rn-carousel rn-carousel-controls class=" banner-container col-lg-12 col-xs-12">
+                                <ul ng-class="{'mobile-banner-container-expand': contentState.data.mobileBannerVideoPlay}" rn-carousel rn-carousel-controls rn-carousel-index="contentState.data.bannerIndex" class=" banner-container col-lg-12 col-xs-12">
                                     <li data-ng-repeat="banner in contentState.data.banners">
                                         <cxc-banner cxcbannercontent="banner"></cxc-banner>
                                     </li>
@@ -147,6 +134,14 @@
                             </div>
                         </div>
                         <div ng-hide="contentState.data.galleryViewing" class="row reduced-padding sidebar-right desktoponly">
+
+                            <!--Experiment-->
+                            <div ng-hide="contentState.data.galleryViewing" class="social-button-box">
+                                <div data-ng-repeat="sn in socialState.data.socialNetworks" class="social-buttons">
+                                    <i ng-click="socialState.changeSm(sn.id, sn.abbrev)" data-ng-class="sn.active ? '{{sn.class}} sn-active' : '{{sn.class}}'"></i>
+                                </div>
+                            </div>
+
                             <div data-ng-class="socialState.data.videoPlayer ? 'col-lg-12 col-xs-12' : 'col-lg-3 col-xs-12'">
                                 <div data-ng-class="socialState.data.videoPlayer ? 'video-expand social-feeds col-lg-12 col-xs-12 box reduced-padding' : 'social-feeds col-lg-12 col-xs-12 box reduced-padding'">
                                     <div data-ng-class="{'fb-events': socialState.data.fbevents }" data-ng-show="socialState.data.currentSm == 'fb'">
@@ -154,7 +149,7 @@
                                              data-href="https://www.facebook.com/BrightRockZA"
                                              data-tabs="timeline"
                                              data-height="570"
-                                             data-width="345"
+                                             data-width="500" 
                                              data-small-header="true"
                                              data-adapt-container-width="true"
                                              data-hide-cover="false"
@@ -181,29 +176,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-ng-show="socialState.data.currentSm == 'fe'">
-                                        <!--<div class="fb-page"
-                                             data-href="https://www.facebook.com/sontheband"
-                                             data-tabs="events,timeline"
-                                             data-height="517"
-                                             data-width="345"
-                                             data-small-header="true"
-                                             data-adapt-container-width="true"
-                                             data-hide-cover="false"
-                                             data-show-facepile="true">
-                                            <div class="fb-xfbml-parse-ignore">
-                                                <blockquote cite="https://www.facebook.com/sontheband">
-                                                    <a href="https://www.facebook.com/sontheband">SON EVENTS</a>
-                                                </blockquote>
-                                            </div>
-                                        </div>-->
-                                    </div>
                                     <div class="" data-ng-show="socialState.data.currentSm == 'tw'">
                                         <twitter-stream></twitter-stream>
                                     </div>
                                     <div data-ng-show="socialState.data.currentSm == 'yt'">
-                                        <!--<div ng-click="socialState.data.videoPlayer = !socialState.data.videoPlayer" class="video-player"></div>-->
-                                        <iframe width="100%" height="560" src="https://www.youtube.com/embed/videoseries?list=PLg7wQ1JGZrZi21PXbjIjirDkEmxzTM8SV" frameborder="0" allowfullscreen></iframe>
+                                        <iframe width="100%" height="560" src="https://www.youtube.com/embed/videoseries?list=PLSjBl-wReCAH4tXzuKB3faUY5pYGqQwEj" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -229,29 +206,7 @@
     <script src="scripts/angular-carousel.min.js"></script>
 
     <!--CUSTOM CxC Scripts-->
-    <script src="app/all.min.js"></script>
-    <!-- Load app main script -->
-    <!--<script src="app/app.js"></script>
-    <script src="app/services/ajaxInterceptorService.js"></script>
-    <script src="app/services/categoryService.js"></script>
-    <script src="app/services/contentState.js"></script>
-    <script src="app/services/cxcService.js"></script>
-    <script src="app/services/errorState.js"></script>
-    <script src="app/services/pageService.js"></script>
-    <script src="app/services/postService.js"></script>
-    <script src="app/services/socialState.js"></script>
-
-    <script src="app/directives/cxcCard.js"></script>
-    <script src="app/directives/cxcBanner.js"></script>
-    <script src="app/directives/twitterStream.js"></script>
-    <script src="app/directives/scrollEvent.js"></script>
-
-    <script src="app/controllers/pageController.js"></script>
-    <script src="app/controllers/galleryController.js"></script>
-    <script src="app/controllers/homeController.js"></script>
-    <script src="app/controllers/indexController.js"></script>
-    <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>-->
+    <script src="app/all.min.js"></script>   
 
 </body>
 </html>

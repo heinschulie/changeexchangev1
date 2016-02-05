@@ -1,7 +1,7 @@
 ﻿<div class="cxc-banner row center-lg middle-lg" data-ng-click="testClick()"> 
     <img data-ng-src="{{cxcbannercontent.featured_image.source}}" alt="banner image for {{cxcbannercontent.featured_image.title}}">
     <div class="banner-video">       
-        <div class="play-button-container">
+        <div class="play-button-container mobileonly">
             <a ng-click="contentState.data.mobileBannerVideoPlay = !contentState.data.mobileBannerVideoPlay" class="play mobile-play-button mobileonly" title="Play video" ng-class="{'play-active': contentState.data.mobileBannerVideoPlay}"></a>
         </div>
         <iframe class="desktoponly" ng-if="videoExists" data-ng-src="{{cxcbannercontent.excerpt}}" width="100%" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

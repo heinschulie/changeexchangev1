@@ -6,8 +6,10 @@
             </section>-->
             <h3 data-ng-bind-html="contentState.data.post.title"></h3>
             <h5 ng-if="!changeAgentPost">By <a ng-click="contentState.getPostByName(contentState.data.post.author.name)" data-ng-bind-html="contentState.data.post.author.name"></a> </h5>
-            <!--<img ng-src="{{contentState.data.post.featured_image.source}}" />-->
-            <!--<div ng-bind-html="contentState.data.post.excerpt"></div>-->
+            
+            <img ng-src="{{contentState.data.post.featured_image.source}}" />
+            <div ng-bind-html="contentState.data.post.excerpt"></div>
+            
             <div ng-bind-html="contentState.data.post.content"></div>         
             <div ng-if="facebooklikebutton" ng-bind-html="facebooklikebutton"></div>
             <div ng-if="changeAgentPost" class="suggested-posts-category row col-lg-12 col-md-12 col-sm-12 col-xs-12">

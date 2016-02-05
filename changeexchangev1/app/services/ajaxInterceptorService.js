@@ -31,13 +31,13 @@ app.factory('ajaxInterceptorService', ['$q', '$window','$location', 'errorState'
         //    }
         //}
 
-        console.log('A request just left our shores');
+        
 
         return config;
     }
 
     var _responseError = function (rejection) {
-        console.log('There was a ' + rejection.status + ' error');
+            
         if (rejection.status === 0) {
             errorState.data.firstMessage = "Something went slightly wrong - but we don't have much idea what happened...";
             errorState.data.ajaxErrors.push(rejection);
@@ -51,7 +51,8 @@ app.factory('ajaxInterceptorService', ['$q', '$window','$location', 'errorState'
             errorState.data.ajaxErrors.push(rejection);
         }
         //$location.path('/oops');
-        $window.location.href = "http://localhost:16327/oops.html";
+        if (rejection.status)
+            $window.location.href = "http://localhost:16327/oops.html";
         //return $q.reject(rejection);
     }
 

@@ -107,6 +107,15 @@
     overflow: hidden;
 }
 
+.featured-post{
+    img{
+        object-fit: cover;
+        object-position: center center;
+        position: absolute;
+        right: 0;
+    }
+}
+
 /*.excerpt{
     padding-left: $padding;
     padding-right: $padding;
