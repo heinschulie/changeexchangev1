@@ -2056,6 +2056,10 @@ header.header-three {
   .cxc-content-wrap {
     margin-top: 200px;
     margin-bottom: 25px; } }
+@media only screen and (min-width: 1367px) {
+  .cxc-content-wrap {
+    margin-top: 300px;
+    margin-bottom: 25px; } }
 .cxc-content-wrap #more-button {
   position: absolute;
   right: 5px;

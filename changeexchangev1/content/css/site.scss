@@ -371,6 +371,10 @@ header.header-three{
         margin-top: 200px; //For main header
         margin-bottom: 25px;
     } 
+    @include bp-largedesktop{       
+        margin-top: 300px; //For main header large 
+        margin-bottom: 25px;
+    } 
     
     #more-button{
         position: absolute;

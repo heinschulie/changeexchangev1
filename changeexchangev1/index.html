@@ -16,7 +16,6 @@
 
     <title>Change Exchange</title>
     <meta property="og:title" content="The Change Exchange" />
-
     <meta property="fb:app_id" content="1408756689402511" />
 
     <meta property=" og:type" content="website" />
@@ -54,13 +53,13 @@
     <div class="cxc-content-wrap" data-ng-controller="indexController" ng-class="{'cxc-content-wrap-scrolled':scroll}">
         <header ng-hide="scroll > 0" class="desktoponly header-one">
             <figure class="header-image-left">
-                <img src="content/images/Change Exchange Logo.png" />
+                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/Change Exchange Logo.png" />
             </figure>
             <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
             </select>
             <figure class="header-image-right">
-                <img src="content/images/BrightRock-Slab.png" />
+                <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" /></a>
             </figure>
             <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
         </header>
@@ -72,7 +71,7 @@
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
             </select>
             <figure class="header-image-right">
-                <img src="content/images/BrightRock-Slab.png" />
+                <a href="https://www.brightrock.co.za/"><img src="content/images/BrightRock-Slab.png" /></a>
             </figure>
         </header>
 

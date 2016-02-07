@@ -13,7 +13,6 @@
         contentState.changeMoments[0].active = true;
         contentState.chosenMoment = contentState.changeMoments[0];
 
-
         var callForPage = function () {
             return contentState.getPage($routeParams.pagename);
         }
