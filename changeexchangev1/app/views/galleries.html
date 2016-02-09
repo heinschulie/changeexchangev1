@@ -1,7 +1,7 @@
-﻿<div class="row col-lg-9 col-xs-12 reduced-padding negative-margin-top-2" >
+﻿<div class="row col-lg-9 col-xs-12 reduced-padding negative-margin-top-2 galleryContainer" >
     <div data-ng-repeat="gallery in contentState.data.galleries" class="reduced-padding col-xs-12 col-sm-3 col-md-2 col-lg-4">
         <div class="cxc-card box-row box">
-            <a data-ng-href="#/gallery/{{gallery.title}}">
+            <a data-ng-href="/gallery/{{gallery.title}}">
                 <div class="image-column col-lg-12">
                     <div class="cxc-content-image box">
                         <img data-ng-src="{{gallery.featured_image.source}}">

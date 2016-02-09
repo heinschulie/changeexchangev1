@@ -9,23 +9,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="content/css/site.min.css" rel="stylesheet" />
-    <!--<link href="content/css/site.css" rel="stylesheet" />-->
+    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
+    <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <title>Change Exchange</title>
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@brightrockZA" />
+    <meta property="twitter:title" content="The Change Exchange" />
+    <meta property="twitter:type" content="website" />
+    <meta property="twitter:url" content="https://changeexchange.brightrock.co.za/" />
+    <meta property="twitter:image" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
+
     <meta property="og:title" content="The Change Exchange" />
     <meta property="fb:app_id" content="1408756689402511" />
-
-    <meta property=" og:type" content="website" />
-    <meta property="og:url" content="https://changeexchange.brightrock.co.za/" />
-    
-    <meta property="og:image" content="https://changeexchange.brightrock.co.za/wp-content/uploads/2014/02/Change-exchange-masthead_BW.png" />
-    <meta property="og:image:secure_url" content="https://changeexchange.brightrock.co.za/wp-content/uploads/2014/02/Change-exchange-masthead_BW.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://changeexchange.brightrock.co.za/" />  
+    <meta property="og:image" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
+    <meta property="og:image:secure_url" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="399" />
-    <meta property="og:image:height" content="185" />
+    <meta property="og:image:width" content="651" />
+    <meta property="og:image:height" content="210" />
 
     <meta property="og:description" content="Its an asking, learning,sharing, changing space - packed with tips and tools to help you through, and even love, your life's greatest Change Moments" />
     <meta property="og:determiner" content="The" />
@@ -61,41 +67,42 @@
             <figure class="header-image-right">
                 <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" /></a>
             </figure>
-            <h3>Its an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
+            <h3>It's an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
         </header>
         <header ng-show="scroll" class="desktoponly header-three">
             <figure class="header-image-left">
-                <img src="content/images/cxclogo-sansbubble.png" />
+                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/cxclogo-sansbubble.png" />
             </figure>
             <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
             </select>
             <figure class="header-image-right">
-                <a href="https://www.brightrock.co.za/"><img src="content/images/BrightRock-Slab.png" /></a>
+                <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" /></a>
             </figure>
         </header>
 
-        <div id="layout" data-ng-class="{'active': active}" scroll-position="scroll">
-            <a id="menuLink" class="menu-link" data-ng-click="toggleMenu()" data-ng-class="{'active': active}">
+        <div id="layout" data-ng-class="{'active': contentState.data.menuActive}" scroll-position="scroll">
+            <a id="menuLink" class="menu-link" data-ng-click="toggleMenu()" data-ng-class="{'active': contentState.data.menuActive}">
                 <!-- Hamburger icon -->
                 <span></span>
             </a>
-            <div id="menu" data-ng-class="{'active': active, 'minimalHeader' : scroll}" ng-hide="errorState.data.ajaxErrors.length">
+            <div id="menu" data-ng-class="{'active': contentState.data.menuActive, 'minimalHeader' : scroll}" ng-hide="errorState.data.ajaxErrors.length">
                 <!---->
                 <div class="pure-menu">
                     <div id="menu-wrapper">
                         <a class="pure-menu-heading" data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)">Change Moments</a>
                         <ul class="pure-menu-list">
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" />
+                            <!--<li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" class="pure-menu-link">All Change Moments</a></li>-->
                             <li data-ng-cloak class="pure-menu-item" data-ng-class="{ 'active': moment.active }" data-ng-repeat="moment in contentState.changeMoments" ng-if="$index > 0"><a data-ng-click="contentState.selectedMoment(moment, false)" class="pure-menu-link">{{moment.name}}</a></li>
                         </ul>
                         <a class="pure-menu-heading">Exchange</a>
                         <ul class="pure-menu-list">
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" />
                             <!--HTML5 MODE -->
-                                                     
+
                             <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true, true)" class="pure-menu-link">{{cat.name}}</a></li>
-                            <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link">Galleries</a></li>                          
+                            <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link">Galleries</a></li>
                             <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Change Agents'}, false, true)" class=" pure-menu-link">Meet the Change Agents</a></li>
                             <li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link">About</a></li>
                         </ul>
@@ -148,7 +155,7 @@
                                              data-href="https://www.facebook.com/BrightRockZA"
                                              data-tabs="timeline"
                                              data-height="570"
-                                             data-width="500" 
+                                             data-width="500"
                                              data-small-header="true"
                                              data-adapt-container-width="true"
                                              data-hide-cover="false"
@@ -159,21 +166,21 @@
                                                 </blockquote>
                                             </div>
                                         </div>
-                                        <div class="fb-page"
-                                             data-href="https://www.facebook.com/BrightRockZA"
-                                             data-tabs="events"
-                                             data-height="570"
-                                             data-width="345"
-                                             data-small-header="true"
-                                             data-adapt-container-width="true"
-                                             data-hide-cover="false"
-                                             data-show-facepile="true">
-                                            <div class="fb-xfbml-parse-ignore">
-                                                <blockquote cite="https://www.facebook.com/BrightRockZA">
-                                                    <a href="https://www.facebook.com/BrightRockZA">BrightRockZA EVENTS</a>
-                                                </blockquote>
-                                            </div>
+                                        <!--<div class="fb-page"
+                                         data-href="https://www.facebook.com/BrightRockZA"
+                                         data-tabs="events"
+                                         data-height="570"
+                                         data-width="345"
+                                         data-small-header="true"
+                                         data-adapt-container-width="true"
+                                         data-hide-cover="false"
+                                         data-show-facepile="true">
+                                        <div class="fb-xfbml-parse-ignore">
+                                            <blockquote cite="https://www.facebook.com/BrightRockZA">
+                                                <a href="https://www.facebook.com/BrightRockZA">BrightRockZA EVENTS</a>
+                                            </blockquote>
                                         </div>
+                                    </div>-->
                                     </div>
                                     <div class="" data-ng-show="socialState.data.currentSm == 'tw'">
                                         <twitter-stream></twitter-stream>
@@ -184,7 +191,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div scroll-event scroll="scroll" data-ng-view="">
+                        <div scroll-event scroll="scroll" data-ng-view="" autoscroll="">
 
                         </div>
                     </section>
@@ -205,7 +212,29 @@
     <script src="scripts/angular-carousel.min.js"></script>
 
     <!--CUSTOM CxC Scripts-->
-    <script src="app/all.min.js"></script>   
+    <!--<script src="app/all.min.js"></script>-->  
+
+    <script src="app/app.js"></script>
+    <script src="app/services/ajaxInterceptorService.js"></script>
+    <script src="app/services/categoryService.js"></script>
+    <script src="app/services/contentState.js"></script>
+    <script src="app/services/cxcService.js"></script>
+    <script src="app/services/errorState.js"></script>
+    <script src="app/services/pageService.js"></script>
+    <script src="app/services/postService.js"></script>
+    <script src="app/services/socialState.js"></script>
+
+    <script src="app/directives/cxcCard.js"></script>
+    <script src="app/directives/cxcBanner.js"></script>
+    <script src="app/directives/twitterStream.js"></script>
+    <script src="app/directives/scrollEvent.js"></script>
+
+    <script src="app/controllers/pageController.js"></script>
+    <script src="app/controllers/galleryController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/postController.js"></script>
+    <script src="app/controllers/galleriesController.js"></script>
 
 </body>
 </html>

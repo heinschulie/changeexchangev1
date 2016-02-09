@@ -49,7 +49,11 @@ $transition-time: .3s;
   width: 100%;
   overflow: hidden;
   padding: 1% $pad/2 0 0;
-  margin-left: -0.4%;
+  margin-left: -2%;
+
+  @include bp-desktop{
+      margin-left: -0.4%;
+  }
 }
 
 .image__cell {
@@ -233,6 +237,10 @@ $transition-time: .3s;
     }
     .art-info{
         max-width: 50%;
+    }
+
+    .galleryContainer{       
+        min-height: 570px;
     }
 }
 

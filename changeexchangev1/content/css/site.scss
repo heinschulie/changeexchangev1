@@ -339,7 +339,6 @@ header.header-three{
     padding-left: $padding*5;
     padding-right: 0;
     margin-bottom: 3rem;
-    /*padding-bottom: 10rem;*/
 
     @include bp-desktop{
         padding-left: 0;
@@ -347,6 +346,7 @@ header.header-three{
 
         .card-section-1{
             margin-left: -$padding*2;
+            min-height: 570px;
         }
         .card-section-2{
             margin-left: -$padding*2.5;
@@ -382,24 +382,6 @@ header.header-three{
         bottom: 5px;
     }
 }
-
-//_:-ms-fullscreen, :root .ie11up { 
-    /*.cxc-content-wrap{
-        margin-top: 0; //For main header
-    }*/ 
-    /*#layout {
-        top: 9%; //for header one
-    }*/
-//} 
-
-/*@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .cxc-content-wrap{
-        margin-top: 0; //For main header
-    } 
-    #layout {
-        top: 9%; //for header one
-    }
-}*/
 
 .cxc-content-wrap-scrolled{
     @include bp-desktop{       
@@ -461,11 +443,18 @@ header.header-three{
     background-color: $mustard-orange; 
     @include border-radius($borderRadius); 
 
-    /*@include transition(all, 0.4s, ease-in-out);   
+    @include transition(all, 0.4s, ease-in-out);   
     @include alpha-attribute('background-color', rgba($charcoal, 0.5), white);
 
     &:hover{
         cursor: pointer;        
         @include alpha-attribute('background-color', rgba($mustard-orange, 0.8), white);
-    }*/
+    }
+}
+
+.no-more{
+    &:hover{
+        cursor: default;        
+        @include alpha-attribute('background-color', rgba($charcoal, 0.8), white);
+    }
 }

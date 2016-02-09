@@ -10,12 +10,12 @@
         $scope.exchangeCategories = [];
         $scope.flashbackCategories = [];
         $scope.errorState = errorState;
-        $scope.active = false;
+        //$scope.active = false;
         $scope.toggleMenu = function () {
-            if ($scope.active)
-                $scope.active = false;
+            if ($scope.contentState.data.menuActive)
+                $scope.contentState.data.menuActive = false;
             else
-                $scope.active = true;
+                $scope.contentState.data.menuActive = true;
         }
 
         $scope.scroll = 0; 

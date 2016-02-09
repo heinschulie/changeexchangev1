@@ -62,6 +62,10 @@
     padding-left: $padding*11; 
     padding-right: $padding*11;
     border-bottom: 3px solid $mustard-orange;
+    em{
+        color: black;
+        font-style: italic; 
+    }
 }
 
 .page-content {

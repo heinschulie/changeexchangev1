@@ -1,6 +1,6 @@
 @import '_cxcVariables.scss';
 @import '_colours.scss';
-
+@import '_mixins.scss';
 
 input[type=range] {
   width:300px;
@@ -96,14 +96,19 @@ div.rn-carousel-indicator span {
 /* prev/next controls */
 .rn-carousel-control {
   transition: opacity 0.2s ease-out;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: 35%;
+  top: 33%;
   opacity: 0.75;
   cursor: pointer;
   color: $mustard-orange; 
   &:hover {
     opacity: 1;
+  }
+
+  @include bp-desktop{
+      font-size: 3.5em;
+      top: 35%;
   }
 
   &.rn-carousel-control-prev {

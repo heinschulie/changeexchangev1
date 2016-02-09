@@ -6,6 +6,8 @@
     var homeController = function ($scope, $timeout, errorState, contentState, socialState) {
 
         $scope.contentState = contentState;
+        $scope.contentState.data.menuActive = false; ///if I'm lucky
+        $scope.contentState.data.deactivateMore = false; //we hope for the best
         $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
         $scope.socialState = socialState;
         $scope.errorState = errorState; 

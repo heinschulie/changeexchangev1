@@ -6,13 +6,14 @@
         //var serviceBase = 'http://localhost/ohsoserious/wp-json/';
         //var applicationBase = 'http://localhost:16327/';
 
-        // *** Development and staging
-        var serviceBase = 'https://services.brightrock.co.za/changeexchange/wp-json/';
-        var applicationBase = 'http://changeexchangev1.azurewebsites.net/';
+        //// *** Development and staging
+        //var serviceBase = 'https://services.brightrock.co.za/changeexchange/wp-json/';
+        //var applicationBase = 'http://changeexchangev1.azurewebsites.net/';
 
 
         // *** Production 
-        // ???
+        var serviceBase = 'https://services.brightrock.co.za/changeexchange/wp-json/';
+        var applicationBase = 'https://www.changeexchange.co.za/';
 
         var getServiceUrl = function () {
 

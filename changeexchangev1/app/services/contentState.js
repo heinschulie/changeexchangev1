@@ -15,7 +15,9 @@
             artworks: [],
             galleryViewing: false,
             mobileBannerVideoPlay: false,
-            bannerIndex: 0
+            bannerIndex: 0,
+            deactivateMore: false,
+            menuActive: false
         };
 
         var standardPostCategories = [
@@ -33,6 +35,7 @@
         var chosenMoment = { name: "What change moment are you going through?", active: true };
         var changeMoments = [
             { name: "What change moment are you going through?", active: false },
+            { name: "All Change Moments", active: false },
             { name: 'Landing that Job', active: false },
             { name: 'Making a Home', active: false },
             { name: 'Starting a Family', active: false },
@@ -57,9 +60,30 @@
                 data.post.title = $sce.trustAsHtml(data.post.title);
                 data.post.excerpt = $sce.trustAsHtml(data.post.excerpt);
                 data.post.content = $sce.trustAsHtml(data.post.content);
+                return results;
             })
         }
 
+        //Due to a late freakout by the genius I'm going to have to break a few stylistic rules. 
+        var getPostByTitle = function (name) {
+            return postService.getPostByName(name).then(function (results) {
+                if (results.data.length) {
+                    data.categories = results.data[0].terms.category
+                      .map(function (category) {
+                          return category.name;
+                      });
+
+                    data.post = results.data[0];
+                    data.post.title = $sce.trustAsHtml(data.post.title);
+                    data.post.excerpt = $sce.trustAsHtml(data.post.excerpt);
+                    data.post.content = $sce.trustAsHtml(data.post.content);
+                    data.post.slug = $sce.trustAsHtml(data.post.slug);
+                }
+            })
+        }
+
+
+        //This refers to the author search. 
         var getPostByName = function (name) {
             return postService.getPostByName(name).then(function (results) {
                 if (results.data.length) {
@@ -83,16 +107,21 @@
             if (data.categories.length)
                 angular.forEach(data.categories, function (cat) {
                     socialState.data.videoPlayer = false; // Ensure Youtube video isn't expanded. 
-                    if (cat.toLowerCase() === "events") {
-                        socialState.changeSm(3, 'fe'); //Magic number! Apologies - but time is of the essence. See socialState. 
-                    }
+                    //if (cat.toLowerCase() === "events") {
+                    //    socialState.changeSm(3, 'fe'); //Magic number! Apologies - but time is of the essence. See socialState. 
+                    //}
                 })
             return postService.getPosts(data.postsPerPage, data.pageNumber, data.categories, false).then(function (results) {
-                prepPosts(results.data, false);
+                if (results.data.length < 1)
+                    data.deactivateMore = true;
+                else
+                    prepPosts(results.data, false);
+
                 if (data.pageNumber === 1)
                     data.posts = results.data;
                 else
                     data.posts = data.posts.concat(results.data)
+
             })
         }
 
@@ -168,7 +197,7 @@
 
             angular.forEach(postArray, function (post, key) {
                 //Remove banners from post array
-                post.urlName = encodeURI(post.title).replace(/%20/g, '-');
+                post.urlName = encodeURI(post.slug).replace(/%20/g, '-');
                 angular.forEach(post.terms.category, function (cat) {
                     if (cat.name.toLowerCase() === "banner") {
                         bannerindeces.push(key);
@@ -194,9 +223,12 @@
 
         var selectedMoment = function (moment, fetchBanners, isExchangeCat) {
 
+            data.deactivateMore = false;
+            data.menuActive = false; ///if I'm lucky
             data.categories = [];
+
             if (moment)
-                if (moment.name === 'What change moment are you going through?') {
+                if (moment.name === 'What change moment are you going through?' || moment.name === "All Change Moments") {
                     changeMoments[0].active = true;
                     chosenMoment = changeMoments[0];
                     data.categories = data.categories.concat(standardPostCategories);
@@ -248,6 +280,7 @@
             selectedMoment: selectedMoment,
             getPage: getPage,
             getPost: getPost,
+            getPostByTitle: getPostByTitle,
             getPostByName: getPostByName,
             getPosts: getPosts,
             getPostsByAuthor: getPostsByAuthor,

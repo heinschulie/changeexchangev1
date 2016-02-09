@@ -3,34 +3,47 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var postController = function ($scope, $location, $routeParams, $sce, socialState, contentState) {
-
+    var postController = function ($scope, $location, $routeParams, $sce, $timeout, socialState, contentState) {
 
         $scope.changeAgentPost = false;
         $scope.sameAuthorPosts = [];
+        $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
         $scope.sameCategoryPosts = [];
         $scope.recommendedMessageCat = "";
         $scope.recommendedMessageAuthor = "";
 
         $scope.contentState = contentState;
+        $scope.contentState.data.menuActive = false; ///if I'm lucky
         $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
         $scope.socialState = socialState;
-        var postId = $routeParams.postId;
+        //var postId = $routeParams.postId;
         //var postId = 0;
         //var postName = $routeParams.postName.replace("%20", " ");
+        var postSlug = $routeParams.slug;
 
         $scope.callForPost = function () {
-            return contentState.getPost(postId).then(function (results) {
-                $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
-                $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;
-                $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
-            });
-
-            //return contentState.getPostByName(postName).then(function (results) {
+            //return contentState.getPost(postId).then(function (results) {
             //    $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
             //    $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;
-            //    $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
+
+            //    var socialUrl = "https://services.brightrock.co.za/ChangeExchange/";
+            //    if (results.data.terms.category[0].parent)
+            //        socialUrl = socialUrl + results.data.terms.category[0].parent.name + "/";
+            //    socialUrl = socialUrl + results.data.terms.category[0].name + "/" + results.data.slug;
+            //    socialUrl = encodeURI(socialUrl).replace(/%20/g, '-');
+            //    return; 
+            //    //$timeout($sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'), 500);
+            //    //$scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
             //});
+
+            return contentState.getPostByTitle(postSlug).then(function (results) {
+                $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
+                $scope.recommendedMessageAuthor = "More articles from " + contentState.data.post.author.name;          
+            });
+        }
+
+        var setFbButton = function () {
+            $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
         }
 
         var callForRecommendedPosts = function () {
@@ -64,7 +77,8 @@
         }
 
         //Initialise 
-        if (postId === contentState.data.post.ID) {
+        //if (postId === contentState.data.post.ID) {
+        if (postSlug === contentState.data.post.ID) {
             if (contentState.data.categories[0] === 'Change agents')
                 $scope.changeAgentPost = true;
             if (contentState.data.posts.length < 1)
@@ -83,5 +97,5 @@
                 });
     }
 
-    app.controller("postController", ["$scope", "$location", "$routeParams", "$sce", "socialState", "contentState", postController]);
+    app.controller("postController", ["$scope", "$location", "$routeParams", "$sce", "$timeout", "socialState", "contentState", postController]);
 }())

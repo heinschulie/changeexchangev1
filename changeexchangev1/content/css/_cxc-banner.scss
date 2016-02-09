@@ -63,13 +63,15 @@
 .absolute-inner{
     position: absolute;
     height:100%;
-    left: 0.7rem;
-    right:0.7rem;
+    left: 0.45rem;
+    right:0.85rem;
 
     @include bp-desktop{
         left: initial;
         right: initial; 
-        width:98.5%;  
+        width:98.5%; 
+        /*left: 0.7rem;
+        right:0.7rem;*/ 
     }
 }
 
@@ -199,37 +201,49 @@
     width:100%; 
     height: 100%;
     margin-left: 0;
-    /*background-size: cover;
-    background-position:center left;*/ 
     color: $white;
-    /*&:hover{
-        img{
-            @include filter(grayscale, 0); 
-        }          
-    }*/
+
     img{
         position:absolute;
         width:100%; 
         height: 100%;
         top:0;
         left: 0;
-        /*-o-object-fit: cover;
-        object-fit: cover;*/
         -o-object-position: top left;
-        object-position: top left;  
-        /*@include transition(all, 0.5s, ease-in-out);
-        @include filter(grayscale, 100%);*/      
+        object-position: top left;     
     }
 }
 
-.banner-copy{
+a.banner-link{
     position:absolute;
     width: 50%;
-    height: $cardHeight;
     right: 0;
-    top:0;
+    min-height: 100%;
+    background-color:blue;
+
+    /*@include bp-desktop{
+        width: auto;
+        margin-left: 0;
+        min-height: 0;
+    }*/
+}
+
+.banner-copy{
+
+    position: relative;
+    width: 100%;
+    margin-top: 0;
     z-index: 1;
     text-align: right;
+ 
+    @include bp-desktop{
+        position:absolute;
+        width: 50%;
+        height: $cardHeight;
+        right: 0;
+        top:0;
+    }
+    
     h1{
         font-size: 1em;
         margin-bottom: 0;    

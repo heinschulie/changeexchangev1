@@ -36,7 +36,7 @@
         };
 
         var getPosts = function (postsPerPage, pageNumber, category, includeContent) {
-            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=' + postsPerPage + '&page=' + pageNumber + '&fields=ID,title,excerpt';
+            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=' + postsPerPage + '&page=' + pageNumber + '&fields=ID,title,excerpt,slug,category';
             if (includeContent) url = url + ',content';
             if (category && category.length > 0) {
                 url = url + '&filter[category_name]=';
@@ -56,7 +56,7 @@
 
 
         var getPostsByAuthor = function (authorId) {
-            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=3&filter[author]=' + authorId + '&fields=ID,title,excerpt';
+            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=3&filter[author]=' + authorId + '&fields=ID,title,excerpt,slug';
             return $http.get(url)
                 .then(function (results) {
                     return results;
@@ -64,7 +64,7 @@
         };
 
         var getPostsByTags = function (tagArray) {
-            var url = serviceBase + 'posts?filter[post_status]=publish&fields=ID,title,excerpt';
+            var url = serviceBase + 'posts?filter[post_status]=publish&fields=ID,title,excerpt,slug';
             if (tagArray && tagArray.length > 0) {
                 url = url + '&filter[tag]=';
                 for (var i = 0; i < tagArray.length; i++) {
@@ -82,7 +82,7 @@
         };
 
         var getBanners = function (numberOfBanners, category) {
-            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=' + numberOfBanners + '&fields=ID,title,excerpt';
+            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=' + numberOfBanners + '&fields=ID,title,excerpt,slug,content';
             if (category && category.length > 0) {
                 url = url + '&filter[category_name]=';
                 for (var i = 0; i < category.length; i++) {

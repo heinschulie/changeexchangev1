@@ -53,6 +53,52 @@ $charcoal: rgba(97,97,97,1);*/
 /*$mustard-yellow: rgba(246,169,21,1);
 $mustard-orange: rgba(229,152,10,1);
 $charcoal: rgba(97,97,97,1);*/
+/*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
+/*@mixin bp-iphone6landscape {
+    @media only screen 
+        and (min-device-width : 375px) HELLOYOU
+        and (max-device-width : 667px) 
+        and (orientation : landscape) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}
+
+@mixin bp-iphone6portrait {
+    @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px) 
+        and (orientation : portrait) 
+        and (-webkit-min-device-pixel-ratio : 2)
+    { 
+        @content;
+    }
+}*/
+/* Smartphones (landscape) ----------- 4 */
+/* Smartphones (portrait) ----------- 4 */
+/* Smartphones (portrait) ----------- 5 */
+/* Smartphones (landscape) ----------- 5 */
+/* Smartphones (portrait) ----------- 6 */
+/* Smartphones (landscape) ----------- 6 */
+/* Smartphones (portrait) ----------- 6+ */
+/* Smartphones (landscape) ----------- 6+ */
+/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/*@mixin bp-ipadlandscapeOld {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}*/
+/* iPads (portrait and landscape) ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
+/* Desktops and laptops ----------- */
 input[type=range] {
   width: 300px; }
 
@@ -132,14 +178,18 @@ div.rn-carousel-indicator span {
 /* prev/next controls */
 .rn-carousel-control {
   transition: opacity 0.2s ease-out;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: 35%;
+  top: 33%;
   opacity: 0.75;
   cursor: pointer;
   color: #F8B900; }
   .rn-carousel-control:hover {
     opacity: 1; }
+  @media only screen and (min-width: 1224px) {
+    .rn-carousel-control {
+      font-size: 3.5em;
+      top: 35%; } }
   .rn-carousel-control.rn-carousel-control-prev {
     left: 0.5em; }
     .rn-carousel-control.rn-carousel-control-prev:before {
@@ -214,7 +264,10 @@ $charcoal: rgba(97,97,97,1);*/
   width: 100%;
   overflow: hidden;
   padding: 1% 6px 0 0;
-  margin-left: -0.4%; }
+  margin-left: -2%; }
+  @media only screen and (min-width: 1224px) {
+    .image-grid {
+      margin-left: -0.4%; } }
 
 .image__cell {
   float: left;
@@ -445,7 +498,10 @@ $charcoal: rgba(97,97,97,1);*/
     margin-left: -6px; }
 
   .art-info {
-    max-width: 50%; } }
+    max-width: 50%; }
+
+  .galleryContainer {
+    min-height: 570px; } }
 /*Colours*/
 /*$mustard-yellow: rgba(246,169,21,1);
 $mustard-orange: rgba(229,152,10,1);
@@ -1380,13 +1436,15 @@ $charcoal: rgba(97,97,97,1);*/
 .absolute-inner {
   position: absolute;
   height: 100%;
-  left: 0.7rem;
-  right: 0.7rem; }
+  left: 0.45rem;
+  right: 0.85rem; }
   @media only screen and (min-width: 1224px) {
     .absolute-inner {
       left: initial;
       right: initial;
-      width: 98.5%; } }
+      width: 98.5%;
+      /*left: 0.7rem;
+      right:0.7rem;*/ } }
 
 .banner-container {
   position: relative;
@@ -1500,35 +1558,41 @@ $charcoal: rgba(97,97,97,1);*/
   width: 100%;
   height: 100%;
   margin-left: 0;
-  /*background-size: cover;
-  background-position:center left;*/
-  color: white;
-  /*&:hover{
-      img{
-          @include filter(grayscale, 0); 
-      }          
-  }*/ }
+  color: white; }
   .cxc-banner img {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    /*-o-object-fit: cover;
-    object-fit: cover;*/
     -o-object-position: top left;
-    object-position: top left;
-    /*@include transition(all, 0.5s, ease-in-out);
-    @include filter(grayscale, 100%);*/ }
+    object-position: top left; }
 
-.banner-copy {
+a.banner-link {
   position: absolute;
   width: 50%;
-  height: 280px;
   right: 0;
-  top: 0;
+  min-height: 100%;
+  background-color: blue;
+  /*@include bp-desktop{
+      width: auto;
+      margin-left: 0;
+      min-height: 0;
+  }*/ }
+
+.banner-copy {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
   z-index: 1;
   text-align: right; }
+  @media only screen and (min-width: 1224px) {
+    .banner-copy {
+      position: absolute;
+      width: 50%;
+      height: 280px;
+      right: 0;
+      top: 0; } }
   .banner-copy h1 {
     font-size: 1em;
     margin-bottom: 0;
@@ -1747,6 +1811,9 @@ $charcoal: rgba(97,97,97,1);*/
   padding-left: 2.2rem;
   padding-right: 2.2rem;
   border-bottom: 3px solid #F8B900; }
+  .post-canvas em {
+    color: black;
+    font-style: italic; }
 
 .page-content {
   background-color: white;
@@ -2034,14 +2101,14 @@ header.header-three {
 .page-section {
   padding-left: 1rem;
   padding-right: 0;
-  margin-bottom: 3rem;
-  /*padding-bottom: 10rem;*/ }
+  margin-bottom: 3rem; }
   @media only screen and (min-width: 1224px) {
     .page-section {
       padding-left: 0;
       margin-right: -0.2rem; }
       .page-section .card-section-1 {
-        margin-left: -0.4rem; }
+        margin-left: -0.4rem;
+        min-height: 570px; }
       .page-section .card-section-2 {
         margin-left: -0.5rem; } }
   .page-section .row {
@@ -2065,20 +2132,6 @@ header.header-three {
   right: 5px;
   bottom: 5px; }
 
-/*.cxc-content-wrap{
-    margin-top: 0; //For main header
-}*/
-/*#layout {
-    top: 9%; //for header one
-}*/
-/*@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .cxc-content-wrap{
-        margin-top: 0; //For main header
-    } 
-    #layout {
-        top: 9%; //for header one
-    }
-}*/
 @media only screen and (min-width: 1224px) {
   .cxc-content-wrap-scrolled {
     margin-top: 5%; } }
@@ -2126,12 +2179,21 @@ header.header-three {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-    /*@include transition(all, 0.4s, ease-in-out);   
-    @include alpha-attribute('background-color', rgba($charcoal, 0.5), white);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: silver;
+  background-color: rgba(130, 130, 130, 0.5); }
+  .more-button:hover {
+    cursor: pointer;
+    background-color: #f9c732;
+    background-color: rgba(248, 185, 0, 0.8); }
 
-    &:hover{
-        cursor: pointer;        
-        @include alpha-attribute('background-color', rgba($mustard-orange, 0.8), white);
-    }*/ }
+.no-more:hover {
+  cursor: default;
+  background-color: #9b9b9b;
+  background-color: rgba(130, 130, 130, 0.8); }
 
 /*# sourceMappingURL=site.css.map */
