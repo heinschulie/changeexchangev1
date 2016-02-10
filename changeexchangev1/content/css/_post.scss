@@ -24,9 +24,10 @@
         //height: 100%;
         margin-bottom: 1rem;
         margin-left: 1rem;
+        width: 100%;
         @include border-radius($borderRadius);
-        @include bp-iphone{
-            //width: 100%; 
+        @include bp-desktop{
+            width: auto; 
         }
     }
 

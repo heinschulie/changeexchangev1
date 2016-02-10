@@ -1781,10 +1781,14 @@ $charcoal: rgba(97,97,97,1);*/
   float: right;
   margin-bottom: 1rem;
   margin-left: 1rem;
+  width: 100%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px; }
+  @media only screen and (min-width: 1224px) {
+    .post-container img {
+      width: auto; } }
 .post-container section.article-hero {
   position: relative;
   width: 100%;
