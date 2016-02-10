@@ -42,6 +42,7 @@
     <Content Include="app\controllers\galleriesController.js" />
     <Content Include="app\controllers\galleryController.js" />
     <Content Include="app\directives\cxcBanner.js" />
+    <Content Include="scripts\anguLike.js" />
     <Content Include="app\directives\scrollEvent.js" />
     <Content Include="app\directives\templates\cxc-banner.html" />
     <Content Include="app\directives\templates\main-header.html" />

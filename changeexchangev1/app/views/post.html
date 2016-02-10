@@ -10,8 +10,17 @@
             <img ng-src="{{contentState.data.post.featured_image.source}}" />
             <div ng-bind-html="contentState.data.post.excerpt"></div>
             
-            <div ng-bind-html="contentState.data.post.content"></div>         
-            <div ng-bind-html="facebooklikebutton"></div>  <!--ng-if="facebooklikebutton"-->
+            <div ng-bind-html="contentState.data.post.content"></div>  
+
+            <div fb-like="myModel.Url"></div>
+            <div google-plus="myModel.Url"></div>
+            <div tweet="myModel.Name" tweet-url="myModel.Url"></div>
+            <div pin-it="myModel.Name" pin-it-image="myModel.ImageUrl" pin-it-url="myModel.Url"></div>
+
+            <!--<div><a ng-click="click()">Click</a></div>-->       
+            <!--<div class="fb-like" ng-href="{{posturl}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div> <!--<div ng-bind-html="facebooklikebutton"></div>-->  <!--ng-if="facebooklikebutton"-->-->
+            <!--<br />
+            <div ng-bind-html="facebooklikebutton"></div>-->
             <div ng-if="changeAgentPost" class="suggested-posts-category row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h5 class="row recommended-post-message">Contributions by {{contentState.data.post.author.name}}</h5>
                 <cxc-card class="col-xs-12 col-sm-6 col-md-4 col-lg-4'" ng-repeat="post in sameAuthorPosts" cxccontent="post"></cxc-card>
@@ -28,4 +37,5 @@
             <cxc-card class="col-xs-12 col-sm-6 col-md-4 col-lg-4'" ng-repeat="post in sameCategoryPosts | limitTo: 3" cxccontent="post"></cxc-card>
         </div>
     </div>
+    <!--<script src="https://platform.instagram.com/en_US/embeds.js" async="" defer="defer"></script>-->
 </div>

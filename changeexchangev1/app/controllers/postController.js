@@ -3,11 +3,12 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var postController = function ($scope, $location, $routeParams, $sce, $timeout, socialState, contentState) {
+    var postController = function ($rootScope, $scope, $location, $routeParams, $sce, $timeout, socialState, contentState) {
 
         $scope.changeAgentPost = false;
         $scope.sameAuthorPosts = [];
-        $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
+        //$scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
+        $scope.posturl = $location.absUrl();
         $scope.sameCategoryPosts = [];
         $scope.recommendedMessageCat = "";
         $scope.recommendedMessageAuthor = "";
@@ -20,6 +21,13 @@
         //var postId = 0;
         //var postName = $routeParams.postName.replace("%20", " ");
         var postSlug = $routeParams.slug;
+
+
+        $scope.myModel = {
+            Url: '' + $location.absUrl(),
+            Name: "A post for the ages",
+            ImageUrl: 'http://www.jasonwatmore.com/pics/jason.jpg'
+        };
 
         $scope.callForPost = function () {
             //return contentState.getPost(postId).then(function (results) {
@@ -42,9 +50,19 @@
             });
         }
 
-        var setFbButton = function () {
-            $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
-        }
+        //function setFbButton() {
+        //    return $timeout(function () {
+        //        $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
+        //        $rootScope.$apply();
+        //    });
+        //}
+
+        //$scope.click = function () {
+        //    console.log('Clicked');
+        //}
+        //var setFbButton = function () {
+        //    $scope.facebooklikebutton = $sce.trustAsHtml('<div class="fb-like" ng-if="facebooklikeurl" data-ng-href="' + $location.absUrl() + '" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>');
+        //}
 
         var callForRecommendedPosts = function () {
             contentState.getPostsByAuthor().then(function(results){
@@ -94,8 +112,9 @@
                         contentState.getPosts().then(getRecommendedPosts);
                     else
                         getRecommendedPosts();
-                });
+                })
+                //.then(setFbButton);
     }
 
-    app.controller("postController", ["$scope", "$location", "$routeParams", "$sce", "$timeout", "socialState", "contentState", postController]);
+    app.controller("postController", ["$rootScope", "$scope", "$location", "$routeParams", "$sce", "$timeout", "socialState", "contentState", postController]);
 }())

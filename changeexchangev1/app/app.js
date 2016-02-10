@@ -6,7 +6,7 @@
 
 
 'use strict';
-var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel']);
+var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel', 'angulike']);
 
 
 app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
@@ -70,6 +70,13 @@ app.config(["$httpProvider", function ($httpProvider) {
     //$httpProvider.defaults.withCredentials = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
+
+app.run([
+      '$rootScope', function ($rootScope) {
+          $rootScope.facebookAppId = '481757868679120'; // set your facebook app id here
+      }
+]);
+
 
 //app.filter(['html',function($sce){
 //    return function(input){
