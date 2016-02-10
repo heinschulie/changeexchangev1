@@ -9,10 +9,9 @@ var print = require('gulp-print');
 var gulpIf = require('gulp-if');
 var minifyCSS = require('gulp-minify-css');
 
-
 var config = {
     //Include all js files but exclude any min.js files
-    src: ['app/**/*.js', '!app/**/*.min.js']
+    src: ['app/**/*.js', 'scripts/**/*.js', '!app/**/*.min.js'] //, '!scripts/**/*.min.js'
     //src: ['content/css/**/*.scss', '!app/**/*.min.js']
 }
 

@@ -54,7 +54,6 @@
     <Content Include="app\views\galleries.html" />
     <Content Include="app\views\gallery.html" />
     <Content Include="content\css\error.css" />
-    <Content Include="content\css\site.min.css" />
     <Content Include="content\images\errorscreen.png" />
     <Content Include="index.html" />
     <Content Include="oops.html" />
@@ -120,7 +119,6 @@
     <Content Include="favicon.ico" />
     <Content Include="content\images\Love-Change-badge.png" />
     <Content Include="scripts\angular-carousel.min.js" />
-    <Content Include="scripts\gallery.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1567,7 +1567,6 @@ a.banner-link {
   width: 50%;
   right: 0;
   min-height: 100%;
-  background-color: blue;
   /*@include bp-desktop{
         width: auto;
         margin-left: 0;
@@ -1811,6 +1810,9 @@ $charcoal: rgba(97,97,97,1);*/
   .post-canvas em {
     color: black;
     font-style: italic; }
+  .post-canvas .social-share-button {
+    float: left;
+    margin-right: 5%; }
 
 .page-content {
   background-color: white;

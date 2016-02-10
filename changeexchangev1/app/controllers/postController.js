@@ -23,11 +23,11 @@
         var postSlug = $routeParams.slug;
 
 
-        $scope.myModel = {
-            Url: '' + $location.absUrl(),
-            Name: "A post for the ages",
-            ImageUrl: 'http://www.jasonwatmore.com/pics/jason.jpg'
-        };
+        //$scope.myModel = {
+        //    Url: '' + $location.absUrl(),
+        //    Name: "A post for the ages",
+        //    ImageUrl: 'http://www.jasonwatmore.com/pics/jason.jpg'
+        //};
 
         $scope.callForPost = function () {
             //return contentState.getPost(postId).then(function (results) {
@@ -106,6 +106,15 @@
         else
             $scope.callForPost()
                 .then(function (results) {
+
+                    $scope.myModel = {
+                        Url: '' + $location.absUrl(),
+                        Name: contentState.data.post.title,
+                        ImageUrl: contentState.data.post.featured_image.source
+                    };
+                    //$scope.model.Name = contentState.data.post.title;
+                    //$scope.model.ImageUrl = contentState.data.post.featured_image.source;
+
                     if (contentState.data.categories[0] === 'Change agents')
                         $scope.changeAgentPost = true;
                     if (contentState.data.posts.length < 1)
