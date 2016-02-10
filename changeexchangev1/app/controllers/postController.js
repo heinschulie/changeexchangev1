@@ -86,7 +86,8 @@
                 for (var i = 0; i < thisPostCategories.length; i++) {
                     for (var j = 0; j < contentState.data.categories.length; j++){
                         if (thisPostCategories[i] === contentState.data.categories[j]
-                            && thisPostCategories[i] !== "Change Moments"
+                            //&& thisPostCategories[i] !== "Change Moments"
+                            && thisPostCategories[i] !== "Authors"
                             && thisPostCategories[i] !== "Exchange")
                             return true;
                     }                   
@@ -97,7 +98,8 @@
         //Initialise 
         //if (postId === contentState.data.post.ID) {
         if (postSlug === contentState.data.post.ID) {
-            if (contentState.data.categories[0] === 'Change agents')
+            //if (contentState.data.categories[0] === 'Change agents')
+            if (contentState.data.categories[0] === 'Authors')
                 $scope.changeAgentPost = true;
             if (contentState.data.posts.length < 1)
                 contentState.getPosts();
@@ -115,7 +117,8 @@
                     //$scope.model.Name = contentState.data.post.title;
                     //$scope.model.ImageUrl = contentState.data.post.featured_image.source;
 
-                    if (contentState.data.categories[0] === 'Change agents')
+                    //if (contentState.data.categories[0] === 'Change agents')
+                    if (contentState.data.categories[0] === 'Authors')
                         $scope.changeAgentPost = true;
                     if (contentState.data.posts.length < 1)
                         contentState.getPosts().then(getRecommendedPosts);

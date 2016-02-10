@@ -103,7 +103,7 @@
 
                             <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true, true)" class="pure-menu-link">{{cat.name}}</a></li>
                             <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link">Galleries</a></li>
-                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Change Agents'}, false, true)" class=" pure-menu-link">Meet the Change Agents</a></li>
+                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Authors'}, false, true)" class=" pure-menu-link">Meet the Change Agents</a></li>
                             <li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link">About</a></li>
                         </ul>
                         <a class="pure-menu-heading pure-menu-secondary-heading" ng-click="flashback = !flashback">Flashbacks</a>
@@ -208,6 +208,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- Older version of Jquery for expanding grid-->
+    
     <!--LOCAL-->
     <!--<script src="scripts/angular-carousel.min.js"></script>
     <script src="scripts/anguLike.js"></script>-->
