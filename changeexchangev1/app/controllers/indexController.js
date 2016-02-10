@@ -12,7 +12,6 @@
         $scope.errorState = errorState;
         //$scope.active = false;
 
-
         $scope.toggleMenu = function () {
             if ($scope.contentState.data.menuActive)
                 $scope.contentState.data.menuActive = false;
