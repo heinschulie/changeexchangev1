@@ -12,6 +12,7 @@
             posts: [],
             banners: [],
             galleries: [],
+            stagedContent: [],
             artworks: [],
             galleryViewing: false,
             mobileBannerVideoPlay: false,
@@ -158,6 +159,20 @@
             })
         }
 
+        var getStagedContent = function () {
+            return postService.getPosts(20, 1, ['content staging'], false).then(function (results) {
+                if (results.data.length < 1)
+                    data.deactivateMore = true;
+                else
+                    prepPosts(results.data, false);
+
+                if (data.pageNumber === 1)
+                    data.posts = results.data;
+                else
+                    data.posts = data.posts.concat(results.data)
+            })
+        }
+
         var getBanners = function (categories, featuredOnly) {
             var bannerCategory = ['banner'];
             
@@ -287,6 +302,7 @@
             getPostsByTags: getPostsByTags,
             getArtworks: getArtworks,
             getGalleries: getGalleries,
+            getStagedContent: getStagedContent,
             getBanners: getBanners
         };
     };

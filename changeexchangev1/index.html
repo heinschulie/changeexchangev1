@@ -17,23 +17,24 @@
     <title>Change Exchange</title>
 
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:site" content="@brightrockZA" />
+    <meta property="twitter:site" content="@BrightRockZA" />
     <meta property="twitter:title" content="The Change Exchange" />
+    <meta property="twitter:description" content="It's an asking, learning,sharing, changing space - packed with tips and tools to help you through, and even love, your life's greatest Change Moments" />
     <meta property="twitter:type" content="website" />
-    <meta property="twitter:url" content="https://changeexchange.brightrock.co.za/" />
+    <meta property="twitter:url" content="https://changeexchange.co.za/" />
     <meta property="twitter:image" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
 
     <meta property="og:title" content="The Change Exchange" />
     <meta property="fb:app_id" content="1408756689402511" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://changeexchange.brightrock.co.za/" />  
+    <meta property="og:url" content="https://changeexchange.co.za/" />  
     <meta property="og:image" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
     <meta property="og:image:secure_url" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="651" />
     <meta property="og:image:height" content="210" />
 
-    <meta property="og:description" content="Its an asking, learning,sharing, changing space - packed with tips and tools to help you through, and even love, your life's greatest Change Moments" />
+    <meta property="og:description" content="It's an asking, learning,sharing, changing space - packed with tips and tools to help you through, and even love, your life's greatest Change Moments" />
     <meta property="og:determiner" content="The" />
     <meta property="og:site_name" content="Change Exchange" />
 
@@ -59,25 +60,25 @@
     <div class="cxc-content-wrap" data-ng-controller="indexController" ng-class="{'cxc-content-wrap-scrolled':scroll}">
         <header ng-hide="scroll > 0" class="desktoponly header-one">
             <figure class="header-image-left">
-                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/Change Exchange Logo.png" />
+                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/Change Exchange Logo.png" alt="ChangeExchange logo" />
             </figure>
             <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
             </select>
             <figure class="header-image-right">
-                <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" /></a>
+                <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" alt="BrightRock logo" /></a>
             </figure>
             <h3>It's an <em>asking</em>, learning, <em>sharing</em>, changing space - packed with <em>tips</em> and tools to help you through, and even love, your <em>life's greatest Change Moments</em></h3>
         </header>
         <header ng-show="scroll" class="desktoponly header-three">
             <figure class="header-image-left">
-                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/cxclogo-sansbubble.png" />
+                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/cxclogo-sansbubble.png" alt="ChangeExchange Logo" />
             </figure>
             <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
             </select>
             <figure class="header-image-right">
-                <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" /></a>
+                <a href="https://www.brightrock.co.za/" target="_blank"><img src="content/images/BrightRock-Slab.png" alt="BrightRock logo" /></a>
             </figure>
         </header>
 
@@ -98,26 +99,26 @@
                         </ul>
                         <a class="pure-menu-heading">Exchange</a>
                         <ul class="pure-menu-list">
-                            <img class="drop-shadow" src="content/images/dropshadow.PNG" />
+                            <img class="drop-shadow" src="content/images/dropshadow.PNG" alt="dropshadow" />
                             <!--HTML5 MODE -->
 
-                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true, true)" class="pure-menu-link">{{cat.name}}</a></li>
-                            <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link">Galleries</a></li>
-                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Authors'}, false, true)" class=" pure-menu-link">Meet the Change Agents</a></li>
-                            <li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link">About</a></li>
+                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true, true)" class="pure-menu-link" title="{{cat.description}}">{{cat.name}}</a></li>
+                            <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link" title="Galleries">Galleries</a></li>
+                            <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Authors'}, false, true)" title="Meet our wonderful writers" class=" pure-menu-link">Meet the Change Agents</a></li>
+                            <li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link" title="Get to know the Change Exchange!">About</a></li>
                         </ul>
-                        <a class="pure-menu-heading pure-menu-secondary-heading" ng-click="flashback = !flashback">Flashbacks</a>
+                        <a class="pure-menu-heading pure-menu-secondary-heading" ng-click="flashback = !flashback" title="Old Content">Flashbacks</a>
                         <ul class="pure-menu-list pure-menu-secondary-list" ng-show="flashback">
-                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in flashbackCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true)" class="pure-menu-link">{{cat.name}}</a></li>
+                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in flashbackCategories | orderBy:'description'"><a data-ng-click="contentState.selectedMoment(cat, true)" title="{{cat.description}}" class="pure-menu-link">{{cat.name}}</a></li>
                         </ul>
-                        <img id="love-change-badge" src="content/images/Love-Change-badge.png" />
+                        <img id="love-change-badge" src="content/images/Love-Change-badge.png" alt="Love Change button" />
                     </div>
                 </div>
             </div>
             <div class="">
                 <div class="header mobile-header mobileonly">
                     <figure>
-                        <img src="content/images/cxclogo-sansbubble.png" />
+                        <img src="content/images/cxclogo-sansbubble.png" alt="ChangeExchange logo"/>
                     </figure>
                     <select class="mobile-change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                         <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
@@ -206,7 +207,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- Older version of Jquery for expanding grid-->
     
     <!--LOCAL-->
@@ -215,8 +215,7 @@
 
     <!--CUSTOM CxC Scripts-->
     <script src="app/all.min.js"></script>  
-
-
+    
     <!--<script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
@@ -237,7 +236,18 @@
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
-    <script src="app/controllers/galleriesController.js"></script>-->
+    <script src="app/controllers/galleriesController.js"></script>
+    <script src="app/controllers/stagingController.js"></script>-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-29255089-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </body>
 </html>

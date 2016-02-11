@@ -26,6 +26,16 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         templateUrl: "/app/views/gallery.html"
     });
 
+    $routeProvider.when("/Content-staging", {
+        controller: "stagingController",
+        templateUrl: "/app/views/home.html"
+    });
+
+    $routeProvider.when("/Content-staging/:slug", {
+        controller: "postController",
+        templateUrl: "/app/views/post.html"
+    });
+
     $routeProvider.when("/home", {
         controller: "homeController",
         templateUrl: "/app/views/home.html"

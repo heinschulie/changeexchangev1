@@ -129,7 +129,7 @@
                               });
                               return;
                           } else {
-                              element.html('<a href="https://twitter.com/share" class="twitter-share-button" data-text="' + scope.tweet + '" data-url="' + (scope.tweetUrl || $location.absUrl()) + '">Tweet</a>');
+                              element.html('<a href="https://twitter.com/share" class="twitter-share-button" data-text="' + scope.tweet + ' #lovechange' + '" data-url="' + (scope.tweetUrl || $location.absUrl()) + '">Tweet</a>');
                               $window.twttr.widgets.load(element.parent()[0]);
                           }
                       }

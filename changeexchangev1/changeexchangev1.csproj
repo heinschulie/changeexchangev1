@@ -41,7 +41,9 @@
     <Content Include="app\all.min.js" />
     <Content Include="app\controllers\galleriesController.js" />
     <Content Include="app\controllers\galleryController.js" />
+    <Content Include="app\controllers\stagingController.js" />
     <Content Include="app\directives\cxcBanner.js" />
+    <Content Include="app\views\content-staging.html" />
     <Content Include="content\css\site.min.css" />
     <Content Include="scripts\anguLike.js" />
     <Content Include="app\directives\scrollEvent.js" />
