@@ -269,7 +269,7 @@ header.header-three{
             font-size: 0.6em;
             height: 35px;
             padding-left: 5%;
-            color:orange;
+            //color:orange;
         }
         @include bp-iphone5landscape{
             font-size: 1em;
@@ -280,7 +280,7 @@ header.header-three{
             font-size: 0.7em;
             height: 35px;
             padding-left: 10%;
-            color:purple;
+            //color:purple;
         }
         @include bp-iphone6landscape{
             font-size: 1em;
@@ -308,7 +308,7 @@ header.header-three{
             font-size: 0.6em;
             height: 35px;
             padding-left: 5%;
-            color:blue;
+            //color:blue;
         }
         @include bp-s4galaxylandscape{
             font-size: 1em;
@@ -319,7 +319,7 @@ header.header-three{
             font-size: 0.7em;
             height: 35px;
             padding-left: 10%;
-            color:red;
+            //color:red;
         }
         
         @include bp-s5galaxylandscape{
@@ -331,13 +331,13 @@ header.header-three{
             font-size: 0.7em;
             height: 35px;
             padding-left: 10%;
-            color:white;
+            //color:white;
         }
-        @include bp-nokiaN9{
+        @include bp-s6galaxyportrait{
             font-size: 0.7em;
             height: 35px;
             padding-left: 10%;
-            color:magenta;
+            //color:magenta;
         }
 
         border: none; 

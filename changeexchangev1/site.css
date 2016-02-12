@@ -479,6 +479,7 @@ $charcoal: rgba(97,97,97,1);*/
   height: auto;
   display: block;
   padding: 10px;
+  padding-right: 3px;
   box-sizing: border-box;
   color: #ededed; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -748,8 +749,8 @@ This is the parent `<div>` that contains the menu and the content area.
     margin-bottom: 0; } }
 
 #layout.active #menu {
-  left: 65%;
-  width: 65%; }
+  left: 80%;
+  width: 80%; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #layout.active #menu {
       left: 45%;
@@ -760,7 +761,7 @@ This is the parent `<div>` that contains the menu and the content area.
       width: 20%; } }
 
 #layout.active .menu-link {
-  left: 65%; }
+  left: 80%; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #layout.active .menu-link {
       left: 45%; } }
@@ -806,9 +807,9 @@ The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 #menu {
-  margin-left: -65%;
+  margin-left: -80%;
   /* "#menu" width */
-  width: 65%;
+  width: 80%;
   position: fixed;
   top: 0;
   left: 0;
@@ -885,7 +886,7 @@ a.active {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 35%;
+  width: 20%;
   opacity: 0.5; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     a.active {
@@ -1011,7 +1012,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-right: 2em; }
 
   #layout {
-    padding-left: 65%;
+    padding-left: 80%;
     /* left col width "#menu" */
     left: 0; } }
   @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -1025,7 +1026,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (min-width: 70em) {
   #menu {
-    left: 65%; } }
+    left: 80%; } }
   @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #menu {
       left: 45%; } }
@@ -1036,7 +1037,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 @media (min-width: 70em) {
   .menu-link {
     position: fixed;
-    left: 65%; } }
+    left: 80%; } }
   @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     .menu-link {
       left: 45%; } }
@@ -1047,7 +1048,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 @media (min-width: 70em) {
   #layout.active .menu-link {
-    left: 65%; } }
+    left: 80%; } }
   @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #layout.active .menu-link {
       left: 45%; } }
@@ -1064,7 +1065,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   */
   #layout.active {
     position: relative;
-    left: 65%; } }
+    left: 80%; } }
   @media only screen and (max-width: 80em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #layout.active {
       left: 45%; } }
@@ -1389,7 +1390,10 @@ $charcoal: rgba(97,97,97,1);*/
   padding-top: 0;
   margin-right: 0;
   padding-right: 0.2rem;
-  padding-bottom: 26%; }
+  padding-bottom: 26%;
+  /*@include bp-s4galaxylandscape{
+      padding-bottom: 30%;
+  }*/ }
   @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
     .carousel-wrapper {
       padding-bottom: 28%; } }
@@ -1423,6 +1427,15 @@ $charcoal: rgba(97,97,97,1);*/
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .carousel-wrapper {
       padding-bottom: 40%; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .carousel-wrapper {
+      /* PORTRAIT:
+      Arnova 7 G2
+      BlackBerry Bold 9780
+      HTC Desire Z
+      Nokia N900
+      Samsung Galaxy Grand*/
+      padding-bottom: 32%; } }
   @media only screen and (max-width: 60em) {
     .carousel-wrapper {
       padding-right: 0.7rem;
@@ -1525,6 +1538,15 @@ $charcoal: rgba(97,97,97,1);*/
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .mobile-banner-container-expand {
       height: 312.66667px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .mobile-banner-container-expand {
+      /* PORTRAIT:
+      Arnova 7 G2
+      BlackBerry Bold 9780
+      HTC Desire Z
+      Nokia N900
+      Samsung Galaxy Grand*/
+      height: 280px; } }
 
 .mobile-carousel-expand {
   margin-bottom: 326.66667px; }
@@ -1561,6 +1583,15 @@ $charcoal: rgba(97,97,97,1);*/
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .mobile-carousel-expand {
       margin-bottom: 190px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .mobile-carousel-expand {
+      /* PORTRAIT:
+      Arnova 7 G2
+      BlackBerry Bold 9780
+      HTC Desire Z
+      Nokia N900
+      Samsung Galaxy Grand*/
+      margin-bottom: 200px; } }
 
 .cxc-banner {
   position: relative;
@@ -1715,6 +1746,16 @@ a.banner-link {
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .mobile-banner-video {
       margin-top: 109.33333px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .mobile-banner-video {
+      /* PORTRAIT:
+      Arnova 7 G2
+      BlackBerry Bold 9780
+      HTC Desire Z
+      Nokia N900
+      Samsung Galaxy Grand*/
+      margin-top: 80px;
+      padding-bottom: 57%; } }
   @media only screen and (min-width: 1224px) {
     .mobile-banner-video {
       margin-top: 280px; } }
@@ -2132,8 +2173,7 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.6em;
       height: 35px;
-      padding-left: 5%;
-      color: orange; } }
+      padding-left: 5%; } }
   @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
     .mobile-header .mobile-change-moment-select {
       font-size: 1em;
@@ -2143,8 +2183,7 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.7em;
       height: 35px;
-      padding-left: 10%;
-      color: purple; } }
+      padding-left: 10%; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .mobile-header .mobile-change-moment-select {
       font-size: 1em;
@@ -2169,8 +2208,7 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.6em;
       height: 35px;
-      padding-left: 5%;
-      color: blue; } }
+      padding-left: 5%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .mobile-header .mobile-change-moment-select {
       font-size: 1em;
@@ -2180,8 +2218,7 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.7em;
       height: 35px;
-      padding-left: 10%;
-      color: red; } }
+      padding-left: 10%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .mobile-header .mobile-change-moment-select {
       font-size: 1em;
@@ -2191,8 +2228,7 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.7em;
       height: 35px;
-      padding-left: 10%;
-      color: white; } }
+      padding-left: 10%; } }
   @media only screen and (max-width: 480px) and (orientation: portrait) {
     .mobile-header .mobile-change-moment-select {
       /* PORTRAIT:
@@ -2203,8 +2239,7 @@ header.header-three {
       Samsung Galaxy Grand*/
       font-size: 0.7em;
       height: 35px;
-      padding-left: 10%;
-      color: magenta; } }
+      padding-left: 10%; } }
 
 .layout {
   display: flex;

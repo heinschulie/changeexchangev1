@@ -45,6 +45,13 @@
     @include bp-s4galaxyportrait{
         padding-bottom: 40%;
     }
+    
+    /*@include bp-s4galaxylandscape{
+        padding-bottom: 30%;
+    }*/
+    @include bp-s6galaxyportrait{
+        padding-bottom: 32%;
+    }
 
     @include bp-large{
         padding-right: 0.7rem;
@@ -163,6 +170,9 @@
     @include bp-s4galaxyportrait{
         height: $iphone5BannerHeight*3.35;
     }
+    @include bp-s6galaxyportrait{
+        height: 280px;
+    }
 }
 
 .mobile-carousel-expand{
@@ -203,6 +213,9 @@
     }
     @include bp-s4galaxyportrait{
         margin-bottom: 190px;
+    }
+    @include bp-s6galaxyportrait{
+        margin-bottom: 200px;
     }
 }
 
@@ -344,6 +357,7 @@ a.banner-link{
     width: 100%;
     position: relative;
     margin-top: $mobileBannerHeight + 16px;
+    padding-bottom: 57%;
 
     @include bp-ipadlandscape{
         margin-top: $ipadBannerHeight + 16px;
@@ -385,11 +399,15 @@ a.banner-link{
     @include bp-s4galaxyportrait{
         margin-top: $iphone6BannerHeight + 16px;
     }
+    
+    @include bp-s6galaxyportrait{
+        margin-top: 80px;
+        padding-bottom: 57%;
+    }
 
     @include bp-desktop{
         margin-top: $cardHeight;
     }
-    padding-bottom: 57%;
 
     .inner{
         position: absolute;

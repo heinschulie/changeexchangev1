@@ -213,8 +213,20 @@
         @content;
     }
 }
+@mixin bp-s6galaxylandscape {
+    @media only screen and (max-width: 802px) and (orientation : landscape) {
+	    /* LANDSCAPE:
+	    Kindle Fire HD 7
+	    Kindle Fire HD 8.9
+	    Arnova 7 G2
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+         @content;
+    }
+}
 
-@mixin bp-nokiaN9 {
+@mixin bp-s6galaxyportrait {
     @media only screen and (max-width: 480px) and (orientation : portrait) {
 	    /* PORTRAIT:
 	    Arnova 7 G2
