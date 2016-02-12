@@ -120,6 +120,7 @@
 
 /* Smartphones (portrait) ----------- 6+ */
 @mixin bp-iphone6Plusportrait {
+
     @media only screen and (min-device-width : 414px) 
                         and (max-device-width : 736px) 
                         and (orientation : portrait)
@@ -131,8 +132,8 @@
 
 /* Smartphones (landscape) ----------- 6+ */
 @mixin bp-iphone6Pluslandscape {
-    @media only screen and (device-aspect-ratio: 9/16)
-    and (min-width : 414px) {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) 
+    {
         @content;
     }
 }

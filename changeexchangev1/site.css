@@ -1404,10 +1404,13 @@ $charcoal: rgba(97,97,97,1);*/
       padding-bottom: 35%; } }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
     .carousel-wrapper {
-      padding-bottom: 40%; } }
+      padding-bottom: 32%; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .carousel-wrapper {
       padding-bottom: 35%; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .carousel-wrapper {
+      padding-bottom: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .carousel-wrapper {
       padding-bottom: 30%; } }
@@ -1467,6 +1470,9 @@ $charcoal: rgba(97,97,97,1);*/
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .banner-container {
       height: 143.33333px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+    .banner-container {
+      height: 175px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .banner-container {
       height: 143.33333px; } }
@@ -1536,10 +1542,13 @@ $charcoal: rgba(97,97,97,1);*/
       margin-bottom: 335px; } }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
     .mobile-carousel-expand {
-      margin-bottom: 195px; } }
+      margin-bottom: 210px; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .mobile-carousel-expand {
-      margin-bottom: 368px; } }
+      margin-bottom: 322.5px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .mobile-carousel-expand {
+      margin-bottom: 250px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .mobile-carousel-expand {
       margin-bottom: 345px; } }
@@ -1562,11 +1571,13 @@ $charcoal: rgba(97,97,97,1);*/
   .cxc-banner img {
     position: absolute;
     width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     -o-object-position: top left;
     object-position: top left; }
+    @media only screen and (min-width: 1224px) {
+      .cxc-banner img {
+        height: 100%; } }
 
 a.banner-link {
   position: absolute;
@@ -1682,10 +1693,16 @@ a.banner-link {
       margin-top: 159.33333px; } }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
     .mobile-banner-video {
-      margin-top: 109.33333px; } }
+      margin-top: 80px; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .mobile-banner-video {
       margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .mobile-banner-video {
+      margin-top: 94px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+    .mobile-banner-video {
+      margin-top: 190px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .mobile-banner-video {
       margin-top: 159.33333px; } }
@@ -2088,9 +2105,9 @@ header.header-three {
   margin: 2em 0 0; }
   .mobile-header figure img {
     width: 100%; }
-.mobile-header select.mobile-change-moment-select {
+.mobile-header .mobile-change-moment-select {
   width: 100%;
-  height: 50%;
+  height: 35px;
   border-radius: 5px;
   background-color: #F8B900;
   background-image: url("../images/selectbutton.png");
@@ -2104,52 +2121,67 @@ header.header-three {
   -webkit-appearance: none;
   /* Safari and Chrome */ }
   @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       height: 45px;
       padding-left: 30%; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       height: 45px;
       padding-left: 25%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
-    .mobile-header select.mobile-change-moment-select {
-      font-size: 0.7em;
-      height: 35px; } }
+    .mobile-header .mobile-change-moment-select {
+      font-size: 0.6em;
+      height: 35px;
+      padding-left: 5%;
+      color: orange; } }
   @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       font-size: 1em;
       height: 35px;
       padding-left: 15%; } }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       font-size: 0.7em;
       height: 35px;
-      padding-left: 10%; } }
+      padding-left: 10%;
+      color: purple; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       font-size: 1em;
       height: 35px;
       padding-left: 22.5%; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .mobile-header .mobile-change-moment-select {
+      font-size: 0.8em;
+      height: 35px;
+      padding-left: 10%; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+    .mobile-header .mobile-change-moment-select {
+      font-size: 13em;
+      height: 35px;
+      padding-left: 22.5%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       font-size: 1em;
       height: 35px;
       padding-left: 20%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .mobile-header select.mobile-change-moment-select {
-      font-size: 0.7em;
+    .mobile-header .mobile-change-moment-select {
+      font-size: 0.6em;
       height: 35px;
-      padding-left: 10%; } }
+      padding-left: 5%;
+      color: blue; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       font-size: 1em;
       height: 35px;
       padding-left: 22.5%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .mobile-header select.mobile-change-moment-select {
+    .mobile-header .mobile-change-moment-select {
       font-size: 0.7em;
       height: 35px;
-      padding-left: 10%; } }
+      padding-left: 10%;
+      color: red; } }
 
 .layout {
   display: flex;
