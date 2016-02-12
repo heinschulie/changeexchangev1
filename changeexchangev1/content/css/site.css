@@ -2180,6 +2180,17 @@ header.header-three {
       height: 35px;
       padding-left: 10%;
       color: red; } }
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-header .mobile-change-moment-select {
+      font-size: 1em;
+      height: 35px;
+      padding-left: 22.5%; } }
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .mobile-header .mobile-change-moment-select {
+      font-size: 0.7em;
+      height: 35px;
+      padding-left: 10%;
+      color: white; } }
 
 .layout {
   display: flex;

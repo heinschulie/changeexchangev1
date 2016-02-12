@@ -321,6 +321,18 @@ header.header-three{
             padding-left: 10%;
             color:red;
         }
+        
+        @include bp-s5galaxylandscape{
+            font-size: 1em;
+            height: 35px;
+            padding-left: 22.5%;
+        }
+        @include bp-s5galaxyportrait{
+            font-size: 0.7em;
+            height: 35px;
+            padding-left: 10%;
+            color:white;
+        }
 
         border: none; 
 
