@@ -65,6 +65,7 @@
             });
         }
 
+
         //Initialise 
         if (postSlug === contentState.data.post.ID) {
             if (contentState.data.categories[0] === 'Authors')

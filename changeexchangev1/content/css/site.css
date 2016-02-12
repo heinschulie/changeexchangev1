@@ -1777,12 +1777,18 @@ $charcoal: rgba(97,97,97,1);*/
   margin-bottom: 1rem;
   margin-left: 1rem;
   width: 100%;
+  height: 100%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px; }
   @media only screen and (min-width: 1224px) {
     .post-container img {
+      width: auto;
+      height: auto;
+      float: none;
+      margin-bottom: auto;
+      margin-left: auto;
       width: auto; } }
 
 .post-container section.article-hero {
@@ -1819,50 +1825,60 @@ $charcoal: rgba(97,97,97,1);*/
   .post-canvas .social-share-button {
     float: left;
     margin-right: 5%; }
-  .post-canvas .entry-content img {
-    margin: 0 0 1.5em 0; }
-  .post-canvas .alignleft, .post-canvas img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left; }
-  .post-canvas .alignright, .post-canvas img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right; }
-  .post-canvas .aligncenter, .post-canvas img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both; }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .entry-content img {
+      margin: 0 0 1.5em 0; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .alignleft, .post-canvas img.alignleft {
+      margin-right: 1.5em;
+      display: inline;
+      float: left; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .alignright, .post-canvas img.alignright {
+      margin-left: 1.5em;
+      display: inline;
+      float: right; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .aligncenter, .post-canvas img.aligncenter {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      clear: both; } }
   .post-canvas .alignnone, .post-canvas img.alignnone {
     /* not sure about this one */ }
-  .post-canvas .wp-caption {
-    margin-bottom: 1.5em;
-    text-align: center;
-    padding-top: 5px; }
-  .post-canvas .wp-caption img {
-    border: 0 none;
-    padding: 0;
-    margin: 0; }
-  .post-canvas .wp-caption p.wp-caption-text {
-    line-height: 1.5;
-    font-size: 10px;
-    margin: 0; }
-  .post-canvas .wp-smiley {
-    margin: 0 !important;
-    max-height: 1em; }
-  .post-canvas blockquote.left {
-    margin-right: 20px;
-    text-align: right;
-    margin-left: 0;
-    width: 33%;
-    float: left; }
-  .post-canvas blockquote.right {
-    margin-left: 20px;
-    text-align: left;
-    margin-right: 0;
-    width: 33%;
-    float: right; }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .wp-caption {
+      margin-bottom: 1.5em;
+      text-align: center;
+      padding-top: 5px; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .wp-caption img {
+      border: 0 none;
+      padding: 0;
+      margin: 0; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .wp-caption p.wp-caption-text {
+      line-height: 1.5;
+      font-size: 10px;
+      margin: 0; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas .wp-smiley {
+      margin: 0 !important;
+      max-height: 1em; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas blockquote.left {
+      margin-right: 20px;
+      text-align: right;
+      margin-left: 0;
+      width: 33%;
+      float: left; } }
+  @media only screen and (min-width: 1224px) {
+    .post-canvas blockquote.right {
+      margin-left: 20px;
+      text-align: left;
+      margin-right: 0;
+      width: 33%;
+      float: right; } }
 
 .page-content {
   background-color: white;
