@@ -19,6 +19,7 @@
             thirdheader: false
         };
         
+
         //Social Feed Functionality 
         var changeSm = function (id, abbrev) {            
             angular.forEach(data.socialNetworks, function (sn) {

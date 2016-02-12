@@ -2191,6 +2191,18 @@ header.header-three {
       height: 35px;
       padding-left: 10%;
       color: white; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .mobile-header .mobile-change-moment-select {
+      /* PORTRAIT:
+	    Arnova 7 G2
+	    BlackBerry Bold 9780
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+      font-size: 0.7em;
+      height: 35px;
+      padding-left: 10%;
+      color: magenta; } }
 
 .layout {
   display: flex;

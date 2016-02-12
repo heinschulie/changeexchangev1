@@ -333,6 +333,12 @@ header.header-three{
             padding-left: 10%;
             color:white;
         }
+        @include bp-nokiaN9{
+            font-size: 0.7em;
+            height: 35px;
+            padding-left: 10%;
+            color:magenta;
+        }
 
         border: none; 
 

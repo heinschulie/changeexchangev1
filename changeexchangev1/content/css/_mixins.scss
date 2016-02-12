@@ -214,6 +214,18 @@
     }
 }
 
+@mixin bp-nokiaN9 {
+    @media only screen and (max-width: 480px) and (orientation : portrait) {
+	    /* PORTRAIT:
+	    Arnova 7 G2
+	    BlackBerry Bold 9780
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+        @content;
+    }
+}
+
 /* Desktops and laptops ----------- */
 @mixin bp-desktop {
     @media only screen and (min-width : 1224px) {
