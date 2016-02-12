@@ -22,7 +22,6 @@
         var postSlug = $routeParams.slug;
         $scope.postCategory = $routeParams.subcategory.replace('-', ' ');
 
-
         $scope.callForPost = function () {
             //return contentState.getPost(postId).then(function (results) {
             //    $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";

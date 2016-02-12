@@ -177,13 +177,13 @@
 	//Samsung Galaxy Tab 2 7.0
 	//Samsung Galaxy Tab 7
 	//Ainol Novo 7 Elf 2
-    @media only screen and (max-width: 1024px) and (orientation : landscape) {
+    @media only screen and (min-device-width : 768px) and (max-width: 1024px) and (orientation : landscape) {
 	    @content;
     }
 }
 /* iPads (portrait and landscape) ----------- */
 @mixin bp-ipad {
-    @media only screen and (max-width: 768px) and (orientation : portrait) {
+    @media only screen and (min-device-width : 767px) and (max-width: 768px) and (orientation : portrait) {
         @content;
     }
 }
