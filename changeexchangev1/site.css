@@ -127,10 +127,10 @@ ul[rn-carousel] {
     display: inline-block;
     margin-left: 0;
     margin-right: 0; }
-    @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    @media only screen and (max-width: 1024px) and (orientation: landscape) {
       ul[rn-carousel] > li {
         height: 243.33333px; } }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
       ul[rn-carousel] > li {
         height: 243.33333px; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
@@ -184,6 +184,14 @@ div.rn-carousel-indicator span {
   opacity: 0.75;
   cursor: pointer;
   color: #F8B900; }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    .rn-carousel-control {
+      font-size: 3.5em;
+      top: 27.5%; } }
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    .rn-carousel-control {
+      font-size: 4.5em;
+      top: 27.5%; } }
   .rn-carousel-control:hover {
     opacity: 1; }
   @media only screen and (min-width: 1224px) {
@@ -482,7 +490,7 @@ $charcoal: rgba(97,97,97,1);*/
   padding-right: 3px;
   box-sizing: border-box;
   color: #ededed; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .image--large, .art-info {
       max-height: 450px; } }
   @media only screen and (min-width: 1224px) {
@@ -751,7 +759,7 @@ This is the parent `<div>` that contains the menu and the content area.
 #layout.active #menu {
   left: 80%;
   width: 80%; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     #layout.active #menu {
       left: 45%;
       width: 45%; } }
@@ -762,7 +770,7 @@ This is the parent `<div>` that contains the menu and the content area.
 
 #layout.active .menu-link {
   left: 80%; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     #layout.active .menu-link {
       left: 45%; } }
   @media only screen and (min-width: 1224px) {
@@ -822,7 +830,7 @@ appears on the left side of the page.
   -ms-overflow-style: -ms-autohiding-scrollbar;
   scrollbar-face-color: transparent;
   scrollbar-track-color: transparent; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     #menu {
       margin-left: -45%;
       /* "#menu" width */
@@ -888,7 +896,7 @@ a.active {
   right: 0;
   width: 20%;
   opacity: 0.5; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     a.active {
       width: 55%; } }
 
@@ -1015,7 +1023,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 80%;
     /* left col width "#menu" */
     left: 0; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (max-width: 768px) and (orientation: portrait) {
     #layout {
       padding-left: 45%;
       /* "#menu" width */ } }
@@ -1027,7 +1035,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 @media (min-width: 70em) {
   #menu {
     left: 80%; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (max-width: 768px) and (orientation: portrait) {
     #menu {
       left: 45%; } }
   @media only screen and (min-width: 70em) and (min-width: 1224px) {
@@ -1038,7 +1046,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .menu-link {
     position: fixed;
     left: 80%; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (max-width: 768px) and (orientation: portrait) {
     .menu-link {
       left: 45%; } }
   @media only screen and (min-width: 70em) and (min-width: 1224px) {
@@ -1049,7 +1057,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 @media (min-width: 70em) {
   #layout.active .menu-link {
     left: 80%; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (min-width: 70em) and (max-width: 768px) and (orientation: portrait) {
     #layout.active .menu-link {
       left: 45%; } }
   @media only screen and (min-width: 70em) and (min-width: 1224px) {
@@ -1066,7 +1074,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   #layout.active {
     position: relative;
     left: 80%; } }
-  @media only screen and (max-width: 80em) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 80em) and (max-width: 768px) and (orientation: portrait) {
     #layout.active {
       left: 45%; } }
   @media only screen and (max-width: 80em) and (min-width: 1224px) {
@@ -1394,12 +1402,12 @@ $charcoal: rgba(97,97,97,1);*/
   /*@include bp-s4galaxylandscape{
       padding-bottom: 30%;
   }*/ }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .carousel-wrapper {
       padding-bottom: 28%; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .carousel-wrapper {
-      padding-bottom: 38%; } }
+      padding-bottom: 31%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
     .carousel-wrapper {
       padding-bottom: 40%; } }
@@ -1440,7 +1448,7 @@ $charcoal: rgba(97,97,97,1);*/
     .carousel-wrapper {
       padding-right: 0.7rem;
       padding-left: 0.7rem; } }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .carousel-wrapper {
       padding-right: 0.7rem;
       padding-left: 0.7rem; } }
@@ -1465,12 +1473,12 @@ $charcoal: rgba(97,97,97,1);*/
 .banner-container {
   position: relative;
   height: 93.33333px; }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .banner-container {
       height: 243.33333px; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .banner-container {
-      height: 243.33333px; } }
+      height: 200px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
     .banner-container {
       height: 93.33333px; } }
@@ -1508,10 +1516,10 @@ $charcoal: rgba(97,97,97,1);*/
 
 .mobile-banner-container-expand {
   height: 326.66667px; }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .mobile-banner-container-expand {
-      height: 1216.66667px; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      height: 835px; } }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .mobile-banner-container-expand {
       height: 1034.16667px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
@@ -1550,10 +1558,10 @@ $charcoal: rgba(97,97,97,1);*/
 
 .mobile-carousel-expand {
   margin-bottom: 326.66667px; }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .mobile-carousel-expand {
-      margin-bottom: 1216.66667px; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      margin-bottom: 590px; } }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .mobile-carousel-expand {
       margin-bottom: 430px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
@@ -1639,10 +1647,10 @@ a.banner-link {
     margin-bottom: 0;
     width: 90%;
     margin-top: 1rem; }
-    @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+    @media only screen and (max-width: 1024px) and (orientation: landscape) {
       .banner-copy h1 {
         font-size: 2em; } }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
       .banner-copy h1 {
         font-size: 2em; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
@@ -1710,12 +1718,12 @@ a.banner-link {
   position: relative;
   margin-top: 109.33333px;
   padding-bottom: 57%; }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .mobile-banner-video {
       margin-top: 259.33333px; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .mobile-banner-video {
-      margin-top: 259.33333px; } }
+      margin-top: 190px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
     .mobile-banner-video {
       margin-top: 109.33333px; } }
@@ -1725,12 +1733,22 @@ a.banner-link {
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
     .mobile-banner-video {
       margin-top: 80px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .mobile-banner-video {
+      /* PORTRAIT:
+      Arnova 7 G2
+      BlackBerry Bold 9780
+      HTC Desire Z
+      Nokia N900
+      Samsung Galaxy Grand*/
+      margin-top: 80px;
+      padding-bottom: 57%; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .mobile-banner-video {
       margin-top: 159.33333px; } }
   @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
     .mobile-banner-video {
-      margin-top: 94px; } }
+      margin-top: 96px; } }
   @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
     .mobile-banner-video {
       margin-top: 190px; } }
@@ -1746,16 +1764,6 @@ a.banner-link {
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .mobile-banner-video {
       margin-top: 109.33333px; } }
-  @media only screen and (max-width: 480px) and (orientation: portrait) {
-    .mobile-banner-video {
-      /* PORTRAIT:
-      Arnova 7 G2
-      BlackBerry Bold 9780
-      HTC Desire Z
-      Nokia N900
-      Samsung Galaxy Grand*/
-      margin-top: 80px;
-      padding-bottom: 57%; } }
   @media only screen and (min-width: 1224px) {
     .mobile-banner-video {
       margin-top: 280px; } }
@@ -1859,7 +1867,7 @@ $charcoal: rgba(97,97,97,1);*/
   max-height: 250px;
   overflow: hidden;
   border-bottom: 3px solid #F8B900; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .post-container section.article-hero {
       max-height: 450px; } }
   @media only screen and (min-width: 1224px) {
@@ -2141,6 +2149,40 @@ header.header-three {
       width: 10%;
       top: 14%; }
 
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  .mobile-header {
+    height: 295px; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .mobile-header {
+    height: 215px; } }
+@media only screen and (max-width: 802px) and (orientation: landscape) {
+  .mobile-header {
+    /* LANDSCAPE:
+    Kindle Fire HD 7
+    Kindle Fire HD 8.9
+    Arnova 7 G2
+    HTC Desire Z
+    Nokia N900
+    Samsung Galaxy Grand*/
+    height: 215px; } }
 .mobile-header figure {
   width: 100%;
   margin: 2em 0 0; }
@@ -2161,11 +2203,11 @@ header.header-three {
   /* Firefox */
   -webkit-appearance: none;
   /* Safari and Chrome */ }
-  @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation: landscape) {
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
     .mobile-header .mobile-change-moment-select {
       height: 45px;
       padding-left: 30%; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
     .mobile-header .mobile-change-moment-select {
       height: 45px;
       padding-left: 25%; } }
@@ -2193,7 +2235,8 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.8em;
       height: 35px;
-      padding-left: 10%; } }
+      padding-left: 10%;
+      color: purple; } }
   @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
     .mobile-header .mobile-change-moment-select {
       font-size: 13em;

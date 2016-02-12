@@ -14,7 +14,7 @@
         padding-bottom: 28%;
     }   
     @include bp-ipad{
-        padding-bottom: 38%;
+        padding-bottom: 31%;
     }   
     @include bp-iphone5portrait{
         padding-bottom: 40%;
@@ -93,7 +93,7 @@
         height: $ipadBannerHeight;
     }   
     @include bp-ipad{
-        height: $ipadBannerHeight;
+        height: 200px;
     }
     
     @include bp-iphone5portrait{
@@ -140,7 +140,7 @@
     height: $mobileBannerHeight*3.5;
 
     @include bp-ipadlandscape{
-        height: $ipadBannerHeight*5;
+        height: 835px;
     }   
     @include bp-ipad{
         height: $ipadBannerHeight*4.25;
@@ -179,7 +179,7 @@
     margin-bottom: $mobileBannerHeight*3.5;
 
     @include bp-ipadlandscape{
-        margin-bottom: $ipadBannerHeight*5;
+        margin-bottom: 590px;
     }   
     @include bp-ipad{
         margin-bottom: 430px;
@@ -363,7 +363,7 @@ a.banner-link{
         margin-top: $ipadBannerHeight + 16px;
     }   
     @include bp-ipad{
-        margin-top: $ipadBannerHeight + 16px;
+        margin-top: 190px;
     }    
     @include bp-iphone5portrait{
         margin-top: $iphone5BannerHeight + 16px;
@@ -375,12 +375,18 @@ a.banner-link{
         //margin-top: $iphone6BannerHeight + 16px;
         margin-top: 80px;
     }
+
+    @include bp-s6galaxyportrait{
+        margin-top: 80px;
+        padding-bottom: 57%;
+    }
+
     @include bp-iphone6landscape{
         margin-top: $iphone6LandscapeBannerHeight + 16px;
     }
     @include bp-iphone6Plusportrait{
         //margin-top: $iphone6BannerHeight + 16px;
-        margin-top: 94px;
+        margin-top: 96px;
     }
     @include bp-iphone6Pluslandscape{
         //margin-top: $iphone6BannerHeight + 16px;
@@ -400,10 +406,6 @@ a.banner-link{
         margin-top: $iphone6BannerHeight + 16px;
     }
     
-    @include bp-s6galaxyportrait{
-        margin-top: 80px;
-        padding-bottom: 57%;
-    }
 
     @include bp-desktop{
         margin-top: $cardHeight;

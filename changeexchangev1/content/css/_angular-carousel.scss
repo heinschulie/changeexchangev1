@@ -95,6 +95,16 @@ div.rn-carousel-indicator span {
 
 /* prev/next controls */
 .rn-carousel-control {
+  
+  @include bp-ipad{
+      font-size: 3.5em;
+      top: 27.5%;
+  }
+  @include bp-ipadlandscape{
+      font-size: 4.5em;
+      top: 27.5%;
+  }
+    
   transition: opacity 0.2s ease-out;
   font-size: 1.5rem;
   position: absolute;
@@ -105,7 +115,7 @@ div.rn-carousel-indicator span {
   &:hover {
     opacity: 1;
   }
-
+  
   @include bp-desktop{
       font-size: 3.5em;
       top: 35%;

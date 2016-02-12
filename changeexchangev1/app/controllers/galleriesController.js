@@ -9,6 +9,7 @@
         $scope.contentState = contentState;
         $scope.contentState.data.menuActive = false; ///if I'm lucky
         $scope.contentState.data.galleryViewing = false; //unless we're in a gallery 
+        $scope.contentState.data.mobileBannerVideoPlay = false; //close the door behind you
         $scope.socialState = socialState;
 
         var callForGalleries = function () {

@@ -238,7 +238,35 @@ header.header-three{
 
 //Mobile change moment drop down 
 .mobile-header{
-
+    
+    @include bp-ipadlandscape{
+        height:295px;
+    }
+    @include bp-iphone4landscape{
+        height:215px;
+    }
+    @include bp-iphone5landscape{
+        height:215px;
+    }
+    @include bp-iphone6landscape{    
+           height:215px;
+    }
+    @include bp-iphone6Pluslandscape{
+        height:215px;
+    }
+    @include bp-s3galaxylandscape{
+        height:215px;
+    }
+    @include bp-s4galaxylandscape{
+        height:215px;
+    }
+    @include bp-s5galaxylandscape{
+        height:215px;
+    }  
+    @include bp-s6galaxylandscape{
+        height:215px;
+    }
+    
     figure{
         width: 100%;
         margin: 2em 0 0;
@@ -280,7 +308,6 @@ header.header-three{
             font-size: 0.7em;
             height: 35px;
             padding-left: 10%;
-            //color:purple;
         }
         @include bp-iphone6landscape{
             font-size: 1em;
@@ -292,6 +319,7 @@ header.header-three{
             font-size: 0.8em;
             height: 35px;
             padding-left: 10%;
+            color:purple;
         }
         @include bp-iphone6Pluslandscape{
             font-size: 13em;

@@ -162,15 +162,28 @@
 
 @mixin bp-ipadlandscape {
     // iPad (portrait and landscape)
-    @media handheld, only screen and (max-width: 1024px) and (min-width: 667px) and (orientation : landscape) {
-        @content;
-      }
+    //Apple iPad
+	//Apple iPad 2
+	//Apple iPad 3 (and 4)
+	//Apple iPad Mini
+	//Archos 80G9
+	//BAUHN AMID-972XS
+	//HP Touchpad
+	//Panasonic Toughpad A1
+	//Acer Iconia Tab A101
+	//Archos 70b (it2)
+	//Arnova 10b G3
+	//BlackBerry PlayBook
+	//Samsung Galaxy Tab 2 7.0
+	//Samsung Galaxy Tab 7
+	//Ainol Novo 7 Elf 2
+    @media only screen and (max-width: 1024px) and (orientation : landscape) {
+	    @content;
+    }
 }
 /* iPads (portrait and landscape) ----------- */
 @mixin bp-ipad {
-    @media only screen and (min-device-width: 768px) 
-      and (max-device-width: 1024px) 
-      and (-webkit-min-device-pixel-ratio: 1) {
+    @media only screen and (max-width: 768px) and (orientation : portrait) {
         @content;
     }
 }
