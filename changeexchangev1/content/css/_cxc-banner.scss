@@ -10,6 +10,27 @@
     //width: 99.5%;
     padding-bottom: $bannerHeight; //THIS DETERMINES THE IMAGE ASPECT RATION. WIDTH: 100% ==> PADDING_BOTTOM: ?
 
+    
+    @include bp-s3galaxylandscape{
+        padding-bottom: 30%;
+    }
+    @include bp-s3galaxyportrait{
+        padding-bottom: 214px;
+    }
+    @include bp-s4galaxylandscape{
+        padding-bottom: 30%;
+    }
+    @include bp-s4galaxyportrait{
+        padding-bottom: 40%;
+    }
+    
+    @include bp-s6galaxylandscape{
+        padding-bottom: 30%;
+    }
+    @include bp-s6galaxyportrait{
+        padding-bottom: 32%;
+    }
+
     @include bp-ipadlandscape{
         padding-bottom: 28%;
     }   
@@ -17,10 +38,10 @@
         padding-bottom: 31%;
     }   
     @include bp-iphone5portrait{
-        padding-bottom: 40%;
+        padding-bottom: 34%;
     }
     @include bp-iphone5landscape{
-        padding-bottom: 35%;
+        padding-bottom: 30%;
     }
     @include bp-iphone6portrait{
         padding-bottom: 32%;
@@ -33,25 +54,6 @@
         padding-bottom: 30%;
     }
 
-    @include bp-s3galaxylandscape{
-        padding-bottom: 30%;
-    }
-    @include bp-s3galaxyportrait{
-        padding-bottom: 40%;
-    }
-    @include bp-s4galaxylandscape{
-        padding-bottom: 30%;
-    }
-    @include bp-s4galaxyportrait{
-        padding-bottom: 40%;
-    }
-    
-    /*@include bp-s4galaxylandscape{
-        padding-bottom: 30%;
-    }*/
-    @include bp-s6galaxyportrait{
-        padding-bottom: 32%;
-    }
 
     @include bp-large{
         padding-right: 0.7rem;
@@ -106,20 +108,20 @@
         height: $iphone6BannerHeight;
     }
     @include bp-iphone6landscape{
-        height: $iphone6LandscapeBannerHeight;
+        height: 162px;
     }
     @include bp-iphone6Pluslandscape{
         height: 175px;
     }
     
     @include bp-s3galaxylandscape{
-        height: $iphone5LandscapeBannerHeight;
+        height: 162px;
     }
     @include bp-s3galaxyportrait{
         height: $iphone5BannerHeight;
     }
     @include bp-s4galaxylandscape{
-        height: $iphone6LandscapeBannerHeight;
+        height: 156px;
     }
     @include bp-s4galaxyportrait{
         height: $iphone6BannerHeight;
@@ -138,6 +140,25 @@
 
 .mobile-banner-container-expand{
     height: $mobileBannerHeight*3.5;
+   
+    @include bp-s3galaxylandscape{
+        height: $iphone5LandscapeBannerHeight*3.5;
+    }
+    @include bp-s3galaxyportrait{
+        height: 215px;
+    }
+    @include bp-s4galaxylandscape{
+        height: $iphone5LandscapeBannerHeight*3.5;
+    }
+    @include bp-s4galaxyportrait{
+        height: $iphone5BannerHeight*3.35;
+    }
+    @include bp-s6galaxyportrait{
+        height: 280px;
+    }
+    @include bp-s6galaxylandscape{
+        height: 534px;
+    }
 
     @include bp-ipadlandscape{
         height: 835px;
@@ -149,34 +170,45 @@
         height: $iphone5BannerHeight*3;
     }
     @include bp-iphone5landscape{
-        height: $iphone5LandscapeBannerHeight*1.25;
+        height: 462px;
     }
     @include bp-iphone6portrait{
         height: $iphone6BannerHeight*3.5;
     }
     @include bp-iphone6landscape{
-        height: $iphone6LandscapeBannerHeight*2.25;
+        height: 538px;
+    }
+    @include bp-iphone6Plusportrait{
+        height: 322px;
+    }
+    @include bp-iphone6Pluslandscape{
+        height: 534px;
     }
 
-    @include bp-s3galaxylandscape{
-        height: $iphone5LandscapeBannerHeight*3.5;
-    }
-    @include bp-s3galaxyportrait{
-        height: $iphone5BannerHeight*3.35;
-    }
-    @include bp-s4galaxylandscape{
-        height: $iphone5LandscapeBannerHeight*3.5;
-    }
-    @include bp-s4galaxyportrait{
-        height: $iphone5BannerHeight*3.35;
-    }
-    @include bp-s6galaxyportrait{
-        height: 280px;
-    }
 }
 
 .mobile-carousel-expand{
     margin-bottom: $mobileBannerHeight*3.5;
+
+    
+    @include bp-s3galaxylandscape{
+        margin-bottom: 345px;
+    }
+    @include bp-s3galaxyportrait{
+        margin-bottom: 190px;
+    }
+    @include bp-s4galaxylandscape{
+        margin-bottom: 345px;
+    }
+    @include bp-s4galaxyportrait{
+        margin-bottom: 190px;
+    }
+    @include bp-s6galaxyportrait{
+        margin-bottom: 200px;
+    }
+    @include bp-s6galaxylandscape{
+        margin-bottom: 376px;
+    }
 
     @include bp-ipadlandscape{
         margin-bottom: 590px;
@@ -195,32 +227,20 @@
         margin-bottom: 210px;
     }
     @include bp-iphone6landscape{
-        margin-bottom: $iphone6LandscapeBannerHeight*2.25;
+        margin-bottom: 346px;
     }
     @include bp-iphone6Plusportrait{
-        margin-bottom: 250px;
+        margin-bottom: 226px;
+    }
+    @include bp-iphone6Pluslandscape{
+        margin-bottom: 376px;
     }
 
 
-    @include bp-s3galaxylandscape{
-        margin-bottom: 345px;
-    }
-    @include bp-s3galaxyportrait{
-        margin-bottom: 190px;
-    }
-    @include bp-s4galaxylandscape{
-        margin-bottom: 345px;
-    }
-    @include bp-s4galaxyportrait{
-        margin-bottom: 190px;
-    }
-    @include bp-s6galaxyportrait{
-        margin-bottom: 200px;
-    }
 }
 
 .cxc-banner{
-    position: relative;
+    //position: relative;
     width:100%; 
     height: 100%;
     margin-left: 0;
@@ -358,41 +378,7 @@ a.banner-link{
     position: relative;
     margin-top: $mobileBannerHeight + 16px;
     padding-bottom: 57%;
-
-    @include bp-ipadlandscape{
-        margin-top: $ipadBannerHeight + 16px;
-    }   
-    @include bp-ipad{
-        margin-top: 190px;
-    }    
-    @include bp-iphone5portrait{
-        margin-top: $iphone5BannerHeight + 16px;
-    }
-    @include bp-iphone5landscape{
-        margin-top: $iphone5LandscapeBannerHeight + 16px;
-    }
-    @include bp-iphone6portrait{
-        //margin-top: $iphone6BannerHeight + 16px;
-        margin-top: 80px;
-    }
-
-    @include bp-s6galaxyportrait{
-        margin-top: 80px;
-        padding-bottom: 57%;
-    }
-
-    @include bp-iphone6landscape{
-        margin-top: $iphone6LandscapeBannerHeight + 16px;
-    }
-    @include bp-iphone6Plusportrait{
-        //margin-top: $iphone6BannerHeight + 16px;
-        margin-top: 96px;
-    }
-    @include bp-iphone6Pluslandscape{
-        //margin-top: $iphone6BannerHeight + 16px;
-        margin-top: 190px;
-    }
-
+    
     @include bp-s3galaxylandscape{
         margin-top: $iphone5LandscapeBannerHeight + 16px;
     }
@@ -405,7 +391,44 @@ a.banner-link{
     @include bp-s4galaxyportrait{
         margin-top: $iphone6BannerHeight + 16px;
     }
-    
+
+    @include bp-s6galaxyportrait{
+        margin-top: 95px;
+        padding-bottom: 57%;
+    }
+
+    @include bp-s6galaxylandscape{
+        margin-top: 174px;
+    }
+
+    @include bp-ipadlandscape{
+        margin-top: $ipadBannerHeight + 16px;
+    }   
+    @include bp-ipad{
+        margin-top: 204px;
+    }    
+    @include bp-iphone5portrait{
+        margin-top: 94px;
+    }
+    @include bp-iphone5landscape{
+        margin-top: $iphone5LandscapeBannerHeight + 16px;
+    }
+    @include bp-iphone6portrait{
+        //margin-top: $iphone6BannerHeight + 16px;
+        margin-top: 94px;
+    }
+
+    @include bp-iphone6landscape{
+        margin-top: 180px;
+    }
+    @include bp-iphone6Plusportrait{
+        //margin-top: $iphone6BannerHeight + 16px;
+        margin-top: 106px;
+    }
+    @include bp-iphone6Pluslandscape{
+        //margin-top: $iphone6BannerHeight + 16px;
+        margin-top: 190px;
+    }  
 
     @include bp-desktop{
         margin-top: $cardHeight;

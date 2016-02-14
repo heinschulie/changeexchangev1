@@ -1392,43 +1392,29 @@ $charcoal: rgba(97,97,97,1);*/
   padding-top: 0;
   margin-right: 0;
   padding-right: 0.2rem;
-  padding-bottom: 26%;
-  /*@include bp-s4galaxylandscape{
-        padding-bottom: 30%;
-    }*/ }
-  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .carousel-wrapper {
-      padding-bottom: 28%; } }
-  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
-    .carousel-wrapper {
-      padding-bottom: 31%; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
-    .carousel-wrapper {
-      padding-bottom: 40%; } }
-  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
-    .carousel-wrapper {
-      padding-bottom: 35%; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
-    .carousel-wrapper {
-      padding-bottom: 32%; } }
-  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
-    .carousel-wrapper {
-      padding-bottom: 35%; } }
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
-    .carousel-wrapper {
-      padding-bottom: 30%; } }
+  padding-bottom: 26%; }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .carousel-wrapper {
       padding-bottom: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .carousel-wrapper {
-      padding-bottom: 40%; } }
+      padding-bottom: 214px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .carousel-wrapper {
       padding-bottom: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .carousel-wrapper {
       padding-bottom: 40%; } }
+  @media only screen and (max-width: 802px) and (orientation: landscape) {
+    .carousel-wrapper {
+      /* LANDSCAPE:
+	    Kindle Fire HD 7
+	    Kindle Fire HD 8.9
+	    Arnova 7 G2
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+      padding-bottom: 30%; } }
   @media only screen and (max-width: 480px) and (orientation: portrait) {
     .carousel-wrapper {
       /* PORTRAIT:
@@ -1438,6 +1424,27 @@ $charcoal: rgba(97,97,97,1);*/
 	    Nokia N900
 	    Samsung Galaxy Grand*/
       padding-bottom: 32%; } }
+  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .carousel-wrapper {
+      padding-bottom: 28%; } }
+  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+    .carousel-wrapper {
+      padding-bottom: 31%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .carousel-wrapper {
+      padding-bottom: 34%; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .carousel-wrapper {
+      padding-bottom: 30%; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .carousel-wrapper {
+      padding-bottom: 32%; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .carousel-wrapper {
+      padding-bottom: 35%; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .carousel-wrapper {
+      padding-bottom: 30%; } }
   @media only screen and (max-width: 60em) {
     .carousel-wrapper {
       padding-right: 0.7rem;
@@ -1484,19 +1491,19 @@ $charcoal: rgba(97,97,97,1);*/
       height: 93.33333px; } }
   @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
     .banner-container {
-      height: 143.33333px; } }
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+      height: 162px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (device-aspect-ratio: 16 / 9) {
     .banner-container {
       height: 175px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .banner-container {
-      height: 143.33333px; } }
+      height: 162px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .banner-container {
       height: 93.33333px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .banner-container {
-      height: 143.33333px; } }
+      height: 156px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .banner-container {
       height: 93.33333px; } }
@@ -1510,30 +1517,12 @@ $charcoal: rgba(97,97,97,1);*/
 
 .mobile-banner-container-expand {
   height: 326.66667px; }
-  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .mobile-banner-container-expand {
-      height: 835px; } }
-  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
-    .mobile-banner-container-expand {
-      height: 1034.16667px; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
-    .mobile-banner-container-expand {
-      height: 280px; } }
-  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
-    .mobile-banner-container-expand {
-      height: 179.16667px; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
-    .mobile-banner-container-expand {
-      height: 326.66667px; } }
-  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
-    .mobile-banner-container-expand {
-      height: 322.5px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .mobile-banner-container-expand {
       height: 501.66667px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .mobile-banner-container-expand {
-      height: 312.66667px; } }
+      height: 215px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .mobile-banner-container-expand {
       height: 501.66667px; } }
@@ -1549,30 +1538,43 @@ $charcoal: rgba(97,97,97,1);*/
 	    Nokia N900
 	    Samsung Galaxy Grand*/
       height: 280px; } }
+  @media only screen and (max-width: 802px) and (orientation: landscape) {
+    .mobile-banner-container-expand {
+      /* LANDSCAPE:
+	    Kindle Fire HD 7
+	    Kindle Fire HD 8.9
+	    Arnova 7 G2
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+      height: 534px; } }
+  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .mobile-banner-container-expand {
+      height: 835px; } }
+  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+    .mobile-banner-container-expand {
+      height: 1034.16667px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-banner-container-expand {
+      height: 280px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-banner-container-expand {
+      height: 462px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-banner-container-expand {
+      height: 326.66667px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-banner-container-expand {
+      height: 538px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .mobile-banner-container-expand {
+      height: 322px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (device-aspect-ratio: 16 / 9) {
+    .mobile-banner-container-expand {
+      height: 534px; } }
 
 .mobile-carousel-expand {
   margin-bottom: 326.66667px; }
-  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .mobile-carousel-expand {
-      margin-bottom: 590px; } }
-  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
-    .mobile-carousel-expand {
-      margin-bottom: 430px; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
-    .mobile-carousel-expand {
-      margin-bottom: 185px; } }
-  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
-    .mobile-carousel-expand {
-      margin-bottom: 335px; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
-    .mobile-carousel-expand {
-      margin-bottom: 210px; } }
-  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
-    .mobile-carousel-expand {
-      margin-bottom: 322.5px; } }
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
-    .mobile-carousel-expand {
-      margin-bottom: 250px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .mobile-carousel-expand {
       margin-bottom: 345px; } }
@@ -1594,9 +1596,42 @@ $charcoal: rgba(97,97,97,1);*/
 	    Nokia N900
 	    Samsung Galaxy Grand*/
       margin-bottom: 200px; } }
+  @media only screen and (max-width: 802px) and (orientation: landscape) {
+    .mobile-carousel-expand {
+      /* LANDSCAPE:
+	    Kindle Fire HD 7
+	    Kindle Fire HD 8.9
+	    Arnova 7 G2
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+      margin-bottom: 376px; } }
+  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .mobile-carousel-expand {
+      margin-bottom: 590px; } }
+  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+    .mobile-carousel-expand {
+      margin-bottom: 430px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-carousel-expand {
+      margin-bottom: 185px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-carousel-expand {
+      margin-bottom: 335px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-carousel-expand {
+      margin-bottom: 210px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-carousel-expand {
+      margin-bottom: 346px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .mobile-carousel-expand {
+      margin-bottom: 226px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (device-aspect-ratio: 16 / 9) {
+    .mobile-carousel-expand {
+      margin-bottom: 376px; } }
 
 .cxc-banner {
-  position: relative;
   width: 100%;
   height: 100%;
   margin-left: 0;
@@ -1712,40 +1747,6 @@ a.banner-link {
   position: relative;
   margin-top: 109.33333px;
   padding-bottom: 57%; }
-  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .mobile-banner-video {
-      margin-top: 259.33333px; } }
-  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
-    .mobile-banner-video {
-      margin-top: 190px; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
-    .mobile-banner-video {
-      margin-top: 109.33333px; } }
-  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
-    .mobile-banner-video {
-      margin-top: 159.33333px; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
-    .mobile-banner-video {
-      margin-top: 80px; } }
-  @media only screen and (max-width: 480px) and (orientation: portrait) {
-    .mobile-banner-video {
-      /* PORTRAIT:
-	    Arnova 7 G2
-	    BlackBerry Bold 9780
-	    HTC Desire Z
-	    Nokia N900
-	    Samsung Galaxy Grand*/
-      margin-top: 80px;
-      padding-bottom: 57%; } }
-  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
-    .mobile-banner-video {
-      margin-top: 159.33333px; } }
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
-    .mobile-banner-video {
-      margin-top: 96px; } }
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
-    .mobile-banner-video {
-      margin-top: 190px; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .mobile-banner-video {
       margin-top: 159.33333px; } }
@@ -1758,6 +1759,50 @@ a.banner-link {
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .mobile-banner-video {
       margin-top: 109.33333px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .mobile-banner-video {
+      /* PORTRAIT:
+	    Arnova 7 G2
+	    BlackBerry Bold 9780
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+      margin-top: 95px;
+      padding-bottom: 57%; } }
+  @media only screen and (max-width: 802px) and (orientation: landscape) {
+    .mobile-banner-video {
+      /* LANDSCAPE:
+	    Kindle Fire HD 7
+	    Kindle Fire HD 8.9
+	    Arnova 7 G2
+	    HTC Desire Z
+	    Nokia N900
+	    Samsung Galaxy Grand*/
+      margin-top: 174px; } }
+  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .mobile-banner-video {
+      margin-top: 259.33333px; } }
+  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+    .mobile-banner-video {
+      margin-top: 204px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (device-aspect-ratio: 40 / 71) {
+    .mobile-banner-video {
+      margin-top: 94px; } }
+  @media only screen and (device-aspect-ratio: 71 / 40) and (min-width: 321px) {
+    .mobile-banner-video {
+      margin-top: 159.33333px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (device-aspect-ratio: 375 / 667) {
+    .mobile-banner-video {
+      margin-top: 94px; } }
+  @media only screen and (device-aspect-ratio: 667 / 375) and (min-width: 375px) {
+    .mobile-banner-video {
+      margin-top: 180px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (device-aspect-ratio: 9 / 16) {
+    .mobile-banner-video {
+      margin-top: 106px; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (device-aspect-ratio: 16 / 9) {
+    .mobile-banner-video {
+      margin-top: 190px; } }
   @media only screen and (min-width: 1224px) {
     .mobile-banner-video {
       margin-top: 280px; } }
@@ -2162,7 +2207,7 @@ header.header-three {
   .mobile-header {
     height: 215px; } }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (device-aspect-ratio: 16 / 9) {
   .mobile-header {
     height: 215px; } }
 
@@ -2242,9 +2287,8 @@ header.header-three {
     .mobile-header .mobile-change-moment-select {
       font-size: 0.8em;
       height: 35px;
-      padding-left: 10%;
-      color: purple; } }
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+      padding-left: 10%; } }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (device-aspect-ratio: 16 / 9) {
     .mobile-header .mobile-change-moment-select {
       font-size: 13em;
       height: 35px;

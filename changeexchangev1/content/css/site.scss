@@ -319,7 +319,7 @@ header.header-three{
             font-size: 0.8em;
             height: 35px;
             padding-left: 10%;
-            color:purple;
+            //color:purple;
         }
         @include bp-iphone6Pluslandscape{
             font-size: 13em;
@@ -399,6 +399,7 @@ header.header-three{
 
 .page-section {
     padding-left: $padding*5;
+    //padding-left: 0;
     padding-right: 0;
     margin-bottom: 3rem;
 
