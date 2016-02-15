@@ -34,7 +34,6 @@
             });
         }
 
-
         var callForRecommendedPosts = function () {
             contentState.getPostsByAuthor().then(function(results){
                 $scope.sameAuthorPosts = results.filter(function (post) {

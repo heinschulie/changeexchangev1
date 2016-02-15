@@ -92,6 +92,8 @@
     <Content Include="content\css\_gallery.scss" />
     <Content Include="content\css\_error.scss" />
     <Content Include="content\css\_playButton.scss" />
+    <Content Include="content\css\_flexboxgrid.scss" />
+    <Content Include="content\css\_pureLayout.scss" />
     <None Include="Properties\PublishProfiles\changeexchangev1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

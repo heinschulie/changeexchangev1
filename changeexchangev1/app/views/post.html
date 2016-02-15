@@ -31,7 +31,7 @@
         <div ng-if="!changeAgentPost" id="sidebar" data-ng-class="socialState.data.videoPlayer ? 'no-margin-top column col-lg-3 col-md-12 col-sm-12 col-xs-12' : 'column col-lg-3 col-md-12 col-sm-12 col-xs-12'">
             <h5 class="recommended-post-message">{{recommendedMessageAuthor}}</h5>
             <div class="row box">
-                <cxc-card class="col-xs-12 col-sm-6 col-md-6 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 3" cxccontent="post"></cxc-card>
+                <cxc-card class="col-xs-12 col-sm-6 col-md-12 col-lg-12'" ng-repeat="post in sameAuthorPosts | limitTo: 3" cxccontent="post"></cxc-card>
             </div>
         </div>
         <div class="suggested-posts-category row col-lg-9 col-md-12 col-sm-12 col-xs-12">
