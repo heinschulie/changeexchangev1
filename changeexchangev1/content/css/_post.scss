@@ -57,6 +57,20 @@
 
     .instagram-media{
         margin: 0 auto;
+        width: 100%; 
+        height: 370px;
+
+        @include bp-ipad{
+            width:40%;
+            float: right;
+        }
+        @include bp-ipadlandscape{
+            width:30%;
+            float: right;
+        }
+        @include bp-desktop{
+            height: 800px;
+        }
     }
 }
 

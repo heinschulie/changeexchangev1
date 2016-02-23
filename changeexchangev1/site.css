@@ -3470,7 +3470,20 @@ $charcoal: rgba(97,97,97,1);*/
     width: 100%;
     position: relative; }
 .post-container .instagram-media {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%;
+  height: 370px; }
+  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+    .post-container .instagram-media {
+      width: 40%;
+      float: right; } }
+  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .post-container .instagram-media {
+      width: 30%;
+      float: right; } }
+  @media only screen and (min-width: 1224px) {
+    .post-container .instagram-media {
+      height: 800px; } }
 
 .post-canvas {
   background-color: white;
