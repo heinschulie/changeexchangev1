@@ -2449,7 +2449,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 70em) {
+@media (min-width: 76.5em) {
   .header,
   .content {
     padding-left: 2em;
@@ -2458,48 +2458,48 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 80%;
     /* left col width "#menu" */
     left: 0; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #layout {
       padding-left: 45%;
       /* "#menu" width */ } }
-  @media only screen and (min-width: 70em) and (min-width: 1224px) {
+  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
     #layout {
       padding-left: 20%;
       /* "#menu" width */ } }
 
-@media (min-width: 70em) {
+@media (min-width: 76.5em) {
   #menu {
     left: 80%; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #menu {
       left: 45%; } }
-  @media only screen and (min-width: 70em) and (min-width: 1224px) {
+  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
     #menu {
       left: 20%; } }
 
-@media (min-width: 70em) {
+@media (min-width: 76.5em) {
   .menu-link {
     position: fixed;
     left: 80%; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     .menu-link {
       left: 45%; } }
-  @media only screen and (min-width: 70em) and (min-width: 1224px) {
+  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
     .menu-link {
       display: none;
       left: 20%; } }
 
-@media (min-width: 70em) {
+@media (min-width: 76.5em) {
   #layout.active .menu-link {
     left: 80%; } }
-  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #layout.active .menu-link {
       left: 45%; } }
-  @media only screen and (min-width: 70em) and (min-width: 1224px) {
+  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 20%; } }
 
-@media (max-width: 80em) {
+@media (max-width: 76.5em) {
   /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -2509,10 +2509,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   #layout.active {
     position: relative;
     left: 80%; } }
-  @media only screen and (max-width: 80em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (max-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #layout.active {
       left: 45%; } }
-  @media only screen and (max-width: 80em) and (min-width: 1224px) {
+  @media only screen and (max-width: 76.5em) and (min-width: 1224px) {
     #layout.active {
       left: 20%; } }
 
@@ -2737,8 +2737,8 @@ $charcoal: rgba(97,97,97,1);*/
   border-bottom: 3px solid #F8B900; }
   @media only screen and (max-width: 80em) {
     .social-feeds {
-      right: 2.3rem;
-      width: 14.4rem; } }
+      right: 1.2rem;
+      width: 24.5%; } }
   .social-feeds span {
     display: block;
     width: 100%;

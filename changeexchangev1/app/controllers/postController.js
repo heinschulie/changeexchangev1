@@ -24,7 +24,6 @@
         if ($routeParams.subcategory)
             $scope.postCategory = $routeParams.subcategory.replace(/-/g, ' ');
 
-
         $scope.callForPost = function () {
             //return contentState.getPost(postId).then(function (results) {
             //    $scope.recommendedMessageCat = "Enjoyed that article? Then we suggest you try one of these below...";
