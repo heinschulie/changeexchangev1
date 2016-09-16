@@ -20,9 +20,7 @@
         //var postId = 0;
         //var postName = $routeParams.postName.replace("%20", " ");
         var postSlug = $routeParams.slug;
-        //$scope.postCategory = $routeParams.subcategory.replace('-', ' ');
-        if ($routeParams.subcategory)
-            $scope.postCategory = $routeParams.subcategory.replace(/-/g, ' ');
+        $scope.postCategory = $routeParams.subcategory.replace('-', ' ');
 
         $scope.callForPost = function () {
             //return contentState.getPost(postId).then(function (results) {
@@ -80,6 +78,7 @@
         else
             $scope.callForPost()
                 .then(function (results) {
+                    
                     $scope.myModel = {
                         Url: '' + $location.absUrl(),
                         Name: contentState.data.post.title,

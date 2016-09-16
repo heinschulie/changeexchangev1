@@ -1,0 +1,14 @@
+<div  class="reduced-padding video-carousel-wrapper" ng-class="{'opacity-zero': test}">
+ 
+    <div class="videoContainer" ng-click="testClick()" ng-style="singular ? {'background-image': 'url(' + cxcvideobannercontent.mobileUrl + ')'} : { 'background-image': 'url(' + cxcvideobannercontent.featured_image.source + ')'}">
+        <!--<img data-ng-src="{{cxcvideobannercontent.featured_image.source}}" alt="banner image for {{cxcvideobannercontent.featured_image.title}}">-->
+        <cxc-video-carousel style="height: 100%; width: 100%;" singular='singular' cxcvideocarouselcontent="cxcvideobannercontent"></cxc-video-carousel>
+    </div>
+
+    <!--ONLY SHOWS ON DESKTOP-->
+    <div ng-show="test && !singular"  class="videoContainer desktop-singular">
+        <!--<img data-ng-src="{{cxcvideobannercontent.featured_image.source}}" alt="banner image for {{cxcvideobannercontent.featured_image.title}}">     -->
+        <cxc-video-carousel singular='true' cxcvideocarouselcontent="cxcvideobannercontent"></cxc-video-carousel>
+    </div>
+    
+</div>

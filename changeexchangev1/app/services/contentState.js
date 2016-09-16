@@ -11,6 +11,7 @@
             post: {},
             posts: [],
             banners: [],
+            videobanners: [],
             galleries: [],
             stagedContent: [],
             artworks: [],
@@ -207,6 +208,44 @@
             })
         }
 
+        var getVideoBanners = function (categories, featuredOnly) {
+            
+            var bannerCategory = ['video-banner'];
+            
+            return postService.getVideoBanners(data.postsPerPage, bannerCategory).then(function (results) {
+               
+               console.log(results.data);
+                // var workingArray = [];
+                // if (categories) {
+                //     data.banners = [];
+                //     angular.forEach(results.data, function (banner) {
+                //         angular.forEach(banner.terms.category, function (cat) {
+                //             angular.forEach(categories, function (wantedCat) {
+                //                 if (cat.name.toLowerCase() === wantedCat.toLowerCase())
+                //                     //data.banners = data.banners.concat(banner);
+                //                     workingArray = workingArray.concat(banner);
+                //             })
+                //         })
+                //     })
+                // }
+                // //else data.banners = data.banners.concat(results.data);
+                // else workingArray = workingArray.concat(results.data);
+                var workingArray = [];
+                workingArray = workingArray.concat(results.data); 
+                if (featuredOnly) {
+                    data.videobanners = [];
+                    angular.forEach(workingArray, function (vbanner) {
+                        angular.forEach(vbanner.terms.post_tag, function (tag) {
+                            if (tag.name.toLowerCase() === 'featured')
+                                data.videobanners = data.videobanners.concat(vbanner);
+                        })
+                    })
+                }
+                else
+                    data.videobanners = data.videobanners.concat(workingArray);
+            })
+        }
+
         var prepPosts = function (postArray, replaceBannerArray) {
             var bannerindeces = [];
 
@@ -303,7 +342,8 @@
             getArtworks: getArtworks,
             getGalleries: getGalleries,
             getStagedContent: getStagedContent,
-            getBanners: getBanners
+            getBanners: getBanners,
+            getVideoBanners: getVideoBanners
         };
     };
 

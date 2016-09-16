@@ -99,13 +99,32 @@
                 });
         };
 
+        var getVideoBanners = function (numberOfBanners, category) {
+            var url = serviceBase + 'posts?filter[post_status]=publish&filter[posts_per_page]=' + numberOfBanners + '&fields=ID,title,excerpt,slug,content';
+            if (category && category.length > 0) {
+                url = url + '&filter[category_name]=';
+                for (var i = 0; i < category.length; i++) {
+                    url = url + ',' + category[i];
+                }
+            }
+            url = url.replace("'", "");
+            return $http.get(url)
+                .then(function (results) {
+                    return results;
+                })
+                .catch(function (error) {
+                    errorState.catchError(error);
+                });
+        };
+
         return {
             getPost: getPost,
             getPostByName: getPostByName,
             getPosts: getPosts,
             getPostsByTags: getPostsByTags,
             getPostsByAuthor: getPostsByAuthor,
-            getBanners: getBanners
+            getBanners: getBanners,
+            getVideoBanners: getVideoBanners
         };
     };
 

@@ -1290,7 +1290,7 @@ td, th {
 .pure-menu-link, .pure-menu-heading {
   display: block;
   text-decoration: none;
-  white-space: nowrap; }
+  white-space: normal; }
 
 .pure-menu-horizontal {
   width: 100%;
@@ -2449,7 +2449,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 76.5em) {
+@media (min-width: 70em) {
   .header,
   .content {
     padding-left: 2em;
@@ -2458,48 +2458,48 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 80%;
     /* left col width "#menu" */
     left: 0; } }
-  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #layout {
       padding-left: 45%;
       /* "#menu" width */ } }
-  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     #layout {
       padding-left: 20%;
       /* "#menu" width */ } }
 
-@media (min-width: 76.5em) {
+@media (min-width: 70em) {
   #menu {
     left: 80%; } }
-  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #menu {
       left: 45%; } }
-  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     #menu {
       left: 20%; } }
 
-@media (min-width: 76.5em) {
+@media (min-width: 70em) {
   .menu-link {
     position: fixed;
     left: 80%; } }
-  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     .menu-link {
       left: 45%; } }
-  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     .menu-link {
       display: none;
       left: 20%; } }
 
-@media (min-width: 76.5em) {
+@media (min-width: 70em) {
   #layout.active .menu-link {
     left: 80%; } }
-  @media only screen and (min-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (min-width: 70em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #layout.active .menu-link {
       left: 45%; } }
-  @media only screen and (min-width: 76.5em) and (min-width: 1224px) {
+  @media only screen and (min-width: 70em) and (min-width: 1224px) {
     #layout.active .menu-link {
       left: 20%; } }
 
-@media (max-width: 76.5em) {
+@media (max-width: 80em) {
   /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -2509,10 +2509,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   #layout.active {
     position: relative;
     left: 80%; } }
-  @media only screen and (max-width: 76.5em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (max-width: 80em) and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
     #layout.active {
       left: 45%; } }
-  @media only screen and (max-width: 76.5em) and (min-width: 1224px) {
+  @media only screen and (max-width: 80em) and (min-width: 1224px) {
     #layout.active {
       left: 20%; } }
 
@@ -2737,8 +2737,8 @@ $charcoal: rgba(97,97,97,1);*/
   border-bottom: 3px solid #F8B900; }
   @media only screen and (max-width: 80em) {
     .social-feeds {
-      right: 1.2rem;
-      width: 24.5%; } }
+      right: 2.3rem;
+      width: 14.4rem; } }
   .social-feeds span {
     display: block;
     width: 100%;
@@ -3266,6 +3266,94 @@ a.banner-link {
 .play-button-container {
   margin-top: 20%; }
 
+.video-carousel-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 0;
+  margin-right: 0;
+  padding-right: 0.2rem;
+  width: 100%; }
+
+.videoContainer {
+  position: relative;
+  display: block;
+  transition: 0.9s;
+  width: 100%;
+  height: 70vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: darkgray; }
+  .videoContainer img {
+    position: absolute;
+    width: 100%; }
+  @media only screen and (min-width: 1224px) {
+    .videoContainer {
+      height: 20vw; } }
+
+@media only screen and (min-width: 1224px) {
+  .videoContainer.desktop-singular {
+    height: 39vw; } }
+
+.setContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%; }
+  .setContainer .videoSet {
+    flex: 1; }
+
+.videoSet {
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100% !important; }
+  @media only screen and (min-width: 1224px) {
+    .videoSet {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start; } }
+
+.singular {
+  justify-content: center;
+  flex-flow: column;
+  align-items: center; }
+
+.car-set-container {
+  height: 85%;
+  width: 100%; }
+
+.videoBox {
+  z-index: 1;
+  background: lightblue;
+  box-sizing: border-box;
+  margin: 5px;
+  flex: 1 1 auto;
+  max-width: 75%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden; }
+  @media only screen and (min-width: 1224px) {
+    .videoBox {
+      max-width: 33%;
+      height: 72.5%; } }
+
+.singular .videoBox {
+  max-width: 75%;
+  width: 75%;
+  height: 100%; }
+
+.share-panel {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
 /*Colours*/
 /*$mustard-yellow: rgba(246,169,21,1);
 $mustard-orange: rgba(229,152,10,1);
@@ -3361,20 +3449,7 @@ $charcoal: rgba(97,97,97,1);*/
     position: relative; }
 
 .post-container .instagram-media {
-  margin: 0 auto;
-  width: 100%;
-  height: 370px; }
-  @media only screen and (min-device-width: 767px) and (max-width: 768px) and (orientation: portrait) {
-    .post-container .instagram-media {
-      width: 40%;
-      float: right; } }
-  @media only screen and (min-device-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .post-container .instagram-media {
-      width: 30%;
-      float: right; } }
-  @media only screen and (min-width: 1224px) {
-    .post-container .instagram-media {
-      height: 800px; } }
+  margin: 0 auto; }
 
 .post-canvas {
   background-color: white;

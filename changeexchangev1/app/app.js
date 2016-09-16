@@ -41,6 +41,10 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         templateUrl: "/app/views/home.html"
     });
 
+    //$routeProvider.when("/:postId/:postTitle", {
+    //    controller: "postController",
+    //    templateUrl: "/app/views/post.html"
+    //});
     $routeProvider.when("/:category/:subcategory/:slug", {
         controller: "postController",
         templateUrl: "/app/views/post.html"

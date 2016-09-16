@@ -9,8 +9,8 @@
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="content/css/site.min.css" rel="stylesheet" />
-    <!--<link href="content/css/site.css" rel="stylesheet" />-->
+    <!--<link href="content/css/site.min.css" rel="stylesheet" />-->
+    <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -131,7 +131,9 @@
                 </div>
                 <div class="wrap">
                     <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
-                        <div class="row reduced-padding carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
+                        
+                        <!--REGULAR BANNER -->
+                        <div ng-hide="contentState.data.videobanners.length" class="row reduced-padding carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
                             <div class="absolute-inner">
                                 <ul ng-class="{'mobile-banner-container-expand': contentState.data.mobileBannerVideoPlay}" rn-carousel rn-carousel-controls rn-carousel-index="contentState.data.bannerIndex" class=" banner-container col-lg-12 col-xs-12">
                                     <li data-ng-repeat="banner in contentState.data.banners">
@@ -140,6 +142,19 @@
                                 </ul>
                             </div>
                         </div>
+                        <!--END REGULAR BANNER-->
+
+                        <!--NEW VIDEO BANNER-->
+                        <!--<div ng-if="contentState.data.videobanners.length" ng-show="contentState.data.videobanners.length" class="row reduced-padding video-carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
+                            <div class="absolute-inner">-->
+                               
+                                <cxc-video-banner class="desktoponly" ng-if="contentState.data.videobanners.length" singular='false' cxcvideobannercontent="contentState.data.videobanners[0]"></cxc-video-banner>
+                                <cxc-video-banner class="mobileonly" ng-if="contentState.data.videobanners.length" singular='true' cxcvideobannercontent="contentState.data.videobanners[0]"></cxc-video-banner>
+                            
+                            <!--</div>
+                        </div>-->
+                        <!--END NEW VIDEO BANNER-->
+
                         <div ng-hide="contentState.data.galleryViewing" class="row reduced-padding sidebar-right desktoponly">
 
                             <!--Experiment-->
@@ -210,13 +225,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- Older version of Jquery for expanding grid-->
     
     <!--LOCAL-->
-    <!--<script src="scripts/angular-carousel.min.js"></script>
-    <script src="scripts/anguLike.js"></script>-->
+    <script src="scripts/angular-carousel.min.js"></script>
+    <script src="scripts/anguLike.js"></script>
 
     <!--CUSTOM CxC Scripts-->
-    <script src="app/all.min.js"></script>  
+    <!--<script src="app/all.min.js"></script>  -->
     
-    <!--<script src="app/app.js"></script>
+    <script src="app/app.js"></script>
     <script src="app/services/ajaxInterceptorService.js"></script>
     <script src="app/services/categoryService.js"></script>
     <script src="app/services/contentState.js"></script>
@@ -228,6 +243,8 @@
 
     <script src="app/directives/cxcCard.js"></script>
     <script src="app/directives/cxcBanner.js"></script>
+    <script src="app/directives/cxcVideoBanner.js"></script>
+    <script src="app/directives/cxcVideoCarousel.js"></script>
     <script src="app/directives/twitterStream.js"></script>
     <script src="app/directives/scrollEvent.js"></script>
 
@@ -237,7 +254,7 @@
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/postController.js"></script>
     <script src="app/controllers/galleriesController.js"></script>
-    <script src="app/controllers/stagingController.js"></script>-->
+    <script src="app/controllers/stagingController.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

@@ -1,0 +1,129 @@
+.video-carousel-wrapper {
+    display: flex; 
+    flex-flow: column nowrap; 
+    justify-content: space-between;
+    position: relative;
+    padding-top: 0;
+    margin-right: 0;
+    padding-right: 0.2rem;
+    // padding-bottom: 50%;
+    // height: 50vw; 
+    padding-right: 1.1rem;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.opacityZero{
+    // opacity: 0; 
+    // padding-bottom: 50%; 
+}
+
+.videoContainer{
+    position: relative;
+    display: block;
+    // display: flex; 
+    // flex-flow: row nowrap; 
+    // justify-content: space-between;
+    // align-items: stretch; 
+    transition: 0.9s; 
+    width: 100%;
+    height: 70vw; 
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-color: darkgray; 
+
+    img{
+        position: absolute; 
+        width:100%; 
+    }
+    @include bp-desktop{
+        // padding-bottom: 26%;
+        height: 20vw; 
+    }
+}
+.videoContainer.desktop-singular{
+    @include bp-desktop{
+        height: 39vw; 
+    }
+}
+
+.setContainer{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+
+    .videoSet{
+        flex: 1; 
+    }
+}
+
+// .videoSet {
+//     display: flex !important; 
+//     flex-flow: row nowrap; 
+//     justify-content: space-between;
+//     align-items: flex-start;
+//     // @include bp-desktop{
+        
+//     // }
+// }
+
+.videoSet {
+    display: flex !important; 
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+    height: 100% !important; 
+    @include bp-desktop{
+        flex-flow: row nowrap; 
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+.singular{
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+.car-set-container{
+    height: 85%;
+    width: 100%;
+}
+
+.videoBox {
+    z-index: 1;
+    background: lightblue;
+    box-sizing: border-box;
+    margin: 5px;
+    flex: 1 1 auto;
+    max-width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include bp-desktop{
+        max-width: 33%;
+        height: 72.5%;
+    }
+}
+
+.singular{
+    .videoBox {  
+        max-width: 75%;
+        width: 75%; 
+        height: 100%;
+    }
+}
+
+.share-panel{
+    height: 15%;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+}

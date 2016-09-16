@@ -26,6 +26,8 @@
             $scope.callForPosts();
         if (!contentState.data.banners || contentState.data.banners.length < 3)
             contentState.getBanners(null, true);
+        if (!contentState.data.videobanners || !contentState.data.videobanners.length)
+            contentState.getVideoBanners(null, true);
        
     }
 
