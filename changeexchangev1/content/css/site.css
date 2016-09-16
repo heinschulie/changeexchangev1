@@ -3274,7 +3274,9 @@ a.banner-link {
   padding-top: 0;
   margin-right: 0;
   padding-right: 0.2rem;
-  width: 100%; }
+  padding-right: 1.1rem;
+  width: 100%;
+  box-sizing: border-box; }
 
 .videoContainer {
   position: relative;
