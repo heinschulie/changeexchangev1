@@ -72,7 +72,7 @@
                     // if(window.innerWidth <= 800 && window.innerHeight <= 600)
                     //     isMobile = true; 
                     var set = []; 
-                    urlArray.forEach(function(url){
+                    urlArray.forEach(function(url, index){
                         url = url.trim(); 
                         $scope.myModel = {
                             Url: url,
@@ -82,10 +82,17 @@
                         var cleanUrl = $sce.trustAsResourceUrl(url);
                         var vid = { cleanUrl: cleanUrl, shareUrl: url};
                         if(!$scope.singular){  
-                            if(set.length < 2) //less than 3
+                            // if(set.length < 2) //less than 3
+                            //     set.push(vid);
+                            // else{
+                            //     set.push(vid);
+                            //     $scope.contentCopy.videoArray.push(set); 
+                            //     set = []; 
+                            // }
+                            if(set.length < 3) //less than 3
                                 set.push(vid);
-                            else{
-                                set.push(vid);
+                            
+                            if(set.length === 3 || index + 1 === urlArray.length){
                                 $scope.contentCopy.videoArray.push(set); 
                                 set = []; 
                             }
