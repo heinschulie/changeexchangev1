@@ -29,11 +29,12 @@
     transition: 0.9s; 
     width: 100%;
     height: 70vw; 
-
+    padding: 2vh;
+    box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; 
-    background-color: darkgray; 
+    background-color: black; 
 
     img{
         position: absolute; 
@@ -41,7 +42,8 @@
     }
     @include bp-desktop{
         // padding-bottom: 26%;
-        height: 20vw; 
+        height: 20vw;
+    
     }
 }
 .videoContainer.desktop-singular{
@@ -71,7 +73,20 @@
         
 //     // }
 // }
+.video-cta{
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    color: white;
+    cursor: pointer; 
 
+    div{
+        font-size: 24px;
+    } 
+}
 .videoSet {
     display: flex !important; 
     flex-flow: column nowrap; 
@@ -99,7 +114,7 @@
     z-index: 1;
     background: lightblue;
     box-sizing: border-box;
-    margin: 5px;
+    // margin: 2.5% 5%;
     flex: 1 1 auto;
     max-width: 75%;
     height: 100%;
@@ -108,7 +123,7 @@
 
     @include bp-desktop{
         max-width: 33%;
-        height: 72.5%;
+        height: 100%;
     }
 }
 
@@ -124,6 +139,46 @@
     height: 15%;
     width: 100%;
     display: flex; 
-    justify-content: space-around; 
+    justify-content: center; 
     align-items: center;
+    .social-share-button {
+        margin-right: 5px;
+    }
+    .social-share-button.fb-button {
+        margin-top: -8px;
+    }
+    @include bp-desktop {
+        .social-share-button {
+            transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            transform-origin: center center;
+            -ms-transform-origin: center center;
+            -webkit-transform-origin: center center;
+            -moz-transform-origin: center center;
+            -webkit-transform-origin: center center;
+            margin-right: 50px;
+        }
+        .social-share-button.fb-button {
+            margin-top: -12px;
+        }
+    }
 }
+
+
+.fb-share-button
+{
+    transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    transform-origin: top left;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+}
+

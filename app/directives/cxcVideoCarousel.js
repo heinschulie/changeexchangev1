@@ -21,13 +21,22 @@
 
             },
 
-            controller: ["$scope", "$sce", "$sanitize", "contentState", function ($scope, $sce, $sanitize, contentState) {
+            controller: ["$window", "$scope", "$sce", "$sanitize", "contentState", function ($window, $scope, $sce, $sanitize, contentState) {
                 
                 $scope.contentState = contentState;
 
                 $scope.testClick = function(){
                     $scope.test = !$scope.test;
                 }; 
+
+                $scope.sharevideo = function(url) {
+                    console.log(url);
+                    FB.ui({
+                        method: 'share',
+                        display: 'popup',
+                        href: 'http://localhost:3000/Change-moments/Landing-that-Job/tutto-paella',
+                    }, function(response){});
+                }
                 // $scope.cxcvideobannercontent.url = "";
 
                 console.log("SINGULAR: " + $scope.singular); 
