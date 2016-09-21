@@ -91,7 +91,7 @@
                 <!---->
                 <div class="pure-menu">
                     <div id="menu-wrapper">
-                        <a class="pure-menu-heading" data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)">Change Moments</a>
+                        <a class="pure-menu-heading" data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, false)">Change Moments</a>
                         <ul class="pure-menu-list">
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" />
                             <!--<li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" class="pure-menu-link">All Change Moments</a></li>-->
@@ -133,7 +133,7 @@
                     <section class="page-section" ng-hide="errorState.data.ajaxErrors.length">
                         
                         <!--REGULAR BANNER -->
-                        <div ng-hide="contentState.data.videobanners.length" class="row reduced-padding carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
+                        <div ng-hide="contentState.data.videobanners.length && !contentState.data.showSpecificBanners" class="row reduced-padding carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
                             <div class="absolute-inner">
                                 <ul ng-class="{'mobile-banner-container-expand': contentState.data.mobileBannerVideoPlay}" rn-carousel rn-carousel-controls rn-carousel-index="contentState.data.bannerIndex" class=" banner-container col-lg-12 col-xs-12">
                                     <li data-ng-repeat="banner in contentState.data.banners">
@@ -145,14 +145,12 @@
                         <!--END REGULAR BANNER-->
 
                         <!--NEW VIDEO BANNER-->
-                        <!--<div ng-if="contentState.data.videobanners.length" ng-show="contentState.data.videobanners.length" class="row reduced-padding video-carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">
-                            <div class="absolute-inner">-->
-                               
+                        <!--<div ng-if="contentState.data.videobanners.length" ng-show="contentState.data.videobanners.length" class="row reduced-padding video-carousel-wrapper" ng-class="{'mobile-carousel-expand': contentState.data.mobileBannerVideoPlay}">-->
+                            <div ng-hide="contentState.data.showSpecificBanners">    
                                 <cxc-video-banner class="desktoponly" ng-if="contentState.data.videobanners.length" singular='false' cxcvideobannercontent="contentState.data.videobanners[0]"></cxc-video-banner>
                                 <cxc-video-banner class="mobileonly" ng-if="contentState.data.videobanners.length" singular='true' cxcvideobannercontent="contentState.data.videobanners[0]"></cxc-video-banner>
-                            
-                            <!--</div>
-                        </div>-->
+                            </div>
+                        <!--</div>-->
                         <!--END NEW VIDEO BANNER-->
 
                         <div ng-hide="contentState.data.galleryViewing" class="row reduced-padding sidebar-right desktoponly">
@@ -195,7 +193,7 @@
                                             <blockquote cite="https://www.facebook.com/BrightRockZA">
                                                 <a href="https://www.facebook.com/BrightRockZA">BrightRockZA EVENTS</a>
                                             </blockquote>
-                                        </div>
+                                        </div> 
                                     </div>-->
                                     </div>
                                     <div class="" data-ng-show="socialState.data.currentSm == 'tw'">

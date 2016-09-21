@@ -3266,6 +3266,10 @@ a.banner-link {
 .play-button-container {
   margin-top: 20%; }
 
+/*Colours*/
+/*$mustard-yellow: rgba(246,169,21,1);
+$mustard-orange: rgba(229,152,10,1);
+$charcoal: rgba(97,97,97,1);*/
 .video-carousel-wrapper {
   display: flex;
   flex-flow: column nowrap;
@@ -3326,9 +3330,12 @@ a.banner-link {
   background: black;
   text-transform: uppercase;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .6s; }
   .video-cta div {
     font-size: 24px; }
+  .video-cta:hover {
+    background: #F8B900; }
 
 .videoSet {
   display: flex !important;
@@ -3353,7 +3360,7 @@ a.banner-link {
 
 .videoBox {
   z-index: 1;
-  background: lightblue;
+  background: black;
   box-sizing: border-box;
   flex: 1 1 auto;
   max-width: 75%;

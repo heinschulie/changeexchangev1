@@ -1,3 +1,5 @@
+@import '_colours.scss'; 
+
 .video-carousel-wrapper {
     display: flex; 
     flex-flow: column nowrap; 
@@ -86,10 +88,14 @@
     text-transform: uppercase; 
     color: white;
     cursor: pointer; 
+    transition: .6s; 
 
     div{
         font-size: 24px;
     } 
+    &:hover{
+        background: $mustard-orange;
+    }
 }
 .videoSet {
     display: flex !important; 
@@ -116,7 +122,7 @@
 
 .videoBox {
     z-index: 1;
-    background: lightblue;
+    background: black;
     box-sizing: border-box;
     // margin: 2.5% 5%;
     flex: 1 1 auto;

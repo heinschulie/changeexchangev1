@@ -12,6 +12,7 @@
             posts: [],
             banners: [],
             videobanners: [],
+            showSpecificBanners: false,
             galleries: [],
             stagedContent: [],
             artworks: [],
@@ -315,9 +316,12 @@
             data.posts = data.posts.splice(0, position)                         // - Trim array down to position             
 
             if (fetchBanners) {
+                data.showSpecificBanners = true; 
                 getBanners(data.categories);
                 data.bannerIndex = 0;
             }
+            else
+                data.showSpecificBanners = false; 
 
 
             if ($location.path() !== "/home")
