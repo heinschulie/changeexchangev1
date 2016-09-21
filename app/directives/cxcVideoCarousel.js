@@ -76,7 +76,7 @@
                         url = url.trim(); 
                         $scope.myModel = {
                             Url: url,
-                            Name: 'Change Exchange Comp',
+                            Name: 'Great clip by @BrightRockZA',
                             ImageUrl: $scope.cxcvideocarouselcontent.featured_image.source
                         };
                         var cleanUrl = $sce.trustAsResourceUrl(url);
