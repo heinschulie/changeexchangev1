@@ -3,9 +3,7 @@
         <cxc-video-carousel singular='singular' cxcvideocarouselcontent="cxcvideobannercontent"></cxc-video-carousel>
     </div>
     <div class="video-cta" ng-show="!singular" ng-click="testClick()">
-        <div>Share and win!!!</div>
-        <div>Share and win!!!</div>
-        <div>Share and win!!!</div>
+        <div>{{cxcvideobannercontent.caption}}</div>
     </div>
     <div ng-show="test && !singular"  class="videoContainer desktop-singular desktoponly">
        <cxc-video-carousel singular='true' cxcvideocarouselcontent="cxcvideobannercontent"></cxc-video-carousel>

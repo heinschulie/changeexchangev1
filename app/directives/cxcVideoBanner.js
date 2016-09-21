@@ -32,9 +32,9 @@
 
                 // Get mobile ImageUrl
                 if (typeof $scope.cxcvideobannercontent.excerpt === 'string' || $scope.cxcvideobannercontent.excerpt instanceof String) {
-                    $scope.cxcvideobannercontent.mobileUrl = $scope.cxcvideobannercontent.excerpt.replace('<p>', '').replace('</p>', '');
+                    $scope.cxcvideobannercontent.caption = $scope.cxcvideobannercontent.excerpt.replace('<p>', '').replace('</p>', '');
                     //var excerpt = $sce.trustAsUrl($scope.cxcbannercontent.excerpt);
-                    $scope.cxcvideobannercontent.mobileUrl = $sce.trustAsResourceUrl($scope.cxcvideobannercontent.mobileUrl);
+                    // $scope.cxcvideobannercontent.caption = $sce.trustAsHtml($scope.cxcvideobannercontent.caption);
                 }
 
                 // $scope.cxcvideobannercontent.url = "";

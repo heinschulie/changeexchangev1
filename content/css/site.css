@@ -3319,7 +3319,7 @@ $charcoal: rgba(97,97,97,1);*/
 @media only screen and (min-width: 1224px) {
   .setContainerMultiple {
     width: 90%;
-    height: 75%; } }
+    height: 65%; } }
 
 .video-cta {
   width: 100%;
@@ -3328,7 +3328,7 @@ $charcoal: rgba(97,97,97,1);*/
   justify-content: space-around;
   align-items: center;
   background: black;
-  text-transform: uppercase;
+  text-transform: none;
   color: white;
   cursor: pointer;
   transition: .6s; }

@@ -65,7 +65,7 @@
 .setContainerMultiple{
     @include bp-desktop{
         width: 90%;
-        height: 75%; 
+        height: 65%; 
     }
 }
 
@@ -85,7 +85,7 @@
     justify-content: space-around;
     align-items: center;
     background: black;
-    text-transform: uppercase; 
+    text-transform: none;
     color: white;
     cursor: pointer; 
     transition: .6s; 
