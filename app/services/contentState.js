@@ -262,7 +262,7 @@
                         }
                     }
 
-                    if(changeMoments.some(cm => cm.name === cat.name))
+                    if(changeMoments.some(function(cm) { return cm.name === cat.name }))
                         cat.parent = { name: "Change moments"}
                     else
                         cat.parent = { name: "Exchange"}
