@@ -261,6 +261,11 @@
                             data.banners.push(post);
                         }
                     }
+
+                    if(changeMoments.some(cm => cm.name === cat.name))
+                        cat.parent = { name: "Change moments"}
+                    else
+                        cat.parent = { name: "Exchange"}
                 });
                 angular.forEach(post.terms.post_tag, function (tag) {
                     if (tag.name.toLowerCase() === 'featured')
