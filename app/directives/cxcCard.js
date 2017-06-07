@@ -10,7 +10,8 @@
             restrict: 'E',
             templateUrl: "app/directives/templates/cxc-card.html",
             scope: {
-                cxccontent: '='
+                cxccontent: '=',
+                featured: '='
             },
 
             replace: true,

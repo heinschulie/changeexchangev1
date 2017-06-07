@@ -1,10 +1,10 @@
 ﻿<div ng-if="!socialState.data.videoPlayer" class="card-section-1 row col-lg-9 col-xs-12 reduced-padding negative-margin-top-2">
-    <cxc-card data-ng-class="$first ? 'col-xs-12 col-sm-12 col-md-9 col-lg-8 featured-post' : 'col-xs-12 col-sm-6 col-md-3 col-lg-4'" data-ng-repeat="post in contentState.data.posts | limitTo: 5" cxccontent="post"></cxc-card>
+    <cxc-card data-ng-class="$first ? 'col-xs-12 col-sm-12 col-md-9 col-lg-8 featured-post' : 'col-xs-12 col-sm-6 col-md-3 col-lg-4'" data-ng-repeat="post in contentState.data.posts | limitTo: 5" cxccontent="post" featured="!!$first"></cxc-card>
 </div>
 <div ng-if="socialState.data.videoPlayer" class="card-section-1 row col-lg-12 col-xs-12 reduced-padding negative-margin-top-2">
-    <cxc-card data-ng-class="$index < 3 ? 'col-xs-12 col-sm-12 col-md-9 col-lg-6' : 'col-xs-12 col-sm-6 col-md-3 col-lg-3'" data-ng-repeat="post in contentState.data.posts | limitTo: 5" cxccontent="post"></cxc-card>
+    <cxc-card data-ng-class="$index < 3 ? 'col-xs-12 col-sm-12 col-md-9 col-lg-6' : 'col-xs-12 col-sm-6 col-md-3 col-lg-3'" data-ng-repeat="post in contentState.data.posts | limitTo: 5" cxccontent="post" featured="post.featured"></cxc-card>
 </div>
 <div class="card-section-2 row col-lg-12 col-xs-12 reduced-padding negative-margin-top-2">
-    <cxc-card data-ng-class="$index == 6 || post.featured ? 'col-xs-12 col-sm-6 col-md-9 col-lg-6 featured-post' : 'col-xs-12 col-sm-6 col-md-3 col-lg-3'" data-ng-repeat="post in contentState.data.posts" ng-if="$index > 4" cxccontent="post"></cxc-card>
+    <cxc-card data-ng-class="$index == 6 || post.featured ? 'col-xs-12 col-sm-6 col-md-9 col-lg-6 featured-post' : 'col-xs-12 col-sm-6 col-md-3 col-lg-3'" data-ng-repeat="post in contentState.data.posts" ng-if="$index > 4" cxccontent="post" featured="$index == 6 || post.featured"></cxc-card>
     <a ng-class="contentState.data.deactivateMore ? 'no-more col-lg-12 col-xs-12 more-button' : 'col-lg-12 col-xs-12 more-button'" ng-show="contentState.data.posts.length" data-ng-click="callForPosts()">More</a>
 </div>

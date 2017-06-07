@@ -1,17 +1,12 @@
 ﻿<div class="reduced-padding">
     <div class="cxc-card box-row box">
-        <!--<a data-ng-href="#/{{cxccontent.ID}}">-->
-        <a data-ng-href="/{{cxccontent.url}}">
-            <div class="image-column col-lg-12">
-                <div class="cxc-content-image box">
-                    <img data-ng-src="{{cxccontent.featured_image.source}}" alt="Image of {{cxccontent.featured_image.title}}" />
-                </div>
-            </div>
+        <a class="cxc-card-inner" data-ng-href="/{{cxccontent.url}}">
+            <img data-ng-src="{{cxccontent.featured_image.source}}" alt="Image of {{cxccontent.featured_image.title}}" />
             <div class="column content-copy">
                 <div class="cxc-content-title">
                     <h5 data-ng-bind-html="cxccontent.title"></h5>
                 </div>
-                <div data-ng-bind-html="cxccontent.excerpt" class="box excerpt"></div>
+                <div data-ng-bind-html="cxccontent.excerpt" class="cxc-content-excerpt box uni"></div> <!-- data-ng-if="!featured" -->
             </div>
         </a>
     </div>
