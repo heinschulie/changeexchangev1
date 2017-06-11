@@ -2668,6 +2668,9 @@ $charcoal: rgba(97,97,97,1);*/
 
 .featured-post img {
   flex: 1; }
+  @media only screen and (max-width: 30em) {
+    .featured-post img {
+      min-height: 500px; } }
 
 .featured-post .content-copy {
   position: absolute;

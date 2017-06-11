@@ -117,9 +117,14 @@
 //     overflow: hidden;
 // }
 
+
+
 .featured-post{
     img{
         flex: 1;
+        @include bp-small{
+            min-height: 500px;
+        }
     }
 
     .content-copy{
