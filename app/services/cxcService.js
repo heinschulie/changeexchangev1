@@ -4,7 +4,7 @@
 
         // *** Local development
         //var serviceBase = 'http://localhost/ohsoserious/wp-json/';
-        var applicationBase = 'http://localhost:16327/';
+        var applicationBase = 'http://localhost:16327fffff/';
 
         //// *** Development and staging
         // var serviceBase = 'http://bitnami-wordpress-a206.cloudapp.net/wp-json/';
