@@ -20,7 +20,7 @@
         //var postId = 0;
         //var postName = $routeParams.postName.replace("%20", " ");
         var postSlug = $routeParams.slug;
-        $scope.postCategory = $routeParams.subcategory.replace('-', ' ');
+        $scope.postCategory = $routeParams.subcategory.replace(/-/g, ' ');
 
         $scope.callForPost = function () {
             //return contentState.getPost(postId).then(function (results) {
