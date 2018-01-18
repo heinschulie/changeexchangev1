@@ -52,7 +52,7 @@ app.factory('ajaxInterceptorService', ['$q', '$window','$location', 'errorState'
         }
         //$location.path('/oops');
         if (rejection.status)
-            $window.location.href = "http://localhost:16327/oops.html";
+            $window.location.href = "https://localhost:16327/oops.html";
         //return $q.reject(rejection);
     }
 
