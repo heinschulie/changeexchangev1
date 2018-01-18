@@ -22,13 +22,13 @@
     <meta property="twitter:description" content="It's an asking, learning,sharing, changing space - packed with tips and tools to help you through, and even love, your life's greatest Change Moments" />
     <meta property="twitter:type" content="website" />
     <meta property="twitter:url" content="https://www.changeexchange.co.za/" />
-    <meta property="twitter:image" content="content/images/Change Exchange Logo.png" />
+    <meta property="twitter:image" content="content/images/change-exchange-logo.png" />
 
     <meta property="og:title" content="The Change Exchange" />
     <meta property="fb:app_id" content="1408756689402511" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.changeexchange.co.za/" />  
-    <meta property="og:image" content="content/images/Change Exchange Logo.png" />
+    <meta property="og:image" content="content/images/change-exchange-logo.png" />
     <meta property="og:image:secure_url" content="https://www.changeexchange.co.za/content/images/Change%20Exchange%20Logo.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="651" />
@@ -60,7 +60,7 @@
     <div class="cxc-content-wrap" data-ng-controller="indexController" ng-class="{'cxc-content-wrap-scrolled':scroll}">
         <header ng-hide="scroll > 0" class="desktoponly header-one">
             <figure class="header-image-left">
-                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/Change Exchange Logo.png" alt="ChangeExchange logo" />
+                <img data-ng-click="contentState.selectedMoment({name : 'What change moment are you going through?'}, true)" src="content/images/change-exchange-logo.png" alt="ChangeExchange logo" />
             </figure>
             <select class="change-moment-select" data-ng-model="contentState.chosenMoment.name" data-ng-change="contentState.selectedMoment(contentState.chosenMoment, false)">
                 <option ng-repeat="moment in contentState.changeMoments" ng-show="$index > 0" value="{{moment.name}}">{{moment.name}}</option>
