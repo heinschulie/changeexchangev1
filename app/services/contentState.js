@@ -283,6 +283,10 @@
 
         var selectedMoment = function (moment, fetchBanners, isExchangeCat) {
 
+
+            // TODO: MASSIVE hack to work around previous laziness. I know, I know. 
+            // fetchBanners = moment === 'Podcast' ? false : fetchBanners; 
+            
             data.deactivateMore = false;
             data.menuActive = false; ///if I'm lucky
             data.categories = [];
