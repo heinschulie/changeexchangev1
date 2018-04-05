@@ -3,7 +3,7 @@
     'use strict';
     var app = angular.module("cxcApp");
 
-    var homeController = function ($scope, $timeout, errorState, contentState, socialState) {
+    var homeController = function ($scope, $timeout, $routeParams, errorState, contentState, socialState) {
 
         $scope.contentState = contentState;
         $scope.contentState.data.menuActive = false; ///if I'm lucky
@@ -13,14 +13,30 @@
         $scope.socialState = socialState;
         $scope.errorState = errorState; 
 
+        var mainCategory = { name: $routeParams.category };
+        var mainSubcategory = { name: $routeParams.subcategory };
+
         $scope.callForPosts = function () {
             return contentState.getPosts();
         }
 
         //Initialise 
         if (contentState.data.categories.length < 1) {             // - If this is the first time we land on this page. 
-            //Call only the change moments and exchange categories 
-            $scope.contentState.data.categories = $scope.contentState.standardPostCategories;
+            console.log("HELLO: ", mainCategory, " + ", mainSubcategory); 
+            //new check
+            if(mainCategory && mainCategory.name && mainSubcategory && mainSubcategory.name){
+                console.log("WE GOT THIS FAR");
+                const isExchange = mainCategory.name.toLowerCase() === 'exchange';
+                const fetchBanners = mainSubcategory.name.toLowerCase() !== 'tell-me-your-story' && isExchange;
+                
+                $scope.contentState.selectedMoment(mainSubcategory, fetchBanners, isExchange, true); 
+                // $scope.contentState.data.categories.push(mainSubcategory);
+            }
+            else{
+                console.log("HERE NOW")
+                //Call only the change moments and exchange categories 
+                $scope.contentState.data.categories = $scope.contentState.standardPostCategories;
+            }     
         }
         if (contentState.data.posts.length < 1)
             $scope.callForPosts();
@@ -31,5 +47,5 @@
        
     }
 
-    app.controller("homeController", ["$scope", "$timeout", "errorState", "contentState", "socialState", homeController]);
+    app.controller("homeController", ["$scope", "$timeout", "$routeParams", "errorState", "contentState", "socialState", homeController]);
 }())

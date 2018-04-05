@@ -281,11 +281,7 @@
             //})         
         };
 
-        var selectedMoment = function (moment, fetchBanners, isExchangeCat) {
-
-
-            // TODO: MASSIVE hack to work around previous laziness. I know, I know. 
-            // fetchBanners = moment === 'Podcast' ? false : fetchBanners; 
+        var selectedMoment = function (moment, fetchBanners, isExchangeCat, keepUrl) {
             
             data.deactivateMore = false;
             data.menuActive = false; ///if I'm lucky
@@ -332,11 +328,18 @@
             else
                 data.showSpecificBanners = false; 
 
-
-            if ($location.path() !== "/home")
-                $location.path('/home');
-            else
+            /* 
+                This technical debt is starting to build up quite severely. The new 'keepUrl' param 
+                is just a hack to allow deeplinking for categories. What needs to happen, hopefully as a complete
+                new build, is to shift over entire state management system to one that respects the url as the 
+                single source of truth. Now we're starting to develop a bit of a hybrid.   
+            */
+            if(keepUrl || $location.path() === "/home"){
                 return getPosts();
+            }
+            else{
+                $location.path('/home');
+            }       
         }
 
         return {
