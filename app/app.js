@@ -1,7 +1,7 @@
 ﻿
 
 //Notes on Angular integration with Wordpress: 
-// 1 - Wordpress content is typically fucked... mixture of structure, styling and actual content. Use ng-sanitize along with ng-bind
+// 1 - Wordpress content is typically messed... mixture of structure, styling and actual content. Use ng-sanitize along with ng-bind
 //     ng-bind-html="something.something" directive to get around this. It hurts though. Check out here: https://1fix.io/blog/2014/11/13/angularjs-wordpress-theme-ngbindhtml/
 
 
@@ -45,11 +45,16 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     //    controller: "postController",
     //    templateUrl: "/app/views/post.html"
     //});
+    
     $routeProvider.when("/:category/:subcategory/:slug", {
         controller: "postController",
         templateUrl: "/app/views/post.html"
     });
 
+    $routeProvider.when("/:category/:subcategory", {
+        controller: "homeController",
+        templateUrl: "/app/views/home.html"
+    });
     //$routeProvider.when("/:postName", {
     //    controller: "postController",
     //    templateUrl: "/app/views/post.html"

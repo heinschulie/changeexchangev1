@@ -106,7 +106,13 @@
                             <img class="drop-shadow" src="content/images/dropshadow.PNG" alt="dropshadow" />
                             <!--HTML5 MODE -->
 
-                            <li data-ng-cloak class="pure-menu-item" data-ng-repeat="cat in exchangeCategories | orderBy:'description'"><a data-ng-click="cat.name === 'Podcasts' ? contentState.selectedMoment(cat, false, true) : contentState.selectedMoment(cat, true, true)" class="pure-menu-link" title="{{cat.description}}">{{cat.name}}</a></li>
+                            <li data-ng-cloak 
+                                class="pure-menu-item" 
+                                data-ng-repeat="cat in exchangeCategories | orderBy:'description'">
+                                <a data-ng-click="cat.name === 'Tell me your story' ? contentState.selectedMoment(cat, false, true) : contentState.selectedMoment(cat, true, true)" 
+                                    class="pure-menu-link" title="{{cat.description}}">{{cat.name}}
+                                </a>
+                            </li>
                             <li class="pure-menu-item"><a ng-href="/galleries" class="pure-menu-link" title="Galleries">Galleries</a></li>
                             <li data-ng-cloak class="pure-menu-item"><a data-ng-click="contentState.selectedMoment({name : 'Authors'}, false, true)" title="Meet our wonderful writers" class=" pure-menu-link">Meet the Change Agents</a></li>
                             <li class="pure-menu-item"><a href="/exchange/about" class="pure-menu-link" title="Get to know the Change Exchange!">About</a></li>
