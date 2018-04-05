@@ -11,7 +11,7 @@ var app = angular.module('cxcApp', ['ngRoute', 'ngSanitize', 'angular-carousel',
 
 app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
-    $routeProvider.when("/exchange/:pagename", {
+    $routeProvider.when("/more/:pagename", {
         controller: "pageController",
         templateUrl: "/app/views/page.html"
     });
