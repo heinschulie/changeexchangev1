@@ -8,7 +8,7 @@
 
         //// *** Development and staging
         // var serviceBase = 'http://bitnami-wordpress-a206.cloudapp.net/wp-json/';
-        var serviceBase = 'https://changeexchangepublish.co.za/wp-json/';
+        var serviceBase = 'http://changeexchangepublish.co.za/wp-json/';
         //var applicationBase = 'http://changeexchangev1.azurewebsites.net/';
 
         // *** Production 

@@ -33,7 +33,6 @@
         };
 
         return {
-            //getCategory: getCategory,
             getCategories: getCategories
         };
     };
